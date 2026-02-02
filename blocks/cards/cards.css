@@ -63,6 +63,12 @@
   font-size: var(--body-font-size-xs);
   line-height: 28px;
 }
+.cards .cards-card-body li {
+  position: relative;
+}
+.blog-cards .cards.block ul ul{
+gap: 15px;
+}
 
 .cards .cards-card-body p > strong,
 .cards .cards-card-body h2 {
@@ -593,7 +599,7 @@ width: 100%;
 .blog-cards .cards.block li::before {
   content: "";
   position: absolute;
-  left: -2px;
+  left: -7px;
   top: 13px;
   width: 4px;
   height: 4px;
