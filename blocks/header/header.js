@@ -763,6 +763,29 @@ export default async function decorate(block) {
     }
   }); */
 
+  const navCheck = document.querySelector("nav");
+
+  if (navCheck) {
+    const observer = new MutationObserver(() => {
+      if (navCheck.getAttribute("aria-expanded") === "false") {
+        // CLOSE ALL MENUS when mobile nav closes
+        megaMenus.forEach((menu) => {
+          menu.style.display = "none";
+        });
+
+        menuItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+      }
+    });
+
+    observer.observe(nav, {
+      attributes: true,
+      attributeFilter: ["aria-expanded"],
+    });
+  }
+
+
   document
     .querySelectorAll(".header-menu-body .default-content-wrapper ul")
     .forEach((ul) => {
