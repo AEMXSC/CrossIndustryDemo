@@ -74,7 +74,7 @@ footer .footer a:hover {
 .footer-main .default-content-wrapper p {
   margin: 0px;
   color: var(--charcoal, #1B1B1E);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 20px;
@@ -84,7 +84,7 @@ line-height: 20px;
     gap: 8px;
     align-items: center;
     color: var(--charcoal, #1B1B1E);
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 24px;
 font-weight: 500;
 line-height: 34px;
@@ -123,7 +123,7 @@ pointer-events: none;
 }
 .footer-main .accordion-wrapper .accordion details summary p{
 color: var(--charcoal, #1B1B1E);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 600;
 line-height: 20px;
@@ -158,7 +158,7 @@ opacity: 0.7;
 .footer ul li a{
   text-decoration: none;
   color: var(--charcoal, #1B1B1E);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 20px;
@@ -167,7 +167,7 @@ position: relative;
 .footer .footer-bottom ul li a:before {
     content: "";
     color: var(--charcoal, #1B1B1E);
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -217,7 +217,7 @@ gap: 21px;
 } */
 .footer-bottom .default-content-wrapper p {
 color: var(--charcoal, #1B1B1E);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 20px;
@@ -252,7 +252,7 @@ width: 100%;
     border: 1px solid var(--primary,#1F4DA8);
     padding: 4px 8px;
     color: var(--primary,#1F4DA8);
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 10px;
     font-weight: 500;
     line-height: 10px;

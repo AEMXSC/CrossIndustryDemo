@@ -12,7 +12,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     color: var(--charcoal, #1B1B1E);
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
@@ -71,7 +71,7 @@
 
 .benefits-section-container .benefits-content h2 {
     color: var(--charcoal, #1B1B1E);
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -81,7 +81,7 @@
 
 .benefits-section-container .benefits-content p {
     color: var(--charcoal, #1B1B1E);
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -106,7 +106,7 @@
 .benefits-section-container .cta a {
     color: var(--off-white, #FEFEFD);
 
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;

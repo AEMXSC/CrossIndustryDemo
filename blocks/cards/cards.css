@@ -492,7 +492,7 @@ width: 100%;
   margin-top: 0px;
   margin-bottom: 0px;
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   font-weight: 500;
   line-height: 40px;
@@ -500,7 +500,7 @@ width: 100%;
 
 .blog-cards2 .default-content-wrapper .button-container a {
   color: var(--neutral-0,#fff);
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -620,7 +620,7 @@ width: 100%;
 
 .blog-cards .cards-card-body h4 {
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -657,7 +657,7 @@ width: 100%;
   text-decoration: none;
   font-weight: 600;
   color: var(--primary,#1F4DA8);
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -704,7 +704,7 @@ width: 100%;
 }
 .blog-cards .cards.block p:first-of-type{
   color: var(--off-white, #FEFEFD);
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 12px;
 font-weight: 500;
 line-height: 20px;
@@ -714,7 +714,7 @@ line-height: 20px;
 
 .blog-cards .cards-wrapper .cards-card-body p:nth-child(2) {
 color: var(--slate-gray, #5E5E60);
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -803,7 +803,7 @@ padding-bottom: 24px !important;
   margin-top: 0px;
   margin-bottom: 0px;
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   font-weight: 500;
   line-height: 40px;
@@ -811,7 +811,7 @@ padding-bottom: 24px !important;
 
 .blog-cards .default-content-wrapper .button-container a {
   color: var(--neutral-0,#fff);
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -926,7 +926,7 @@ padding-bottom: 24px !important;
 
 .blog-cards2 .cards-card-body h4 {
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -958,7 +958,7 @@ padding-bottom: 24px !important;
   text-decoration: none;
   font-weight: 600;
   color: var(--primary,#1F4DA8);
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -1005,7 +1005,7 @@ padding-bottom: 24px !important;
 }
 .blog-cards2 .cards.block p:first-of-type{
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 12px;
 font-weight: 500;
 line-height: 20px;
@@ -1015,7 +1015,7 @@ line-height: 20px;
 
 .blog-cards2 .cards-wrapper .cards-card-body p:nth-child(2) {
 color: var(--slate-gray, #5E5E60);
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1099,7 +1099,7 @@ gap: 16px;
   margin-top: 0px;
   margin-bottom: 0px;
   color: var(--charcoal, var(--charcoal, #1B1B1E));
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   font-weight: 500;
   line-height: 40px;
@@ -1107,7 +1107,7 @@ gap: 16px;
 
 .blog-cards2 .default-content-wrapper .button-container a {
   color: var(--neutral-0,#fff);
-  font-family: "DM Sans";
+  font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1144,7 +1144,7 @@ gap: 16px;
 }
 .products h2 {
   color: var(--charcoal,#1B1B1E);
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 30px;
 font-weight: 500;
 line-height: 40px;
@@ -1159,7 +1159,7 @@ line-height: 40px;
     background: var(--charcoal, #1B1B1E);
     width: 170px;
     color: var(--neutral-0,#fff);
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -1196,7 +1196,7 @@ background: transparent;
 }
 .products .cards-card-body h3{
 color: var(--off-white, #FEFEFD);
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 30px;
 font-weight: 400;
 line-height: 32px;
@@ -1205,7 +1205,7 @@ margin-bottom: 8px;
 
 .products .cards > ul > li .cards-card-body p{
 color: var(--medium-gray, #CECECE);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 12px;
 font-weight: 400;
 line-height: 16px;
@@ -1214,7 +1214,7 @@ margin-top: 0px;
 }
 .products .cards-card-body h4{
 color: var(--off-white, #FEFEFD);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 16px;
@@ -1228,7 +1228,7 @@ margin-top: 0px ;
 }
 .products .cards .cards-card-body li {
 color: var(--medium-gray, #CECECE);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 12px;
 font-weight: 400;
 line-height: 16px;
@@ -1281,7 +1281,7 @@ display: flex;
     border-radius: 100px;
     border: 0.5px solid var(--off-white, #FEFEFD);
     color: var(--off-white, #FEFEFD);
-    font-family: "DM Sans";
+    font-family: var(--DM-Sans, sans-serif);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -1298,7 +1298,7 @@ gap: 10px;
 border-radius: 100px;
 background: var(--off-white, #FEFEFD);
 color: var(--charcoal, #1B1B1E);
-font-family: "DM Sans";
+font-family: var(--DM-Sans, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 20px;
@@ -1408,7 +1408,7 @@ margin-bottom: 0px;
     border-radius: 100px !important;
     background: var(--primary,#1F4DA8) !important;
     color: var(--neutral-0,#fff) !important;
-    font-family: "DM Sans" !important;
+    font-family: var(--DM-Sans, sans-serif) !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 20px !important;
@@ -1507,7 +1507,7 @@ margin-bottom: 0px;
     border-radius: 100px !important;
     background: var(--primary,#1F4DA8) !important;
     color: var(--neutral-0,#fff) !important;
-    font-family: "DM Sans" !important;
+    font-family: var(--DM-Sans, sans-serif) !important;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 20px !important;
@@ -1634,7 +1634,7 @@ padding: 48px 24px 32px;
   }
   .products.product-variant2 .cards-wrapper .cards > ul > li .cards-card-body h3 {
     font-size: 16px;
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     line-height: 16px;
   }
   .products.product-variant2 .button-container {
@@ -1691,7 +1691,7 @@ top: -36px;
   }
   .products.product-variant3 .cards-wrapper .cards > ul > li .cards-card-body h3 {
     font-size: 16px;
-    font-family: Inter;
+    font-family: var(--Inter, sans-serif);
     line-height: 16px;
   }
   .products.product-variant3 .button-container {
