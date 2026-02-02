@@ -43,15 +43,15 @@ footer .footer a:hover {
 
 
 .footer-wrapper {
-  background: #E2F1FB !important;
-  color: #1B1B1E !important;
+  background: var(--light-blue, #E2F1FB) !important;
+  color: var(--charcoal, #1B1B1E) !important;
 }
 .footer-main {
     display: flex;
     justify-content: space-between;
     /* max-width: 1440px;
     margin: 0 auto !important; */
-    background: #E2F1FB;
+    background: var(--light-blue, #E2F1FB);
     /* padding: 100px 88px 30px; */
     gap: 110px;
 }
@@ -73,7 +73,7 @@ footer .footer a:hover {
 }
 .footer-main .default-content-wrapper p {
   margin: 0px;
-  color: #1B1B1E;
+  color: var(--charcoal, #1B1B1E);
 font-family: Inter;
 font-size: 14px;
 font-weight: 400;
@@ -83,7 +83,7 @@ line-height: 20px;
   display: flex;
     gap: 8px;
     align-items: center;
-    color: #1B1B1E;
+    color: var(--charcoal, #1B1B1E);
 font-family: "DM Sans";
 font-size: 24px;
 font-weight: 500;
@@ -122,7 +122,7 @@ margin-bottom: 16px;
 pointer-events: none;
 }
 .footer-main .accordion-wrapper .accordion details summary p{
-color: #1B1B1E;
+color: var(--charcoal, #1B1B1E);
 font-family: Inter;
 font-size: 14px;
 font-weight: 600;
@@ -157,7 +157,7 @@ opacity: 0.7;
 }
 .footer ul li a{
   text-decoration: none;
-  color: #1B1B1E;
+  color: var(--charcoal, #1B1B1E);
 font-family: Inter;
 font-size: 14px;
 font-weight: 400;
@@ -166,13 +166,13 @@ position: relative;
 }
 .footer .footer-bottom ul li a:before {
     content: "";
-    color: #1B1B1E;
+    color: var(--charcoal, #1B1B1E);
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    border: 0.2px solid #1B1B1E;
+    border: 0.2px solid var(--charcoal, #1B1B1E);
     margin: 0 8px;
 }
  .footer .footer-bottom.footer-variant2 ul li a:before,
@@ -183,7 +183,7 @@ position: relative;
   display: none;
 }
 .footer ul li a:hover {
-  color: #1B1B1E;
+  color: var(--charcoal, #1B1B1E);
 }
 .footer ul li a::after {
 display: none;
@@ -216,7 +216,7 @@ gap: 21px;
   display: none;
 } */
 .footer-bottom .default-content-wrapper p {
-color: #1B1B1E;
+color: var(--charcoal, #1B1B1E);
 font-family: Inter;
 font-size: 14px;
 font-weight: 400;
@@ -249,9 +249,9 @@ width: 100%;
 }
 .footer-main.footer-variant3 .accordion-wrapper .accordion sub{
        border-radius: 29px;
-    border: 1px solid #1F4DA8;
+    border: 1px solid var(--primary,#1F4DA8);
     padding: 4px 8px;
-    color: #1F4DA8;
+    color: var(--primary,#1F4DA8);
     font-family: "DM Sans";
     font-size: 10px;
     font-weight: 500;

@@ -130,7 +130,7 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: var(--font-weight-400, 400);
-  color: #696969;
+  color: var(--dark-gray, #696969);
 }
 
 .accordion-variant1 .default-content-wrapper>p {
@@ -239,7 +239,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: var(--font-weight-400, 400);
-  color: #696969;
+  color: var(--dark-gray, #696969);
 }
 
 .accordion-variant2.accordion-container .combined-wrapper .accordion-item-wrapper .accordion-item-body .icon-pie-chart {
@@ -260,23 +260,23 @@
   font-size: 12px;
   line-height: 17.27px;
   font-weight: var(--font-weight-500, 500);
-  border-bottom: 0.43px solid #D8D8D6;
-  border-left: 0.43px solid #D8D8D6;
+  border-bottom: 0.43px solid var(--silver, #D8D8D6);
+  border-left: 0.43px solid var(--silver, #D8D8D6);
 }
 
 .accordion-variant1.accordion-container .accordion-ul-wrapper ul li:first-child,
 .accordion-variant2.accordion-container .accordion-ul-wrapper ul li:first-child,
 .accordion-variant3.accordion-container .accordion-ul-wrapper ul li:first-child {
   padding: 11px 0 11px 13px;
-  background-color: #F2F2F2;
-  color: #1F4DA8;
-  border-top: 0.43px solid #D8D8D6;
+  background-color: var(--light-gray, #F2F2F2);
+  color: var(--primary,#1F4DA8);
+  border-top: 0.43px solid var(--silver, #D8D8D6);
 }
 
 .accordion-variant1.accordion-container .accordion-ul-wrapper ul:last-child,
 .accordion-variant2.accordion-container .accordion-ul-wrapper ul:last-child,
 .accordion-variant3.accordion-container .accordion-ul-wrapper ul:last-child {
-  border-right: 0.43px solid #D8D8D6;
+  border-right: 0.43px solid var(--silver, #D8D8D6);
 }
 
 @media (max-width: 768px) {

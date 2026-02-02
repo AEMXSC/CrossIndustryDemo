@@ -157,7 +157,7 @@
 }
 
 .notification-banner-varient3 .banner-wrapper .block {
-    background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, #D79F4B 98.59%);
+    background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, var(--secondary,#D79F4B) 98.59%);
     min-height: 76px;
     border-radius: 24px;
     position: relative;
@@ -454,7 +454,7 @@
     font-size: 72px;
     line-height: 62px;
     margin-bottom: 8px;
-    color: var(--Gold);
+    color: var(--secondary,#D79F4B);
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     letter-spacing: var(--letter-spacing, 0);
@@ -545,7 +545,7 @@
 }
 
 .simple-banner-varient4 .banner-wrapper .block {
-    background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, #D79F4B 98.59%);
+    background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, var(--secondary,#D79F4B) 98.59%);
     min-height: 282px;
     border-radius: 24px;
     position: relative;

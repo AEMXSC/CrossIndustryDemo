@@ -34,7 +34,7 @@
     font-size: 48px;
     line-height: 54px;
     letter-spacing: 0;
-    color: var(--Gold);
+    color: var(--secondary,#D79F4B);
 }
 
 .track-record-varient1 .track-record-wrapper .block .track-record-wrapper-item>div>div :last-child {
@@ -43,7 +43,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
     margin-top: 12px;
 }
 
@@ -113,7 +113,7 @@
     font-size: 96px;
     line-height: 120px;
     letter-spacing: 0;
-    color: var(--Gold);
+    color: var(--secondary,#D79F4B);
 }
 
 .track-record-varient2 .track-record-wrapper .block .track-record-wrapper-item>div>div :last-child {
@@ -122,7 +122,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0;
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
 }
 
 @media (max-width: 768px) {
@@ -201,7 +201,7 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0;
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
     border-bottom: 1px solid var(--Silver);
     padding: 0 0 16px 12px;
 }
@@ -281,7 +281,7 @@
     height: 60px;
     margin: 0 auto 22px;
     border-radius: 50%;
-    background: var(--Gold);
+    background: var(--secondary,#D79F4B);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,7 +309,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
 }
 
 @media (min-width: 992px) {
@@ -389,7 +389,7 @@
     line-height: 24px;
     margin-top: 16px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
 }
 
 .process-step-varient2 .track-record-wrapper .block {
@@ -428,7 +428,7 @@
     top: 15px;
     width: 12px;
     height: 12px;
-    background: var(--Gold);
+    background: var(--secondary,#D79F4B);
     border-radius: 50%;
 }
 
@@ -462,7 +462,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
 }
 
 @media (max-width: 768px) {
@@ -537,7 +537,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #5E5E60;
+    color: var(--slate-gray, #5E5E60);
 }
 
 .process-step-varient3 .track-record-wrapper .block .track-record-wrapper-item {
@@ -565,7 +565,7 @@
     font-size: 48px;
     line-height: 36px;
     letter-spacing: var(--letter-spacing, 0);
-    color: var(--Gold);
+    color: var(--secondary,#D79F4B);
     min-width: 40px;
 }
 
@@ -585,7 +585,7 @@
     font-size: 14px;
     line-height: 20px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #5E5E60
+    color: var(--slate-gray, #5E5E60)
 }
 
 /* MOBILE STACK */
