@@ -129,13 +129,14 @@ ul {
 }
 
 /* MENU ITEMS */
-.header-menu-body ul li {
+.header-menu-body ul li a{
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
   font-weight: var(--font-weight-400, 400);
   color: #797979;
   margin-bottom: 14px;
+  text-decoration: none;
 }
 
 /* RIGHT IMAGE */
@@ -177,7 +178,7 @@ ul {
 
   .header-menu-body picture img {
     max-width: 100%;
-    margin-bottom: 16px;
+    margin: 39px 0px;
   }
 
   .lang-switcher {
@@ -320,45 +321,47 @@ ul {
     line-height: 20px;
     color: #1B1B1E;
   }
+
+  /* first li styling */
+  .header-menu-body ul li:first-child {
+    position: relative;
+    padding-right: 24px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  /* arrow (closed = down) */
+  .header-menu-body ul.active li:first-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: translateY(-50%) rotate(45deg);
+    /* down arrow */
+    transition: transform 0.3s ease;
+  }
+
+  /* open state = arrow up */
+  .header-menu-body ul li:first-child::after {
+    transform: translateY(-50%) rotate(-135deg);
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transition: transform 0.3s ease;
+    /* up arrow */
+  }
 }
 
-/* first li styling */
-.header-menu-body ul li:first-child {
-  position: relative;
-  padding-right: 24px;
-  cursor: pointer;
-  font-weight: 600;
-}
 
-/* arrow (closed = down) */
-.header-menu-body ul.active li:first-child::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transform: translateY(-50%) rotate(45deg);
-  /* down arrow */
-  transition: transform 0.3s ease;
-}
-
-/* open state = arrow up */
-.header-menu-body ul li:first-child::after {
-  transform: translateY(-50%) rotate(-135deg);
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transition: transform 0.3s ease;
-  /* up arrow */
-}
 
 a::after,
 a.button::after {
