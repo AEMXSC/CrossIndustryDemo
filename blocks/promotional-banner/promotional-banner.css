@@ -227,6 +227,12 @@ max-width: unset;
     .promotional-banner-container.banner-varient4 .promotional-banner-wrapper {
       margin: unset;
     }
+    .promotional-banner-container.banner-varient3 .grid-content > div {
+        width: 100% !important;
+    }
+    .promotional-banner-container.banner-varient3 .grid-content .bottom-content {
+        width: 100% !important;
+    }
 }
 
 /* variant 2 */
@@ -285,10 +291,15 @@ max-width: unset;
 
 .promotional-banner-container.banner-varient3 .grid-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-
+.promotional-banner-container.banner-varient3 .grid-content > div {
+width: 38.2%;
+}
+.promotional-banner-container.banner-varient3 .grid-content .bottom-content {
+width: 42.4%;
+} 
 .promotional-banner-container.banner-varient3 .grid-content h2 {
     margin-bottom: 0px;
 }
