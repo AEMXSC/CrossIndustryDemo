@@ -1,7 +1,7 @@
 /* variant 1 */
 .banner-varient1 {
     padding-top: 60px;
-    background-color: #C8E5F5;
+    background-color: var(--accent-color, #C8E5F5);
     padding-top: 82px;
     margin-top: 44px !important;
     margin: 0px;
