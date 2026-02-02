@@ -701,6 +701,7 @@ export default async function decorate(block) {
   const menuItems = block.querySelectorAll(".header-menu ul li");
   const megaMenus = block.querySelectorAll(".header-menu-body");
   const headerMenuBodies = block.querySelectorAll(".header-menu-body");
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   headerMenuBodies.forEach((body) => {
     const uls = body.querySelectorAll(".default-content-wrapper > ul");
@@ -716,57 +717,54 @@ export default async function decorate(block) {
     body.querySelector(".default-content-wrapper")?.appendChild(imgwrapper);
   });
 
-  // Hide all mega menus initially
-  megaMenus.forEach((menu) => (menu.style.display = "none"));
-
   menuItems.forEach((item, index) => {
-    item.addEventListener("mouseenter", (e) => {
-      e.stopPropagation();
-      // Hide all menus first
-      megaMenus.forEach((menu) => (menu.style.display = "none"));
-      // Remove active class from all items
-      menuItems.forEach((i) => i.classList.remove("active"));
-      // Show the corresponding menu
-      if (megaMenus[index]) {
-        megaMenus[index].style.display = "block";
-      }
-      // Add active class for underline
-      item.classList.add("active");
-    });
+    if (!isMobile) {
+      // DESKTOP: hover behavior
+      item.addEventListener("mouseenter", (e) => {
+        e.stopPropagation();
+        megaMenus.forEach((menu) => (menu.style.display = "none"));
+        menuItems.forEach((i) => i.classList.remove("active"));
 
-    item.addEventListener("mouseleave", (e) => {
-      e.stopPropagation();
-      setTimeout(() => {
-        // Check if mouse is over the mega menu for this index
-        const overMenu = megaMenus[index].matches(":hover");
-        if (!overMenu) {
-          megaMenus[index].style.display = "none";
-          // Remove active class when menu hides
-          item.classList.remove("active");
+        if (megaMenus[index]) {
+          megaMenus[index].style.display = "block";
         }
-      }, 150); // small delay to prevent flicker
-    });
+        item.classList.add("active");
+      });
+
+      item.addEventListener("mouseleave", (e) => {
+        e.stopPropagation();
+        setTimeout(() => {
+          const overMenu = megaMenus[index].matches(":hover");
+          if (!overMenu) {
+            megaMenus[index].style.display = "none";
+            item.classList.remove("active");
+          }
+        }, 150);
+      });
+    } else {
+      // MOBILE: click behavior
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = megaMenus[index].style.display === "block";
+        megaMenus.forEach((menu) => (menu.style.display = "none"));
+        menuItems.forEach((i) => i.classList.remove("active"));
+        if (!isOpen) {
+          megaMenus[index].style.display = "block";
+          item.classList.add("active");
+        }
+      });
+    }
   });
+  /* document.addEventListener("click", () => {
+    if (isMobile) {
+      megaMenus.forEach((menu) => (menu.style.display = "none"));
+      menuItems.forEach((i) => i.classList.remove("active"));
+    }
+  }); */
 
-  // Keep menu open when hovering the mega menu itself and manage underline
-  megaMenus.forEach((menu, index) => {
-    menu.addEventListener("mouseenter", (e) => {
-      e.stopPropagation();
-      // Keep the corresponding menu visible
-      menu.style.display = "block";
-      // Add underline class on menu item as well
-      menuItems[index].classList.add("active");
-    });
-
-    menu.addEventListener("mouseleave", (e) => {
-      e.stopPropagation();
-      menu.style.display = "none";
-      // Remove underline class on corresponding menu item
-      menuItems[index].classList.remove("active");
-    });
-  });
-
-  document.querySelectorAll(".header-menu-body .default-content-wrapper ul")
+  document
+    .querySelectorAll(".header-menu-body .default-content-wrapper ul")
     .forEach((ul) => {
       const header = ul.querySelector("li:first-child");
       header.addEventListener("click", () => {
