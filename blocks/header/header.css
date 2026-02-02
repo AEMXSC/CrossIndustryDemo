@@ -1,5 +1,6 @@
 /* RESET */
-.nav-hamburger {
+.nav-hamburger,
+.lang-switcher {
   display: none;
 }
 
@@ -14,7 +15,6 @@ ul {
 /* =========================
    TOP PROMO BAR
 ========================= */
-
 .header-top .default-content-wrapper>a {
   display: block;
 }
@@ -79,21 +79,32 @@ ul {
   color: #0a3b8f;
 }
 
-/* =========================
-   MEGA MENU
-========================= */
 .header-menu-body {
   width: 100%;
   background: #fff;
-  /* border-top: 1px solid #e5e7eb; */
 }
 
-.header-menu-body .default-content-wrapper {
+.header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper,
+.header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper,
+.header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper {
+  width: 614px;
+  height: auto;
+}
+
+.header-variant1.header-menu-body .default-content-wrapper,
+.header-variant2.header-menu-body .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 40px 0px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   align-items: flex-start;
 }
@@ -129,7 +140,7 @@ ul {
 }
 
 /* MENU ITEMS */
-.header-menu-body ul li a{
+.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li a {
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
@@ -139,21 +150,61 @@ ul {
   text-decoration: none;
 }
 
-/* RIGHT IMAGE */
-.header-menu-body picture img {
-  max-width: 614px;
-  height: auto;
+.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li strong {
+  font-weight: var(--font-weight-500, 500);
+  font-size: 12px;
+  line-height: 20px;
+  color: #FEFEFD;
+}
+
+.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li a {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: var(--font-weight-400, 400);
+  color: #797979;
+  margin-bottom: 14px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li strong {
+  font-weight: var(--font-weight-500, 500);
+  font-size: 12px;
+  line-height: 20px;
+  color: #FEFEFD;
+  background-color: #D79F4B;
+  border-radius: 29px;
+  display: inline-block;
+  padding: 4px 12px;
 }
 
 /* =========================
    MOBILE STYLES
 ========================= */
 @media (max-width: 768px) {
+  .header-top {
+    display: none;
+  }
+
   .header-menu .default-content-wrapper {
     flex-direction: column;
-    /* align-items: flex-start; */
     gap: 16px;
-    padding: 32px 0 0 0;
+    padding: 32px 0px;
+  }
+
+  .header-variant1.header-menu-body .default-content-wrapper,
+  .header-variant2.header-menu-body .default-content-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 0px;
+  }
+
+  .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper,
+  .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
   }
 
   .header-menu ul {
@@ -176,23 +227,11 @@ ul {
     gap: 0px;
   }
 
-  .header-menu-body picture img {
-    max-width: 100%;
+  /* .header-menu-body picture img */
+  .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper,
+  .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper {
+    width: 100%;
     margin: 39px 0px;
-  }
-
-  .lang-switcher {
-    position: static;
-    margin-top: 16px;
-  }
-}
-
-/* =========================
-   MOBILE HAMBURGER FIX
-========================= */
-@media (max-width: 768px) {
-  .header-top {
-    display: none;
   }
 
   /* SHOW HAMBURGER */
@@ -256,6 +295,7 @@ ul {
   nav[aria-expanded="true"] .header-menu,
   nav[aria-expanded="true"] .header-menu-body {
     display: block;
+    width: 100%;
   }
 
   nav[aria-expanded="true"] .header-menu .default-content-wrapper {
@@ -359,15 +399,4 @@ ul {
     transition: transform 0.3s ease;
     /* up arrow */
   }
-}
-
-
-
-a::after,
-a.button::after {
-  display: none;
-}
-
-.single-lang {
-  display: none;
 }

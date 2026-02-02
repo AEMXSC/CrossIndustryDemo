@@ -85,7 +85,7 @@ function focusNavSection() {
       section.setAttribute("aria-expanded", expanded);
     });
   }
-} */
+} 
 
 async function overlayLoad(navSections) {
   const langCode = getLanguage();
@@ -698,9 +698,23 @@ export default async function decorate(block) {
   // Ensure search icon mask uses correct base path in UE/author/local
 
   /* Custom Js For Show header-menu-body */
-  /* Custom JS For Show header-menu-body */
   const menuItems = block.querySelectorAll(".header-menu ul li");
   const megaMenus = block.querySelectorAll(".header-menu-body");
+  const headerMenuBodies = block.querySelectorAll(".header-menu-body");
+
+  headerMenuBodies.forEach((body) => {
+    const uls = body.querySelectorAll(".default-content-wrapper > ul");
+    const img = body.querySelectorAll(".default-content-wrapper > p");
+    if (!uls.length) return;
+    const ulwrapper = document.createElement("div");
+    const imgwrapper = document.createElement("div");
+    ulwrapper.className = "header-menu-body-inner-ul-wrapper";
+    uls.forEach((ul) => ulwrapper.appendChild(ul));
+    body.querySelector(".default-content-wrapper")?.appendChild(ulwrapper);
+    imgwrapper.className = "header-menu-body-inner-img-wrapper";
+    img.forEach((p) => imgwrapper.appendChild(p));
+    body.querySelector(".default-content-wrapper")?.appendChild(imgwrapper);
+  });
 
   // Hide all mega menus initially
   megaMenus.forEach((menu) => (menu.style.display = "none"));
@@ -751,6 +765,7 @@ export default async function decorate(block) {
       menuItems[index].classList.remove("active");
     });
   });
+
   document.querySelectorAll(".header-menu-body .default-content-wrapper ul")
     .forEach((ul) => {
       const header = ul.querySelector("li:first-child");
