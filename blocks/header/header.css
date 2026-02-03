@@ -215,6 +215,7 @@ ul {
     flex-direction: column;
     gap: 0px;
     width: 100%;
+    order: 2;
   }
 
   .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper ul,
