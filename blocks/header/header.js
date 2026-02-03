@@ -702,6 +702,7 @@ export default async function decorate(block) {
   const megaMenus = block.querySelectorAll(".header-menu-body");
   const headerMenuBodies = block.querySelectorAll(".header-menu-body");
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const navCheck = document.querySelector("nav");
 
   headerMenuBodies.forEach((body) => {
     const uls = body.querySelectorAll(".default-content-wrapper > ul");
@@ -715,7 +716,7 @@ export default async function decorate(block) {
     imgwrapper.className = "header-menu-body-inner-img-wrapper";
     img.forEach((p) => imgwrapper.appendChild(p));
     body.querySelector(".default-content-wrapper")?.appendChild(imgwrapper);
-  }); 
+  });
 
   menuItems.forEach((item, index) => {
     if (!isMobile) {
@@ -743,7 +744,7 @@ export default async function decorate(block) {
       });
     } else {
       // MOBILE: click behavior
-      item.addEventListener("click", (e) => {
+      /* item.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
         const isOpen = megaMenus[index].style.display === "block";
@@ -753,8 +754,34 @@ export default async function decorate(block) {
           megaMenus[index].style.display = "block";
           item.classList.add("active");
         }
+      }); */
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openTab(index);
       });
     }
+  });
+
+  function openTab(index) {
+    megaMenus.forEach((menu) => (menu.style.display = "none"));
+    menuItems.forEach((i) => i.classList.remove("active"));
+
+    if (megaMenus[index]) {
+      megaMenus[index].style.display = "block";
+      menuItems[index].classList.add("active");
+    }
+  }
+  
+
+  const observer = new MutationObserver(() => {
+    if (isMobile && navCheck.getAttribute("aria-expanded") === "true") {
+      openTab(0);
+    }
+  });
+  observer.observe(navCheck, {
+    attributes: true,
+    attributeFilter: ["aria-expanded"],
   });
   /* document.addEventListener("click", () => {
     if (isMobile) {
@@ -762,11 +789,8 @@ export default async function decorate(block) {
       menuItems.forEach((i) => i.classList.remove("active"));
     }
   }); */
-
-  const navCheck = document.querySelector("nav");
-
   if (navCheck) {
-    const observer = new MutationObserver(() => {
+    const observer = new MutationObserver((_, index) => {
       if (navCheck.getAttribute("aria-expanded") === "false") {
         // CLOSE ALL MENUS when mobile nav closes
         megaMenus.forEach((menu) => {
@@ -785,10 +809,7 @@ export default async function decorate(block) {
     });
   }
 
-
-  document
-    .querySelectorAll(".header-menu-body .default-content-wrapper ul")
-    .forEach((ul) => {
+  document.querySelectorAll(".header-menu-body .default-content-wrapper ul").forEach((ul) => {
       const header = ul.querySelector("li:first-child");
       header.addEventListener("click", () => {
         ul.classList.toggle("active");

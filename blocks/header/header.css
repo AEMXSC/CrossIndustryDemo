@@ -221,6 +221,7 @@ ul {
   .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper ul,
   .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper ul {
     width: 100%;
+    border-bottom: 0.5px solid #B2B3B5;
   }
 
   .header-menu ul {
@@ -247,7 +248,7 @@ ul {
   .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper,
   .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper {
     width: 100%;
-    margin: 39px 0px;
+    margin-bottom: 39px;
   }
 
   /* SHOW HAMBURGER */
@@ -308,8 +309,7 @@ ul {
     overflow-y: auto;
   }
 
-  nav[aria-expanded="true"] .header-menu,
-  nav[aria-expanded="true"] .header-menu-body {
+  nav[aria-expanded="true"] .header-menu {
     display: block;
     width: 100%;
   }
