@@ -1,6 +1,7 @@
 {
   "mappings": [
     "/content/dept-crossIndustry/:/",
+    "/content/dept-crossIndustry/*:/*",
     "/content/dept-crossIndustry/configuration:/.helix/config.json",
     "/content/dept-crossIndustry/metadata:/metadata.json"
   ],
