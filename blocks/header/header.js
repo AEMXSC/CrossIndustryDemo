@@ -703,7 +703,7 @@ export default async function decorate(block) {
   const headerMenuBodies = block.querySelectorAll(".header-menu-body");
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
-  /* headerMenuBodies.forEach((body) => {
+  headerMenuBodies.forEach((body) => {
     const uls = body.querySelectorAll(".default-content-wrapper > ul");
     const img = body.querySelectorAll(".default-content-wrapper > p");
     if (!uls.length) return;
@@ -715,49 +715,7 @@ export default async function decorate(block) {
     imgwrapper.className = "header-menu-body-inner-img-wrapper";
     img.forEach((p) => imgwrapper.appendChild(p));
     body.querySelector(".default-content-wrapper")?.appendChild(imgwrapper);
-    const images = body.querySelectorAll('[data-aue-component="image"]');
-    const texts = body.querySelectorAll('[data-richtext-component="text"]');
-    console.log(images,texts);
-  }); */
-
-  headerMenuBodies.forEach((body) => {
-    const contentWrapper = body.querySelector(".default-content-wrapper");
-    if (!contentWrapper) return;
-
-    // UL logic (unchanged)
-    const uls = contentWrapper.querySelectorAll(":scope > ul");
-    if (!uls.length) return;
-
-    const ulwrapper = document.createElement("div");
-    ulwrapper.className = "header-menu-body-inner-ul-wrapper";
-    uls.forEach((ul) => ulwrapper.appendChild(ul));
-    contentWrapper.appendChild(ulwrapper);
-
-    // IMAGE + TEXT WRAPPER
-    const imgwrapper = document.createElement("div");
-    imgwrapper.className = "header-menu-body-inner-img-wrapper";
-    contentWrapper.appendChild(imgwrapper);
-
-    const images = contentWrapper.querySelectorAll(
-      '[data-aue-component="image"]',
-    );
-    const texts = contentWrapper.querySelectorAll(
-      '[data-richtext-component="text"]',
-    );
-
-    images.forEach((img, index) => {
-      const text = texts[index];
-      if (!text) return;
-
-      const pairDiv = document.createElement("div");
-
-      pairDiv.appendChild(img);
-      pairDiv.appendChild(text);
-
-      imgwrapper.appendChild(pairDiv);
-    });
-  });
-  
+  }); 
 
   menuItems.forEach((item, index) => {
     if (!isMobile) {
