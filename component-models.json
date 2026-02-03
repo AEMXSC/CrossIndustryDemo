@@ -263,6 +263,18 @@
           {
             "name": "Header menu body",
             "value": "header-menu-body"
+          },
+          {
+            "name": "hitech v1",
+            "value": "hitech-variant1"
+          },
+          {
+            "name": "hitech v2",
+            "value": "hitech-variant2"
+          },
+          {
+            "name": "hitech v3",
+            "value": "hitech-variant3"
           }
         ]
       }
