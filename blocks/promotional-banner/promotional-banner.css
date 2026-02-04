@@ -441,6 +441,13 @@ width: 42.4%;
     margin-bottom: 24px;
 }
 
+
+/* hi tecg bannner variant 3 */
+.hitech-banner-variant3 {
+padding: 80px 88px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
 @media screen and (max-width: 1024px) {
     .hitech-banner-variant1 .promotionalbanner-content {
         flex-direction: column-reverse;
