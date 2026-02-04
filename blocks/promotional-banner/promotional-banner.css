@@ -411,10 +411,12 @@ width: 42.4%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 88px 0px 88px;
-    min-height: 726px;
+    min-height: 726px !important;
     position: relative;
 }
-
+.hitech-banner-variant2 .promotional-banner-wrapper {
+    width: 82.2%;
+}
 .hitech-banner-variant2 .promotionalbanner-content {
     display: flex;
     justify-content: space-between;
