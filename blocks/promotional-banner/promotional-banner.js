@@ -27,7 +27,7 @@ export default function decorate(block) {
   }
 
   if (getType.contains("hitech-1")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-varient1");
+    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant");
     block.append(bannerType1(block));
   } 
 }
