@@ -405,7 +405,7 @@ width: 42.4%;
 .hitech-banner-variant2 .banner-conetent a:last-child,
 .hitech-banner-variant3 .banner-conetent a:last-child,
 .hitech-banner-variant4 .banner-conetent a:last-child {
-    display: none;
+    display: none !important;
 }
 
 
