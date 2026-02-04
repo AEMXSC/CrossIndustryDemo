@@ -182,17 +182,17 @@ async function loadThemeFromPage(themePagePath) {
       const fontName = fontLink.textContent?.trim();
       const fontUrl = fontLink.href?.trim();
       // eslint-disable-next-line no-trailing-spaces
-      
+
       if (fontName && fontUrl) {
         // Create @font-face declaration
         fontFaces.push(`@font-face {
-  font-family: '${fontName}';
-  font-display: swap;
-  src: url('${fontUrl}') format('woff');
-}`);
+            font-family: '${fontName}';
+            font-display: swap;
+            src: url('${fontUrl}') format('woff');
+          }`);
         // Create CSS variable for font family
         const fontVarName = fontName.toLowerCase().replace(/\s+/g, '-');
-        fontVariables.push(`  --${fontVarName}: '${fontName}';`);
+        fontVariables.push(`--${fontVarName}: '${fontName}';`);
       }
     });
 
