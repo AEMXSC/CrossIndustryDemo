@@ -448,6 +448,43 @@ padding: 80px 88px;
     max-width: 1440px;
     margin: 0 auto;
 }
+.hitech-banner-variant3 .promotional-banner-wrapper {
+display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.hitech-banner-variant3 .promotionalbanner-content {
+width: 48.9%;
+}
+.hitech-banner-variant3 .bannner-image {
+    width: 45.9%;
+}
+.hitech-banner-variant3 .redirections {
+
+}
+
+/* hi tech banner variant 4 */ 
+
+.hitech-banner-variant4 {
+padding: 80px 0px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.hitech-banner-variant4 .promotional-banner-wrapper {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hitech-banner-variant4 .promotionalbanner-content {
+width: 48.9%;
+}
+.hitech-banner-variant4 .bannner-image {
+    width: 45.9%;
+}
+.hitech-banner-variant4 .redirections {
+
+}
+
 @media screen and (max-width: 1024px) {
     .hitech-banner-variant1 .promotionalbanner-content {
         flex-direction: column-reverse;
