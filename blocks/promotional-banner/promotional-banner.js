@@ -31,6 +31,10 @@ export default function decorate(block) {
     block.closest(".promotional-banner-container").classList.add("hitech-banner-variant1");
     block.append(bannerType1(block));
   } 
+  if (getType.contains("hitech-2")) {
+    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant2");
+    block.append(bannerType1(block));
+  } 
 }
 
 
