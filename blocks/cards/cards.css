@@ -1903,4 +1903,7 @@ overflow: unset;
   .hitech-variant2.cards-container {
     gap: 32px;
   }
+  .hitech-variant2 .cards > ul > li .cards-card-image {
+    width: 100%;
+  }
 }
