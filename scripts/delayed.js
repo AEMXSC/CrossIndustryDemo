@@ -94,9 +94,9 @@ function buildTwitterLinks() {
   });
 }
 
-// if (!window.location.hostname.includes('localhost')) {
-//   embedCustomLibraries();
-//   if (window.parent && !(window.parent.location.pathname.indexOf('/canvas/') > -1)) {
-//     loadAT();
-//   }
-// }
+if (!window.location.hostname.includes('localhost')) {
+  embedCustomLibraries();
+  if (window.parent && !(window.parent.location.pathname.indexOf('/canvas/') > -1)) {
+    loadAT();
+  }
+}
