@@ -375,7 +375,7 @@ width: 42.4%;
     line-height: 24px;
 }
 
-.hitech-banner-variant1 .banner-conetent a {
+.hitech-banner-variant1.promotional-banner-container .banner-conetent a {
     display: flex;
     width: 166px;
     height: 48px;
@@ -396,4 +396,22 @@ width: 42.4%;
 
 .hitech-banner-variant1 .banner-conetent a:last-child {
     display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .hitech-banner-variant1 .promotionalbanner-content {
+        flex-direction: column-reverse;
+    }
+    .hitech-banner-variant1 .bannner-image {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    right: -100px;
+}
+.hitech-banner-variant1 .banner-conetent {
+    width: 100%;
+    padding: 56px 24px 0px 24px;
+}
 }

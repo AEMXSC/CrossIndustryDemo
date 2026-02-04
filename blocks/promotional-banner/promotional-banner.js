@@ -22,12 +22,13 @@ export default function decorate(block) {
   } else if (getType.contains("type-4")) {
     block.closest(".promotional-banner-container").classList.add("banner-varient4");
     block.append(bannerType4(block));
-  } else {
-    block.append(bannerType1(block));
-  }
+  } 
+  // else {
+  //   block.append(bannerType1(block));
+  // }
 
   if (getType.contains("hitech-1")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant");
+    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant1");
     block.append(bannerType1(block));
   } 
 }
