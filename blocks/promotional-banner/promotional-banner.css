@@ -418,6 +418,17 @@ width: 42.4%;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
+    text-align: center;
+}
+.hitech-banner-variant2 .redirections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+    margin-bottom: 0px;
+}
+.hitech-banner-variant1 .banner-conetent h2 {
+    margin-bottom: 24px;
 }
 
 @media screen and (max-width: 1024px) {
