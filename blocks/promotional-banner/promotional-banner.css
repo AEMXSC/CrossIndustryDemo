@@ -481,6 +481,10 @@ line-height: 20px; /* 142.857% */
 
 /* hitech bannner variant 2 */
 .hitech-banner-variant2 {
-    padding: 80px 24px 0px 24px;
+    padding: 80px 24px 0px 24px !important;
+    min-height: 520px !important;
+}
+.hitech-banner-variant2 .promotionalbanner-content {
+    width: 100%;
 }
 }
