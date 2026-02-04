@@ -410,6 +410,13 @@ width: 42.4%;
     background: linear-gradient(109deg, #000 11.78%, #1E1E1E 133.49%);
     max-width: 1440px;
     margin: 0 auto;
+    padding: 80px 88px 0px 88px;
+}
+.hitech-banner-variant2 .promotionalbanner-content {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 
 @media screen and (max-width: 1024px) {
