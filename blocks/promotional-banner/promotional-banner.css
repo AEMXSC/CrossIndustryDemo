@@ -412,8 +412,9 @@ width: 42.4%;
     margin: 0 auto;
     padding: 80px 88px 0px 88px;
 }
+
 .hitech-banner-variant2 .promotionalbanner-content {
-display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column-reverse;
