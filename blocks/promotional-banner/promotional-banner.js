@@ -47,8 +47,8 @@ export default function decorate(block) {
 
 
 function bannerType1(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("picture img")[0].src.trim() : block.querySelectorAll("picture img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("picture img")[0].src.trim();
+  let source = window.innerWidth > 1024 ? block?.querySelectorAll("picture img")[0]?.src.trim() : block.querySelectorAll("picture img")[1]?.src.trim();
+  source = block.querySelectorAll("img").length > 1 ? source : block?.querySelectorAll("picture img")[0]?.src.trim();
   let heading = block.querySelector("h2").innerText.trim();
   let description = block.querySelector("p").innerText.trim();
   let buttons = block.querySelectorAll("a");
