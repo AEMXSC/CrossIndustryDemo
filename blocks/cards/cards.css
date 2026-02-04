@@ -1860,7 +1860,9 @@ flex-basis: 100%;
 .swiper-notification {
   display: none;
 }
-
+.hitech-variant2 .cards.block.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+overflow: unset;
+}
 
 @media screen and (max-width: 1024px) {
   .hitech-variant1.cards-container, .hitech-variant2.cards-container, .hitech-variant3.cards-container {
