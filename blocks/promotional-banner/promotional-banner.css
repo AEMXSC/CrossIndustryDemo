@@ -547,6 +547,11 @@ line-height: 20px; /* 142.857% */
 }
 .hitech-banner-variant3.promotional-banner-container .bannner-image {
     width: 100%;
+    text-align: center;
+}
+.hitech-banner-variant3.promotional-banner-container .bannner-image img{
+    width: 327px;
+    height: 323px;
 }
 .hitech-banner-variant3.promotional-banner-container .promotionalbanner-content .banner-conetent {
     width: 100%;
