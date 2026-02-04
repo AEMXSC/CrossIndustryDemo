@@ -475,11 +475,12 @@ padding: 80px 0px;
 }
 .hitech-banner-variant4 .promotionalbanner-content {
 display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 .hitech-banner-variant4 .banner-conetent {
 width: 48.9%;
+padding-right: 88px;
 }
 .hitech-banner-variant4 .bannner-image {
     width: 45.9%;
@@ -558,6 +559,34 @@ line-height: 20px; /* 142.857% */
     text-align: center;
 }
 .hitech-banner-variant3.promotional-banner-container .redirections {
+        align-items: center;
+    justify-content: center;
+}
+
+
+/* hi tecg banner variant 4 */
+
+/* hitech banner variant 3 */
+.hitech-banner-variant4.promotional-banner-container {
+    padding: 24px 0px;
+}
+.hitech-banner-variant4.promotional-banner-container .promotionalbanner-content {
+        flex-direction: column;
+    gap: 26px;
+}
+.hitech-banner-variant4.promotional-banner-container .bannner-image {
+    width: 100%;
+    text-align: center;
+}
+.hitech-banner-variant4.promotional-banner-container .bannner-image img{
+      width: 281px;
+    height: 282px;
+}
+.hitech-banner-variant4.promotional-banner-container .promotionalbanner-content .banner-conetent {
+    width: 100%;
+    text-align: center;
+}
+.hitech-banner-variant4.promotional-banner-container .redirections {
         align-items: center;
     justify-content: center;
 }
