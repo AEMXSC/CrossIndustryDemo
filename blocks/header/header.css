@@ -184,7 +184,7 @@ ul {
   font-size: 12px;
   line-height: 20px;
   color: #FEFEFD;
-  background-color: #D79F4B;
+  background-color: var(--secondary, #D79F4B);
   border-radius: 29px;
   display: inline-block;
   padding: 4px 12px;
