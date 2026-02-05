@@ -718,6 +718,27 @@ export default async function decorate(block) {
     body.querySelector(".default-content-wrapper")?.appendChild(imgwrapper);
   });
 
+  document
+    .querySelectorAll(".header-menu-body-inner-img-wrapper")
+    .forEach((wrapper) => {
+      const ps = Array.from(wrapper.querySelectorAll(":scope > p"));
+
+      // clear existing content
+      wrapper.innerHTML = "";
+
+      for (let i = 0; i < ps.length; i += 2) {
+        const imgTextWrapper = document.createElement("div");
+        imgTextWrapper.className = "img-text-wrapper";
+
+        imgTextWrapper.appendChild(ps[i]);
+        if (ps[i + 1]) {
+          imgTextWrapper.appendChild(ps[i + 1]);
+        }
+
+        wrapper.appendChild(imgTextWrapper);
+      }
+    });
+
   menuItems.forEach((item, index) => {
     if (!isMobile) {
       // DESKTOP: hover behavior

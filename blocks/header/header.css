@@ -98,8 +98,8 @@ ul {
   width: 29%;
 }
 
-.header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper,
-.header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper {
+.header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper .img-text-wrapper>p:first-child,
+.header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper .img-text-wrapper>p:first-child {
   width: 614px;
   height: auto;
 }
@@ -146,10 +146,11 @@ ul {
 }
 
 /* MENU ITEMS */
-.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li{
+.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li {
   margin-bottom: 14px;
 }
-.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li a{
+
+.header-variant1.header-menu-body .header-menu-body-inner-ul-wrapper ul li a {
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
@@ -165,11 +166,11 @@ ul {
   color: #FEFEFD;
 }
 
-.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li{
+.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li {
   margin-bottom: 16px;
 }
 
-.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li a{
+.header-variant2.header-menu-body .header-menu-body-inner-ul-wrapper ul li a {
   cursor: pointer;
   font-size: 14px;
   line-height: 20px;
@@ -187,6 +188,40 @@ ul {
   border-radius: 29px;
   display: inline-block;
   padding: 4px 12px;
+}
+
+.header-menu-body-inner-img-wrapper .img-text-wrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.header-menu-body-inner-img-wrapper .img-text-wrapper>p:nth-child(2) {
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-500, 500);
+  font-size: 28px;
+  line-height: 30px;
+  max-width: 226px;
+  color: #1B1B1E;
+}
+
+.header-menu-body-inner-img-wrapper .img-text-wrapper>p:last-child a {
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border-radius: 100px;
+  background-color: #1B1B1E;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-400, 400);
+  color: #FFFFFF;
+  text-decoration: none;
+  position: absolute;
+  bottom: -80px;
 }
 
 /* =========================
@@ -245,10 +280,29 @@ ul {
   }
 
   /* .header-menu-body picture img */
-  .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper,
-  .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper {
+  .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper .img-text-wrapper>p:first-child,
+  .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-img-wrapper .img-text-wrapper>p:first-child {
     width: 100%;
     margin-bottom: 39px;
+  }
+
+  .header-menu-body-inner-img-wrapper .img-text-wrapper {
+    margin-bottom: 0;
+  }
+
+  .header-menu-body-inner-img-wrapper .img-text-wrapper>p:nth-child(2) {
+    top: 28px;
+    left: 23px;
+    font-size: 16.71px;
+    line-height: 17.9px;
+    max-width: 226px;
+  }
+
+  .header-menu-body-inner-img-wrapper .img-text-wrapper>p:last-child a {
+    padding: 7px 14px;
+    font-size: 10px;
+    line-height: 12px;
+    bottom: -40px;
   }
 
   /* SHOW HAMBURGER */
