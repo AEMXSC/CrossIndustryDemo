@@ -6,9 +6,13 @@
     padding-top: 112px;
     /* margin-top: 44px !important; */
     margin: 0px;
-        margin-top: 154px !important;
 }
-
+.banner-varient1.promotional-banner-container,
+.banner-varient2.promotional-banner-container,
+.banner-varient3.promotional-banner-container,
+.banner-varient4.promotional-banner-container {
+margin-top: 154px !important;
+}
 .banner-varient1 img {
     margin-bottom: -8px;
     max-width: none;
@@ -109,9 +113,12 @@ max-width: unset;
 }
 
 @media screen and (max-width: 1024px) {
-    .banner-varient1 {
+    .banner-varient1.promotional-banner-container,
+.banner-varient2.promotional-banner-container,
+.banner-varient3.promotional-banner-container,
+.banner-varient4.promotional-banner-container{
         /* margin-top: 90px !important; */
-        margin-top: 153px !important;
+        margin-top: 152px !important;
         background-size: contain;
     }
 
@@ -240,9 +247,17 @@ max-width: unset;
     }
 }
 @media screen and (max-width: 768px) {
-.banner-varient1 {
+.banner-varient1.promotional-banner-container,
+.banner-varient2.promotional-banner-container,
+.banner-varient3.promotional-banner-container,
+.banner-varient4.promotional-banner-container {
         margin-top: 106px !important;
     }
+}
+@media screen and (min-width: 1024px) and(max-width: 1104px) { 
+    .banner-varient1 .bannner-image{
+width: 65.7%;
+}
 }
 /* variant 2 */
 .banner-varient2 .promotionalbanner-content {
