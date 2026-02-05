@@ -3,7 +3,7 @@
 }
 
 .benefits-section-container .default-content-wrapper:first-child {
-    position: absolute;
+    /* position: absolute; */
     top: 23px;
     left: 50px;
 }
@@ -27,7 +27,7 @@
 .benefits-section-container {
     max-width: 1440px;
     margin: 0 auto !important;
-    padding: 100px 88px 120px;
+    padding: 120px 88px;
     /* gap: 32px; */
     gap: 24px;
 }
@@ -61,6 +61,7 @@
 }
 .benefits-section-container .default-content-wrapper:first-child:first-child {
     width: 100%;
+    padding: 0px;
 }
 
 .benefits-section-container .benefits-card {
@@ -133,7 +134,7 @@
     .benefits-section-container {
         flex-direction: column;
         /* padding-top: 136px !important; */
-                padding: 136px 24px 32px !important;
+                padding: 48px 24px 32px !important;
     }
 
     .benefits-section-container .default-content-wrapper:first-child {
@@ -181,7 +182,7 @@
         width: 100% !important;
     }
     .benefits-section-container .default-content-wrapper:first-child h3 {
-        font-size: 21px;
+        font-size: 24px;
     }
 }
 
