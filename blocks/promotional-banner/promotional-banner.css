@@ -254,6 +254,11 @@ max-width: unset;
         margin-top: 106px !important;
     }
 }
+@media screen and (min-width: 1024px) and(max-width: 1104px) { 
+    .banner-varient1 .bannner-image{
+width: 65.7%;
+}
+}
 /* variant 2 */
 .banner-varient2 .promotionalbanner-content {
     display: flex;
