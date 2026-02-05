@@ -139,7 +139,7 @@
     .benefits-section-container .default-content-wrapper:first-child {
         padding: 0px;
         left: 17px;
-        top: 23px;
+        top: 75px;
     }
 
     .benefits-section-container .benefits-card {
@@ -181,7 +181,7 @@
         width: 100% !important;
     }
     .benefits-section-container .default-content-wrapper:first-child h3 {
-        font-size: 24px;
+        font-size: 21px;
     }
 }
 
