@@ -1558,6 +1558,13 @@ margin-bottom: 0px;
     align-items: center;
     margin-bottom: 40px;
 }
+
+.blog-cards .cards-card-body:has([data-aue-type="richtext"]) {
+
+}
+.blog-cards2 .cards-card-body:has([data-aue-type="richtext"]) {
+
+}
 @media screen  and (max-width: 1024px){
   .products.cards-container {
     padding: 48px 24px 84px;
