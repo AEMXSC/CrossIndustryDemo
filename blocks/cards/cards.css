@@ -823,6 +823,7 @@ padding-bottom: 24px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  text-decoration: none;
 }
 .blog-cards .default-content-wrapper .button-container a:hover,
 .blog-cards .default-content-wrapper .button-container a:focus {
@@ -1171,6 +1172,7 @@ margin-bottom: 40px;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
+    text-decoration: none;
 }
 
 .products.section.cards-container > div > p::after {
@@ -1293,6 +1295,7 @@ display: flex;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    text-decoration: none;
 }
 .products .cards > ul > li .cards-card-body p:last-child a:first-child::after {
 display: none;
@@ -1310,6 +1313,7 @@ font-family: var(--DM-Sans, sans-serif);
 font-size: 14px;
 font-weight: 400;
 line-height: 20px;
+text-decoration: none;
 }
 .products a:hover,
 .products a:focus {
