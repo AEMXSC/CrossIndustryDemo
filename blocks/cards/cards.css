@@ -1559,8 +1559,7 @@ margin-bottom: 0px;
     margin-bottom: 40px;
 }
 
-.blog-cards .cards-card-body
-[data-aue-type="richtext"] > p:has(.icon) {
+.blog-cards .cards-card-body[data-aue-type="richtext"] > p:has(.icon) {
 color: var(--off-white, #FEFEFD);
     font-family: var(--DM-Sans, sans-serif);
     font-size: 12px;
