@@ -41,7 +41,7 @@ footer .footer a:hover {
 
 
 .footer-wrapper {
-  background: var(--light-blue, #E2F1FB) !important;
+  background: var(--accent-color, #E2F1FB) !important;
   color: var(--charcoal, #1B1B1E) !important;
 }
 
@@ -51,7 +51,7 @@ footer .footer a:hover {
 
     /* max-width: 1440px;
     margin: 0 auto !important; */
-    background: var(--light-blue, #E2F1FB);
+    background: var(--accent-color, #E2F1FB);
 
     /* padding: 100px 88px 30px; */
     gap: 110px;
