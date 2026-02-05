@@ -1530,6 +1530,14 @@ margin-bottom: 0px;
     display: none;
   }
 
+.products.default-content-wrapper:has([data-aue-type="richtext"]) {
+  display: unset;
+}
+.products :has([data-aue-type="richtext"]) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen  and (max-width: 1024px){
   .products.cards-container {
     padding: 48px 24px 84px;
