@@ -544,6 +544,7 @@ width: 100%;
 
 .blog-cards {
   /* padding: 40px 0; */
+  padding-bottom: 0px;
   max-width: 1440px;
   margin: 0 auto !important;
   padding-top: 60px;
@@ -1154,6 +1155,7 @@ font-family: var(--DM-Sans, sans-serif);
 font-size: 30px;
 font-weight: 500;
 line-height: 40px;
+margin-bottom: 40px;
 }
 .products .button-container a{
     display: flex;
