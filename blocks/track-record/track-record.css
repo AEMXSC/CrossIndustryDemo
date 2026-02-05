@@ -241,6 +241,8 @@
     background: #ffffff;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif; */
+        padding-bottom: 160px;
+    margin-bottom: 0px;
 }
 
 .process-step-varient1 .track-record-wrapper .block>div>div>p {
@@ -506,6 +508,9 @@
     .process-step-varient2 .track-record-wrapper .block .track-record-wrapper-item p:nth-child(2) {
         font-size: 16px;
         margin-bottom: 8px;
+    }
+    .process-step-varient1 {
+        padding-bottom: 32px;
     }
 }
 
