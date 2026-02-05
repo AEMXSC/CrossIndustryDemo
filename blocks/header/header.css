@@ -190,7 +190,7 @@ ul {
 
 .header-menu ul li.active {
   font-weight: bold;
-  border-bottom: 2px solid #c19155;
+  border-bottom: 2px solid var(--secondary, #D79F4B);
   font-weight: var(--font-weight-600, 600);
   color: #1B1B1E;
 }
