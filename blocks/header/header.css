@@ -15,6 +15,63 @@ ul {
 /* =========================
    TOP PROMO BAR
 ========================= */
+
+.header-lang-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  position: absolute;
+  right: 90px;
+}
+
+.header-lang-wrapper .icon-icon-world{
+  padding: 3px 0;
+}
+
+/* globe icon */
+.header-lang-wrapper img {
+  width: 18px;
+  height: 18px;
+  /* filter: invert(1); */
+}
+
+/* remove default p spacing */
+.header-lang-wrapper p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* language list */
+.header-lang-wrapper ul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* hide second language */
+.header-lang-wrapper ul li:nth-child(2) {
+  display: none;
+}
+
+/* dropdown arrow */
+.header-lang-wrapper ul::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+  margin-left: 6px;
+}
 .header-top .default-content-wrapper>a {
   display: block;
 }
@@ -24,12 +81,15 @@ ul {
   color: #fff;
   font-size: 14px;
   text-align: center;
+  position: relative;
 }
 
 .header-top .default-content-wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 12px 0px;
+  display: flex;
+  justify-self: center;
 }
 
 .header-top a {
