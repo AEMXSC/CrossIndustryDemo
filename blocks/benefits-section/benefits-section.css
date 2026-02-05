@@ -180,6 +180,9 @@
         height: 445px !important;
         width: 100% !important;
     }
+    .benefits-section-container .default-content-wrapper:first-child h3 {
+        font-size: 24px;
+    }
 }
 
 .benefits-section-container.benefits-section2 {
