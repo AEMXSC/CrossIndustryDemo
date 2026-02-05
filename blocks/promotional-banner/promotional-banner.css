@@ -247,10 +247,10 @@ max-width: unset;
     }
 }
 @media screen and (max-width: 768px) {
-.banner-varient1,
-.banner-varient2,
-.banner-varient3,
-.banner-varient4 {
+.banner-varient1.promotional-banner-container,
+.banner-varient2.promotional-banner-container,
+.banner-varient3.promotional-banner-container,
+.banner-varient4.promotional-banner-container {
         margin-top: 106px !important;
     }
 }
