@@ -20,8 +20,8 @@ ul {
 }
 
 .header-top {
-  background: #0a3b8f;
-  color: #fff;
+  background: var(--primary, #0a3b8f);
+  color: var(--neutral-0, #fff);
   font-size: 14px;
   text-align: center;
 }
