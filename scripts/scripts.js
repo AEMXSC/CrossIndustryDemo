@@ -149,8 +149,12 @@ async function loadThemeFromPage(themePagePath) {
       }
     }
 
+    let domain = '';
+    if (window.location.href.includes('author-p')) {
+      domain = 'https://bfsi-main--dept-crossindustry-demo--milandevnath-aem.aem.page';
+    }
     // Fetch theme configuration page
-    const resp = await fetch(`${url}.plain.html`);
+    const resp = await fetch(`${domain}${url}.plain.html`);
     if (!resp.ok) {
       console.warn(`Theme configurator not found at ${url}`);
       return;
