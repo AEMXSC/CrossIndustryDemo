@@ -858,6 +858,22 @@ export default async function decorate(block) {
         ul.classList.toggle("active");
       });
     });
+    const sections = document.querySelectorAll(".process-step-varient1");
+    sections.forEach((section) => {
+      const richTextDivs = section.querySelectorAll(
+        'div[data-aue-type="richtext"]',
+      );
+      richTextDivs.forEach((richDiv) => {
+        const parentP = richDiv.closest("p");
+        if (!parentP) return;
+        // move all children of richtext div before the <p>
+        while (richDiv.firstChild) {
+          parentP.parentNode.insertBefore(richDiv.firstChild, parentP);
+        }
+        // remove the empty <p>
+        parentP.remove();
+      });
+    });
   try {
     const iconEl = document.querySelector("header .search.search-icon .icon");
     if (iconEl && window.hlx && window.hlx.codeBasePath) {

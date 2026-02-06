@@ -312,7 +312,7 @@ ul {
   .header-menu .default-content-wrapper {
     flex-direction: column;
     gap: 16px;
-    padding: 32px 0px;
+    padding: 20px 0px;
   }
 
   .header-variant1.header-menu-body .default-content-wrapper,
@@ -386,7 +386,7 @@ ul {
   .nav-hamburger {
     display: block;
     position: absolute;
-    top: 30px;
+    top: 16px;
     left: 16px;
     width: 44px;
     height: 44px;
