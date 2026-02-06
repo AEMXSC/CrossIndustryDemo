@@ -129,6 +129,7 @@ async function loadThemeFromPage(themePagePath) {
       // eslint-disable-next-line no-restricted-syntax
       for (let candidate of candidates) {
         candidate = candidate.includes('.html') ? candidate.replace('.html', '') : candidate;
+        try {
           // eslint-disable-next-line no-await-in-loop
           const testResp = await fetch(`${candidate}.plain.html`);
           if (testResp.ok) {
