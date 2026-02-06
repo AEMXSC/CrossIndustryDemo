@@ -128,8 +128,7 @@ async function loadThemeFromPage(themePagePath) {
       let found = false;
       // eslint-disable-next-line no-restricted-syntax
       for (let candidate of candidates) {
-        try {
-          candidate = candidate.includes('.html') ? candidate.split('.html')[0] : candidate;
+        candidate = candidate.includes('.html') ? candidate.replace('.html', '') : candidate;
           // eslint-disable-next-line no-await-in-loop
           const testResp = await fetch(`${candidate}.plain.html`);
           if (testResp.ok) {
@@ -150,12 +149,8 @@ async function loadThemeFromPage(themePagePath) {
       }
     }
 
-    let domain = '';
-    if (window.location.href.includes('author-p')) {
-      domain = 'https://main--dept-crossindustry-demo--milandevnath-aem.aem.page';
-    }
     // Fetch theme configuration page
-    const resp = await fetch(`${domain}${url}.plain.html`);
+    const resp = await fetch(`${url}.plain.html`);
     if (!resp.ok) {
       console.warn(`Theme configurator not found at ${url}`);
       return;
