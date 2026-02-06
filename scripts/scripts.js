@@ -127,8 +127,9 @@ async function loadThemeFromPage(themePagePath) {
       // Search for first available theme-configurator
       let found = false;
       // eslint-disable-next-line no-restricted-syntax
-      for (const candidate of candidates) {
+      for (let candidate of candidates) {
         try {
+          candidate = candidate.includes('.html') ? candidate.split('.html')[0] : candidate;
           // eslint-disable-next-line no-await-in-loop
           const testResp = await fetch(`${candidate}.plain.html`);
           if (testResp.ok) {
@@ -151,7 +152,7 @@ async function loadThemeFromPage(themePagePath) {
 
     let domain = '';
     if (window.location.href.includes('author-p')) {
-      domain = 'https://bfsi-main--dept-crossindustry-demo--milandevnath-aem.aem.page';
+      domain = 'https://main--dept-crossindustry-demo--milandevnath-aem.aem.page';
     }
     // Fetch theme configuration page
     const resp = await fetch(`${domain}${url}.plain.html`);
