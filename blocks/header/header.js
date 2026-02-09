@@ -747,7 +747,7 @@ export default async function decorate(block) {
       const ps = wrapper.querySelectorAll(":scope p");
       const ul = wrapper.querySelector(":scope > ul");
 
-      if (ps.length >= 2 && ul) {
+      // if (ps.length >= 2 && ul) {
         const langWrapper = document.createElement("div");
         langWrapper.className = "header-lang-wrapper";
 
@@ -757,7 +757,7 @@ export default async function decorate(block) {
         // move second <p> and <ul> inside it
         langWrapper.appendChild(ps[1]);
         langWrapper.appendChild(ul);
-      }
+      // }
     }
   
 
