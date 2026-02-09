@@ -746,6 +746,8 @@ export default async function decorate(block) {
     if (wrapper) {
       const ps = wrapper.querySelectorAll(":scope >p");
       const ul = wrapper.querySelector(":scope > ul");
+      console.log(ps,"ps");
+      
 
       if (ps.length >= 2 && ul) {
         const langWrapper = document.createElement("div");
@@ -753,8 +755,6 @@ export default async function decorate(block) {
 
         // insert wrapper before second <p>
         ps[1].before(langWrapper);
-        ps[2].before(langWrapper);
-
         // move second <p> and <ul> inside it
         langWrapper.appendChild(ps[1]);
         langWrapper.appendChild(ul);
