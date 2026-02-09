@@ -744,7 +744,7 @@ export default async function decorate(block) {
     );
 
     if (wrapper) {
-      const ps = wrapper.querySelectorAll(":scope > p");
+      const ps = wrapper.querySelectorAll(":scope p");
       const ul = wrapper.querySelector(":scope > ul");
 
       if (ps.length >= 2 && ul) {
@@ -856,22 +856,6 @@ export default async function decorate(block) {
       const header = ul.querySelector("li:first-child");
       header.addEventListener("click", () => {
         ul.classList.toggle("active");
-      });
-    });
-    const sections = document.querySelectorAll(".process-step-varient1");
-    sections.forEach((section) => {
-      const richTextDivs = section.querySelectorAll(
-        'div[data-aue-type="richtext"]',
-      );
-      richTextDivs.forEach((richDiv) => {
-        const parentP = richDiv.closest("p");
-        if (!parentP) return;
-        // move all children of richtext div before the <p>
-        while (richDiv.firstChild) {
-          parentP.parentNode.insertBefore(richDiv.firstChild, parentP);
-        }
-        // remove the empty <p>
-        parentP.remove();
       });
     });
   try {
