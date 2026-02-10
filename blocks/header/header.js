@@ -792,15 +792,18 @@ export default async function decorate(block) {
       const ps = wrapper.querySelectorAll(":scope > p");
       const ul = wrapper.querySelector(":scope > ul");
 
-      if (ps.length >= 2 && ul) {
+      // find the <p> that contains a <span>
+      const pWithSpan = Array.from(ps).find((p) => p.querySelector("span"));
+
+      if (pWithSpan && ul) {
         const langWrapper = document.createElement("div");
         langWrapper.className = "header-lang-wrapper";
 
-        // insert wrapper before second <p>
-        ps[1].before(langWrapper);
+        // insert wrapper before the <p> that has span
+        pWithSpan.before(langWrapper);
 
-        // move second <p> and <ul> inside it
-        langWrapper.appendChild(ps[1]);
+        // move the <p> and <ul> inside wrapper
+        langWrapper.appendChild(pWithSpan);
         langWrapper.appendChild(ul);
       }
     }
@@ -903,21 +906,26 @@ export default async function decorate(block) {
         ul.classList.toggle("active");
       });
     });
-    const sections = document.querySelectorAll(".process-step-varient1");
-    sections.forEach((section) => {
-      const richTextDivs = section.querySelectorAll(
-        'div[data-aue-type="richtext"]',
-      );
-      richTextDivs.forEach((richDiv) => {
-        const parentP = richDiv.closest("p");
-        if (!parentP) return;
-        // move all children of richtext div before the <p>
-        while (richDiv.firstChild) {
-          parentP.parentNode.insertBefore(richDiv.firstChild, parentP);
-        }
-        // remove the empty <p>
-        parentP.remove();
-      });
+
+    const langWrapper = document.querySelector(".header-lang-wrapper");
+    const ul = langWrapper.querySelector("ul");
+
+    langWrapper.addEventListener("click", () => {
+      langWrapper.classList.toggle("open");
+    });
+    ul.addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+        const first = ul.children[0];
+        const clicked = e.target;
+
+        // swap text
+        [first.textContent, clicked.textContent] = [
+          clicked.textContent,
+          first.textContent,
+        ];
+
+        wrapper.classList.remove("open");
+      }
     });
   try {
     const iconEl = document.querySelector("header .search.search-icon .icon");
