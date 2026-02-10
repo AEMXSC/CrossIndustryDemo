@@ -88,6 +88,9 @@ blogCards(block);
   if (classlistExists.contains("hitech-variant1") || classlistExists.contains("hitech-variant2") || classlistExists.contains("hitech-variant3")) {
 hitecgGalleryComp(block)
   }
+  if(classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
+    hitechArticles(block)
+  }
     }
 
 
@@ -259,6 +262,111 @@ function hitechVariant2() {
       el: '.swiper-pagination',
       clickable: true,
       type: "bullets",
+    }
+  });
+}
+
+
+function hitechArticles(block) {
+  let classlistExists = block.closest(".cards-container").classList;
+  block.classList.add('swiper');
+  block.querySelector("ul").classList.add("swiper-wrapper");
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+  const paginationEl = document.createElement('div');
+  paginationEl.classList.add('swiper-pagination');
+  block.appendChild(paginationEl);
+  if (classlistExists.contains("hitech-articles1")) {
+    hitechArticles1();
+  }
+  if (classlistExists.contains("hitech-articles2")) {
+    hitechArticles2();
+  }
+  if (classlistExists.contains("hitech-articles3")) {
+    let prevButton = document.createElement('div');
+    prevButton.classList.add('swiper-button-prev');
+    block.appendChild(prevButton);
+    let nextbutton = document.createElement('div');
+    nextbutton.classList.add('swiper-button-next');
+    block.appendChild(nextbutton);
+    hitechArticles3();
+  }
+}
+function hitechArticles1() {
+  Swiper(".hitech-articles1 .swiper", {
+    slidesPerView: 3,
+    // slideToClickedSlide: true,
+    spaceBetween: 12,
+    grabCursor: true,
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+}
+
+function hitechArticles2() {
+  Swiper(".hitech-articles2 .swiper", {
+    slidesPerView: 3,
+    slideToClickedSlide: true,
+    spaceBetween: 12,
+    grabCursor: true,
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }
+  });
+}
+
+function hitechArticles3() {
+  Swiper(".hitech-articles3 .swiper", {
+    slidesPerView: 3,
+    slideToClickedSlide: true,
+    spaceBetween: 12,
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      type: "bullets",
+    },
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+      },
+      767: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
     }
   });
 }
