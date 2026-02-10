@@ -412,9 +412,9 @@ width: 42.4%;
     position: relative;
 }
 
-.hitech-banner-variant2 .promotional-banner-wrapper {
+/* .hitech-banner-variant2 .promotional-banner-wrapper {
     width: 82.2%;
-}
+} */
 
 .hitech-banner-variant2 .promotionalbanner-content {
     display: flex;
@@ -422,7 +422,7 @@ width: 42.4%;
     align-items: center;
     flex-direction: column-reverse;
     text-align: center;
-    width: 82.2%;
+    /* width: 82.2%; */
 }
 
 .hitech-banner-variant2 .bannner-image {
