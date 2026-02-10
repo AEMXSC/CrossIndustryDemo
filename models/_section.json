@@ -24,6 +24,34 @@
       "fields": [
         {
           "component": "select",
+          "name": "section-name",
+          "value": "",
+          "label": "Section Type",
+          "description": "Select the section type to customize available style options",
+          "valueType": "string",
+          "options": [
+            { "name": "Default/Generic", "value": "" },
+            { "name": "Hero Section", "value": "hero-section" },
+            { "name": "BFSI Section", "value": "bfsi-section" },
+            { "name": "Promo Section", "value": "promo-section" },
+            { "name": "Healthcare Section", "value": "healthcare-section" },
+            { "name": "Product Section", "value": "product-section" },
+            { "name": "Testimonial Section", "value": "testimonial-section" },
+            { "name": "Content Section", "value": "content-section" },
+            { "name": "CTA Section", "value": "cta-section" },
+            { "name": "Footer Section", "value": "footer-section" }
+          ]
+        },
+        {
+          "component": "multiselect",
+          "name": "section-styles",
+          "value": "",
+          "label": "Section Styles",
+          "description": "Select one or more styles for this section. Options change based on Section Type.",
+          "valueType": "string"
+        },
+        {
+          "component": "select",
           "name": "sec-spacing",
           "value": "",
           "label": "Spacing Top (padding top)",
