@@ -516,13 +516,6 @@ function decorateSections(main) {
             .filter((style) => style)
             .map((style) => toClassName(style.trim()));
           styles.forEach((style) => section.classList.add(style));
-        } else if (key === 'section-styles') {
-          const sectionStyles = meta[key]
-            .split(',')
-            .filter((style) => style)
-            .map((style) => toClassName(style.trim()));
-          section.dataset.sectionStyles = sectionStyles.join(',');
-          sectionStyles.forEach((style) => section.classList.add(style));
         } else {
           section.dataset[toCamelCase(key)] = meta[key];
         }

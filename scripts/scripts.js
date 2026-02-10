@@ -28,9 +28,6 @@ import {
   getHostname,
 } from './utils.js';
 
-// Import section styles support
-import { applySectionStylesToContainer } from './section-styles-editor.js';
-
 /**
  * Loads and applies theme configuration from spreadsheet
  * Fetches CSS variables from theme-configuration page and injects as <style> tag
@@ -467,9 +464,6 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateDMImages(main);
-  
-  // Apply dynamic section styles based on section-name
-  applySectionStylesToContainer(main);
 }
 
 
