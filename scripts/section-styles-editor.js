@@ -66,7 +66,7 @@ function updateSectionStylesOptions(sectionName, sectionElement) {
   
   // If we're in the Universal Editor dialog
   if (window.Granite?.UI) {
-    updateGraniteUIMultiSelect(availableStyles);
+    updateGraniteUIMultiSelect(availableStyles, sectionElement);
   } else {
     // Modern Universal Editor approach
     updateModernEditorMultiSelect(availableStyles, sectionElement);
@@ -77,10 +77,18 @@ function updateSectionStylesOptions(sectionName, sectionElement) {
  * Update Granite UI (Classic AEM) multi-select component
  * @param {Array} styleOptions - Available style options
  */
-function updateGraniteUIMultiSelect(styleOptions) {
+function updateGraniteUIMultiSelect(styleOptions, sectionElement) {
   // Find the section-styles coral-multiselect element
   const multiSelect = document.querySelector('[name="./section-styles"]');
   if (!multiSelect) return;
+
+  // Capture currently selected values before clearing
+  const dataValue = sectionElement?.dataset?.sectionStyles || '';
+  const currentValue = dataValue || multiSelect.value || '';
+  const selectedValues = currentValue
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
 
   // Clear existing options
   multiSelect.items.clear();
@@ -90,8 +98,17 @@ function updateGraniteUIMultiSelect(styleOptions) {
     const item = document.createElement('coral-multiselect-item');
     item.value = option.value;
     item.textContent = option.name;
+    if (selectedValues.includes(option.value)) {
+      item.selected = true;
+    }
     multiSelect.items.add(item);
   });
+
+  // Remove selections that are no longer valid
+  const validSelections = selectedValues.filter((value) =>
+    styleOptions.some((option) => option.value === value)
+  );
+  multiSelect.value = validSelections.join(',');
 }
 
 /**

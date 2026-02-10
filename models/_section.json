@@ -48,7 +48,15 @@
           "value": "",
           "label": "Section Styles",
           "description": "Select one or more styles for this section. Options change based on Section Type.",
-          "valueType": "string"
+          "valueType": "string",
+          "options": [
+            { "name": "Light Background", "value": "light-bg" },
+            { "name": "Dark Background", "value": "dark-bg" },
+            { "name": "Full Width", "value": "full-width" },
+            { "name": "Contained", "value": "contained" },
+            { "name": "Padded", "value": "padded" },
+            { "name": "No Padding", "value": "no-padding" }
+          ]
         },
         {
           "component": "select",

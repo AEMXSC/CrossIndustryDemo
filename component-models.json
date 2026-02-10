@@ -180,6 +180,86 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "select",
+        "name": "section-name",
+        "label": "Section Type",
+        "description": "Select the section archetype to tailor the available style choices",
+        "options": [
+          {
+            "name": "Default / Generic",
+            "value": ""
+          },
+          {
+            "name": "Hero Section",
+            "value": "hero-section"
+          },
+          {
+            "name": "BFSI Section",
+            "value": "bfsi-section"
+          },
+          {
+            "name": "Promo Section",
+            "value": "promo-section"
+          },
+          {
+            "name": "Healthcare Section",
+            "value": "healthcare-section"
+          },
+          {
+            "name": "Product Section",
+            "value": "product-section"
+          },
+          {
+            "name": "Testimonial Section",
+            "value": "testimonial-section"
+          },
+          {
+            "name": "Content Section",
+            "value": "content-section"
+          },
+          {
+            "name": "CTA Section",
+            "value": "cta-section"
+          },
+          {
+            "name": "Footer Section",
+            "value": "footer-section"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "section-styles",
+        "label": "Section Styles",
+        "description": "Choose one or more styles. The available values adapt to the selected Section Type.",
+        "options": [
+          {
+            "name": "Light Background",
+            "value": "light-bg"
+          },
+          {
+            "name": "Dark Background",
+            "value": "dark-bg"
+          },
+          {
+            "name": "Full Width",
+            "value": "full-width"
+          },
+          {
+            "name": "Contained",
+            "value": "contained"
+          },
+          {
+            "name": "Padded",
+            "value": "padded"
+          },
+          {
+            "name": "No Padding",
+            "value": "no-padding"
+          }
+        ]
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",
