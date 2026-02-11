@@ -284,6 +284,18 @@
           {
             "name": "hitech Articles v3",
             "value": "hitech-articles3"
+          },
+          {
+            "name": "hitech Footer v1",
+            "value": "hitech-footerv1"
+          },
+          {
+            "name": "hitech Footer v2",
+            "value": "hitech-footerv2"
+          },
+          {
+            "name": "hitech Footer v3",
+            "value": "hitech-footerv3"
           }
         ]
       }
