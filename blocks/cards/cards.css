@@ -2202,7 +2202,7 @@ padding: 40px 24px;
   .hitech-articles3 .cards > ul > li {
     width: 65.8% !important;
   }
-  .hitech-articles3 .cards > ul > li .cards-card-body h4 {
+  .hitech-articles3 .cards-wrapper .cards > ul > li .cards-card-body h4 {
     font-size: 16px;
   }
 }
