@@ -1982,7 +1982,7 @@ line-height: 24px;
 }
 .hitech-articles3.cards-container .swiper-button-prev{
   top: -70px;
-  right: 30px;
+  left: 90%;
 }
 .hitech-articles1 .cards > ul > li,
 .hitech-articles2 .cards > ul > li,
@@ -2037,14 +2037,23 @@ padding: 0px;
   .hitech-articles1 .cards > ul > li .cards-card-body h4 {
   text-transform: uppercase;
 }
-  .hitech-articles2 .cards > ul > li .cards-card-body p,
-  .hitech-articles3 .cards > ul > li .cards-card-body p {
+  .hitech-articles2 .cards > ul > li .cards-card-body h4 + p,
+  .hitech-articles3 .cards > ul > li .cards-card-body h4 + p {
   color: #696969;
     font-family: var(--Inter, sans-serif);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     margin: 12px 0px 24px 0px;
+}
+.hitech-articles3 .cards > ul > li .cards-card-body h4 +  p {
+  display: none;
+  color: #5E5E60;
+font-family: var(--Inter, sans-serif);
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+margin: 0px;
 }
 .hitech-articles3 .cards > ul > li .cards-card-body p:first-child {
 padding: 4px 12px;
@@ -2067,6 +2076,15 @@ padding: 4px 12px;
   /* align-items: center; */
   text-decoration: none;
   gap: 8px;
+
+  color: var(--Quantum-Violet, #7A63FF);
+font-family: var(--Space-Grotesk, sans-serif);
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+}
+.hitech-articles3 .cards > ul > li .cards-card-body p a span{
+  display: none;
 }
 .hitech-articles2 .cards > ul > li .cards-card-body p img,
 .hitech-articles3 .cards > ul > li .cards-card-body p img {
@@ -2099,7 +2117,20 @@ position: relative;
     background: var(--gray-medium, #929292);
     border-radius: 50%;
 }
-
+.hitech-articles3 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+border-radius: 6px;
+    background: var(--Nebula-Navy, #10172A);
+    height: 8px;
+    width: 29px;
+}
+.hitech-articles3 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-horizontal.swiper-pagination-bullets {
+    display: none;
+  }
+  .hitech-articles1 .cards > ul > li img,
+  .hitech-articles2 .cards > ul > li img,
+.hitech-articles3 .cards > ul > li img {
+  object-fit: fill;
+}
 /* .swiper-button-prev {
   background-image: url("/content/dam/dept-crossIndustry/hi-tech-images/nex-arrow.svg");
     } */
@@ -2107,6 +2138,8 @@ position: relative;
   .hitech-articles1.cards-container,
   .hitech-articles2.cards-container  {
         padding: 40px 24px 136px 24px;
+            position: relative;
+    gap: 32px;
   }
 .hitech-articles3.cards-container {
 padding: 40px 24px;
@@ -2114,12 +2147,14 @@ padding: 40px 24px;
 .hitech-articles3 .cards .cards-card-body ul {
   display: none;
 }
-   .hitech-articles1 .default-content-wrapper h2{
+   .hitech-articles1 .default-content-wrapper h2, 
+   .hitech-articles2 .default-content-wrapper h2,
+   .hitech-articles3 .default-content-wrapper h2{
         font-size: 24px;
     line-height: 32px;
    }
    .hitech-articles1 .cards > ul > li, .hitech-articles2 .cards > ul > li, .hitech-articles3 .cards > ul > li {
-    width: 37.8% !important;
+    width: 51.8% !important;
    }
   .hitech-articles1 .cards-wrapper .cards > ul > li .cards-card-body h4, 
   .hitech-articles2 .cards-wrapper .cards > ul > li .cards-card-body h4 {
@@ -2139,13 +2174,35 @@ padding: 40px 24px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
-  .hitech-articles1.cards-container, .hitech-articles2.cards-container {
-    position: relative;
-  }
+
   .hitech-articles1 .default-content-wrapper .button-container, .hitech-articles2 .default-content-wrapper .button-container {
         position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .hitech-articles3 .cards > ul > li .cards-card-body h4 +  p {
+    display: block;
+    margin: 12px 0px 16px;
+  }
+
+  .hitech-articles2 .cards > ul > li .cards-card-body p a, .hitech-articles3 .cards > ul > li .cards-card-body p a  {
+    font-size: 14px;
+  }
+  .hitech-articles3.cards-container .cards-wrapper .cards > ul {
+    margin-bottom: 36px;
+  }
+  .hitech-articles3 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-horizontal.swiper-pagination-bullets {
+    display: block;
+  }
+  .hitech-articles3.cards-container .swiper-button-prev,
+  .hitech-articles3.cards-container .swiper-button-next {
+    display: none;
+  }
+  .hitech-articles3 .cards > ul > li {
+    width: 65.8% !important;
+  }
+  .hitech-articles3 .cards > ul > li .cards-card-body h4 {
+    font-size: 16px;
   }
 }

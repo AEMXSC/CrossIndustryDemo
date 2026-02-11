@@ -330,7 +330,7 @@ function hitechArticles2() {
         slidesPerView: 1.5,
       },
       767: {
-        slidesPerView: 2,
+        slidesPerView: 1.5,
       },
       1024: {
         slidesPerView: 3,
@@ -362,7 +362,7 @@ function hitechArticles3() {
         slidesPerView: 1.5,
       },
       767: {
-        slidesPerView: 2,
+        slidesPerView: 1.5,
       },
       1024: {
         slidesPerView: 3,
