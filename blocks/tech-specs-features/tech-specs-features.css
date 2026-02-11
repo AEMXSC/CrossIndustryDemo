@@ -1,0 +1,12 @@
+header,
+footer,
+.hitech-variant1,
+.hitech-variant2,
+.promotional-banner-container,
+.cards-container{
+    display: none;
+}
+
+.tech-specs-features-container{
+    background: burlywood;
+}
