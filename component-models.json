@@ -6398,6 +6398,24 @@
     ]
   },
   {
+    "id": "techspecsfeatures",
+    "fields": [
+      {
+        "component": "select",
+        "name": "classes",
+        "value": "",
+        "label": "select type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Tech Specs Features Type 1",
+            "value": "techspecsfeatures-type-1"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "theme-configurator",
     "fields": [
       {

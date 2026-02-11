@@ -13,7 +13,7 @@ export default function decorate(block) {
   block.appendChild(wrapper);
   if (block.classList.contains("process-step-type-3")) {
     const items = block.querySelectorAll(
-      ".track-record-wrapper-item > div > div"
+      ".track-record-wrapper-item > div > div",
     );
 
     items.forEach((contentDiv) => {
@@ -72,3 +72,26 @@ export default function decorate(block) {
     });
   });
 }
+
+const hardCodeDomains = "https://publish-p153659-e1796191.adobeaemcloud.com/";
+const domin = window.location.origin.includes("localhost")
+  ? hardCodeDomains
+  : window.location.origin;
+const url = "/graphql/execute.json/global/hi-tech-component";
+async function fetcData() {
+  try {
+    const response = await fetch(domin + url);
+    const data = await response.json();
+    const item = data?.data?.hiTechModelList?.items?.[0];
+    if (!item) return;
+    const cardDetails = item.cardNoLabel.map((no, index) => ({
+      cardNoLabel: no,
+      cardTitleLabel: item.cardTitleLabel[index]?.html || "",
+      cardDescriptionLabel: item.cardDescriptionLabel[index]?.html || "",
+    }));
+    console.log("Card Details Object:", cardDetails);
+  } catch (error) {
+    console.error("Error fetching hi-tech data:", error);
+  }
+}
+fetcData(); 
