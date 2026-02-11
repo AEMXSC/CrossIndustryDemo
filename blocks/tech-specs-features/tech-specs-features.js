@@ -8,19 +8,19 @@ async function fetcData() {
     const response = await fetch(domin + url);
     const data = await response.json();
     const item = data?.data?.hiTechModelList?.items?.[0];
+    const label = [item?.titleLabel, item?.descriptionLabel]; ;
     if (!item) return;
     const cardDetails = item.cardNoLabel.map((no, index) => ({
       cardNoLabel: no,
       cardTitleLabel: item.cardTitleLabel[index]?.html || "",
       cardDescriptionLabel: item.cardDescriptionLabel[index]?.html || "",
     }));
-    console.log("Card Details Object:", cardDetails);
+    return { cardDetails, label };
   } catch (error) {
     console.error("Error fetching hi-tech data:", error);
   }
 }
-fetcData();
-export default function decorate(block) {
+export default async function decorate(block) {
   /*  Variant logic */
   const container = block.closest(".tech-specs-features-container");
   const classes = block.classList;
@@ -32,5 +32,26 @@ export default function decorate(block) {
   const matchKey = Object.keys(TYPE_MAP).find((key) => classes.contains(key));
   const { variant } = TYPE_MAP[matchKey] || TYPE_MAP["type-1"];
   container?.classList.add(variant);
-  console.log(block, "tech");
+
+  /* HTML */
+  const wrapper = block.querySelector("div");
+  wrapper.classList.add("tech-specs-features-inner-wrapper");
+  const leftSide = wrapper.querySelector("div");
+  leftSide.className = "tech-specs-features-left-side";
+  const rightSide = document.createElement("div");
+  rightSide.className = "tech-specs-features-right-side";
+  wrapper.appendChild(rightSide); 
+  const data = await fetcData();
+  console.log(data, "card");
+  leftSide.innerHTML = `<h2>${data?.label?.[0] || ""}</h2>
+    ${data?.label?.[1]?.html || ""}
+  `;
+  rightSide.innerHTML = data?.cardDetails
+    ?.map((card) => `<div class="tech-specs-features-card">
+    <p>${card.cardNoLabel || ""}</p>
+    ${card.cardTitleLabel || ""}
+    ${card.cardDescriptionLabel || ""}
+  </div>`,
+    )
+    .join("");
 }
