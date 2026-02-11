@@ -46,6 +46,14 @@
             {
               "name": "Tech Specs Features Type 1",
               "value": "tech-specs-features-type-1"
+            },
+            {
+              "name": "Tech Specs Features Type 2",
+              "value": "tech-specs-features-type-2"
+            },
+            {
+              "name": "Tech Specs Features Type 3",
+              "value": "tech-specs-features-type-3"
             }
           ]
         }

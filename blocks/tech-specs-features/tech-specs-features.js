@@ -26,8 +26,8 @@ export default function decorate(block) {
   const classes = block.classList;
   const TYPE_MAP = {
     "tech-specs-features-type-1": { variant: "tech-specs-features-varient1" },
-    "tech-specs-features-type-1": { variant: "tech-specs-features-varient2" },
-    "tech-specs-features-type-1": { variant: "tech-specs-features-varient3" },
+    "tech-specs-features-type-2": { variant: "tech-specs-features-varient2" },
+    "tech-specs-features-type-3": { variant: "tech-specs-features-varient3" },
   };
   const matchKey = Object.keys(TYPE_MAP).find((key) => classes.contains(key));
   const { variant } = TYPE_MAP[matchKey] || TYPE_MAP["type-1"];
