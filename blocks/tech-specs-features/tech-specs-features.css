@@ -138,4 +138,98 @@
 }
 .tech-specs-features-varient2 .tech-specs-features-wrapper .tech-specs-features-type-2 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p:nth-of-type(3) {
   display: none;
-}/*# sourceMappingURL=tech-specs-features.css.map */
+}
+
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-left-side {
+  width: 32.4%;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-left-side {
+    width: 100%;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-left-side h2 {
+  font-family: var(--DM-Sans, sans-serif);
+  margin-bottom: 16px;
+  font-weight: var(--font-weight-400, 400);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  color: #373739;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-left-side h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-left-side p {
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-400, 400);
+  font-size: 14px;
+  line-height: 20px;
+  color: #5C5D63;
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side {
+  width: 47.2%;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side {
+    width: 100%;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card {
+  padding: 32px 0px 48px 12px;
+  border-bottom: 0.7px solid;
+  border-image-source: linear-gradient(90deg, rgba(122, 99, 255, 0) -12.25%, rgba(122, 99, 255, 0.8) 51.51%, rgba(122, 99, 255, 0) 116.5%);
+  border-image-slice: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 58px;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card {
+    flex-direction: column;
+    gap: 8px;
+    padding: 36px 0px 36px 12px;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p {
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-400, 400);
+  font-size: 48px;
+  line-height: 52px;
+  color: #10172A;
+}
+@media (max-width: 768px) {
+  .tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p {
+    margin-bottom: 8px;
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card .tech-specs-features-card-content > p:nth-of-type(1) {
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-500, 500);
+  color: #1B1B1E;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 16px;
+}
+.tech-specs-features-varient3 .tech-specs-features-wrapper .tech-specs-features-type-3 .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card .tech-specs-features-card-content > p:nth-of-type(2) {
+  font-family: var(--DM-Sans, sans-serif);
+  font-weight: var(--font-weight-400, 400);
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F4F52;
+}

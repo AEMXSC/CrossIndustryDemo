@@ -22,6 +22,7 @@ async function fetcData() {
 }
 export default async function decorate(block) {
   /*  Variant logic */
+  const checkClasse =  block.classList.contains("tech-specs-features-type-3");
   const container = block.closest(".tech-specs-features-container");
   const classes = block.classList;
   const TYPE_MAP = {
@@ -42,16 +43,27 @@ export default async function decorate(block) {
   rightSide.className = "tech-specs-features-right-side";
   wrapper.appendChild(rightSide); 
   const data = await fetcData();
-  console.log(data, "card");
   leftSide.innerHTML = `<h2>${data?.label?.[0] || ""}</h2>
     ${data?.label?.[1]?.html || ""}
   `;
-  rightSide.innerHTML = data?.cardDetails
+  if(checkClasse){
+    rightSide.innerHTML = data?.cardDetails?.map((card) => `
+    <div class="tech-specs-features-card">
+     <p>${card.cardNoLabel || ""}</p>
+      <div class="tech-specs-features-card-content">
+      ${card.cardTitleLabel || ""}
+      ${card.cardDescriptionLabel || ""}
+      </div>
+    </div>`,
+    ).join("");
+  }else(
+    rightSide.innerHTML = data?.cardDetails
     ?.map((card) => `<div class="tech-specs-features-card">
     <p>${card.cardNoLabel || ""}</p>
     ${card.cardTitleLabel || ""}
     ${card.cardDescriptionLabel || ""}
   </div>`,
     )
-    .join("");
+    .join("")
+  )
 }
