@@ -180,9 +180,42 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "select",
+        "name": "sectionType",
+        "label": "Section Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": "default"
+          },
+          {
+            "name": "Header",
+            "value": "header"
+          },
+          {
+            "name": "Footer",
+            "value": "footer"
+          },
+          {
+            "name": "Accordion",
+            "value": "accordion"
+          }
+        ]
+      },
+      {
         "component": "multiselect",
-        "name": "style",
+        "name": "styleDefault",
         "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "default"
+          ]
+        },
         "options": [
           {
             "name": "Default",
@@ -200,7 +233,7 @@
                 "value": "blog-cards2"
               },
               {
-                "name": "Products Default Class",
+                "name": "Products Default",
                 "value": "products"
               },
               {
@@ -216,24 +249,68 @@
                 "value": "product-variant3"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleHeader",
+        "label": "Header Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "header"
+          ]
+        },
+        "options": [
           {
-            "name": "Accordion",
+            "name": "Header",
             "children": [
               {
-                "name": "Accordion-Variant 1",
-                "value": "accordion-variant1"
+                "name": "Header Top",
+                "value": "header-top"
               },
               {
-                "name": "Accordion-Variant 2",
-                "value": "accordion-variant2"
+                "name": "Header Menu",
+                "value": "header-menu"
               },
               {
-                "name": "Accordion-Variant 3",
-                "value": "accordion-variant3"
+                "name": "Header Menu Body",
+                "value": "header-menu-body"
+              },
+              {
+                "name": "Header Variant 1",
+                "value": "header-variant1"
+              },
+              {
+                "name": "Header Variant 2",
+                "value": "header-variant2"
+              },
+              {
+                "name": "Header Variant 3",
+                "value": "header-variant3"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleFooter",
+        "label": "Footer Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "footer"
+          ]
+        },
+        "options": [
           {
             "name": "Footer",
             "children": [
@@ -254,33 +331,37 @@
                 "value": "footer-variant3"
               }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleAccordion",
+        "label": "Accordion Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "accordion"
+          ]
+        },
+        "options": [
           {
-            "name": "Header",
+            "name": "Accordion",
             "children": [
               {
-                "name": "Header top",
-                "value": "header-top"
+                "name": "Accordion Variant 1",
+                "value": "accordion-variant1"
               },
               {
-                "name": "Header menu",
-                "value": "header-menu"
+                "name": "Accordion Variant 2",
+                "value": "accordion-variant2"
               },
               {
-                "name": "Header menu body",
-                "value": "header-menu-body"
-              },
-              {
-                "name": "Header Variant 1",
-                "value": "header-variant1"
-              },
-              {
-                "name": "Header Variant 2",
-                "value": "header-variant2"
-              },
-              {
-                "name": "Header Variant 3",
-                "value": "header-variant3"
+                "name": "Accordion Variant 3",
+                "value": "accordion-variant3"
               }
             ]
           }
