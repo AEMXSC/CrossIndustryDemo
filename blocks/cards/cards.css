@@ -2036,7 +2036,7 @@ margin: 0px;
 }
 .hitech-articles1 .default-content-wrapper .button-container,
 .hitech-articles2 .default-content-wrapper .button-container {
-    height: 48px;
+    /* height: 48px; */
     padding: 9px 24px;
     border-radius: 4px;
 background: #10172A;
