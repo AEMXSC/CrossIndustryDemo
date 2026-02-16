@@ -371,7 +371,7 @@
                 "value": "benefits-section1"
               },
               {
-                "name": "Benefits Variant 1",
+                "name": "Benefits Variant 2",
                 "value": "benefits-section2"
               }
             ]
@@ -763,23 +763,6 @@
   {
     "id": "benefitssection",
     "fields": [
-      {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "select type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Type 1",
-            "value": "Type 1"
-          },
-          {
-            "name": "Type 2",
-            "value": "Type 2"
-          }
-        ]
-      },
       {
         "component": "reference",
         "valueType": "string",
