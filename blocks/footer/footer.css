@@ -51,12 +51,7 @@ footer .footer a:hover {
 
     /* max-width: 1440px;
     margin: 0 auto !important; */
-<<<<<<< HEAD
     /* background: var(--light-blue, #E2F1FB); */
-=======
-    background: var(--accent-color, #E2F1FB);
-
->>>>>>> efdf1c3ea78dc94b0dd89185dad5f406bffac729
     /* padding: 100px 88px 30px; */
     gap: 110px;
 }

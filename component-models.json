@@ -334,6 +334,43 @@
           {
             "name": "Accordion",
             "value": "accordion"
+          },
+          {
+            "name": "Blogs",
+            "value": "blogs"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleBlogs",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "blogs"
+          ]
+        },
+        "options": [
+          {
+            "name": "Blogs",
+            "children": [
+              {
+                "name": "Highlight",
+                "value": "highlight"
+              },
+              {
+                "name": "Blogs v1",
+                "value": "blog-cards"
+              },
+              {
+                "name": "Blogs v2",
+                "value": "blog-cards2"
+              }
+            ]
           }
         ]
       },
