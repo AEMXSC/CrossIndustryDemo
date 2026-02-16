@@ -2069,12 +2069,19 @@ line-height: 24px;
   display: flex;
   /* overflow: hidden; */
 }
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
 .hitech-articles3.cards-container .swiper-button-next{
-  top: -70px;
+  /* top: -70px; */
+  position: unset;
 }
 .hitech-articles3.cards-container .swiper-button-prev{
-  top: -70px;
-  left: 90%;
+  /* top: -70px;
+  left: 90%; */
+  position: unset;
 }
 .hitech-articles1 .cards > ul > li,
 .hitech-articles2 .cards > ul > li,
