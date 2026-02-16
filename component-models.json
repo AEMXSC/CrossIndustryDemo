@@ -342,6 +342,39 @@
           {
             "name": "Products",
             "value": "products"
+          },
+          {
+            "name": "Benefits",
+            "value": "benifits"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleBenefits",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "benefits"
+          ]
+        },
+        "options": [
+          {
+            "name": "Benefits",
+            "children": [
+              {
+                "name": "Benefits Variant 1",
+                "value": "benefits-section1"
+              },
+              {
+                "name": "Benefits Variant 1",
+                "value": "benefits-section2"
+              }
+            ]
           }
         ]
       },
