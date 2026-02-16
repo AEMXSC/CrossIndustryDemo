@@ -65,8 +65,45 @@
                         {
                             "name": "Footer",
                             "value": "footer"  
+                        },
+                        {
+                            "name": "HitechGallery",
+                            "value": "hitechgallery"  
                         }
 
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleHitechGallery",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "hitechgallery"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "HitechGallery",
+                            "children": [
+                            {
+                                "name": "hitech gallery v1",
+                                "value": "hitech-variant1"
+                            },
+                            {
+                                "name": "hitech gallery v2",
+                                "value": "hitech-variant2"
+                            },
+                            {
+                                "name": "hitech gallery v3",
+                                "value": "hitech-variant3"
+                            }
+                            ]
+                        }
                     ]
                 },
                  {
