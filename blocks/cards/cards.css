@@ -2215,7 +2215,7 @@ border-radius: 6px;
     height: 8px;
     width: 29px;
 }
-.hitech-articles3 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-horizontal.swiper-pagination-bullets {
+.hitech-articles3 .swiper-horizontal>.swiper-pagination-bullets{
     display: none;
   }
   .hitech-articles1 .cards > ul > li img,
