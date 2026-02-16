@@ -346,6 +346,59 @@
           {
             "name": "Benefits",
             "value": "benefits"
+          },
+          {
+            "name": "Footer",
+            "value": "footer"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleFooter",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "footer"
+          ]
+        },
+        "options": [
+          {
+            "name": "Footer",
+            "children": [
+              {
+                "name": "Footer variant Main",
+                "value": "footer-main"
+              },
+              {
+                "name": "Footer variant Bottom",
+                "value": "footer-bottom"
+              },
+              {
+                "name": "Footer Variant 2",
+                "value": "footer-variant2"
+              },
+              {
+                "name": "Footer Variant 3",
+                "value": "footer-variant3"
+              },
+              {
+                "name": "hitech Footer variant 1",
+                "value": "hitech-footerv1"
+              },
+              {
+                "name": "hitech Footer variant 2",
+                "value": "hitech-footerv2"
+              },
+              {
+                "name": "hitech Footer variant 3",
+                "value": "hitech-footerv3"
+              }
+            ]
           }
         ]
       },
