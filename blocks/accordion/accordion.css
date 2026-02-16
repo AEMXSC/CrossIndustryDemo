@@ -195,7 +195,7 @@
 }
 
 /* .varient 2 */
-.accordion-variant2.accordion-container>div:first-child>p:last-child {
+.accordion-variant2.accordion-container .default-content-wrapper p:last-of-type{
   display: none;
 }
 
@@ -203,7 +203,7 @@
   display: none;
 }
 
-.accordion-variant2 .default-content-wrapper>p {
+.accordion-variant2.accordion-container .default-content-wrapper p:first-child {
   font-size: 30px;
   line-height: 40px;
   font-weight: var(--font-weight-500, 500);

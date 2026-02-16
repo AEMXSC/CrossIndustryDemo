@@ -127,7 +127,8 @@ async function loadThemeFromPage(themePagePath) {
       // Search for first available theme-configurator
       let found = false;
       // eslint-disable-next-line no-restricted-syntax
-      for (const candidate of candidates) {
+      for (let candidate of candidates) {
+        candidate = candidate.includes('.html') ? candidate.replace('.html', '') : candidate;
         try {
           // eslint-disable-next-line no-await-in-loop
           const testResp = await fetch(`${candidate}.plain.html`);
@@ -139,6 +140,7 @@ async function loadThemeFromPage(themePagePath) {
           }
         } catch (e) {
           // Continue to next candidate
+          console.warn(`Theme configurator not found at ${candidate}`);
         }
       }
 
@@ -182,17 +184,17 @@ async function loadThemeFromPage(themePagePath) {
       const fontName = fontLink.textContent?.trim();
       const fontUrl = fontLink.href?.trim();
       // eslint-disable-next-line no-trailing-spaces
-      
+
       if (fontName && fontUrl) {
         // Create @font-face declaration
         fontFaces.push(`@font-face {
-  font-family: '${fontName}';
-  font-display: swap;
-  src: url('${fontUrl}') format('woff');
-}`);
+            font-family: '${fontName}';
+            font-display: swap;
+            src: url('${fontUrl}') format('woff');
+          }`);
         // Create CSS variable for font family
         const fontVarName = fontName.toLowerCase().replace(/\s+/g, '-');
-        fontVariables.push(`  --${fontVarName}: '${fontName}';`);
+        fontVariables.push(`--${fontVarName}: '${fontName}';`);
       }
     });
 
