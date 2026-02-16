@@ -69,8 +69,45 @@
                         {
                             "name": "HitechGallery",
                             "value": "hitechgallery"  
+                        },
+                        {
+                            "name": "HitechArticles",
+                            "value": "hitechArticles"  
                         }
 
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleHitechArticles",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "hitechArticles"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "Hitech Articles",
+                            "children": [
+                           {
+                                "name": "hitech Articles v1",
+                                "value": "hitech-articles1"
+                            },
+                            {
+                                "name": "hitech Articles v2",
+                                "value": "hitech-articles2"
+                            },
+                            {
+                                "name": "hitech Articles v3",
+                                "value": "hitech-articles3"
+                            }
+                            ]
+                        }
                     ]
                 },
                 {
