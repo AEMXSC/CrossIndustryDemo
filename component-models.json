@@ -236,6 +236,43 @@
           {
             "name": "TrackRecord",
             "value": "trackrecord"
+          },
+          {
+            "name": "TechSepcsFeature",
+            "value": "techsepcsfeature"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleTechSepcsFeature",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "techsepcsfeature"
+          ]
+        },
+        "options": [
+          {
+            "name": "TechSepcsFeature",
+            "children": [
+              {
+                "name": "tech-specs-features-type-1",
+                "value": "tech-specs-features-varient1"
+              },
+              {
+                "name": "tech-specs-features-type-2",
+                "value": "tech-specs-features-varient2"
+              },
+              {
+                "name": "tech-specs-features-type-3",
+                "value": "tech-specs-features-varient3"
+              }
+            ]
           }
         ]
       },
