@@ -8,39 +8,30 @@ import {
 } from "../../scripts/dom-helpers.js";
 
 export default function decorate(block) {
-  console.log(block);
   let getType = block.classList;
 
-  if (getType.contains("type-1")) {
-    // block.closest(".promotional-banner-container").classList.add("banner-varient1");
-    block.append(bannerType1(block));
-  } else if (getType.contains("type-2")) {
-    // block.closest(".promotional-banner-container").classList.add("banner-varient2");
+  if (getType.contains("type-1") || getType.contains("type-2")) {
     block.append(bannerType1(block));
   } else if (getType.contains("type-3")) {
-    // block.closest(".promotional-banner-container").classList.add("banner-varient3");
     block.append(bannerType3(block));
   } else if (getType.contains("type-4")) {
-    // block.closest(".promotional-banner-container").classList.add("banner-varient4");
     block.append(bannerType4(block));
   } 
 
-  if (getType.contains("hitech-1")) {
-    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant1");
-    block.append(hitechBanner(block));
-  } 
-  if (getType.contains("hitech-2")) {
-    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant2");
-    block.append(hitechBanner(block));
-  } 
-  if (getType.contains("hitech-3")) {
-    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant3");
-    block.append(hitechBanner(block));
-  }
-  if (getType.contains("hitech-4")) {
-    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant4");
-    block.append(hitechBanner(block));
-  }
+
+let hitechBannerVariants = [
+  "hitech-banner-variant1",
+  "hitech-banner-variant2",
+  "hitech-banner-variant3",
+  "hitech-banner-variant4"
+];
+let hasVariantClass = hitechBannerVariants.some(cls =>
+  block.classList.contains(cls)
+);
+
+if (hasVariantClass) {
+  block.append(hitechBanner(block));
+}
 }
 
 
