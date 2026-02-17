@@ -198,10 +198,6 @@
             "value": "footer"
           },
           {
-            "name": "Accordion",
-            "value": "accordion"
-          },
-          {
             "name": "Blogs",
             "value": "blogs"
           },
@@ -763,39 +759,6 @@
               {
                 "name": "Footer Variant 3",
                 "value": "footer-variant3"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "component": "multiselect",
-        "name": "styleAccordion",
-        "label": "Accordion Style",
-        "valueType": "string[]",
-        "condition": {
-          "===": [
-            {
-              "var": "sectionType"
-            },
-            "accordion"
-          ]
-        },
-        "options": [
-          {
-            "name": "Accordion",
-            "children": [
-              {
-                "name": "Accordion Variant 1",
-                "value": "accordion-variant1"
-              },
-              {
-                "name": "Accordion Variant 2",
-                "value": "accordion-variant2"
-              },
-              {
-                "name": "Accordion Variant 3",
-                "value": "accordion-variant3"
               }
             ]
           }
