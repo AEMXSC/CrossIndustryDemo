@@ -316,6 +316,18 @@
               {
                 "name": "Process Step Type 3",
                 "value": "process-step-varient3"
+              },
+              {
+                "name": "tech-specs-type-1",
+                "value": "tech-specs-varient1"
+              },
+              {
+                "name": "tech-specs-type-2",
+                "value": "tech-specs-varient2"
+              },
+              {
+                "name": "tech-specs-type-3",
+                "value": "tech-specs-varient3"
               }
             ]
           }
