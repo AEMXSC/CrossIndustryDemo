@@ -232,12 +232,16 @@
           {
             "name": "TrackRecord",
             "value": "trackrecord"
+          },
+          {
+            "name": "NotificationBanner",
+            "value": "notificationbanner"
           }
         ]
       },
       {
         "component": "multiselect",
-        "name": "styleTrackRecord",
+        "name": "styleNotificationBanner",
         "label": "Style",
         "valueType": "string[]",
         "condition": {
@@ -245,36 +249,40 @@
             {
               "var": "sectionType"
             },
-            "trackrecord"
+            "notificationbanner"
           ]
         },
         "options": [
           {
-            "name": "TrackRecord",
+            "name": "NotificationBanner",
             "children": [
               {
-                "name": "Trackrecord Type 1",
-                "value": "track-record-varient1"
+                "name": "Notification Banner Type 1",
+                "value": "notification-banner-varient1"
               },
               {
-                "name": "Trackrecord Type 2",
-                "value": "track-record-varient2"
+                "name": "Notification Banner Type 2",
+                "value": "notification-banner-varient2"
               },
               {
-                "name": "Trackrecord Type 3",
-                "value": "track-record-varient3"
+                "name": "Notification Banner Type 3",
+                "value": "notification-banner-varient3"
               },
               {
-                "name": "Process Step Type 1",
-                "value": "process-step-varient1"
+                "name": "Simple Banners Type 1",
+                "value": "simple-banner-varient1"
               },
               {
-                "name": "Process Step Type 2",
-                "value": "process-step-varient2"
+                "name": "Simple Banners Type 2",
+                "value": "simple-banner-varient2"
               },
               {
-                "name": "Process Step Type 3",
-                "value": "process-step-varient3"
+                "name": "Simple Banners Type 3",
+                "value": "simple-banner-varient3"
+              },
+              {
+                "name": "Simple Banners Type 4",
+                "value": "simple-banner-varient4"
               }
             ]
           }
@@ -809,43 +817,6 @@
   {
     "id": "banner",
     "fields": [
-      {
-        "component": "select",
-        "name": "classes",
-        "value": "",
-        "label": "select type",
-        "valueType": "string",
-        "options": [
-          {
-            "name": "Notification Banner Type 1",
-            "value": "notification-banner-type-1"
-          },
-          {
-            "name": "Notification Banner Type 2",
-            "value": "notification-banner-type-2"
-          },
-          {
-            "name": "Notification Banner Type 3",
-            "value": "notification-banner-type-3"
-          },
-          {
-            "name": "Simple Banners Type 1",
-            "value": "simple-banner-type-1"
-          },
-          {
-            "name": "Simple Banners Type 2",
-            "value": "simple-banner-type-2"
-          },
-          {
-            "name": "Simple Banners Type 3",
-            "value": "simple-banner-type-3"
-          },
-          {
-            "name": "Simple Banners Type 4",
-            "value": "simple-banner-type-4"
-          }
-        ]
-      },
       {
         "component": "reference",
         "name": "image",
