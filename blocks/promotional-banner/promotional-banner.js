@@ -9,7 +9,7 @@ import {
 
 export default function decorate(block) {
   console.log(block);
-  let getType = block.classList;
+  let getType = block.closest(".promotional-banner-container").classList;
 
   if (getType.contains("banner-varient1")) {
     block.append(bannerType1(block));
