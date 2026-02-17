@@ -79,16 +79,16 @@
                             "value": "banner"
                         },
                         {
-                            "name": "TrackRecord",
-                            "value": "trackrecord"
-                        },
-                        {
                             "name": "NotificationBanner",
                             "value": "notificationbanner"
                         },
                         {
                             "name": "Faq",
                             "value": "faq"
+                        },
+                        {
+                            "name": "TrackRecord",
+                            "value": "trackrecord"
                         }
 
                     ]
@@ -112,27 +112,27 @@
                             "children": [
                                 {
                                     "name": "Trackrecord Type 1",
-                                    "value": "trackrecord-type-1"
+                                    "value": "track-record-varient1"
                                 },
                                 {
                                     "name": "Trackrecord Type 2",
-                                    "value": "trackrecord-type-2"
+                                    "value": "track-record-varient2"
                                 },
                                 {
                                     "name": "Trackrecord Type 3",
-                                    "value": "trackrecord-type-3"
+                                    "value": "track-record-varient3"
                                 },
                                 {
                                     "name": "Process Step Type 1",
-                                    "value": "process-step-type-1"
+                                    "value": "process-step-varient1"
                                 },
                                 {
                                     "name": "Process Step Type 2",
-                                    "value": "process-step-type-2"
+                                    "value": "process-step-varient2"
                                 },
                                 {
                                     "name": "Process Step Type 3",
-                                    "value": "process-step-type-3"
+                                    "value": "process-step-varient3"
                                 }
                             ]
                         }
