@@ -2129,10 +2129,7 @@ padding: 0px;
     margin-bottom: 0px;
     min-height: 48px;
   }
-
-.hitech-articles3 .swiper {
-  overflow: unset;
-}
+  
   .hitech-articles1 .cards > ul > li .cards-card-body h4 {
   text-transform: uppercase;
 }
