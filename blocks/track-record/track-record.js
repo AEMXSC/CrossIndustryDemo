@@ -13,7 +13,7 @@ export default function decorate(block) {
   block.appendChild(wrapper);
   if (block.classList.contains("process-step-type-3")) {
     const items = block.querySelectorAll(
-      ".track-record-wrapper-item > div > div"
+      ".track-record-wrapper-item > div > div",
     );
 
     items.forEach((contentDiv) => {
@@ -43,6 +43,9 @@ export default function decorate(block) {
     "process-step-type-1": { variant: "process-step-varient1" },
     "process-step-type-2": { variant: "process-step-varient2" },
     "process-step-type-3": { variant: "process-step-varient3" },
+    "tech-specs-type-1": { variant: "tech-specs-varient1" },
+    "tech-specs-type-2": { variant: "tech-specs-varient2" },
+    "tech-specs-type-3": { variant: "tech-specs-varient3" },
   };
   const matchKey = Object.keys(TYPE_MAP).find((key) => classes.contains(key));
   const { variant } = TYPE_MAP[matchKey] || TYPE_MAP["type-1"];
