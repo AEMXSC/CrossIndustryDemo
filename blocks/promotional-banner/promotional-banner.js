@@ -8,30 +8,31 @@ import {
 } from "../../scripts/dom-helpers.js";
 
 export default function decorate(block) {
+  console.log(block);
   let getType = block.classList;
 
-  if (getType.contains("banner-varient1") || getType.contains("banner-varient2")) {
+  if (getType.contains("type-1")) {
     block.append(bannerType1(block));
-  } else if (getType.contains("banner-varient3")) {
+  } else if (getType.contains("type-2")) {
+    block.append(bannerType1(block));
+  } else if (getType.contains("type-3")) {
     block.append(bannerType3(block));
-  } else if (getType.contains("banner-varient4")) {
+  } else if (getType.contains("type-4")) {
     block.append(bannerType4(block));
   } 
 
-
-let hitechBannerVariants = [
-  "hitech-banner-variant1",
-  "hitech-banner-variant2",
-  "hitech-banner-variant3",
-  "hitech-banner-variant4"
-];
-let hasVariantClass = hitechBannerVariants.some(cls =>
-  block.classList.contains(cls)
-);
-
-if (hasVariantClass) {
-  block.append(hitechBanner(block));
-}
+  if (getType.contains("hitech-banner-variant1")) {
+    block.append(hitechBanner(block));
+  } 
+  if (getType.contains("hitech-banner-variant2")) {
+    block.append(hitechBanner(block));
+  } 
+  if (getType.contains("hitech-banner-variant3")) {
+    block.append(hitechBanner(block));
+  }
+  if (getType.contains("hitech-banner-variant4")) {
+    block.append(hitechBanner(block));
+  }
 }
 
 
