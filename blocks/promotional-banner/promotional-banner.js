@@ -11,13 +11,13 @@ export default function decorate(block) {
   console.log(block);
   let getType = block.classList;
 
-  if (getType.contains("type-1")) {
+  if (getType.contains("banner-varient1")) {
     block.append(bannerType1(block));
-  } else if (getType.contains("type-2")) {
+  } else if (getType.contains("banner-varient2")) {
     block.append(bannerType1(block));
-  } else if (getType.contains("type-3")) {
+  } else if (getType.contains("banner-varient3")) {
     block.append(bannerType3(block));
-  } else if (getType.contains("type-4")) {
+  } else if (getType.contains("banner-varient4")) {
     block.append(bannerType4(block));
   } 
 
