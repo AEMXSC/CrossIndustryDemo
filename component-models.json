@@ -236,6 +236,43 @@
           {
             "name": "NotificationBanner",
             "value": "notificationbanner"
+          },
+          {
+            "name": "Faq",
+            "value": "faq"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleFaq",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "faq"
+          ]
+        },
+        "options": [
+          {
+            "name": "Faq",
+            "children": [
+              {
+                "name": "Accordion Variant 1",
+                "value": "accordion-variant1"
+              },
+              {
+                "name": "Accordion Variant 2",
+                "value": "accordion-variant2"
+              },
+              {
+                "name": "Accordion Variant 3",
+                "value": "accordion-variant3"
+              }
+            ]
           }
         ]
       },
