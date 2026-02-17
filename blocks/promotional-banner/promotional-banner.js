@@ -12,36 +12,33 @@ export default function decorate(block) {
   let getType = block.classList;
 
   if (getType.contains("type-1")) {
-    block.closest(".promotional-banner-container").classList.add("banner-varient1");
+    // block.closest(".promotional-banner-container").classList.add("banner-varient1");
     block.append(bannerType1(block));
   } else if (getType.contains("type-2")) {
-    block.closest(".promotional-banner-container").classList.add("banner-varient2");
+    // block.closest(".promotional-banner-container").classList.add("banner-varient2");
     block.append(bannerType1(block));
   } else if (getType.contains("type-3")) {
-    block.closest(".promotional-banner-container").classList.add("banner-varient3");
+    // block.closest(".promotional-banner-container").classList.add("banner-varient3");
     block.append(bannerType3(block));
   } else if (getType.contains("type-4")) {
-    block.closest(".promotional-banner-container").classList.add("banner-varient4");
+    // block.closest(".promotional-banner-container").classList.add("banner-varient4");
     block.append(bannerType4(block));
   } 
-  // else {
-  //   block.append(bannerType1(block));
-  // }
 
   if (getType.contains("hitech-1")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant1");
+    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant1");
     block.append(hitechBanner(block));
   } 
   if (getType.contains("hitech-2")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant2");
+    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant2");
     block.append(hitechBanner(block));
   } 
   if (getType.contains("hitech-3")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant3");
+    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant3");
     block.append(hitechBanner(block));
   }
   if (getType.contains("hitech-4")) {
-    block.closest(".promotional-banner-container").classList.add("hitech-banner-variant4");
+    // block.closest(".promotional-banner-container").classList.add("hitech-banner-variant4");
     block.append(hitechBanner(block));
   }
 }
