@@ -358,6 +358,63 @@
           {
             "name": "HitechArticles",
             "value": "hitechArticles"
+          },
+          {
+            "name": "Banner",
+            "value": "banner"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleBanner",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "banner"
+          ]
+        },
+        "options": [
+          {
+            "name": "Banner",
+            "children": [
+              {
+                "name": "Bfsi banner Varaint 1",
+                "value": "banner-varient1"
+              },
+              {
+                "name": "Bfsi banner Varaint 2",
+                "value": "banner-varient2"
+              },
+              {
+                "name": "Bfsi banner Varaint 3",
+                "value": "banner-varient3"
+              },
+              {
+                "name": "Bfsi banner Varaint 4",
+                "value": "banner-varient4"
+              },
+              {
+                "name": "Hitech banner Varaint 1",
+                "value": "hitech-banner-variant1"
+              },
+              {
+                "name": "Hitech banner Varaint 2",
+                "value": "hitech-banner-variant2"
+              },
+              {
+                "name": "Hitech banner Varaint 3",
+                "value": "hitech-banner-variant3"
+              },
+              {
+                "name": "Hitech banner Varaint 4",
+                "value": "hitech-banner-variant4"
+              }
+            ]
           }
         ]
       },
