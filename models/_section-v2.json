@@ -245,6 +245,18 @@
                                 {
                                     "name": "Accordion Variant 3",
                                     "value": "accordion-variant3"
+                                },
+                                {
+                                    "name": "HitechAccordion Variant 1",
+                                    "value": "hitechaccordion-variant1"
+                                },
+                                {
+                                    "name": "HitechAccordion Variant 2",
+                                    "value": "hitechaccordion-variant2"
+                                },
+                                {
+                                    "name": "HitechAccordion Variant 3",
+                                    "value": "hitechaccordion-variant3"
                                 }
                             ]
                         }
