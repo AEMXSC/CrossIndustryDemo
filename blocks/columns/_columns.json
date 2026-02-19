@@ -47,10 +47,6 @@
     {
       "id": "column",
       "components": [
-        "text",
-        "image",
-        "button",
-        "title",
         "dm-asset",
         "video",
         "accordion"
