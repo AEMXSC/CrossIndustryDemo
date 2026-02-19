@@ -417,7 +417,7 @@ width: 42.4%;
     flex-shrink: 0;
     border-radius: 4px;
     background: var(--Lunar-Gray, #E6E8F1);
-    color: var(--Nebula-Navy, #10172A);
+    color: var(--Primary, #10172A);
     font-family: var(--Inter, sans-serif);
     font-size: 16px;
     font-style: normal;
@@ -494,7 +494,7 @@ width: 42.4%;
 .hitech-banner-variant3 .redirections {}
 .hitech-banner-variant3.promotional-banner-container .banner-conetent h2,
 .hitech-banner-variant4.promotional-banner-container .banner-conetent h2 {
-color: var(--Nebula-Navy, #10172A);
+color: var(--Primary, #10172A);
 }
 
 .hitech-banner-variant3.promotional-banner-container .banner-conetent p,
@@ -510,7 +510,7 @@ justify-content: center;
 align-items: flex-start;
 gap: 8px;
 border-radius: 4px;
-background: var(--Nebula-Navy, #10172A);
+background: var(--Primary, #10172A);
 color: var(--Lunar-Gray, #E6E8F1);
 font-family: var(--Inter, sans-serif);
 font-size: 16px;

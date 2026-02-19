@@ -520,17 +520,17 @@ gap: 16px;
 /* hi tech footer variant 2 */
 
 .footer-wrapper .footer>div:has(.hitech-footerv2) {
-  background: radial-gradient(180.6% 180.6% at 50% 22.3%, var(--Lunar-Gray, #E6E8F1) 31.89%, var(--Quantum-Violet, #7A63FF) 100%);
+  background: radial-gradient(180.6% 180.6% at 50% 22.3%, var(--Lunar-Gray, #E6E8F1) 31.89%, var(--secondary, #7A63FF) 100%);
 }
 
 .hitech-footerv2 .accordion details summary::after {
-  border-right: 2px solid var(--Nebula-Navy, #10172A);
-  border-bottom: 2px solid var(--Nebula-Navy, #10172A);
+  border-right: 2px solid var(--Primary, #10172A);
+  border-bottom: 2px solid var(--Primary, #10172A);
 }
 
 .footer-main.hitech-footerv2 .accordion details[open] summary::after {
-  border-right: 2px solid var(--Nebula-Navy, #10172A);
-  border-bottom: 2px solid var(--Nebula-Navy, #10172A);
+  border-right: 2px solid var(--Primary, #10172A);
+  border-bottom: 2px solid var(--Primary, #10172A);
 }
 
 .footer .footer-main.hitech-footerv2 ul li a {
@@ -547,11 +547,11 @@ gap: 16px;
 
 .footer-bottom.hitech-footerv2 .default-content-wrapper p,
 .footer .footer-bottom.hitech-footerv2 ul li a {
-  color: var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
+  color: var(--Primary, var(--Primary, #10172A));
 }
 
 .footer .footer-bottom.hitech-footerv2 ul li a:before {
-  border: 0.2px solid var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
+  border: 0.2px solid var(--Primary, var(--Primary, #10172A));
 }
 
 
@@ -582,11 +582,11 @@ gap: 16px;
 }
 
 .footer .footer-bottom.hitech-footerv3 ul li a:before {
-  border: 0.2px solid var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
+  border: 0.2px solid var(--Primary, var(--Primary, #10172A));
 }
 
 .footer-bottom.hitech-footerv3 .default-content-wrapper h3 {
-  color: var(--Quantum-Violet, #7A63FF);
+  color: var(--secondary, #7A63FF);
   text-align: center;
   font-family: var(--Space-Grotesk, sans-serif);
   font-size: 36px;

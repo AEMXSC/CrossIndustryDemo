@@ -1926,7 +1926,7 @@ flex-basis: 100%;
 .hitech-variant2 span.swiper-pagination-bullet.swiper-pagination-bullet-active,
 .hitech-variant3 span.swiper-pagination-bullet.swiper-pagination-bullet-active{
       border-radius: 6px;
-    background: var(--Nebula-Navy, #10172A);
+    background: var(--Primary, #10172A);
     width: 50px;
     height: 8px;
     display: inline-block;
@@ -2039,7 +2039,7 @@ margin: 0px;
     /* height: 48px; */
     padding: 9px 24px;
     border-radius: 4px;
-background: var(--Nebula-Navy, #10172A);
+background: var(--Primary, #10172A);
 }
 .hitech-articles3 .default-content-wrapper .button-container {
   display: none;
@@ -2107,8 +2107,8 @@ padding: 0px;
     justify-content: center;
     align-items: center;
     border-radius: 33px;
-    border: 1px solid var(--Quantum-Violet, #7A63FF);
-    color: var(--Quantum-Violet, #7A63FF);
+    border: 1px solid var(--secondary, #7A63FF);
+    color: var(--secondary, #7A63FF);
     text-align: center;
     font-family: var(--Inter, sans-serif);
     font-size: 12px;
@@ -2154,7 +2154,7 @@ margin: 0px;
 .hitech-articles3 .cards > ul > li .cards-card-body p:first-child {
 padding: 4px 12px;
     border-radius: 29px;
-    background: var(--Nebula-Navy, #10172A);
+    background: var(--Primary, #10172A);
     display: inline;
     color: var(--Lunar-Gray, #E6E8F1);
     font-family: var(--Inter, sans-serif);
@@ -2173,7 +2173,7 @@ padding: 4px 12px;
   text-decoration: none;
   gap: 8px;
 
-  color: var(--Quantum-Violet, #7A63FF);
+  color: var(--secondary, #7A63FF);
 font-family: var(--Space-Grotesk, sans-serif);
 font-size: 16px;
 font-weight: 500;
@@ -2215,7 +2215,7 @@ position: relative;
 }
 .hitech-articles3 .swiper-pagination-bullet.swiper-pagination-bullet-active {
 border-radius: 6px;
-    background: var(--Nebula-Navy, #10172A);
+    background: var(--Primary, #10172A);
     height: 8px;
     width: 29px;
 }
@@ -2348,7 +2348,7 @@ padding: 40px 24px;
 .hitech-feature-variant1 .default-content-wrapper .button-container {
   padding: 9px 24px;
   border-radius: 4px;
-  background: var(--Nebula-Navy, #10172A);
+  background: var(--Primary, #10172A);
   display: inline-block;
 }
 
@@ -2495,7 +2495,7 @@ width: 23.6%;
 .hitech-feature-variant2 .default-content-wrapper .button-container a {
 padding: 9px 24px;
     border-radius: 4px;
-    background: var(--Nebula-Navy, #10172A);
+    background: var(--Primary, #10172A);
     display: inline-block;
         display: inline-flex;
     align-items: center;
