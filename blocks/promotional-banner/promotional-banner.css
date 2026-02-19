@@ -363,7 +363,7 @@ width: 42.4%;
 /* hi tech banner variant 1 */
 
 .hitech-banner-variant1 {
-    background: linear-gradient(101deg, var(--color-midnight,#05060D) 42.11%, var(--color-slate,#8B8FA8) 239.35%);
+    background: linear-gradient(101deg, var(--cosmic-black,#05060D) 42.11%, var(--color-slate,#8B8FA8) 239.35%);
     max-width: 1440px;
     margin: 0 auto;
 }

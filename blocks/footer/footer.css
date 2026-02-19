@@ -542,7 +542,7 @@ gap: 16px;
 }
 
 .footer-main.hitech-footerv2 .default-content-wrapper p:first-child {
-  color: var(--color-midnight,#05060D);
+  color: var(--cosmic-black,#05060D);
 }
 
 .footer-bottom.hitech-footerv2 .default-content-wrapper p,
