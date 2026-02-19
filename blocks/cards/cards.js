@@ -284,12 +284,10 @@ function hitechArticles(block) {
     hitechArticles2();
   }
   if (classlistExists.contains("hitech-articles3")) {
-    ;
     let buttonWrapper = document.createElement('div');
     buttonWrapper.classList.add('button-wrapper');
     let prevButton = document.createElement('div');
     prevButton.classList.add('swiper-button-prev');
-    // block.closest(".hitech-articles3").querySelector(".default-content-wrapper").appendChild(prevButton);
     let nextbutton = document.createElement('div');
     nextbutton.classList.add('swiper-button-next');
     buttonWrapper.appendChild(prevButton);
@@ -298,6 +296,9 @@ function hitechArticles(block) {
     hitechArticles3();
     buttonWrapper.querySelector(".swiper-button-prev").innerHTML = "";
     buttonWrapper.querySelector(".swiper-button-next").innerHTML = "";
+    let img = document.createElement("img");
+        img.src = '/content/dam/dept-crossIndustry/hi-tech-images/nex-arrow.svg';
+    prevButton.appendChild(img);
   }
 }
 function hitechArticles1() {
