@@ -2476,6 +2476,7 @@ width: 23.6%;
 .hitech-feature-variant2 .cards-wrapper .cards > ul {
   display: flex;
   flex-wrap: wrap;
+  padding: 0px;
 }
 .hitech-feature-variant2 .default-content-wrapper {
       display: grid;
