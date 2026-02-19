@@ -2302,3 +2302,182 @@ padding: 40px 24px;
     font-size: 16px;
   }
 }
+
+
+/* hi tech feature variant 1 */
+.hitech-feature-variant1.cards-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 88px 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+}
+
+.hitech-feature-variant1 .default-content-wrapper {
+  padding: 0px;
+  width: 34.6%;
+  margin: 0px;
+}
+
+.hitech-feature-variant1 .default-content-wrapper h3 {
+  color: #373739;
+  font-family: var(--Space-Grotesk, sans-serif);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  margin: 0px;
+}
+
+.hitech-feature-variant1 .default-content-wrapper h3 + p {
+  color: #5C5D63;
+  font-family: var(--Inter, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 16px 0px 40px;
+}
+
+.hitech-feature-variant1 .default-content-wrapper p::after {
+  display: none;
+}
+
+.hitech-feature-variant1 .default-content-wrapper .button-container {
+  padding: 9px 24px;
+  border-radius: 4px;
+  background: #10172A;
+  display: inline-block;
+}
+
+.hitech-feature-variant1 .default-content-wrapper .button-container a {
+  color: #E6E8F1;
+  font-family: var(--Inter, sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hitech-feature-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon),
+.hitech-feature-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+  border-radius: 8px;
+  border: 1px solid #9E95D3;
+  background: #F0F0F0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hitech-feature-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon) img,
+.hitech-feature-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) img {
+  min-height: unset;
+}
+
+.hitech-feature-variant1 .cards-wrapper {
+  padding: 0px;
+  margin: 0px;
+  width: 50.5%;
+}
+
+.hitech-feature-variant1 .cards-wrapper ul {
+  padding: 0px;
+  flex-direction: column;
+}
+
+.hitech-feature-variant1 .cards>ul>li .cards-card-body {
+  margin: 0px;
+}
+
+.hitech-feature-variant1 .cards>ul>li {
+  padding: 48px 0px;
+  position: relative;
+}
+ .hitech-feature-variant1 .cards>ul>li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.7px;
+  background: linear-gradient(90deg, rgba(122, 99, 255, 0.00) -10.96%, rgba(122, 99, 255, 0.80) 51.51%, rgba(122, 99, 255, 0.00) 115.19%);
+ }
+
+.hitech-feature-variant1 .cards>ul>li:first-child {
+  padding-top: 0px;
+}
+
+.hitech-feature-variant1 .cards-wrapper .cards-card-body p {
+  color: #5C5D63;
+  font-family: var(--Inter, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0px;
+}
+
+.hitech-feature-variant1 .cards-wrapper .cards-card-body h4 {
+  margin: 24px 0px 8px;
+  color: #1B1B1E;
+  font-family: var(--Inter, sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hitech-feature-variant1.cards-container {
+    padding: 48px 24px;
+  }
+  .hitech-feature-variant1 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+    margin: 24px 0px 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hitech-feature-variant1.cards-container {
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 48px 24px 90px;
+    position: relative;
+    gap: 64px;
+ }
+ .hitech-feature-variant1 .default-content-wrapper {
+  width: 100%;
+ }
+ .hitech-feature-variant1 .cards-wrapper {
+  width: 100%;
+ }
+ .hitech-feature-variant1 .default-content-wrapper h3 {
+    color: #1B1B1E;
+    font-size: 24px;
+    line-height: 32px;
+ }
+ .hitech-feature-variant1 .default-content-wrapper h3 + p {
+  color: #5E5E60;
+  margin: 12px 0px 0px;
+ }
+ .hitech-feature-variant1 .cards-wrapper .cards>ul>li {
+  margin: 0px;
+  padding: 40px 0px;
+ }
+ .hitech-feature-variant1 .cards-wrapper .cards>ul>li:first-child {
+  padding-top: 0px;
+ }
+ .hitech-feature-variant1 .cards-wrapper .cards>ul>li:last-child::after {
+   display: none;
+ }
+ .hitech-feature-variant1 .default-content-wrapper .button-container {
+  position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .hitech-feature-variant1 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+  margin: 24px 0px 8px;
+ }
+}

@@ -408,7 +408,7 @@ width: 42.4%;
 .hitech-banner-variant1.promotional-banner-container .banner-conetent a,
 .hitech-banner-variant2.promotional-banner-container .banner-conetent a {
     display: flex;
-    width: 166px;
+    /* width: 166px; */
     height: 48px;
     padding: 12px 24px;
     justify-content: center;
