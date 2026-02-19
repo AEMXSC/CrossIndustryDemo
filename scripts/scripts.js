@@ -101,40 +101,34 @@ async function loadThemeConfiguration(themePath) {
   }
 }
 
+/**
+ * Loads theme configuration from a theme-configurator page
+ * Fetches CSS variables and font definitions, applies them to document
+ * Searches hierarchy if no explicit path provided
+ * @param {string} themePagePath - Optional explicit path to theme configurator
+ * @returns {Promise<void>}
+ */
 async function loadThemeFromPage(themePagePath) {
   try {
     let url = themePagePath;
 
-    // If no explicit path provided, search for theme-configurator in hierarchy
+    // Search for theme-configurator in path hierarchy if not explicitly provided
     if (!url) {
       const currentPath = window.location.pathname;
-      const pathSegments = currentPath.split('/').filter(segment => segment);
+      const pathSegments = currentPath.split('/').filter(Boolean);
 
-      // Build candidate paths from most specific to least specific
-      const candidatePaths = [];
+      // Build candidate paths from deepest to shallowest
+      const candidates = pathSegments.map((_, index) => {
+        const path = pathSegments.slice(0, index + 1).join('/');
+        return `/${path}/theme-configurator`;
+      });
+      candidates.reverse();
 
-      // 1. Same level as current page (sibling) - e.g., /us/en/theme-configurator
-      if (pathSegments.length > 0) {
-        const currentDir = '/' + pathSegments.slice(0, -1).join('/');
-        if (currentDir !== '/') {
-          candidatePaths.push(`${currentDir}/theme-configurator`);
-        }
-      }
-
-      // 2. Parent paths going up the hierarchy - e.g., /us/theme-configurator
-      for (let i = pathSegments.length - 1; i > 0; i -= 1) {
-        const parentPath = '/' + pathSegments.slice(0, i).join('/');
-        candidatePaths.push(`${parentPath}/theme-configurator`);
-      }
-
-      // 3. Root level theme-configurator
-      candidatePaths.push('/theme-configurator');
-
-      // Try each candidate path
+      // Search for first available theme-configurator
       let found = false;
       // eslint-disable-next-line no-restricted-syntax
-      for (let i = 0; i < candidatePaths.length; i += 1) {
-        const candidate = candidatePaths[i];
+      for (let candidate of candidates) {
+        candidate = candidate.includes('.html') ? candidate.replace('.html', '') : candidate;
         try {
           // eslint-disable-next-line no-await-in-loop
           const testResp = await fetch(`${candidate}.plain.html`);
@@ -146,42 +140,87 @@ async function loadThemeFromPage(themePagePath) {
           }
         } catch (e) {
           // Continue to next candidate
+          console.warn(`Theme configurator not found at ${candidate}`);
         }
       }
 
-      // 4. Fallback to default
+      // Fallback to default root theme
       if (!found) {
         url = '/theme-configurator-root';
         console.log('Using fallback theme configurator: /theme-configurator-root');
       }
     }
 
+    // Fetch theme configuration page
     const resp = await fetch(`${url}.plain.html`);
-    if (resp.ok) {
-      const html = await resp.text();
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const cssObj = {};
-      doc.querySelectorAll('.css-variable').forEach((varDiv) => {
-        const key = varDiv.querySelector(':scope > div:nth-child(1)')?.textContent?.trim();
-        const value = varDiv.querySelector(':scope > div:nth-child(2)')?.textContent?.trim();
-        if (key && value) {
-          cssObj[key] = value;
-        }
-      });
-      let styleTag = document.getElementById('theme-configuration-styles');
-      if (!styleTag) {
-        styleTag = document.createElement('style');
-        styleTag.id = 'theme-configuration-styles';
-        document.head.appendChild(styleTag);
-      }
-      const cssVariables = Object.entries(cssObj).map(([key, value]) => {
-        const cssVarName = key.startsWith('--') ? key : `--${key}`;
-        return `  ${cssVarName}: ${value};`;
-      });
-      styleTag.textContent = `:root {\n${cssVariables.join('\n')}\n}`;
+    if (!resp.ok) {
+      console.warn(`Theme configurator not found at ${url}`);
+      return;
     }
-  } catch (e) {
-    console.error('Error loading theme from page:', e);
+
+    const html = await resp.text();
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+
+    // Extract CSS variables from css-variable blocks
+    const cssVariables = [];
+    doc.querySelectorAll('.css-variable').forEach((varDiv) => {
+      const key = varDiv.querySelector(':scope > div:nth-child(1)')?.textContent?.trim();
+      const value = varDiv.querySelector(':scope > div:nth-child(2)')?.textContent?.trim();
+
+      if (key && value) {
+        const cssVarName = key.startsWith('--') ? key : `--${key}`;
+        cssVariables.push(`  ${cssVarName}: ${value};`);
+      }
+    });
+
+    // Extract font faces and create font family variables
+    const fontFaces = [];
+    const fontVariables = [];
+
+    doc.querySelectorAll('.font-properties').forEach((el) => {
+      const fontLink = el.querySelector(':scope > div a');
+      if (!fontLink) return;
+
+      const fontName = fontLink.textContent?.trim();
+      const fontUrl = fontLink.href?.trim();
+      // eslint-disable-next-line no-trailing-spaces
+
+      if (fontName && fontUrl) {
+        // Create @font-face declaration
+        fontFaces.push(`@font-face {
+            font-family: '${fontName}';
+            font-display: swap;
+            src: url('${fontUrl}') format('woff');
+          }`);
+        // Create CSS variable for font family
+        const fontVarName = fontName.toLowerCase().replace(/\s+/g, '-');
+        fontVariables.push(`--${fontVarName}: '${fontName}';`);
+      }
+    });
+
+    // Build complete CSS content efficiently
+    const cssContent = [
+      ...fontFaces,
+      '',
+      ':root {',
+      ...cssVariables,
+      ...fontVariables,
+      '}',
+    ].join('\n');
+
+    // Inject or update style tag (single DOM write)
+    let styleTag = document.getElementById('theme-configuration-styles');
+    if (!styleTag) {
+      styleTag = document.createElement('style');
+      styleTag.id = 'theme-configuration-styles';
+      document.head.appendChild(styleTag);
+    }
+
+    styleTag.textContent = cssContent;
+
+    console.log(`Theme loaded from ${url}: ${cssVariables.length} variables, ${fontFaces.length} fonts`);
+  } catch (error) {
+    console.error('Error loading theme from page:', error);
   }
 }
 

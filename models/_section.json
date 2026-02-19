@@ -177,7 +177,12 @@
       	"video",
         "form",
         "embed-adaptive-form",
-        "tabs"
+        "trackrecord",
+        "banner",
+        "accordion",
+        "tabs",
+        "font-properties",
+        "techspecsfeatures"
       ]
     }
   ]
