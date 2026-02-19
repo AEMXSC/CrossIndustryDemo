@@ -509,8 +509,9 @@ function decorateSections(main) {
     const sectionMeta = section.querySelector('div.section-metadata');
     if (sectionMeta) {
       const meta = readBlockConfig(sectionMeta);
+      const { sectiontype } = meta;
       Object.keys(meta).forEach((key) => {
-        if (key.startsWith('style')) {
+        if (key === 'style' || (sectiontype !== undefined && key.toLocaleLowerCase() === ('style').concat(sectiontype.toLocaleLowerCase()))) {
           const styles = meta[key]
             .split(',')
             .filter((style) => style)
