@@ -1,7 +1,7 @@
 footer {
   font-size: var(--body-font-size-xs);
   font-family: var(--light-font-family);
-  background-color: #000;
+  background-color: var(--color-black, #000000);
   width: 100%;
   z-index: 2;
   color: #fff;
@@ -214,7 +214,7 @@ display: none;
 }
 
 .footer .footer-bottom {
-    border-top: 0.5px solid #B2B3B5;
+    border-top: 0.5px solid var(--color-neutral-350, #B2B3B5);
     padding-top: 30px;
 }
 
@@ -336,7 +336,7 @@ gap: 8px
   }
 
   .footer-main .accordion-wrapper .accordion details {
-    border-bottom: 0.5px solid #B2B3B5;
+    border-bottom: 0.5px solid var(--color-neutral-350, #B2B3B5);
 
             /* padding-bottom: 24px; */
   }
@@ -379,7 +379,7 @@ gap: 8px
 }
 
 .footer-bottom .default-content-wrapper p {
-  color: #2C343B;
+  color: var(--color-graphite, #2C343B);
 font-size: 12px;
 }
 
@@ -413,7 +413,7 @@ gap: 16px;
 
 /* hi tech footer cariant 1 */
 .footer-wrapper:has(.hitech-footerv1) {
-  background: radial-gradient(143.64% 206.39% at 42.85% 27.05%, #000 0%, #262626 100%) !important;
+  background: radial-gradient(143.64% 206.39% at 42.85% 27.05%, var(--color-black, #000000) 0%, #262626 100%) !important;
 }
 
 .footer-main.hitech-footerv1 {
@@ -447,12 +447,12 @@ gap: 16px;
 }
 
 .footer-main.hitech-footerv1 .accordion-wrapper .accordion details summary p {
-  color: #E6E8F1;
+  color: var(--Lunar-Gray, #E6E8F1);
   font-weight: 600;
 }
 
 .footer-main.hitech-footerv1 .accordion-wrapper .accordion a {
-  color: #A5A4A4;
+  color: var(--color-soft-ash, #A5A4A4);
 }
 
 .footer-bottom.hitech-footerv1 .default-content-wrapper {
@@ -464,7 +464,7 @@ gap: 16px;
 }
 
 .footer-main.hitech-footerv1 .default-content-wrapper p:first-child {
-  color: #E6E8F1;
+  color: var(--Lunar-Gray, #E6E8F1);
   font-family: var(--Space-Grotesk, sans-serif);
   font-weight: 400;
   line-height: 32px;
@@ -485,8 +485,8 @@ gap: 16px;
 
 .hitech-footerv1 .accordion details summary::after,
 .hitech-footerv3 .accordion details summary::after {
-  border-right: 2px solid #E6E8F1;
-  border-bottom: 2px solid #E6E8F1;
+  border-right: 2px solid var(--Lunar-Gray, #E6E8F1);
+  border-bottom: 2px solid var(--Lunar-Gray, #E6E8F1);
 }
 
 .footer-main.hitech-footerv1 .accordion details[open] summary::after,
@@ -504,8 +504,8 @@ gap: 16px;
 
 .footer-main.hitech-footerv1 .accordion details[open] summary::after,
 .footer-main.hitech-footerv3 .accordion details[open] summary::after {
-  border-right: 2px solid #E6E8F1;
-  border-bottom: 2px solid #E6E8F1;
+  border-right: 2px solid var(--Lunar-Gray, #E6E8F1);
+  border-bottom: 2px solid var(--Lunar-Gray, #E6E8F1);
 }
 
 .footer-main.hitech-footerv1 .accordion-wrapper .accordion details {
@@ -524,48 +524,48 @@ gap: 16px;
 }
 
 .hitech-footerv2 .accordion details summary::after {
-  border-right: 2px solid #10172A;
-  border-bottom: 2px solid #10172A;
+  border-right: 2px solid var(--Nebula-Navy, #10172A);
+  border-bottom: 2px solid var(--Nebula-Navy, #10172A);
 }
 
 .footer-main.hitech-footerv2 .accordion details[open] summary::after {
-  border-right: 2px solid #10172A;
-  border-bottom: 2px solid #10172A;
+  border-right: 2px solid var(--Nebula-Navy, #10172A);
+  border-bottom: 2px solid var(--Nebula-Navy, #10172A);
 }
 
 .footer .footer-main.hitech-footerv2 ul li a {
-  color: #58595D;
+  color: var(--color-slate-gray, #58595D);
 }
 
 .footer-main.hitech-footerv2 .accordion-wrapper .accordion details summary p {
-  color: #58595D;
+  color: var(--color-slate-gray, #58595D);
 }
 
 .footer-main.hitech-footerv2 .default-content-wrapper p:first-child {
-  color: #05060D;
+  color: var(--color-midnight,#05060D);
 }
 
 .footer-bottom.hitech-footerv2 .default-content-wrapper p,
 .footer .footer-bottom.hitech-footerv2 ul li a {
-  color: var(--Nebula-Navy, #10172A);
+  color: var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
 }
 
 .footer .footer-bottom.hitech-footerv2 ul li a:before {
-  border: 0.2px solid var(--Nebula-Navy, #10172A);
+  border: 0.2px solid var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
 }
 
 
 /* hi tech footer variant 3 */
 .footer-wrapper:has(.hitech-footerv3) {
-  background: radial-gradient(143.64% 206.39% at 42.85% 27.05%, #000 0%, #0E0737 100%) !important;
+  background: radial-gradient(143.64% 206.39% at 42.85% 27.05%, var(--color-black, #000000) 0%, var(--color-midnight-indigo, #0E0737) 100%) !important;
 }
 
 .footer .footer-main.hitech-footerv3 ul li a {
-  color: #A5A4A4;
+  color: var(--color-soft-ash, #A5A4A4);
 }
 
 .footer-main.hitech-footerv3 .accordion-wrapper .accordion details summary p {
-  color: #E6E8F1;
+  color: var(--Lunar-Gray, #E6E8F1);
 }
 
 .footer-main.hitech-footerv3 .default-content-wrapper p:first-child {
@@ -573,16 +573,16 @@ gap: 16px;
 }
 
 .footer-bottom.hitech-footerv3 .default-content-wrapper p {
-  color: #A5A4A4;
+  color: var(--color-soft-ash, #A5A4A4);
   width: 35%;
 }
 
 .footer-main.hitech-footerv3 .default-content-wrapper p {
-  color: #A5A4A4;
+  color: var(--color-soft-ash, #A5A4A4);
 }
 
 .footer .footer-bottom.hitech-footerv3 ul li a:before {
-  border: 0.2px solid var(--Nebula-Navy, #10172A);
+  border: 0.2px solid var(--Nebula-Navy, var(--Nebula-Navy, #10172A));
 }
 
 .footer-bottom.hitech-footerv3 .default-content-wrapper h3 {

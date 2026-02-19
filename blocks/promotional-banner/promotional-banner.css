@@ -363,7 +363,7 @@ width: 42.4%;
 /* hi tech banner variant 1 */
 
 .hitech-banner-variant1 {
-    background: linear-gradient(101deg, #05060D 42.11%, #8B8FA8 239.35%);
+    background: linear-gradient(101deg, var(--color-midnight,#05060D) 42.11%, var(--color-slate,#8B8FA8) 239.35%);
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -387,8 +387,8 @@ width: 42.4%;
 .hitech-banner-variant2 .banner-conetent h2,
 .hitech-banner-variant3 .banner-conetent h2,
 .hitech-banner-variant4 .banner-conetent h2 {
-    color: #E6E8F1;
-    font-family: "Space Grotesk";
+    color: var(--Lunar-Gray, #E6E8F1);
+    font-family: var(--Space-Grotesk, sans-serif);
     font-size: 48px;
     font-weight: 400;
     line-height: 62px;
@@ -398,8 +398,8 @@ width: 42.4%;
 .hitech-banner-variant2 .banner-conetent p,
 .hitech-banner-variant2 .banner-conetent p,
 .hitech-banner-variant2 .banner-conetent p {
-    color: #B8B8B8;
-    font-family: Inter;
+    color: var(--Lunar-Gray, #E6E8F1);
+    font-family: var(--Inter, sans-serif);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -416,9 +416,9 @@ width: 42.4%;
     gap: 8px;
     flex-shrink: 0;
     border-radius: 4px;
-    background: #E6E8F1;
-    color: #10172A;
-    font-family: Inter;
+    background: var(--Lunar-Gray, #E6E8F1);
+    color: var(--Nebula-Navy, #10172A);
+    font-family: var(--Inter, sans-serif);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -428,7 +428,7 @@ width: 42.4%;
 
 /* hi tech variant 2 */
 .hitech-banner-variant2 {
-    background: linear-gradient(109deg, #000 11.78%, #1E1E1E 133.49%);
+    background: linear-gradient(109deg, var(--color-black, #000) 11.78%, var(--color-neutral-900, #1E1E1E) 133.49%);
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 88px 0px 88px;
@@ -499,7 +499,7 @@ color: var(--Nebula-Navy, #10172A);
 
 .hitech-banner-variant3.promotional-banner-container .banner-conetent p,
 .hitech-banner-variant4.promotional-banner-container .banner-conetent p {
-color: #666;
+color: var(--color-neutral-600, #666666);
 }
 .hitech-banner-variant3.promotional-banner-container .banner-conetent a,
 .hitech-banner-variant4.promotional-banner-container .banner-conetent a {
@@ -512,7 +512,7 @@ gap: 8px;
 border-radius: 4px;
 background: var(--Nebula-Navy, #10172A);
 color: var(--Lunar-Gray, #E6E8F1);
-font-family: Inter;
+font-family: var(--Inter, sans-serif);
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -561,7 +561,7 @@ line-height: 24px; /* 150% */
     }
 
     .hitech-banner-variant1 .banner-conetent h2 {
-        font-family: "Space Grotesk";
+        font-family: var(--Space-Grotesk, sans-serif);
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
@@ -571,8 +571,8 @@ line-height: 24px; /* 150% */
     .hitech-banner-variant1 .banner-conetent p,
     .hitech-banner-variant2 .banner-conetent p {
         margin-bottom: 0px;
-        color: #B8B8B8;
-        font-family: Inter;
+        color: var(--color-neutral-300, #B8B8B8);
+        font-family: var(--Inter, sans-serif);
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;

@@ -346,14 +346,14 @@ ul {
   .header-variant1.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper ul,
   .header-variant2.header-menu-body .default-content-wrapper .header-menu-body-inner-ul-wrapper ul {
     width: 100%;
-    border-bottom: 0.5px solid #B2B3B5;
+    border-bottom: 0.5px solid var(--color-neutral-350, #B2B3B5);
   }
 
   .header-menu ul {
     flex-direction: row;
     width: 100%;
     gap: 12px;
-    border-bottom: 0.5px solid #B2B3B5;
+    border-bottom: 0.5px solid var(--color-neutral-350, #B2B3B5);
     overflow-x: auto;
   }
 
@@ -540,8 +540,8 @@ ul {
     top: 50%;
     width: 8px;
     height: 8px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-right: 2px solid var(--color-black, #000000);
+    border-bottom: 2px solid var(--color-black, #000000);
     transform: translateY(-50%) rotate(45deg);
     /* down arrow */
     transition: transform 0.3s ease;
@@ -556,8 +556,8 @@ ul {
     top: 50%;
     width: 8px;
     height: 8px;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-right: 2px solid var(--color-black, #000000);
+    border-bottom: 2px solid var(--color-black, #000000);
     transition: transform 0.3s ease;
     /* up arrow */
   }
