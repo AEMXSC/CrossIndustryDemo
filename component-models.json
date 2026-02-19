@@ -240,6 +240,39 @@
           {
             "name": "TechSepcsFeature",
             "value": "techsepcsfeature"
+          },
+          {
+            "name": "Features",
+            "value": "features"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleFeatures",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "features"
+          ]
+        },
+        "options": [
+          {
+            "name": "Features",
+            "children": [
+              {
+                "name": "Hitech Feature Variant 1",
+                "value": "hitech-feature-variant1"
+              },
+              {
+                "name": "Hitech Feature Variant 2",
+                "value": "hitech-feature-variant2"
+              }
+            ]
           }
         ]
       },
