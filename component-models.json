@@ -406,6 +406,10 @@
               {
                 "name": "HitechAccordion Variant 3",
                 "value": "hitechaccordion-variant3"
+              },
+              {
+                "name": "HitechAccordion tab content",
+                "value": "hitechaccordion-tab-content"
               }
             ]
           }
