@@ -289,7 +289,7 @@
 
 .tabs-nav-wrapper .tabs-list {
   flex-direction: column;
-  border-left: 2px solid #E6E8F1;
+  border-left: 2px solid var(--Lunar-Gray, #E6E8F1);
   max-height: fit-content;
 }
 
@@ -346,7 +346,7 @@
   .tabs-nav-wrapper .tabs-list {
     flex-direction: row;
     border-left: none;
-    border-bottom: 2px solid #E6E8F1;
+    border-bottom: 2px solid var(--Lunar-Gray, #E6E8F1);
     overflow-x: scroll;
   }
 
