@@ -94,7 +94,7 @@ export default async function decorate(block) {
     console.warn("No footer found in hierarchy");
     return null;
   }
-  const fragment = await loadFooterHierarchically("/footer");
+  const fragment = await loadFooterHierarchically("/hi-tech-footer1");
 
   // decorate footer DOM
   block.textContent = '';
