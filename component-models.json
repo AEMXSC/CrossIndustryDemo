@@ -6581,38 +6581,33 @@
     "fields": [
       {
         "component": "select",
-        "name": "stylehitechoverview",
+        "name": "style",
         "label": "Select Title Alignment",
-        "valueType": "string[]",
+        "valueType": "string",
         "options": [
           {
-            "name": "Select Title Alignment",
-            "children": [
-              {
-                "name": "Title Left Alignment",
-                "value": "align-left"
-              },
-              {
-                "name": "Title Right Alignment",
-                "value": "align-right"
-              }
-            ]
+            "name": "Title Left Alignment",
+            "value": "align-left"
           },
           {
-            "component": "reference",
-            "valueType": "string",
-            "name": "image",
-            "label": "Select Image",
-            "multi": false
-          },
-          {
-            "component": "richtext",
-            "name": "text",
-            "value": "",
-            "label": "Text",
-            "valueType": "string"
+            "name": "Title Right Alignment",
+            "value": "align-right"
           }
         ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Select Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
