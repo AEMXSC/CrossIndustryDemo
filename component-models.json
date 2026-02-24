@@ -361,6 +361,39 @@
               {
                 "name": "tech-specs-type-3",
                 "value": "tech-specs-varient3"
+              },
+              {
+                "name": "HitechOverview",
+                "value": "hitechoverview"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleHitechOverview",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "hitechoverview"
+          ]
+        },
+        "options": [
+          {
+            "name": "HitechOverview",
+            "children": [
+              {
+                "name": "Hi-tech Overview Variant 1",
+                "value": "hi-tech-overview-variant1"
+              },
+              {
+                "name": "Hi-tech Overview Variant 2",
+                "value": "hi-tech-overview-variant2"
               }
             ]
           }
@@ -6538,6 +6571,40 @@
           {
             "name": "Theme Light",
             "value": "theme-light"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "benefitssection",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "stylehitechoverview",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "hitechoverview"
+          ]
+        },
+        "options": [
+          {
+            "name": "Select Title Alignment",
+            "children": [
+              {
+                "name": "Title Left Alignment",
+                "value": "align-left"
+              },
+              {
+                "name": "Title Right Alignment",
+                "value": "align-right"
+              }
+            ]
           }
         ]
       }
