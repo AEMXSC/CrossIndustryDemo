@@ -6580,18 +6580,10 @@
     "id": "benefitssection",
     "fields": [
       {
-        "component": "multiselect",
+        "component": "select",
         "name": "stylehitechoverview",
-        "label": "Style",
+        "label": "Select Title Alignment",
         "valueType": "string[]",
-        "condition": {
-          "===": [
-            {
-              "var": "sectionType"
-            },
-            "hitechoverview"
-          ]
-        },
         "options": [
           {
             "name": "Select Title Alignment",
@@ -6605,6 +6597,20 @@
                 "value": "align-right"
               }
             ]
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Select Image",
+            "multi": false
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
           }
         ]
       }
