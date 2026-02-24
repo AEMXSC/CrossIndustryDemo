@@ -37,6 +37,56 @@
   min-width: 136px;
 }
 
+/* start css for tab and it's accordion content  1 varition*/
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-nav-wrapper .tabs-list {
+  border-left: none;
+}
+
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-nav-wrapper .tabs-list .tabs-tab[aria-selected='true'] {
+  border-left: 1.5px solid #7A63FF;
+  color: #05060D;
+}
+
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-nav-wrapper .tabs-list .tabs-tab {
+  padding: 8px 36px 8px 16px;
+  border: none;
+  font-family: var(--Inter, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #5C5D63;
+  border-left: 0.5px solid #D2D2D2;
+}
+
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-panels-wrapper .tabs-panel .hitechaccordion-tab-content .accordion-wrapper .accordion.block .accordion-item {
+  border-bottom: 0.7px solid;
+  border-image-source: linear-gradient(90deg, rgba(122, 99, 255, 0) -10.96%, rgba(122, 99, 255, 0.8) 51.51%, rgba(122, 99, 255, 0) 115.19%);
+  border-image-slice: 1;
+}
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-panels-wrapper .tabs-panel .hitechaccordion-tab-content .accordion-wrapper .accordion.block .accordion-item .accordion-item-label::after {
+  top: 29px;
+}
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-panels-wrapper .tabs-panel .hitechaccordion-tab-content .accordion-wrapper .accordion.block .accordion-item .accordion-item-label p {
+  font-family: var(--Inter, sans-serif);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #10172A;
+}
+
+.section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-panels-wrapper .tabs-panel .hitechaccordion-tab-content .accordion-wrapper .accordion.block .accordion-item .accordion-item-body p {
+  font-family: var(--Inter, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #696969;
+}
+
+/* end css for tab and it's accordion content  1 varition*/
+
 /* write the new css for hitech accordion varition 2  */
 .section.hitechaccordion-variant2 .default-content-wrapper {
   display: flex;
@@ -66,6 +116,7 @@
   width: 100%;
   max-width: 899px;
   padding: 0px;
+
   @media screen and (max-width: 767px) {
     padding: 0px 16px;
   }
@@ -77,8 +128,9 @@
   border-image-slice: 1;
   padding: 32px 8px;
 }
+
 .section.hitechaccordion-variant2 .accordion-wrapper .accordion.block .accordion-item:first-child {
-    padding: 0px 8px 32px 8px;
+  padding: 0px 8px 32px 8px;
 }
 
 .section.hitechaccordion-variant2 .accordion-wrapper .accordion.block .accordion-item .accordion-item-label {
@@ -86,12 +138,14 @@
 }
 
 .section.hitechaccordion-variant2 .accordion-wrapper .accordion.block .accordion-item .accordion-item-label p {
-  font-family: var(--Inter, sans-serif);;
+  font-family: var(--Inter, sans-serif);
+  ;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0%;
   color: #10172A;
+
   @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 24px;
@@ -101,18 +155,21 @@
 .section.hitechaccordion-variant2 .accordion-wrapper .accordion.block .accordion-item .accordion-item-body {
   padding: 0px;
   margin-top: 16px;
+
   @media screen and (max-width: 767px) {
     margin-top: 8px;
   }
 }
 
 .section.hitechaccordion-variant2 .accordion-wrapper .accordion.block .accordion-item .accordion-item-body p {
-  font-family: var(--Inter, sans-serif);;
+  font-family: var(--Inter, sans-serif);
+  ;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0%;
   color: #696969;
+
   @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 20px;

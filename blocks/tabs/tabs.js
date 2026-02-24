@@ -160,7 +160,7 @@ export default async function decorate(block) {
 
   // -------- MOVE ACCORDIONS INTO PANELS --------
   const accordionVariants = [
-    ...block.closest("main").querySelectorAll('[class*="accordion-varient"]'),
+    ...block.closest("main").querySelectorAll('[class*="hitechaccordion-tab-content"], [class*="accordion-varient"]'),
   ];
   console.log("Found accordions:", accordionVariants);
 
