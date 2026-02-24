@@ -244,6 +244,10 @@
           {
             "name": "Features",
             "value": "features"
+          },
+          {
+            "name": "HitechOverview",
+            "value": "hitechoverview"
           }
         ]
       },
@@ -361,10 +365,6 @@
               {
                 "name": "tech-specs-type-3",
                 "value": "tech-specs-varient3"
-              },
-              {
-                "name": "HitechOverview",
-                "value": "hitechoverview"
               }
             ]
           }
