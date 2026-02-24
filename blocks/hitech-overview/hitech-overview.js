@@ -1,15 +1,15 @@
 import Swiper from './swiper.min.js';
 export default async function decorate(block) {
   // Create swiper container
-  const swiperContainer = document.createElement('div');
+  let swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper';
 
-  const swiperWrapper = document.createElement('div');
+  let swiperWrapper = document.createElement('div');
   swiperWrapper.className = 'swiper-wrapper';
 
   // Select all overview wrappers inside section
-  const section = block.closest('.hitech-overview-container');
-  const wrappers = section.querySelectorAll('.hitech-overview-wrapper');
+  let section = block.closest('.hitech-overview-container');
+  let wrappers = section.querySelectorAll('.hitech-overview-wrapper');
 
   wrappers.forEach((wrapper) => {
     wrapper.classList.add('swiper-slide');
@@ -26,25 +26,54 @@ export default async function decorate(block) {
   section.innerHTML = '';
   section.appendChild(swiperContainer);
 
- hitechArticles2();
-}
 
+  if (section.classList.contains("hi-tech-overview-variant1")) {
+    hitechArticles1();
+  } else if (section.classList.contains("hi-tech-overview-variant2"))  {
+    hitechArticles2();
+  }
+}
 function hitechArticles2() {
-  Swiper(".hi-tech-overview-variant1 .swiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
+  Swiper(".hi-tech-overview-variant2 .swiper", {
+    slidesPerView: 1.3,
+    spaceBetween: 16,
     loop: false,
+    grabCursor: true,
+    direction: "vertical",
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
     breakpoints: {
       768: {
-        slidesPerView: 1
+        slidesPerView: 1.3,
+        spaceBetween: 0
       },
       1024: {
-        slidesPerView: 1
+        slidesPerView: 1.3,
+        spaceBetween: 0
       }
     }
   });
 }
+
+function hitechArticles1() {
+  Swiper(".hi-tech-overview-variant1 .swiper", {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    loop: false,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1.15
+      },
+      1024: {
+        slidesPerView: 1.15
+      }
+    }
+  });
+} 

@@ -1922,6 +1922,7 @@ flex-basis: 100%;
     background: var(--silver, #D8D8D6);
     border-radius: 6px;
     cursor: pointer;
+    opacity: 1;
 }
 .hitech-variant2 span.swiper-pagination-bullet.swiper-pagination-bullet-active,
 .hitech-variant3 span.swiper-pagination-bullet.swiper-pagination-bullet-active{
