@@ -37,8 +37,6 @@ function hitechArticles2() {
   Swiper(".hi-tech-overview-variant2 .swiper", {
     slidesPerView: 1.3,
     spaceBetween: 16,
-    loop: false,
-    grabCursor: true,
     direction: "vertical",
     pagination: {
       el: '.swiper-pagination',
