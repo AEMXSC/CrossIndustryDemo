@@ -6581,7 +6581,7 @@
     "fields": [
       {
         "component": "select",
-        "name": "style",
+        "name": "classes",
         "label": "Select Title Alignment",
         "valueType": "string",
         "options": [
