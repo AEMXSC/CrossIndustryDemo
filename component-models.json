@@ -185,6 +185,7 @@
         "label": "Section Type",
         "valueType": "string",
         "default": "default",
+        "value": "default",
         "options": [
           {
             "name": "Default",
