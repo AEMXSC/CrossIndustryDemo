@@ -22,7 +22,7 @@ async function fetcData() {
 }
 export default async function decorate(block) {
   /*  Variant logic */
-  // const checkClasse =  block.classList.contains("tech-specs-features-type-3");
+  const checkClasse =  block.classList.contains("tech-specs-features-type-1");
   // const container = block.closest(".tech-specs-features-container");
   // const classes = block.classList;
   // const TYPE_MAP = {

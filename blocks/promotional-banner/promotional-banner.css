@@ -361,6 +361,12 @@ width: 42.4%;
 
 
 /* hi tech banner variant 1 */
+.hitech-banner-variant1.promotional-banner-container,
+.hitech-banner-variant2.promotional-banner-container,
+.hitech-banner-variant3.promotional-banner-container,
+.hitech-banner-variant4.promotional-banner-container {
+margin-top: 154px !important;
+}
 
 .hitech-banner-variant1 {
     background: linear-gradient(101deg, var(--cosmic-black,#05060D) 42.11%, var(--color-slate,#8B8FA8) 239.35%);
@@ -673,4 +679,13 @@ line-height: 24px; /* 150% */
     .hitech-banner-variant4.promotional-banner-container .banner-conetent p {
         margin-bottom: 32px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .hitech-banner-variant1.promotional-banner-container,
+.hitech-banner-variant2.promotional-banner-container,
+.hitech-banner-variant3.promotional-banner-container,
+.hitech-banner-variant4.promotional-banner-container {
+margin-top: 85px !important;
+}
 }
