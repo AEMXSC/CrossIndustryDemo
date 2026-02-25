@@ -17,10 +17,5 @@
     }
   ],
   "models": [],
-  "filters": [
-    {
-      "id": "product-compare-cards",
-      "components": []
-    }
-  ]
+  "filters": []
 }
