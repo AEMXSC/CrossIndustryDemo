@@ -184,6 +184,7 @@
         "name": "sectionType",
         "label": "Section Type",
         "valueType": "string",
+        "default": "default",
         "options": [
           {
             "name": "Default",
@@ -208,6 +209,9 @@
         "name": "styleDefault",
         "label": "Style",
         "valueType": "string[]",
+        "default": [
+          "default"
+        ],
         "condition": {
           "===": [
             {
