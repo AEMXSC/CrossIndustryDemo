@@ -813,7 +813,8 @@
                 "trackrecord",
                 "accordion",
                 "tabs",
-                "font-properties"
+                "font-properties",
+                "product-compare-cards"
             ]
         }
     ]
