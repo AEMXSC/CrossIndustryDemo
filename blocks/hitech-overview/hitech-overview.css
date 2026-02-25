@@ -75,6 +75,7 @@
 .section.hi-tech-overview-variant2 .swiper {
     padding: 0;
     height: 750px;
+    overflow: hidden !important;
 }
 
 .hi-tech-overview-variant2 .swiper-pagination-vertical.swiper-pagination-bullets,

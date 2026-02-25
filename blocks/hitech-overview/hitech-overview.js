@@ -38,6 +38,7 @@ function hitechArticles2() {
     slidesPerView: 1.3,
     spaceBetween: 16,
     direction: "vertical",
+    grabCursor: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
