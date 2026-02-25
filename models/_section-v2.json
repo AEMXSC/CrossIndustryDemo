@@ -60,15 +60,15 @@
                         },
                         {
                             "name": "Footer",
-                            "value": "footer"  
+                            "value": "footer"
                         },
                         {
                             "name": "HitechGallery",
-                            "value": "hitechgallery"  
+                            "value": "hitechgallery"
                         },
                         {
                             "name": "HitechArticles",
-                            "value": "hitechArticles"  
+                            "value": "hitechArticles"
                         },
                         {
                             "name": "Banner",
@@ -102,7 +102,6 @@
                             "name": "Compare",
                             "value": "compare"
                         }
-
                     ]
                 },
                 {
@@ -134,7 +133,6 @@
                                     "name": "Compare Component Variant3",
                                     "value": "compare-variant3"
                                 }
-
                             ]
                         }
                     ]
@@ -164,7 +162,6 @@
                                     "name": "Hitech Feature Variant 2",
                                     "value": "hitech-feature-variant2"
                                 }
-
                             ]
                         }
                     ]
@@ -456,18 +453,18 @@
                         {
                             "name": "HitechArticles",
                             "children": [
-                           {
-                                "name": "hitech Articles v1",
-                                "value": "hitech-articles1"
-                            },
-                            {
-                                "name": "hitech Articles v2",
-                                "value": "hitech-articles2"
-                            },
-                            {
-                                "name": "hitech Articles v3",
-                                "value": "hitech-articles3"
-                            }
+                                {
+                                    "name": "hitech Articles v1",
+                                    "value": "hitech-articles1"
+                                },
+                                {
+                                    "name": "hitech Articles v2",
+                                    "value": "hitech-articles2"
+                                },
+                                {
+                                    "name": "hitech Articles v3",
+                                    "value": "hitech-articles3"
+                                }
                             ]
                         }
                     ]
@@ -489,18 +486,18 @@
                         {
                             "name": "HitechGallery",
                             "children": [
-                            {
-                                "name": "hitech gallery v1",
-                                "value": "hitech-variant1"
-                            },
-                            {
-                                "name": "hitech gallery v2",
-                                "value": "hitech-variant2"
-                            },
-                            {
-                                "name": "hitech gallery v3",
-                                "value": "hitech-variant3"
-                            }
+                                {
+                                    "name": "hitech gallery v1",
+                                    "value": "hitech-variant1"
+                                },
+                                {
+                                    "name": "hitech gallery v2",
+                                    "value": "hitech-variant2"
+                                },
+                                {
+                                    "name": "hitech gallery v3",
+                                    "value": "hitech-variant3"
+                                }
                             ]
                         }
                     ]
@@ -574,11 +571,11 @@
                                 {
                                     "name": "Benefits Variant 1",
                                     "value": "benefits-section1"
-                                    },
-                                    {
+                                },
+                                {
                                     "name": "Benefits Variant 2",
                                     "value": "benefits-section2"
-                                    }
+                                }
                             ]
                         }
                     ]
@@ -813,8 +810,7 @@
                 "trackrecord",
                 "accordion",
                 "tabs",
-                "font-properties",
-                "product-compare-cards"
+                "font-properties"
             ]
         }
     ]
