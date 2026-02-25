@@ -110,7 +110,8 @@ p{
   --Warm-White: #FEFEFD;
   --Deep-Blue: #1F4DA8;
   --DM-Sans: 'DM Sans', sans-serif;
-  --Inter: sans-serif;
+  --Inter: 'Inter', sans-serif;
+  --Space-Grotesk: 'Space Grotesk', sans-serif;
   --font-weight-400: 400;
   --font-weight-500: 500;
   --letter-spacing: 0;
@@ -856,7 +857,7 @@ main .section.bg-image > .default-content-wrapper {
 } */
 
 .adobe-ue-edit header, .adobe-ue-preview header {
-  background: #000;
+  background: var(--color-black, #000000);
 }
 
 /* Section background image (data-image) */

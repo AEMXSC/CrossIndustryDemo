@@ -589,7 +589,7 @@
     font-size: 48px;
     line-height: 62px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #000000;
+    color: var(--color-black, #000000);
     text-align: center;
     margin-bottom: 13px;
 }
@@ -600,7 +600,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #000000;
+    color: var(--color-black, #000000);
     text-align: center;
 }
 

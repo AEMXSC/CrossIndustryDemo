@@ -103,6 +103,7 @@
   transform: none;
   border: none;
   color: var(--Deep-Blue);
+  top: 0;
 }
 
 /* Open state icon */
