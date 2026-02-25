@@ -15,6 +15,11 @@
       }
     }
   ],
-  "models": [],
+  "models": [
+    {
+      "id": "product-compare-cards",
+      "fields": []
+    }
+  ],
   "filters": []
 }
