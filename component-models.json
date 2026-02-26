@@ -6687,18 +6687,12 @@
         "valueType": "string"
       },
       {
-        "component": "container",
-        "name": "swatches",
-        "label": "Color Swatches",
+        "component": "text",
+        "name": "color",
+        "label": "Color (Hex Code)",
+        "valueType": "string",
         "multi": true,
-        "fields": [
-          {
-            "component": "text",
-            "name": "color",
-            "label": "Color (Hex Code)",
-            "valueType": "string"
-          }
-        ]
+        "value": ""
       },
       {
         "component": "text",

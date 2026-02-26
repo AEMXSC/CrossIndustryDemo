@@ -50,6 +50,26 @@
   margin-top: auto;
 }
 
+.product-card__swatches {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0 12px;
+}
+
+.product-card__swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.product-card__swatch:hover {
+  transform: scale(1.2);
+}
+
 /* Button styles */
 .button,
 .button-secondary,

@@ -1,50 +1,63 @@
-// export default function decorate(block) {
-//   const rows = [...block.children];
+export default function decorate(block) {
+    const rows = [...block.children];
 
-//   block.innerHTML = '';
+    block.innerHTML = '';
 
-//   const grid = document.createElement('div');
-//   grid.classList.add('product-compare-cards__grid');
+    const grid = document.createElement('div');
+    grid.classList.add('product-compare-cards__grid');
 
-//   rows.forEach((row) => {
-//     const columns = [...row.children];
+    rows.forEach((row) => {
+        const columns = [...row.children];
 
-//     const image = columns[0];
-//     const title = columns[1];
-//     const description = columns[2];
-//     const specs = columns[3];
-//     const ctaText = columns[4];
-//     const ctaStyle = columns[5];
+        const image = columns[0];
+        const swatches = columns[1];
+        const title = columns[2];
+        const description = columns[3];
+        const specs = columns[4];
+        const ctaText = columns[5];
+        const ctaStyle = columns[6];
 
-//     const card = document.createElement('div');
-//     card.classList.add('product-card');
+        console.log('swatches >>> ', columns);
 
-//     card.innerHTML = `
-//       <div class="product-card__image">
-//         ${image ? image.innerHTML : ''}
-//       </div>
+        const card = document.createElement('div');
+        card.classList.add('product-card');
 
-//       <h3 class="product-card__title">
-//         ${title ? title.textContent : ''}
-//       </h3>
+        const swatchHTML = swatches
+            ? [...swatches.querySelectorAll('p')]
+                .map(p => `<span class="product-card__swatch" style="background:${p.textContent.trim()}"></span>`)
+                .join('')
+            : '';
 
-//       <div class="product-card__description">
-//         ${description ? description.innerHTML : ''}
-//       </div>
+        card.innerHTML = `
+      <div class="product-card__image">
+        ${image ? image.innerHTML : ''}
+      </div>
 
-//       <div class="product-card__specs">
-//         ${specs ? specs.innerHTML : ''}
-//       </div>
+      <div class="product-card__swatches">
+        ${swatchHTML}
+      </div>
 
-//       <div class="product-card__cta">
-//         <a href="#" class="${ctaStyle ? ctaStyle.textContent.trim() : 'button'}">
-//           ${ctaText ? ctaText.textContent.trim() : 'Learn More'}
-//         </a>
-//       </div>
-//     `;
+      <h3 class="product-card__title">
+        ${title ? title.textContent : ''}
+      </h3>
 
-//     grid.appendChild(card);
-//   });
+      <div class="product-card__description">
+        ${description ? description.innerHTML : ''}
+      </div>
 
-//   block.appendChild(grid);
-// }
+      <div class="product-card__specs">
+        ${specs ? specs.innerHTML : ''}
+      </div>
+
+      <div class="product-card__cta">
+        <a href="#" class="${ctaStyle ? ctaStyle.textContent.trim() : 'button'}">
+          ${ctaText ? ctaText.textContent.trim() : 'Learn More'}
+        </a>
+      </div>
+    `;
+
+        grid.appendChild(card);
+    });
+
+    block.appendChild(grid);
+}
