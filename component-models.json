@@ -6687,6 +6687,13 @@
         "valueType": "string"
       },
       {
+        "component": "richtext",
+        "name": "color",
+        "label": "Color (Hex Code)",
+        "valueType": "string",
+        "description": "Enter the hex code for the product color (e.g., #FF5733)."
+      },
+      {
         "component": "text",
         "name": "title",
         "label": "Title",
