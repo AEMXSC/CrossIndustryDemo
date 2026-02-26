@@ -6682,35 +6682,51 @@
     "fields": [
       {
         "component": "reference",
-        "valueType": "string",
         "name": "image",
-        "label": "Image",
-        "multi": false
+        "label": "Product Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
       },
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "specs",
+        "label": "Specifications (Bullet List)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text",
         "valueType": "string"
       },
       {
         "component": "select",
-        "name": "ctastyle",
+        "name": "ctaStyle",
         "label": "CTA Style",
         "valueType": "string",
         "value": "button",
         "options": [
           {
-            "name": "Primary Button",
+            "name": "Primary",
             "value": "button"
           },
           {
-            "name": "Secondary Button",
+            "name": "Secondary",
             "value": "button-secondary"
           },
           {
-            "name": "Dark Button",
+            "name": "Dark",
             "value": "button-dark"
           }
         ]
