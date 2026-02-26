@@ -12,9 +12,10 @@ export default function decorate(block) {
         const colorField = cols[1];
         const title = cols[2];
         const description = cols[3];
-        const specs = cols[4];
-        const ctaText = cols[5];
-        const ctaStyle = cols[6];
+        const productModel = cols[4];
+        const specs = cols[5];
+        const ctaText = cols[6];
+        const ctaStyle = cols[7];
 
         /* Handle comma separated colors */
         const colors = colorField
