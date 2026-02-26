@@ -1956,7 +1956,9 @@ flex-basis: 100%;
 .hitech-variant2 .cards.block.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
 overflow: unset;
 }
-
+.hitech-variant2.cards-container {
+  overflow: hidden;
+}
 @media screen and (max-width: 1024px) {
   .hitech-variant1.cards-container, .hitech-variant2.cards-container, .hitech-variant3.cards-container {
         padding: 48px 24px;
@@ -2022,7 +2024,7 @@ overflow: unset;
   justify-content: space-between;
   align-items: center;
   margin: 0px;
-  gap: 25px;
+  /* gap: 25px; */
 }
 .hitech-articles1 .default-content-wrapper h2,
 .hitech-articles2 .default-content-wrapper h2,
@@ -2268,12 +2270,13 @@ border-radius: 6px;
 @media screen and (max-width:1024px) {
   .hitech-articles1.cards-container,
   .hitech-articles2.cards-container  {
-        padding: 40px 24px 136px 24px;
+        padding: 40px 0px 136px 24px;
             position: relative;
     gap: 32px;
+    overflow: hidden;
   }
 .hitech-articles3.cards-container {
-padding: 40px 24px;
+padding: 40px 0px 40px 24px;
 }
 .hitech-articles3 .cards .cards-card-body ul {
   display: none;

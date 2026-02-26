@@ -4,6 +4,7 @@
 .tech-specs-features-varient1 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side {
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient1 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side {
@@ -19,6 +20,8 @@
   border-left: 0.7px solid;
   border-image-source: linear-gradient(90deg, rgba(122, 99, 255, 0) -12.25%, rgba(122, 99, 255, 0.8) 51.51%, rgba(122, 99, 255, 0) 116.5%);
   border-image-slice: 1;
+  width: 22.65%;
+  min-height: 400px;
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient1 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card {
@@ -27,6 +30,8 @@
     gap: 40px;
     border-bottom: 0.7px solid;
     padding: 40px 0;
+            width: 100%;
+        min-height: 196px;
   }
 }
 .tech-specs-features-varient1 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p:nth-of-type(1) {
@@ -64,6 +69,7 @@
 }
 .tech-specs-features-varient2 .tech-specs-features-wrapper {
   width: 76.7%;
+  margin-left: auto;
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient2 .tech-specs-features-wrapper {
