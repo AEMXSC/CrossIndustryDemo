@@ -42,12 +42,11 @@
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "color",
           "label": "Color (Hex Code)",
           "valueType": "string",
-          "multi": true,
-          "value": ""
+          "description": "Enter the hex code for the product color (e.g., #FF5733)."
         },
         {
           "component": "text",
