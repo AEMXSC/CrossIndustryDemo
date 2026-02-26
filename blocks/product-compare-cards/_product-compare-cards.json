@@ -70,7 +70,8 @@
           "component": "text",
           "name": "ctaText",
           "label": "CTA Text",
-          "valueType": "string"
+          "valueType": "string",
+          "value": "Add to Cart"
         },
         {
           "component": "select",
