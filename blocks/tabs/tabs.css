@@ -30,7 +30,7 @@
     display: flex;
     padding: 12px 24px;
     border-radius: 4px;
-    background: #10172A;
+    background: var(--Primary, #10172A);
     margin-top: 48px;
     width: 100%;
   }
@@ -39,7 +39,7 @@
 .section.hitechaccordion-variant1 .default-content-wrapper:first-child .button-container {
   padding: 12px 24px;
   border-radius: 4px;
-  background: #10172A;
+  background: var(--Primary, #10172A);
   display: flex;
 
   @media screen and (max-width: 767px) {
@@ -48,7 +48,7 @@
 }
 
 .section.hitechaccordion-variant1 .default-content-wrapper .button-container a {
-  color: #E6E8F1;
+  color: var(--Lunar-Gray, #E6E8F1);
   font-family: var(--Inter, sans-serif);
   font-size: 16px;
   font-weight: 400;
@@ -79,7 +79,7 @@
 
 .section.hitechaccordion-variant1 .tabs-wrapper .tabs.block .tabs-nav-wrapper .tabs-list .tabs-tab[aria-selected='true'] {
   border-left: 1.5px solid #7A63FF;
-  color: #05060D;
+  color: var(--cosmic-black, #05060D);
 
   @media screen and (max-width: 767px) {
     border-left: none;
@@ -95,7 +95,7 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0%;
-  color: #5C5D63;
+  color: var(--color-steel-gray, #5C5D63);
   border-left: 0.5px solid #D2D2D2;
 
   @media screen and (max-width: 767px) {
@@ -131,7 +131,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
-  color: #10172A;
+  color: var(--Primary, #10172A);
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
@@ -144,7 +144,7 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0%;
-  color: #696969;
+  color: var(--dark-gray, #696969);
 }
 
 /* end css for tab and it's accordion content  1 varition*/
@@ -204,7 +204,7 @@
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0%;
-  color: #10172A;
+  color: var(--Primary, #10172A);
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
@@ -227,7 +227,7 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0%;
-  color: #696969;
+  color: var(--dark-gray, #696969);
 
   @media screen and (max-width: 767px) {
     font-size: 14px;
@@ -535,7 +535,7 @@
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0%;
-  color: #10172A;
+  color: var(--Primary, #10172A);
 
   @media screen and (max-width: 768px) {
     font-size: 24px;
@@ -544,7 +544,7 @@
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:first-child p u {
-  color: #7A63FF;
+  color: var(--Secondary, #7A63FF);
   text-decoration: none;
 }
 
@@ -585,7 +585,7 @@
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:nth-child(2)>ul>li:nth-child(2) {
   padding: 12px 24px;
   border-radius: 4px;
-  background: #10172A;
+  background: var(--Primary, #10172A);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -593,7 +593,7 @@
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:nth-child(2)>ul>li:nth-child(2) a {
-  color: #E6E8F1;
+  color: var(--Lunar-Gray, #E6E8F1);
   font-family: var(--Inter, sans-serif);
   font-size: 16px;
   font-weight: 400;
@@ -615,7 +615,7 @@
   background: #F0F0F0;
 
   @media screen and (max-width: 768px) {
-    background: #E6E8F1;
+    background: var(--Lunar-Gray, #E6E8F1);
   }
 }
 
@@ -652,7 +652,7 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0%;
-  color: #696969;
+  color: var(--dark-gray, #696969);
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
@@ -714,7 +714,7 @@
   .section.hitechaccordion-variant3 .default-content-wrapper:last-of-type ul:first-child li:nth-child(2) {
     padding: 12px 24px;
     border-radius: 4px;
-    background: #10172A;
+    background: var(--Primary, #10172A);
     display: flex;
     justify-content: center;
     width: 100%;
@@ -722,7 +722,7 @@
   }
 
   .section.hitechaccordion-variant3 .default-content-wrapper:last-of-type ul:first-child li:nth-child(2) a {
-    color: #E6E8F1;
+    color: var(--Lunar-Gray, #E6E8F1);
     font-family: var(--Inter, sans-serif);
     font-size: 16px;
     font-weight: 400;
