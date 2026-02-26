@@ -6687,9 +6687,10 @@
         "valueType": "string"
       },
       {
-        "component": "multifield",
+        "component": "container",
         "name": "swatches",
         "label": "Color Swatches",
+        "multi": true,
         "fields": [
           {
             "component": "text",
