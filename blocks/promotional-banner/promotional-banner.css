@@ -385,6 +385,9 @@ margin-top: 154px !important;
 .hitech-banner-variant1 .bannner-image > div {
     height: 100%;
 }
+.hitech-banner-variant1 .bannner-image img{
+    height: 100%;
+}
 .hitech-banner-variant1 .banner-conetent {
     width: 41.9%;
     padding: 104px 0px 0px 88px;
@@ -562,7 +565,9 @@ line-height: 24px; /* 150% */
         justify-content: end;
         position: relative;
     }
-
+.hitech-banner-variant1 .bannner-image > div {
+    height: unset;
+}
     .hitech-banner-variant1 .banner-conetent {
         width: 100%;
         padding: 56px 24px 0px 24px;
