@@ -61,6 +61,12 @@
           "valueType": "string"
         },
         {
+          "component": "text",
+          "name": "productDescription",
+          "label": "Product Description",
+          "valueType": "string"
+        },
+        {
           "component": "richtext",
           "name": "specs",
           "label": "Specifications (Bullet List)",
