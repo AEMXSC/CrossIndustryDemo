@@ -16,6 +16,7 @@
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0%;
+  color: var(--charcoal, #1B1B1E);
 
   @media screen and (max-width: 767px) {
     font-size: 24px;
@@ -166,6 +167,7 @@
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0%;
+  color: var(--charcoal, #1B1B1E);
 
   @media screen and (max-width: 767px) {
     font-size: 24px;
@@ -571,6 +573,7 @@
   line-height: 24px;
   letter-spacing: 0%;
   margin-bottom: 16px;
+  color: var(--Primary, #10172A);
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:nth-child(2)>ul>li:first-child {
@@ -580,6 +583,7 @@
   line-height: 24px;
   letter-spacing: 0%;
   margin-bottom: 16px;
+  color: var(--dark-gray, #696969);
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:nth-child(2)>ul>li:nth-child(2) {
