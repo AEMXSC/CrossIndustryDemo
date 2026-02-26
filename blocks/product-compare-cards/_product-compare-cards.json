@@ -62,8 +62,8 @@
         },
         {
           "component": "text",
-          "name": "productDescription",
-          "label": "Product Description",
+          "name": "productmodel",
+          "label": "Product Model",
           "valueType": "string"
         },
         {
