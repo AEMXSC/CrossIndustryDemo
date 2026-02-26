@@ -6687,6 +6687,19 @@
         "valueType": "string"
       },
       {
+        "component": "multifield",
+        "name": "swatches",
+        "label": "Color Swatches",
+        "fields": [
+          {
+            "component": "text",
+            "name": "color",
+            "label": "Color (Hex Code)",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
         "component": "text",
         "name": "title",
         "label": "Title",
