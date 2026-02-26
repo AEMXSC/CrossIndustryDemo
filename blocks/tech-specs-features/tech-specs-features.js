@@ -1,7 +1,7 @@
 const hardCodeDomains = "https://publish-p153659-e1796191.adobeaemcloud.com/";
 const domin = window.location.origin.includes("localhost")
   ? hardCodeDomains
-  : window.location.origin;
+  : hardCodeDomains;
 const url = "/graphql/execute.json/global/hi-tech-component";
 async function fetcData() {
   try {

@@ -39,7 +39,7 @@
   font-weight: var(--font-weight-300, 300);
   font-size: 92px;
   line-height: 120px;
-  color: #10172A;
+  color: var(--Primary, #10172A);
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient1 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p:nth-of-type(1) {
@@ -55,7 +55,7 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 14px;
   line-height: 20px;
-  color: #4F4F52;
+  color: var(--color-neutral-dark, #4f4f52);
 }
 
 .tech-specs-features-varient2 .tech-specs-features-wrapper {
@@ -84,7 +84,7 @@
   font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   line-height: 40px;
-  color: #1B1B1E;
+  color: var(--charcoal, #1B1B1E);
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient2 .tech-specs-features-wrapper .tech-specs-features-inner-wrapper .tech-specs-features-left-side > h2 {
@@ -118,7 +118,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
-  border-left: 1px solid #D8D8D6;
+  border-left: 1px solid var(--silver, #D8D8D6);
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient2 .tech-specs-features-wrapper .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card {
@@ -130,7 +130,7 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 48px;
   line-height: 52px;
-  background: linear-gradient(180deg, #7A63FF 0%, #0E0A29 100%);
+  background: linear-gradient(180deg, var(--Secondary, #7A63FF) 0%, var(--color-bg-deep, #0e0a29) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -140,7 +140,7 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 14px;
   line-height: 20px;
-  color: #5E5E60;
+  color: var(--slate-gray, #5E5E60);
 }
 .tech-specs-features-varient2 .tech-specs-features-wrapper .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p:nth-of-type(3) {
   display: none;
@@ -171,7 +171,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
-  color: #373739;
+  color: var(--color-dark-slate, #373739);
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient3 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-left-side h2 {
@@ -184,7 +184,7 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 14px;
   line-height: 20px;
-  color: #5C5D63;
+  color: var(--color-steel-gray, #5C5D63);
 }
 .tech-specs-features-varient3 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side {
   width: 47.2%;
@@ -215,7 +215,7 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 48px;
   line-height: 52px;
-  color: #10172A;
+  color: var(--Primary, #10172A);
 }
 @media (max-width: 768px) {
   .tech-specs-features-varient3 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card > p {
@@ -227,7 +227,7 @@
 .tech-specs-features-varient3 .tech-specs-features-wrapper  .tech-specs-features-inner-wrapper .tech-specs-features-right-side .tech-specs-features-card .tech-specs-features-card-content > p:nth-of-type(1) {
   font-family: var(--DM-Sans, sans-serif);
   font-weight: var(--font-weight-500, 500);
-  color: #1B1B1E;
+  color: var(--charcoal, #1B1B1E);
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 16px;
@@ -237,5 +237,5 @@
   font-weight: var(--font-weight-400, 400);
   font-size: 14px;
   line-height: 20px;
-  color: #4F4F52;
+  color: var(--color-neutral-dark, #4f4f52);
 }

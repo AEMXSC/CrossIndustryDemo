@@ -184,6 +184,8 @@
         "name": "sectionType",
         "label": "Section Type",
         "valueType": "string",
+        "default": "default",
+        "value": "default",
         "options": [
           {
             "name": "Default",
@@ -208,10 +210,6 @@
           {
             "name": "Benefits",
             "value": "benefits"
-          },
-          {
-            "name": "Footer",
-            "value": "footer"
           },
           {
             "name": "HitechGallery",
@@ -769,6 +767,9 @@
         "name": "styleDefault",
         "label": "Style",
         "valueType": "string[]",
+        "default": [
+          "default"
+        ],
         "condition": {
           "===": [
             {

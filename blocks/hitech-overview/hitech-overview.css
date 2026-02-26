@@ -4,7 +4,7 @@
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
-    background: #FAFAFA;
+    background: var(--color-soft-white, #fafafa);
 }
 
 .hi-tech-overview-variant1 {
@@ -20,7 +20,7 @@
 
 .hi-tech-overview-variant1 h3,
 .hi-tech-overview-variant2 h3 {
-    color: #E6E8F1;
+    color: var(--Lunar-Gray, #E6E8F1);
     font-family: var(--Inter, sans-serif);
     font-size: 30px;
     font-weight: 400;
@@ -48,7 +48,7 @@
 }
 
 .hi-tech-overview-variant1 .swiper-pagination-bullet {
-    background: #D8D8D6;
+    background: var(--silver, #D8D8D6);
     width: 8px;
     height: 8px;
     margin: 0px !important;
@@ -58,7 +58,7 @@
 
 .hi-tech-overview-variant1 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     border-radius: 6px;
-    background: var(--Tech-Glow, #05060D);
+    background: var(--cosmic-black,#05060D);
     height: 8px;
     width: 36px;
 }
@@ -93,7 +93,7 @@
 }
 
 .hi-tech-overview-variant2 .swiper-pagination-bullet {
-    background: #D8D8D6;
+    background: var(--silver, #D8D8D6);
     width: 8px;
     height: 8px;
     margin: 0px !important;
@@ -103,7 +103,7 @@
 
 .hi-tech-overview-variant2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     border-radius: 6px;
-    background: var(--Tech-Glow, #48E4C4);
+    background: var(--tech-glow, #48E4C4);
     width: 8px;
     height: 36px;
 }
@@ -165,4 +165,12 @@
     .swiper-vertical>.swiper-pagination-bullets {
         top: 37%;
     }
+     .hi-tech-overview-variant2 h3 {
+   width: 59%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hi-tech-overview-variant2 h3 {
+    width: 30%;
+  }
 }

@@ -8,30 +8,31 @@ import {
 } from "../../scripts/dom-helpers.js";
 
 export default function decorate(block) {
-  console.log(block);
-  let getType = block.closest(".promotional-banner-container").classList;
+  let container = block.closest('.promotional-banner-container');
+  if (!container) return;
 
-  if (getType.contains("banner-varient1")) {
-    block.append(bannerType1(block));
-  } else if (getType.contains("banner-varient2")) {
-    block.append(bannerType1(block));
-  } else if (getType.contains("banner-varient3")) {
-    block.append(bannerType3(block));
-  } else if (getType.contains("banner-varient4")) {
-    block.append(bannerType4(block));
-  } 
+  let classList = container.classList;
 
-  if (getType.contains("hitech-banner-variant1")) {
-    block.append(hitechBanner(block));
-  } 
-  if (getType.contains("hitech-banner-variant2")) {
-    block.append(hitechBanner(block));
-  } 
-  if (getType.contains("hitech-banner-variant3")) {
-    block.append(hitechBanner(block));
-  }
-  if (getType.contains("hitech-banner-variant4")) {
-    block.append(hitechBanner(block));
+  let variantMap = {
+    // Promotional banner variants
+    'banner-varient1': bannerType1,
+    'banner-varient2': bannerType1,
+    'banner-varient3': bannerType3,
+    'banner-varient4': bannerType4,
+
+    // Hitech banner variants
+    'hitech-banner-variant1': hitechBanner,
+    'hitech-banner-variant2': hitechBanner,
+    'hitech-banner-variant3': hitechBanner,
+    'hitech-banner-variant4': hitechBanner,
+  };
+
+  let matchedVariant = Object.keys(variantMap).find((variant) =>
+    classList.contains(variant)
+  );
+
+  if (matchedVariant) {
+    block.append(variantMap[matchedVariant](block));
   }
 }
 

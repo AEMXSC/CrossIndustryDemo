@@ -324,7 +324,7 @@
         right: -143px;
         width: 211px;
         height: 1px;
-        background: #e5e7eb;
+        background: var(--color-cloud-gray, #e5e7eb);
     }
 }
 
@@ -362,7 +362,7 @@
         transform: translateX(-50%);
         width: 2px;
         height: 60px;
-        background-color: #e5e7eb;
+        background-color: var(--color-cloud-gray, #e5e7eb);
         rotate: 0deg;
     }
 }
@@ -418,7 +418,7 @@
     top: 25px;
     bottom: 0;
     width: 0.5px;
-    background: #e5e7eb;
+    background: var(--color-cloud-gray, #e5e7eb);
 }
 
 .process-step-varient2 .track-record-wrapper .block .track-record-wrapper-item>div {
@@ -557,7 +557,7 @@
     display: flex;
     gap: 58px;
     align-items: flex-start;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--color-mist-gray, #eaeaea);
     padding: 32px 0 64px 0;
 }
 
