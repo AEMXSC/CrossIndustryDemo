@@ -115,7 +115,6 @@ export default function decorate(block) {
       grid.appendChild(card);
     });
 
-    block.textContent = ''; // safer than innerHTML
     block.appendChild(grid);
 
   } catch (error) {
