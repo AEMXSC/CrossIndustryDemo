@@ -78,6 +78,17 @@
   margin-bottom: 28px;
 }
 
+.compare-card__model {
+  display: inline-block;
+  background: #f1f1f1;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: #D8D8D6 solid 1px;
+  margin: 10px 0 18px;
+}
+
 .compare-card__specs ul {
   padding-left: 0;
   list-style: none;
