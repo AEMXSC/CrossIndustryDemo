@@ -3,7 +3,7 @@ export default function decorate(block) {
     try {
 
         const rows = [...block.children];
-        block.innerHTML = '';
+        // block.innerHTML = '';
 
         if (!rows.length) return;
 
