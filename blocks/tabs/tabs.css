@@ -786,7 +786,7 @@
     line-height: 20px;
     letter-spacing: 0%;
     margin-bottom: 16px;
-    color: #696969;
+    color: var(--dark-gray, #696969);
   }
 
   .section.hitechaccordion-variant3 .default-content-wrapper:last-of-type ul:first-child li:nth-child(2) {
