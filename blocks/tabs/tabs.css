@@ -1,5 +1,18 @@
 /* write the new css for hitech accordion varition 1  */
 /* title  and anchor button*/
+.section.hitechaccordion-variant1 {
+  width: 100%;
+  max-width: 1264px;
+  margin-left: auto;
+  margin-right: auto;
+   @media screen and (min-width: 767px) and (max-width: 1199px) {
+    padding: 0px 20px;
+   }
+  @media screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
+}
+
 .section.hitechaccordion-variant1 .default-content-wrapper {
   display: flex;
   justify-content: space-between;
@@ -65,8 +78,10 @@
 
 /* start css for tab and it's accordion content  1 varition*/
 .section.hitechaccordion-variant1 .tabs-wrapper {
+  padding: 0px;
+
   @media screen and (max-width: 767px) {
-    padding: 0px 0px 0px 16px;
+    padding: 0px;
   }
 }
 
@@ -422,6 +437,7 @@
   font-weight: var(--font-weight-500, 500);
   font-family: var(--DM-Sans, sans-serif);
   margin-bottom: 70px;
+  padding: 0px;
 }
 
 /*  */
@@ -505,11 +521,20 @@
 /* hitech variation 3 css */
 .section.hitechaccordion-variant3 {
   display: flex;
-  justify-content: space-between;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding: 0px 88px;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1440px;
+  margin-left: auto;
+  padding: 0px 88px;
+  margin-right: auto;
+  gap: 48px;
+
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    padding: 0px 40px;
+    gap: 32px;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 0px 16px;
@@ -519,8 +544,22 @@
 
 .section.hitechaccordion-variant3 .default-content-wrapper {
   width: 449px;
+  flex: 0 0 449px;
+  max-width: 449px;
   margin: 0px;
   padding: 0px;
+
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    width: 320px;
+    flex: 0 0 320px;
+    max-width: 320px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child {
@@ -529,6 +568,14 @@
   display: flex;
   flex-direction: column;
   gap: 240px;
+
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    gap: 120px;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 24px;
+  }
 }
 
 .section.hitechaccordion-variant3 .default-content-wrapper ul:first-child li:first-child p {
@@ -612,7 +659,21 @@
 .section.hitechaccordion-variant3 .accordion-wrapper {
   margin: 0px;
   width: 661px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 661px;
   padding: 0px;
+
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    width: auto;
+    max-width: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
 .section.hitechaccordion-variant3 .accordion-wrapper .accordion.block details[open] {
@@ -620,6 +681,8 @@
 
   @media screen and (max-width: 768px) {
     background: var(--Lunar-Gray, #E6E8F1);
+    margin-bottom: 32px;
+    padding: 12px 8px;
   }
 }
 
@@ -643,7 +706,7 @@
   @media screen and (max-width: 768px) {
     font-size: 14px;
     line-height: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
   }
 }
 
@@ -665,11 +728,21 @@
   }
 }
 
+.section.hitechaccordion-variant3 .accordion-wrapper .accordion.block .accordion-item:last-child {
+  @media screen and (max-width: 768px) {
+    padding: 0px 8px 0px 8px;
+  }
+}
+
 .section.hitechaccordion-variant3 .accordion-wrapper .accordion.block .accordion-item {
   padding: 48px 24px;
 
+  @media screen and (min-width: 769px) and (max-width: 1199px) {
+    padding: 32px 16px;
+  }
+
   @media screen and (max-width: 768px) {
-    padding: 12px 8px;
+    padding: 0px 8px 32px 8px;
   }
 }
 
@@ -709,11 +782,11 @@
   .section.hitechaccordion-variant3 .default-content-wrapper:last-of-type>ul>li:first-child ul>li:first-child {
     font-family: var(--Inter, sans-serif);
     font-weight: 400;
-
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
     margin-bottom: 16px;
+    color: #696969;
   }
 
   .section.hitechaccordion-variant3 .default-content-wrapper:last-of-type ul:first-child li:nth-child(2) {
