@@ -1,123 +1,98 @@
 export default function decorate(block) {
-  try {
-    const rows = [...block.children];
-    if (!rows.length) return;
+  // 1. Get the container where all rows live
+  const rows = [...block.children];
+  if (!rows.length) return;
 
-    const grid = document.createElement('div');
-    grid.classList.add('compare-grid');
+  // 2. Create a grid wrapper (this doesn't need to be editable, so we create it)
+  const grid = document.createElement('div');
+  grid.classList.add('compare-grid');
 
-    rows.forEach((row) => {
-      const cols = [...row.children];
-      if (cols.length < 8) return;
+  rows.forEach((row) => {
+    // Each 'row' is a <div> containing the <div> columns from your spreadsheet/UE
+    const cols = [...row.children];
+    if (cols.length < 8) return;
 
-      const colorField = cols[1];
-      const titleEl = cols[2];
-      const descriptionEl = cols[3];
-      const productModelEl = cols[4];
-      const specsEl = cols[5];
-      const ctaTextEl = cols[6];
-      const ctaStyleEl = cols[7];
+    // Mapping columns based on your description
+    const [
+      iconField,        // cols[0]
+      colorField,       // cols[1]
+      titleEl,          // cols[2]
+      descriptionEl,    // cols[3]
+      productModelEl,   // cols[4]
+      specsEl,          // cols[5]
+      ctaTextEl,        // cols[6]
+      ctaStyleEl        // cols[7]
+    ] = cols;
 
-      const titleText = titleEl?.textContent.trim() || '';
-      const modelText = productModelEl?.textContent.trim() || '';
+    // --- TRANSFORMATION ---
+    // Instead of creating new <div>s, we add classes to the EXISTING elements
+    // This keeps the "data-aue-prop" attributes intact so UE works.
+    
+    row.classList.add('compare-card');
+    titleEl.classList.add('compare-card__title');
+    descriptionEl.classList.add('compare-card__desc');
+    productModelEl.classList.add('compare-card__model');
+    specsEl.classList.add('compare-card__specs');
 
-      // Clean title + model for image name
-      const cleanTitle = titleText.replace(/[^a-zA-Z0-9]/g, '');
-      const cleanModel = modelText.split('·')[0].replace(/[^a-zA-Z0-9]/g, '');
+    // --- DYNAMIC IMAGE LOGIC ---
+    // Since the image isn't in the authoring, we create a placeholder for it
+    const imageWrapper = document.createElement('div');
+    imageWrapper.classList.add('compare-card__image');
+    const img = document.createElement('img');
+    imageWrapper.append(img);
 
-      // Create card container
-      const card = document.createElement('div');
-      card.classList.add('compare-card');
+    // --- SWATCH LOGIC ---
+    const swatchWrapper = document.createElement('div');
+    swatchWrapper.classList.add('compare-card__swatches');
 
-      // ---- IMAGE ----
-      const imageWrapper = document.createElement('div');
-      imageWrapper.classList.add('compare-card__image');
+    // Extract colors from the editable list
+    const colorList = colorField.querySelectorAll('li');
+    colorList.forEach((li, index) => {
+      const colorHex = li.textContent.trim();
+      const swatch = document.createElement('span');
+      swatch.classList.add('compare-swatch');
+      swatch.style.backgroundColor = colorHex;
 
-      const img = document.createElement('img');
-      imageWrapper.appendChild(img);
-
-      // ---- SWATCHES ----
-      const swatchWrapper = document.createElement('div');
-      swatchWrapper.classList.add('compare-card__swatches');
-
-      const colors = colorField
-        ? [...colorField.querySelectorAll('li')].map(li => li.textContent.trim())
-        : [];
-
-      function updateImage(colorHex) {
+      // Click to change image
+      swatch.addEventListener('click', () => {
         const cleanColor = colorHex.replace('#', '');
-        const imageName = `_${cleanTitle}_${cleanModel}_${cleanColor}`;
-        img.src = `/images/${imageName}.png`;
-        img.alt = titleText;
-      }
-
-      colors.forEach((color, index) => {
-        const swatch = document.createElement('span');
-        swatch.classList.add('compare-swatch');
-        swatch.style.background = color;
-
-        swatch.addEventListener('click', () => {
-          updateImage(color);
-        });
-
-        // Load first image by default
-        if (index === 0) {
-          updateImage(color);
-        }
-
-        swatchWrapper.appendChild(swatch);
+        const cleanTitle = titleEl.textContent.trim().replace(/[^a-zA-Z0-9]/g, '');
+        const cleanModel = productModelEl.textContent.trim().split('·')[0].replace(/[^a-zA-Z0-9]/g, '');
+        
+        img.src = `/images/_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
       });
 
-      // ---- TITLE ----
-      const title = document.createElement('h3');
-      title.classList.add('compare-card__title');
-      title.textContent = titleText;
-
-      // ---- DESCRIPTION ----
-      const desc = document.createElement('p');
-      desc.classList.add('compare-card__desc');
-      desc.textContent = descriptionEl?.textContent.trim() || '';
-
-      // ---- MODEL BADGE ----
-      const modelBadge = document.createElement('div');
-      modelBadge.classList.add('compare-card__model');
-      modelBadge.textContent = modelText;
-
-      // ---- SPECS ----
-      const specs = document.createElement('div');
-      specs.classList.add('compare-card__specs');
-      if (specsEl) {
-        specs.append(...specsEl.children);
-      }
-
-      // ---- CTA ----
-      const ctaWrapper = document.createElement('div');
-      ctaWrapper.classList.add('compare-card__cta');
-
-      const cta = document.createElement('a');
-      cta.href = '#';
-      cta.textContent = ctaTextEl?.textContent.trim() || 'Add to Cart';
-      cta.className = ctaStyleEl?.textContent.trim() || 'button-dark';
-
-      ctaWrapper.appendChild(cta);
-
-      // ---- Assemble Card ----
-      card.append(
-        imageWrapper,
-        swatchWrapper,
-        title,
-        desc,
-        modelBadge,
-        specs,
-        ctaWrapper
-      );
-
-      grid.appendChild(card);
+      // Set default (first color)
+      if (index === 0) swatch.click();
+      swatchWrapper.append(swatch);
     });
 
-    block.appendChild(grid);
+    // --- CTA LOGIC ---
+    const ctaWrapper = document.createElement('div');
+    ctaWrapper.classList.add('compare-card__cta');
+    const link = document.createElement('a');
+    link.href = '#';
+    link.textContent = ctaTextEl.textContent.trim();
+    link.className = ctaStyleEl.textContent.trim() || 'button-dark';
+    ctaWrapper.append(link);
 
-  } catch (error) {
-    console.error('Compare Block Error:', error);
-  }
+    // --- RE-ASSEMBLING THE ROW ---
+    // We move the existing, editable elements into the desired order.
+    // row.replaceChildren() clears the old layout and injects our new one
+    row.replaceChildren(
+      imageWrapper,
+      swatchWrapper,
+      titleEl,
+      descriptionEl,
+      productModelEl,
+      specsEl,
+      ctaWrapper
+    );
+
+    // Move the row into our grid
+    grid.append(row);
+  });
+
+  // Finally, put the grid into the block
+  block.replaceChildren(grid);
 }
