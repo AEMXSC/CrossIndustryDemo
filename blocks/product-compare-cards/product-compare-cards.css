@@ -16,7 +16,7 @@
 /* Card */
 .compare-card {
   background: #ffffff;
-  padding: 40px 32px;
+  padding: 40px 80px;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #e6e6e6;
@@ -43,25 +43,33 @@
   height: auto;
 }
 
-/* Swatches */
+/* Swatches Container */
 .compare-card__swatches {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px; /* Increased slightly to accommodate the ring */
   margin: 18px 0;
 }
 
 .compare-swatch {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid #d1d5db;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.2s ease;
+  /* Use a thin border or box-shadow for a subtle inner edge if needed */
+  border: 1px solid rgba(0,0,0,0.1); 
+  box-sizing: border-box;
 }
 
+/* The "Selected" or "Active" state */
+.compare-swatch.is-active,
 .compare-swatch:hover {
-  transform: scale(1.2);
+  /* This creates the outer ring */
+  outline: 2px solid #7A63FF; /* The blue color from your image */
+  /* This creates the white space between the swatch and the ring */
+  outline-offset: 3px; 
+  transform: scale(0.9); /* Slightly shrink the inner circle for a better look */
 }
 
 /* Title */
@@ -75,14 +83,14 @@
 .compare-card__desc {
   font-size: 14px;
   color: #6b7280;
-  margin-bottom: 20px;
+  text-align: left;
 }
 
 /* Specs */
 
 .compare-card__model {
   display: inline-block;
-  background: #f1f1f1;
+  background: #F4F4F4;
   color: #6b7280;
   font-size: 12px;
   padding: 4px 10px;
@@ -131,6 +139,10 @@
 /* CTA */
 .compare-card__cta {
   margin-top: auto;
+}
+
+.compare-card__cta button{
+    width: 100%;
 }
 
 .button-dark {
