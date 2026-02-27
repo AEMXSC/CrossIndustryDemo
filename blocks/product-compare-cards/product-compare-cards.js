@@ -56,7 +56,7 @@ export default function decorate(block) {
       // Click to change image
       swatch.addEventListener('click', () => {
         const cleanColor = colorHex.replace('#', '');
-        const cleanTitle = titleEl.textContent.trim().replace(/[^a-zA-Z0-9]/g, '');
+        const cleanTitle = titleEl.textContent.trim().replace(/[^a-zA-Z0-9]/g, '').replace('inch','');
         const cleanModel = productModelEl.textContent.trim().split('·')[0].replace(/[^a-zA-Z0-9]/g, '');
         
         img.src = `/content/dam/dept-crossIndustry/hi-tech-images/product_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
