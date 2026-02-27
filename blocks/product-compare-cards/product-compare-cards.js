@@ -1,34 +1,41 @@
 export default function decorate(block) {
-  const rows = [...block.children];
-  block.innerHTML = '';
 
-  const grid = document.createElement('div');
-  grid.classList.add('compare-grid');
+    try {
 
-  rows.forEach((row) => {
-    const cols = [...row.children];
+        const rows = [...block.children];
+        block.innerHTML = '';
 
-    const image = cols[0];
-    const colorField = cols[1];
-    const title = cols[2];
-    const description = cols[3];
-    const productModel = cols[4];
-    const specs = cols[5];
-    const ctaText = cols[6];
-    const ctaStyle = cols[7];
+        if (!rows.length) return;
 
-    const colors = colorField
-      ? [...colorField.querySelectorAll('li')].map(li => li.textContent.trim())
-      : [];
 
-    const swatchesHTML = colors
-      .map(color => `<span class="compare-swatch" style="background:${color}"></span>`)
-      .join('');
+        const grid = document.createElement('div');
+        grid.classList.add('compare-grid');
 
-    const card = document.createElement('div');
-    card.classList.add('compare-card');
+        rows?.forEach((row) => {
+            const cols = [...row.children];
+            if (cols.length < 8) return; // Prevent crash
 
-    card.innerHTML = `
+            const image = cols[0];
+            const colorField = cols[1];
+            const title = cols[2];
+            const description = cols[3];
+            const productModel = cols[4];
+            const specs = cols[5];
+            const ctaText = cols[6];
+            const ctaStyle = cols[7];
+
+            const colors = colorField
+                ? [...colorField.querySelectorAll('li')].map(li => li.textContent.trim())
+                : [];
+
+            const swatchesHTML = colors
+                ?.map(color => `<span class="compare-swatch" style="background:${color}"></span>`)
+                ?.join('');
+
+            const card = document.createElement('div');
+            card.classList.add('compare-card');
+
+            card.innerHTML = `
       <div class="compare-card__image">
         ${image ? image.innerHTML : ''}
       </div>
@@ -62,8 +69,12 @@ export default function decorate(block) {
       </div>
     `;
 
-    grid.appendChild(card);
-  });
+            grid?.appendChild(card);
+        });
 
-  block.appendChild(grid);
+        block?.appendChild(grid);
+    }catch(error){
+        console.log(error);
+    }
+
 }
