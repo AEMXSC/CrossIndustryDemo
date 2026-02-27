@@ -59,7 +59,7 @@ export default function decorate(block) {
         const cleanTitle = titleEl.textContent.trim().replace(/[^a-zA-Z0-9]/g, '');
         const cleanModel = productModelEl.textContent.trim().split('·')[0].replace(/[^a-zA-Z0-9]/g, '');
         
-        img.src = `/images/_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
+        img.src = `/content/dam/dept-crossIndustry/hi-tech-images/product_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
       });
 
       // Set default (first color)
