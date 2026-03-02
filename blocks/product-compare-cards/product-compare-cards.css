@@ -1,0 +1,175 @@
+/* Section background */
+.product-compare-cards-container {
+  background: #f5f6f7;
+  padding: 80px 0;
+}
+
+/* Grid Layout */
+.product-compare-cards-container.compare-variant1 .compare-grid {
+  max-width: 1200px;
+  /* margin: 60px auto 0; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+/* Card */
+.product-compare-cards-container.compare-variant1 .compare-card {
+  background: #ffffff;
+  padding: 0px 80px 40px 80px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  width: 400px;
+  height: 595px;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-card .hidden-authoring-fields {
+    display: none;
+}
+
+/* Hover effect */
+.product-compare-cards-container.compare-variant1 .compare-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+/* Image */
+.product-compare-cards-container.compare-variant1 .compare-card__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Swatches Container */
+.product-compare-cards-container.compare-variant1 .compare-card__swatches {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Increased slightly to accommodate the ring */
+  margin: 18px 0;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /* Use a thin border or box-shadow for a subtle inner edge if needed */
+  border: 1px solid rgba(0,0,0,0.1); 
+  box-sizing: border-box;
+}
+
+/* The "Selected" or "Active" state */
+.product-compare-cards-container.compare-variant1 .compare-swatch.is-active,
+.product-compare-cards-container.compare-variant1 .compare-swatch:hover {
+  /* This creates the outer ring */
+  outline: 2px solid #7A63FF; /* The blue color from your image */
+  /* This creates the white space between the swatch and the ring */
+  outline-offset: 3px; 
+  transform: scale(0.9); /* Slightly shrink the inner circle for a better look */
+}
+
+/* Title */
+.product-compare-cards-container.compare-variant1 .compare-card__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.product-compare-cards-container.compare-variant1 .compare-card__desc {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: left;
+}
+
+/* Specs */
+
+.product-compare-cards-container.compare-variant1 .compare-card__model {
+  display: inline-block;
+  background: #F4F4F4;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: #D8D8D6 solid 1px;
+  margin: 10px 0 18px;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-card__specs {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-card__specs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-card__specs li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.4;
+}
+
+/* Tick circle */
+.product-compare-cards-container.compare-variant1 .compare-card__specs li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #111827;
+
+  background-image: url("/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+/* CTA */
+.product-compare-cards-container.compare-variant1 .compare-card__cta {
+  margin-top: auto;
+}
+
+.product-compare-cards-container.compare-variant1 .compare-card__cta button{
+    width: 100%;
+}
+
+.product-compare-cards-container.compare-variant1 .button-dark {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.product-compare-cards-container.compare-variant1 .button-dark:hover {
+  background: #000000;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-compare-cards-container.compare-variant1 .compare-grid {
+    overflow: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-compare-cards-container.compare-variant1 .compare-grid {
+    overflow: auto;
+  }
+}
