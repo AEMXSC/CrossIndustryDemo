@@ -5,18 +5,18 @@
 }
 
 /* Grid Layout */
-.compare-grid {
+.product-compare-cards-container.compare-variant1 .compare-grid {
   max-width: 1200px;
-  margin: 60px auto 0;
+  /* margin: 60px auto 0; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
 }
 
 /* Card */
-.compare-card {
+.product-compare-cards-container.compare-variant1 .compare-card {
   background: #ffffff;
-  padding: 40px 80px;
+  padding: 0px 80px 40px 80px;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #e6e6e6;
@@ -27,31 +27,31 @@
   height: 595px;
 }
 
-.compare-card .hidden-authoring-fields {
+.product-compare-cards-container.compare-variant1 .compare-card .hidden-authoring-fields {
     display: none;
 }
 
 /* Hover effect */
-.compare-card:hover {
+.product-compare-cards-container.compare-variant1 .compare-card:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transform: translateY(-4px);
 }
 
 /* Image */
-.compare-card__image img {
+.product-compare-cards-container.compare-variant1 .compare-card__image img {
   max-width: 100%;
   height: auto;
 }
 
 /* Swatches Container */
-.compare-card__swatches {
+.product-compare-cards-container.compare-variant1 .compare-card__swatches {
   display: flex;
   justify-content: center;
   gap: 12px; /* Increased slightly to accommodate the ring */
   margin: 18px 0;
 }
 
-.compare-swatch {
+.product-compare-cards-container.compare-variant1 .compare-swatch {
   width: 28px;
   height: 28px;
   border-radius: 50%;
@@ -63,8 +63,8 @@
 }
 
 /* The "Selected" or "Active" state */
-.compare-swatch.is-active,
-.compare-swatch:hover {
+.product-compare-cards-container.compare-variant1 .compare-swatch.is-active,
+.product-compare-cards-container.compare-variant1 .compare-swatch:hover {
   /* This creates the outer ring */
   outline: 2px solid #7A63FF; /* The blue color from your image */
   /* This creates the white space between the swatch and the ring */
@@ -73,14 +73,14 @@
 }
 
 /* Title */
-.compare-card__title {
+.product-compare-cards-container.compare-variant1 .compare-card__title {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 /* Description */
-.compare-card__desc {
+.product-compare-cards-container.compare-variant1 .compare-card__desc {
   font-size: 14px;
   color: #6b7280;
   text-align: left;
@@ -88,7 +88,7 @@
 
 /* Specs */
 
-.compare-card__model {
+.product-compare-cards-container.compare-variant1 .compare-card__model {
   display: inline-block;
   background: #F4F4F4;
   color: #6b7280;
@@ -99,18 +99,18 @@
   margin: 10px 0 18px;
 }
 
-.compare-card__specs {
+.product-compare-cards-container.compare-variant1 .compare-card__specs {
   text-align: left;
   margin-bottom: 28px;
 }
 
-.compare-card__specs ul {
+.product-compare-cards-container.compare-variant1 .compare-card__specs ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.compare-card__specs li {
+.product-compare-cards-container.compare-variant1 .compare-card__specs li {
   position: relative;
   padding-left: 30px;
   margin-bottom: 12px;
@@ -120,7 +120,7 @@
 }
 
 /* Tick circle */
-.compare-card__specs li::before {
+.product-compare-cards-container.compare-variant1 .compare-card__specs li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -137,15 +137,15 @@
 }
 
 /* CTA */
-.compare-card__cta {
+.product-compare-cards-container.compare-variant1 .compare-card__cta {
   margin-top: auto;
 }
 
-.compare-card__cta button{
+.product-compare-cards-container.compare-variant1 .compare-card__cta button{
     width: 100%;
 }
 
-.button-dark {
+.product-compare-cards-container.compare-variant1 .button-dark {
   display: inline-block;
   padding: 12px 32px;
   background: #111827;
@@ -157,19 +157,19 @@
   transition: background 0.3s ease;
 }
 
-.button-dark:hover {
+.product-compare-cards-container.compare-variant1 .button-dark:hover {
   background: #000000;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .compare-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .product-compare-cards-container.compare-variant1 .compare-grid {
+    overflow: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .compare-grid {
-    grid-template-columns: 1fr;
+  .product-compare-cards-container.compare-variant1 .compare-grid {
+    overflow: auto;
   }
 }
