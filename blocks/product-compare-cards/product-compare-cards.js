@@ -2,7 +2,10 @@
  * Decorates the Compare Section block.
  * @param {Element} block The block element
  */
+// import Swiper from './swiper.min.js';
+
 export default function decorate(block) {
+  console.log("block", block)
   const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   const authorBase = 'https://publish-p153659-e1796191.adobeaemcloud.com';
 
@@ -101,14 +104,12 @@ export default function decorate(block) {
       row.replaceChildren(imageWrapper, swatchWrapper, titleEl, descriptionEl, productModelEl, specsEl, ctaWrapper);
       grid.append(row);
     });
-
     // Replace the block's internal content with the newly decorated grid
     block.replaceChildren(grid);
   };
 
   // --- 3. INITIAL EXECUTION ---
   renderBlock();
-
   // --- 4. MUTATION OBSERVER: Fixes the "Dropdown not updating" issue ---
   const observer = new MutationObserver((mutations) => {
     // Check if the change came from a UE authoring update

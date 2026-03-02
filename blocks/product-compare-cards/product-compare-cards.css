@@ -1,46 +1,68 @@
 /* Section background */
 .product-compare-cards-container {
   background: #f5f6f7;
-  padding: 80px 0;
+  padding: 120px 88px ;
+      background: #FAFAFA;
+    max-width: 1440px;
+    margin: 0 auto;
+        display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 0px;
 }
 
 /* Grid Layout */
 .product-compare-cards-container.compare-variant1 .compare-grid {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   /* margin: 60px auto 0; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(3, 1fr); */
+  gap: 16px;
 }
 
 /* Card */
 .product-compare-cards-container.compare-variant1 .compare-card {
-  background: #ffffff;
-  padding: 0px 80px 40px 80px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #e6e6e6;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-  width: 400px;
-  height: 595px;
+     /* background: #ffffff; */
+    padding: 0px 80px 40px 80px;
+    border-radius: 12px;
+    /* text-align: center; */
+    /* border: 1px solid #e6e6e6; */
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    width: 31.65%;
+    min-height: 595px;
+    position: relative;
 }
-
+.product-compare-cards-container.compare-variant1 .compare-card::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, rgba(203, 203, 203, 0.00) -10.96%, #CBCBCB 51.51%, rgba(203, 203, 203, 0.00) 115.19%);
+  width: 0.7px;
+      height: 100%;
+      right: 0px;
+}
+.product-compare-cards-container.compare-variant1 .compare-card:last-child:after  {
+display: none;
+}
 .product-compare-cards-container.compare-variant1 .compare-card .hidden-authoring-fields {
     display: none;
 }
 
 /* Hover effect */
-.product-compare-cards-container.compare-variant1 .compare-card:hover {
+/* .product-compare-cards-container.compare-variant1 .compare-card:hover {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transform: translateY(-4px);
-}
+} */
 
 /* Image */
 .product-compare-cards-container.compare-variant1 .compare-card__image img {
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 /* Swatches Container */
@@ -147,13 +169,14 @@
 
 .product-compare-cards-container.compare-variant1 .button-dark {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 8px 24px;
   background: #111827;
-  color: #ffffff;
+  color: #E6E8F1;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   transition: background 0.3s ease;
 }
 
@@ -165,6 +188,34 @@
 @media (max-width: 1024px) {
   .product-compare-cards-container.compare-variant1 .compare-grid {
     overflow: auto;
+    gap: 24px;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card {
+    padding: 0 24px;
+    width: 45.9%;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card__title {
+    font-size: 16px;
+    line-height: 28px;
+    color: #1B1B1E;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card__desc {
+    font-size: 12px;
+    line-height: 18px
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card__model {
+    font-size: 12px;
+    margin: 16px 0px 32px;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card__specs li {
+    font-size: 12px;
+  }
+  .product-compare-cards-container.compare-variant1 .button-dark {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .compare-variant1 .compare-card__image {
+    text-align: center;
   }
 }
 
@@ -172,4 +223,19 @@
   .product-compare-cards-container.compare-variant1 .compare-grid {
     overflow: auto;
   }
+   .product-compare-cards-container.compare-variant1 .compare-card {
+    padding: 0 24px;
+    width: 100%;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card .compare-card__image{
+    text-align: center;
+  }
+  .product-compare-cards-container.compare-variant1 .compare-card__image img {
+    width: unset;
+  }
+}
+
+.compare-variant1 .product-compare-cards-wrapper {
+  padding: 0px;
+  margin: unset;
 }
