@@ -26,9 +26,9 @@ export default async function decorate(block) {
   // const container = block.closest(".tech-specs-features-container");
   // const classes = block.classList;
   // const TYPE_MAP = {
-  //   "tech-specs-features-type-1": { variant: "tech-specs-features-varient1" },
-  //   "tech-specs-features-type-2": { variant: "tech-specs-features-varient2" },
-  //   "tech-specs-features-type-3": { variant: "tech-specs-features-varient3" },
+  //   "tech-specs-features-type-1": { variant: "tech-specs-features-variant1" },
+  //   "tech-specs-features-type-2": { variant: "tech-specs-features-variant2" },
+  //   "tech-specs-features-type-3": { variant: "tech-specs-features-variant3" },
   // };
   // const matchKey = Object.keys(TYPE_MAP).find((key) => classes.contains(key));
   // const { variant } = TYPE_MAP[matchKey] || TYPE_MAP["type-1"];
@@ -46,7 +46,7 @@ export default async function decorate(block) {
   leftSide.innerHTML = `<h2>${data?.label?.[0] || ""}</h2>
     ${data?.label?.[1]?.html || ""}
   `;
-  if(checkClasse.contains("tech-specs-features-varient3")){
+  if(checkClasse.contains("tech-specs-features-variant3")){
     rightSide.innerHTML = data?.cardDetails?.map((card) => `
     <div class="tech-specs-features-card">
      <p>${card.cardNoLabel || ""}</p>

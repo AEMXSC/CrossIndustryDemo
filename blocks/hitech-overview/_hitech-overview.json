@@ -24,15 +24,15 @@
         {
           "component": "select",
           "name": "classes",
-          "label": "Select Title Alignment",
+          "label": "Title Alignment",
           "valueType": "string",
           "options": [
             {
-              "name": "Title Left Alignment",
+              "name": "Left",
               "value": "align-left"
             },
             {
-              "name": "Title Right Alignment",
+              "name": "Right",
               "value": "align-right"
             }
           ]
@@ -41,14 +41,14 @@
           "component": "reference",
           "valueType": "string",
           "name": "image",
-          "label": "Select Image",
+          "label": "Overview Image",
           "multi": false
         },
         {
           "component": "richtext",
           "name": "text",
           "value": "",
-          "label": "Text",
+          "label": "Overview Description",
           "valueType": "string"
         }
       ]

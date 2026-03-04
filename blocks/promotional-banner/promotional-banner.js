@@ -7,319 +7,347 @@ import {
   span
 } from "../../scripts/dom-helpers.js";
 
+/* -----------------------------
+   Helpers
+------------------------------ */
+
+function getImages(block) {
+  const images = block.querySelectorAll("picture img, img");
+  if (!images.length) return "";
+
+  if (images.length > 1) {
+    return window.innerWidth > 1024 ? images[0].src.trim() : images[1].src.trim();
+  }
+
+  return images[0].src.trim();
+}
+
+function getText(el) {
+  return el?.innerText?.trim() || "";
+}
+
+function getButtons(block) {
+  const buttons = block.querySelectorAll("a");
+
+  return {
+    first: {
+      text: getText(buttons[0]),
+      href: buttons[0]?.href || "",
+      title: buttons[0]?.title || ""
+    },
+    second: {
+      text: getText(buttons[1]),
+      href: buttons[1]?.href || "",
+      title: buttons[1]?.title || ""
+    }
+  };
+}
+
+function getContent(block) {
+  return {
+    image: getImages(block),
+    heading: getText(block.querySelector("h2")),
+    description: getText(block.querySelector("p")),
+    buttons: getButtons(block)
+  };
+}
+
+/* -----------------------------
+   Main Decorate
+------------------------------ */
+
 export default function decorate(block) {
-  let container = block.closest('.promotional-banner-container');
+
+  const container = block.closest(".promotional-banner-container");
   if (!container) return;
 
-  let classList = container.classList;
+  const variantMap = {
+    "banner-variant1": bannerType1,
+    "banner-variant2": bannerType1,
+    "banner-variant3": bannerType3,
+    "banner-variant4": bannerType4,
 
-  let variantMap = {
-    // Promotional banner variants
-    'banner-varient1': bannerType1,
-    'banner-varient2': bannerType1,
-    'banner-varient3': bannerType3,
-    'banner-varient4': bannerType4,
-
-    // Hitech banner variants
-    'hitech-banner-variant1': hitechBanner,
-    'hitech-banner-variant2': hitechBanner,
-    'hitech-banner-variant3': hitechBanner,
-    'hitech-banner-variant4': hitechBanner,
+    "hitech-banner-variant1": hitechBanner,
+    "hitech-banner-variant2": hitechBanner,
+    "hitech-banner-variant3": hitechBanner,
+    "hitech-banner-variant4": hitechBanner
   };
 
-  let matchedVariant = Object.keys(variantMap).find((variant) =>
-    classList.contains(variant)
-  );
+  const matchedVariant = Object.keys(variantMap)
+    .find((variant) => container.classList.contains(variant));
 
-  if (matchedVariant) {
-    block.append(variantMap[matchedVariant](block));
-  }
+  if (!matchedVariant) return;
+
+  let content = variantMap[matchedVariant](block);
+  block.textContent = "";
+  block.append(content);
 }
 
+/* -----------------------------
+   Banner Variant 1 & 2
+------------------------------ */
 
 function bannerType1(block) {
-  let source = window.innerWidth > 1024 ? block?.querySelectorAll("picture img")[0]?.src.trim() : block.querySelectorAll("picture img")[1]?.src.trim();
-  source = block.querySelectorAll("picture img").length > 1 ? source : block?.querySelectorAll("picture img")[0]?.src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-  let buttons = block.querySelectorAll("a");
-  let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
-  let fisrtAnchorHref = buttons[0]?.href.trim() || "";
-  let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
-  let secondAnchorText = buttons[1]?.innerText?.trim() || "";
-  let secondAnchorHref = buttons[1]?.href.trim() || "";
-  let secondAnchorTitle = buttons[1]?.title.trim() || "";
 
-  const promotionalBanner =
+  let {
+    image,
+    heading,
+    description,
+    buttons
+  } = getContent(block);
+
+  return div({
+      class: "promotionalbanner promotionalbanner-content block type1"
+    },
+
     div({
-        class: "promotionalbanner promotionalbanner-content block type1",
-        "data-block-name": "promotionalbanner",
-        "data-block-status": "loaded",
+        class: "banner-image"
       },
-      // -------- Image Section --------
+      img({
+        loading: "eager",
+        fetchpriority: "high",
+        src: image,
+        alt: ""
+      })
+    ),
+
+    div({
+        class: "banner-content"
+      },
       div({
-          class: "bannner-image"
+          class: "grid-content"
         },
-        div({},
-          img({
-            loading: "eager",
-            fetchpriority: "high",
-            alt: "",
-            src: `${source}`,
-          })
-        )
-      ),
-      // -------- Content Section --------
-      div({
-          class: "banner-conetent"
-        },
-        div({
-            class: "grid-content"
+
+        h2({}, heading),
+
+        p({}, description),
+
+        p({
+            class: "redirections"
           },
-          h2({
-              id: "upgrade-to-smarter-stronger-rewards"
+
+          buttons.first.text &&
+          a({
+              href: buttons.first.href,
+              title: buttons.first.title
             },
-            heading
+            buttons.first.text
           ),
-          p({},
-            description
-          ),
-          p({
-              class: "redirections"
+
+          buttons.second.text &&
+          a({
+              href: buttons.second.href,
+              title: buttons.second.title
             },
-            a({
-                href: `${fisrtAnchorHref}`,
-                title: `${fisrtAnchorTitle}`
-              },
-              fisrtAnchorText
-            ),
-            " ",
-            a({
-                href: `${secondAnchorHref}`,
-                title: `${secondAnchorTitle}`
-              },
-              secondAnchorText
-            )
+            buttons.second.text
           )
         )
-      ),
-    );
-  block.textContent = '';
-
-  return promotionalBanner;
+      )
+    )
+  );
 }
+
+/* -----------------------------
+   Banner Variant 3
+------------------------------ */
 
 function bannerType3(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("img")[0].src.trim() : block.querySelectorAll("img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("img")[0].src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-    let buttons = block.querySelectorAll("a");
-  let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
-  let fisrtAnchorHref = buttons[0]?.href.trim() || "";
-  let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
-  let secondAnchorText = buttons[1]?.innerText?.trim() || "";
-  let secondAnchorHref = buttons[1]?.href.trim() || "";
-  let secondAnchorTitle = buttons[1]?.title.trim() || "";
-  const promotionalBanner =
+
+  let {
+    image,
+    heading,
+    description,
+    buttons
+  } = getContent(block);
+
+  return div({
+      class: "promotionalbanner promotionalbanner-content block type3"
+    },
+
     div({
-        class: "promotionalbanner promotionalbanner-content block type1",
-        "data-block-name": "promotionalbanner",
-        "data-block-status": "loaded",
+        class: "banner-image desktop-img"
       },
-      // -------- Image Section --------
+      img({
+        loading: "eager",
+        fetchpriority: "high",
+        src: image,
+        alt: ""
+      })
+    ),
+
+    div({
+        class: "banner-content"
+      },
+
       div({
-          class: "bannner-image desktop-img"
+          class: "grid-content"
         },
-        div({},
+
+        div({}, h2({}, heading)),
+
+        div({
+            class: "banner-image mob-img"
+          },
           img({
             loading: "eager",
             fetchpriority: "high",
-            alt: "",
-            src: `${source}`,
+            src: image,
+            alt: ""
           })
-        )
-      ),
-      // -------- Content Section --------
-      div({
-          class: "banner-conetent"
-        },
+        ),
+
         div({
-            class: "grid-content"
+            class: "bottom-content"
           },
-          div({},
-            h2({
-                id: "upgrade-to-smarter-stronger-rewards"
-              },
-              heading
-            ),
-          ),
-          // -------- Image Section --------
-          div({
-              class: "bannner-image mob-img"
+
+          p({}, description),
+
+          p({
+              class: "redirections"
             },
-            div({},
-              img({
-                loading: "eager",
-                fetchpriority: "high",
-                alt: "",
-                src: `${source}`,
-              })
-            )
-          ),
-          div({
-              class: "bottom-content"
-            },
-            p({},
-              description
-            ),
-            p({
-                class: "redirections"
+
+            buttons.first.text &&
+            a({
+                href: buttons.first.href,
+                title: buttons.first.title
               },
-              a({
-                  href: `${fisrtAnchorHref}`,
-                  title: `${fisrtAnchorTitle}`
-                },
-                fisrtAnchorText
-              ),
-              a({
-                  href: `${secondAnchorHref}`,
-                  title: `${secondAnchorTitle}`
-                },
-                secondAnchorText
-              )
+              buttons.first.text
+            ),
+
+            buttons.second.text &&
+            a({
+                href: buttons.second.href,
+                title: buttons.second.title
+              },
+              buttons.second.text
             )
           )
-        ),
-      ),
-    );
-
-  block.textContent = '';
-
-  return promotionalBanner;
+        )
+      )
+    )
+  );
 }
+
+/* -----------------------------
+   Banner Variant 4
+------------------------------ */
 
 function bannerType4(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("img")[0].src.trim() : block.querySelectorAll("img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("img")[0].src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-  block.closest(".promotional-banner-container").style.background = `url(${source}) center / cover no-repeat`;
 
-    let buttons = block.querySelectorAll("a");
-  let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
-  let fisrtAnchorHref = buttons[0]?.href.trim() || "";
-  let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
-  let secondAnchorText = buttons[1]?.innerText?.trim() || "";
-  let secondAnchorHref = buttons[1]?.href.trim() || "";
-  let secondAnchorTitle = buttons[1]?.title.trim() || "";
+  let {
+    image,
+    heading,
+    description,
+    buttons
+  } = getContent(block);
 
-  const promotionalBanner =
+  let container = block.closest(".promotional-banner-container");
+
+  if (container) {
+    container.style.background = `url(${image}) center / cover no-repeat`;
+  }
+
+  return div({
+      class: "promotionalbanner promotionalbanner-content block type4"
+    },
+
     div({
-        class: "promotionalbanner promotionalbanner-content block type1",
-        "data-block-name": "promotionalbanner",
-        "data-block-status": "loaded",
+        class: "banner-content"
       },
-      // -------- Content Section --------
+
       div({
-          class: "banner-conetent"
+          class: "grid-content"
         },
-        div({
-            class: "grid-content"
+
+        h2({}, heading),
+
+        p({}, description),
+
+        p({
+            class: "redirections"
           },
-          h2({
-              id: "upgrade-to-smarter-stronger-rewards"
+
+          buttons.first.text &&
+          a({
+              href: buttons.first.href,
+              title: buttons.first.title
             },
-            heading
+            buttons.first.text
           ),
-          p({},
-            description
-          ),
-          p({
-              class: "redirections"
+
+          buttons.second.text &&
+          a({
+              href: buttons.second.href,
+              title: buttons.second.title
             },
-            a({
-                href: `${fisrtAnchorHref}`,
-                title: `${fisrtAnchorTitle}`
-              },
-              fisrtAnchorText
-            ),
-            " ",
-            a({
-                href: `${secondAnchorHref}`,
-                title: `${secondAnchorTitle}`
-              },
-              secondAnchorText
-            )
+            buttons.second.text
           )
         )
-      ),
-    );
-  block.textContent = '';
-
-  return promotionalBanner;
+      )
+    )
+  );
 }
 
-function hitechBanner(block) {
-  let source = window.innerWidth > 1024 ? block?.querySelectorAll("picture img")[0]?.src.trim() : block.querySelectorAll("picture img")[1]?.src.trim();
-  source = block.querySelectorAll("picture img").length > 1 ? source : block?.querySelectorAll("picture img")[0]?.src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-  let buttons = block.querySelectorAll("a");
-  let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
-  let fisrtAnchorHref = buttons[0]?.href.trim() || "";
-  let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
-  let redirectionArrow = block.querySelector(".icon img")?.src?.trim() || "";
+/* -----------------------------
+   Hitech Banner
+------------------------------ */
 
-  const promotionalBanner =
+function hitechBanner(block) {
+
+  let {
+    image,
+    heading,
+    description,
+    buttons
+  } = getContent(block);
+
+  let arrowIcon = block.querySelector(".icon img")?.src || "";
+
+  return div({
+      class: "promotionalbanner promotionalbanner-content block hitech"
+    },
+
     div({
-        class: "promotionalbanner promotionalbanner-content block type1",
-        "data-block-name": "promotionalbanner",
-        "data-block-status": "loaded",
+        class: "banner-image"
       },
-      // -------- Image Section --------
+      img({
+        loading: "eager",
+        fetchpriority: "high",
+        src: image,
+        alt: ""
+      })
+    ),
+
+    div({
+        class: "banner-content"
+      },
+
       div({
-          class: "bannner-image"
+          class: "grid-content"
         },
-        div({},
-          img({
-            loading: "eager",
-            fetchpriority: "high",
-            alt: "",
-            src: `${source}`,
-          })
-        )
-      ),
-      // -------- Content Section --------
-      div({
-          class: "banner-conetent"
-        },
-        div({
-            class: "grid-content"
+
+        h2({}, heading),
+
+        p({}, description),
+
+        p({
+            class: "redirections"
           },
-          h2({
-              id: "upgrade-to-smarter-stronger-rewards"
+
+          a({
+              href: buttons.first.href,
+              title: buttons.first.title
             },
-            heading
-          ),
-          p({},
-            description
-          ),
-          p({
-              class: "redirections"
-            },
-            a({
-                href: `${fisrtAnchorHref}`,
-                title: `${fisrtAnchorTitle}`
-              },
-              fisrtAnchorText,
-              redirectionArrow ? span(img({ src: redirectionArrow, alt: "" })) : ""
-            ),
+
+            buttons.first.text,
+
+            arrowIcon ? span(img({
+              src: arrowIcon,
+              alt: ""
+            })) : ""
           )
         )
-      ),
-    );
-  block.textContent = '';
-
-  return promotionalBanner;
+      )
+    )
+  );
 }

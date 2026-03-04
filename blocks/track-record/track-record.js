@@ -37,22 +37,22 @@ export default function decorate(block) {
   /* const container = block.closest(".track-record-container");
   const classes = block.classList;
   const TYPE_MAP = {
-    "trackrecord-type-1": { variant: "track-record-varient1" },
-    "trackrecord-type-2": { variant: "track-record-varient2" },
-    "trackrecord-type-3": { variant: "track-record-varient3" },
-    "process-step-type-1": { variant: "process-step-varient1" },
-    "process-step-type-2": { variant: "process-step-varient2" },
-    "process-step-type-3": { variant: "process-step-varient3" },
-    "tech-specs-type-1": { variant: "tech-specs-varient1" },
-    "tech-specs-type-2": { variant: "tech-specs-varient2" },
-    "tech-specs-type-3": { variant: "tech-specs-varient3" },
+    "trackrecord-type-1": { variant: "track-record-variant1" },
+    "trackrecord-type-2": { variant: "track-record-variant2" },
+    "trackrecord-type-3": { variant: "track-record-variant3" },
+    "process-step-type-1": { variant: "process-step-variant1" },
+    "process-step-type-2": { variant: "process-step-variant2" },
+    "process-step-type-3": { variant: "process-step-variant3" },
+    "tech-specs-type-1": { variant: "tech-specs-variant1" },
+    "tech-specs-type-2": { variant: "tech-specs-variant2" },
+    "tech-specs-type-3": { variant: "tech-specs-variant3" },
   };
   const matchKey = Object.keys(TYPE_MAP).find((key) => classes.contains(key));
   const { variant } = TYPE_MAP[matchKey] || TYPE_MAP["type-1"];
   container?.classList.add(variant); */
   // Append
   // block.append(handler);
-  const sections = document.querySelectorAll(".process-step-varient1");
+  const sections = document.querySelectorAll(".process-step-variant1");
   sections.forEach((section) => {
     const richTextDivs = section.querySelectorAll(
       'div[data-aue-type="richtext"]',

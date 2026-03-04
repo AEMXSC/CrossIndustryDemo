@@ -334,15 +334,15 @@
             "children": [
               {
                 "name": "tech-specs-features-type-1",
-                "value": "tech-specs-features-varient1"
+                "value": "tech-specs-features-variant1"
               },
               {
                 "name": "tech-specs-features-type-2",
-                "value": "tech-specs-features-varient2"
+                "value": "tech-specs-features-variant2"
               },
               {
                 "name": "tech-specs-features-type-3",
-                "value": "tech-specs-features-varient3"
+                "value": "tech-specs-features-variant3"
               }
             ]
           }
@@ -367,39 +367,39 @@
             "children": [
               {
                 "name": "Trackrecord Type 1",
-                "value": "track-record-varient1"
+                "value": "track-record-variant1"
               },
               {
                 "name": "Trackrecord Type 2",
-                "value": "track-record-varient2"
+                "value": "track-record-variant2"
               },
               {
                 "name": "Trackrecord Type 3",
-                "value": "track-record-varient3"
+                "value": "track-record-variant3"
               },
               {
                 "name": "Process Step Type 1",
-                "value": "process-step-varient1"
+                "value": "process-step-variant1"
               },
               {
                 "name": "Process Step Type 2",
-                "value": "process-step-varient2"
+                "value": "process-step-variant2"
               },
               {
                 "name": "Process Step Type 3",
-                "value": "process-step-varient3"
+                "value": "process-step-variant3"
               },
               {
                 "name": "tech-specs-type-1",
-                "value": "tech-specs-varient1"
+                "value": "tech-specs-variant1"
               },
               {
                 "name": "tech-specs-type-2",
-                "value": "tech-specs-varient2"
+                "value": "tech-specs-variant2"
               },
               {
                 "name": "tech-specs-type-3",
-                "value": "tech-specs-varient3"
+                "value": "tech-specs-variant3"
               }
             ]
           }
@@ -502,31 +502,31 @@
             "children": [
               {
                 "name": "Notification Banner Type 1",
-                "value": "notification-banner-varient1"
+                "value": "notification-banner-variant1"
               },
               {
                 "name": "Notification Banner Type 2",
-                "value": "notification-banner-varient2"
+                "value": "notification-banner-variant2"
               },
               {
                 "name": "Notification Banner Type 3",
-                "value": "notification-banner-varient3"
+                "value": "notification-banner-variant3"
               },
               {
                 "name": "Simple Banners Type 1",
-                "value": "simple-banner-varient1"
+                "value": "simple-banner-variant1"
               },
               {
                 "name": "Simple Banners Type 2",
-                "value": "simple-banner-varient2"
+                "value": "simple-banner-variant2"
               },
               {
                 "name": "Simple Banners Type 3",
-                "value": "simple-banner-varient3"
+                "value": "simple-banner-variant3"
               },
               {
                 "name": "Simple Banners Type 4",
-                "value": "simple-banner-varient4"
+                "value": "simple-banner-variant4"
               }
             ]
           }
@@ -551,19 +551,19 @@
             "children": [
               {
                 "name": "Bfsi banner Varaint 1",
-                "value": "banner-varient1"
+                "value": "banner-variant1"
               },
               {
                 "name": "Bfsi banner Varaint 2",
-                "value": "banner-varient2"
+                "value": "banner-variant2"
               },
               {
                 "name": "Bfsi banner Varaint 3",
-                "value": "banner-varient3"
+                "value": "banner-variant3"
               },
               {
                 "name": "Bfsi banner Varaint 4",
-                "value": "banner-varient4"
+                "value": "banner-variant4"
               },
               {
                 "name": "Hitech banner Varaint 1",
@@ -6599,15 +6599,15 @@
       {
         "component": "select",
         "name": "classes",
-        "label": "Select Title Alignment",
+        "label": "Title Alignment",
         "valueType": "string",
         "options": [
           {
-            "name": "Title Left Alignment",
+            "name": "Left",
             "value": "align-left"
           },
           {
-            "name": "Title Right Alignment",
+            "name": "Right",
             "value": "align-right"
           }
         ]
@@ -6616,14 +6616,14 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Select Image",
+        "label": "Overview Image",
         "multi": false
       },
       {
         "component": "richtext",
         "name": "text",
         "value": "",
-        "label": "Text",
+        "label": "Overview Description",
         "valueType": "string"
       }
     ]
@@ -6754,14 +6754,14 @@
         "component": "reference",
         "valueType": "string",
         "name": "image",
-        "label": "Select Desktop Image",
+        "label": "Desktop Image",
         "multi": false
       },
       {
         "component": "reference",
         "valueType": "string",
         "name": "mobimage",
-        "label": "Select Mobile Image",
+        "label": "Mobile Image",
         "multi": false
       },
       {

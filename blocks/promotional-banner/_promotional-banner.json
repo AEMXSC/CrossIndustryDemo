@@ -25,14 +25,14 @@
           "component": "reference",
           "valueType": "string",
           "name": "image",
-          "label": "Select Desktop Image",
+          "label": "Desktop Image",
           "multi": false
         },
         {
           "component": "reference",
           "valueType": "string",
           "name": "mobimage",
-          "label": "Select Mobile Image",
+          "label": "Mobile Image",
           "multi": false
         },
         {
