@@ -284,6 +284,10 @@ ul {
   position: relative;
   margin-bottom: 24px;
 }
+.header-menu-body-inner-img-wrapper .img-text-wrapper img {
+  max-height: 261px;
+  /* width: 100%; */
+}
 
 .header-menu-body-inner-img-wrapper .img-text-wrapper>p:nth-child(2) {
   position: absolute;
