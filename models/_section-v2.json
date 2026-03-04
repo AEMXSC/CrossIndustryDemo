@@ -399,35 +399,35 @@
                             "name": "Banner",
                             "children": [
                                 {
-                                    "name": "Bfsi banner Varaint 1",
+                                    "name": "Bfsi banner variant 1",
                                     "value": "banner-variant1"
                                 },
                                 {
-                                    "name": "Bfsi banner Varaint 2",
+                                    "name": "Bfsi banner variant 2",
                                     "value": "banner-variant2"
                                 },
                                 {
-                                    "name": "Bfsi banner Varaint 3",
+                                    "name": "Bfsi banner variant 3",
                                     "value": "banner-variant3"
                                 },
                                 {
-                                    "name": "Bfsi banner Varaint 4",
+                                    "name": "Bfsi banner variant 4",
                                     "value": "banner-variant4"
                                 },
                                 {
-                                    "name": "Hitech banner Varaint 1",
+                                    "name": "Hitech banner variant 1",
                                     "value": "hitech-banner-variant1"
                                 },
                                 {
-                                    "name": "Hitech banner Varaint 2",
+                                    "name": "Hitech banner variant 2",
                                     "value": "hitech-banner-variant2"
                                 },
                                 {
-                                    "name": "Hitech banner Varaint 3",
+                                    "name": "Hitech banner variant 3",
                                     "value": "hitech-banner-variant3"
                                 },
                                 {
-                                    "name": "Hitech banner Varaint 4",
+                                    "name": "Hitech banner variant 4",
                                     "value": "hitech-banner-variant4"
                                 }
                             ]
