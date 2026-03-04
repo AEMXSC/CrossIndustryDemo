@@ -178,7 +178,229 @@
 }
 
 
-/* variation 3 css  */
+/* variation 2 css  */
+.product-compare-cards-container.compare-variant2 {
+  background: #FFFFFF;
+  padding: 80px 0;
+}
+
+/* Grid Layout */
+.product-compare-cards-container.compare-variant2 .compare-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Card */
+.product-compare-cards-container.compare-variant2 .compare-card {
+  background: #ececec;
+  padding: 24px;
+  border-radius: 2px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: center;
+  width: 375px;
+  min-width: 375px;
+  flex: 0 0 375px;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card:nth-child(2)::before {
+  content: none;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card .hidden-authoring-fields {
+  display: none;
+}
+
+/* Hover effect */
+.product-compare-cards-container.compare-variant2 .compare-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Image */
+.product-compare-cards-container.compare-variant2 .compare-card__image {
+ width: 32px;
+ height: 24px;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Swatches Container */
+.product-compare-cards-container.compare-variant2 .compare-card__swatches {
+  display: none;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-swatch {
+  display: none;
+}
+
+/* The "Selected" or "Active" state */
+.product-compare-cards-container.compare-variant2 .compare-swatch.is-active,
+.product-compare-cards-container.compare-variant2 .compare-swatch:hover {
+  outline: none;
+}
+
+/* Title */
+.product-compare-cards-container.compare-variant2 .compare-card__title {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #373739;
+  margin-inline-start: 22px;
+}
+
+/* Description */
+.product-compare-cards-container.compare-variant2 .compare-card__desc {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5C5D63;
+  text-align: left;
+  margin: 12px 0 16px;
+  padding: 0;
+  border-bottom: 0;
+  grid-column: 1 / -1;
+}
+
+/* Specs */
+
+.product-compare-cards-container.compare-variant2 .compare-card__model p {
+  display: inline-block;
+  background: #efedff;
+  color: #6e63ff;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  border: 1px solid #c8c3ff;
+  margin: 0 0 32px;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__model {
+  grid-column: 1 / -1;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__specs {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0;
+  flex: 1;
+  grid-column: 1 / -1;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__specs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 56px;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__specs li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #5C5D63;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+/* Tick circle */
+.product-compare-cards-container.compare-variant2 .compare-card__specs li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #111827;
+
+  background-image: url("/icons/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7px;
+}
+
+/* CTA */
+.product-compare-cards-container.compare-variant2 .compare-card__cta {
+  margin-top: auto;
+  padding: 12px 0 0;
+  background: transparent;
+  grid-column: 1 / -1;
+}
+
+.product-compare-cards-container.compare-variant2 .compare-card__cta button {
+  width: 100%;
+}
+
+.product-compare-cards-container.compare-variant2 .button-dark {
+  display: block;
+  padding: 8px;
+  background: #0c1633;
+  color: #ffffff;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.product-compare-cards-container.compare-variant2 .button-dark:hover {
+  background: #091229;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-compare-cards-container.compare-variant2 .compare-grid {
+    gap: 20px;
+  }
+
+  .product-compare-cards-container.compare-variant2 .compare-card__title {
+    font-size: 30px;
+  }
+
+  .product-compare-cards-container.compare-variant2 .button-dark {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-compare-cards-container.compare-variant2 .compare-grid {
+    gap: 16px;
+  }
+
+  .product-compare-cards-container.compare-variant2 .compare-card__title {
+    font-size: 26px;
+  }
+
+  .product-compare-cards-container.compare-variant2 .button-dark {
+    font-size: 16px;
+  }
+}
+
+/* variation 3 css start */
 .product-compare-cards-container {
   background: #f5f6f7;
   padding: 80px 0;
@@ -188,8 +410,7 @@
 .product-compare-cards-container.compare-variant3 .compare-grid {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   gap: 0;
 }
 
@@ -208,6 +429,7 @@
   min-height: 528px;
   border-left: 0;
   width: 381px;
+  flex: 0 0 381px;
 }
 
 .product-compare-cards-container.compare-variant3 .compare-card:first-child .compare-card__image,
@@ -254,7 +476,7 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0%;
-
+  z-index: 3;
 }
 
 .product-compare-cards-container.compare-variant3 .compare-card .hidden-authoring-fields {
@@ -429,12 +651,23 @@
 /* Responsive */
 @media (max-width: 1024px) {
   .product-compare-cards-container.compare-variant3 .compare-grid {
-    overflow: auto;
+    padding-top: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 @media (max-width: 768px) {
   .product-compare-cards-container.compare-variant3 .compare-grid {
-    overflow: auto;
+    padding-top: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
+}
+
+.section.hi-tech-overview-variant1,
+.section.hi-tech-overview-variant2 {
+  display: none;
 }
