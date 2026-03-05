@@ -2543,14 +2543,41 @@ padding: 9px 24px;
   text-align: center;
 }
 
-.section.compare-variant1 .default-content-wrapper p{
+.section.compare-variant2 .default-content-wrapper p{
   font-size: 36px;
   line-height: 48px;
   font-weight: 400;
   text-align: center;
   max-width: 900px;
-  /* margin: 0 auto 48px; */
+  margin-bottom: 40px;
+  text-align: left;
+    @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
 }
+.section.compare-variant1 .default-content-wrapper p,
+.section.compare-variant3 .default-content-wrapper p {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 900px;
+<<<<<<< HEAD
+  /* margin: 0 auto 48px; */
+=======
+  margin: 0 auto 48px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    line-height: 32px;
+    margin: unset;
+    margin-bottom: 32px;
+    text-align: left;
+  }
+>>>>>>> 0691053637ddd422c799fb0594cf26ff51e1b746
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .hitech-feature-variant1.cards-container {

@@ -55,7 +55,7 @@ export default function decorate(block) {
         const fileName = `product_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
         const path = `/content/dam/dept-crossIndustry/hi-tech-images/${fileName}`;
         
-        img.src = isLocalhost ? `${authorBase}${path}` : path;
+        img.src = `${authorBase}${path}`;
         img.alt = titleEl.textContent.trim();
       };
 
