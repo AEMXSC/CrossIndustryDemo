@@ -2021,9 +2021,9 @@ overflow: unset;
 .hitech-articles3 .default-content-wrapper:has([data-aue-type="richtext"])  [data-aue-type="richtext"] {
     display: unset;
 }
-.hitech-articles1 .default-content-wrapper [data-aue-type="richtext"],
-.hitech-articles2 .default-content-wrapper [data-aue-type="richtext"],
-.hitech-articles3 .default-content-wrapper [data-aue-type="richtext"] {
+.hitech-articles1 .default-content-wrapper,
+.hitech-articles2 .default-content-wrapper,
+.hitech-articles3 .default-content-wrapper {
   padding: 0px;
   display: flex;
   justify-content: space-between;
