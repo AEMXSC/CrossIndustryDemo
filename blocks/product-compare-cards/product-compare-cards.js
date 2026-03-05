@@ -53,7 +53,7 @@ export default function decorate(block) {
         const cleanModel = productModelEl.textContent.trim().split('·')[0].replace(/[^a-zA-Z0-9]/g, '');
         
         const fileName = `product_${cleanTitle}_${cleanModel}_${cleanColor}.png`;
-        const path = `/content/dam/dept-crossIndustry/hi-tech-images/${fileName}`;
+        const path = `/content/dam/dept-crossIndustry/hi-tech-images/compare/${fileName}`;
         
         img.src = `${authorBase}${path}`;
         img.alt = titleEl.textContent.trim();

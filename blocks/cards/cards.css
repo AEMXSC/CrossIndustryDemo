@@ -2492,6 +2492,16 @@ padding: 40px 0px 40px 24px;
   padding: 0px;
   margin: 0px;
 }
+.hitech-feature-variant2 .default-content-wrapper:has([data-aue-type="richtext"])
+[data-aue-type="richtext"],
+.hitech-feature-variant2 .default-content-wrapper:not(:has([data-aue-type="richtext"]))
+ {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+     padding: 0px;
+  margin: 0px;
+ }
 .hitech-feature-variant2 .default-content-wrapper h3 + p {
   margin : 0px 0px 24px;
       /* width: 45%; */
@@ -2564,9 +2574,6 @@ padding: 9px 24px;
   font-weight: 400;
   text-align: center;
   max-width: 900px;
-<<<<<<< HEAD
-  /* margin: 0 auto 48px; */
-=======
   margin: 0 auto 48px;
   @media screen and (max-width: 768px) {
     font-size: 24px;
@@ -2575,7 +2582,6 @@ padding: 9px 24px;
     margin-bottom: 32px;
     text-align: left;
   }
->>>>>>> 0691053637ddd422c799fb0594cf26ff51e1b746
 }
 
 
