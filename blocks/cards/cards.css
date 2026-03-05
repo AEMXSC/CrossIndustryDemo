@@ -2488,10 +2488,10 @@ padding: 40px 0px 40px 24px;
   margin-top: 0px;
   gap: 34px;
 }
-.hitech-feature-variant2 .default-content-wrapper {
+/* .hitech-feature-variant2 .default-content-wrapper {
   padding: 0px;
   margin: 0px;
-}
+} */
 .hitech-feature-variant2 .default-content-wrapper:has([data-aue-type="richtext"])
 [data-aue-type="richtext"],
 .hitech-feature-variant2 .default-content-wrapper:not(:has([data-aue-type="richtext"]))
@@ -2526,11 +2526,11 @@ width: 23.6%;
   flex-wrap: wrap;
   padding: 0px;
 }
-.hitech-feature-variant2 .default-content-wrapper {
+/* .hitech-feature-variant2 .default-content-wrapper {
       display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-}
+} */
 .hitech-feature-variant2 .default-content-wrapper h3 {
   grid-column: span 2;
   width: 85%;
