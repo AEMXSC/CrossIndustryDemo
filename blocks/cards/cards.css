@@ -2649,8 +2649,12 @@ padding: 9px 24px;
   margin: 24px 0px 8px;
  }
 
- .hitech-feature-variant2 .default-content-wrapper {
+ /* .hitech-feature-variant2 .default-content-wrapper {
   display: flex;
+    flex-direction: column;
+  } */
+  .hitech-feature-variant2 .default-content-wrapper:has([data-aue-type="richtext"]) [data-aue-type="richtext"], .hitech-feature-variant2 .default-content-wrapper:not(:has([data-aue-type="richtext"])) {
+     display: flex;
     flex-direction: column;
   }
   .hitech-feature-variant2 .default-content-wrapper ul {
