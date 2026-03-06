@@ -2152,7 +2152,7 @@ padding: 0px;
 .hitech-articles3 .cards > ul > li .cards-card-image {
   width: 100%;
 }
-
+/* 
 .hitech-articles1 .cards > ul > li .cards-card-body p{
       display: inline;
     padding: 8px 12px;
@@ -2168,8 +2168,25 @@ padding: 0px;
     font-weight: 500;
     line-height: 16px;
     text-transform: uppercase;
-} 
+}  */
 
+.hitech-articles1 .cards > ul > li .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"] > p, 
+.hitech-articles1 .cards > ul > li .cards-card-body:not(:has([data-aue-type="richtext"]))> p {
+     display: inline;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 33px;
+    border: 1px solid var(--Secondary, #7A63FF);
+    color: var(--Secondary, #7A63FF);
+    text-align: center;
+    font-family: var(--Inter, sans-serif);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+}
 .hitech-articles1 .cards > ul > li .cards-card-body h4,
 .hitech-articles2 .cards > ul > li .cards-card-body h4,
 .hitech-articles3 .cards > ul > li .cards-card-body h4 {
