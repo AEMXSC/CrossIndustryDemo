@@ -2639,7 +2639,7 @@ padding: 9px 24px;
   font-size: 36px;
   line-height: 48px;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
   max-width: 900px;
   margin-bottom: 48px;
   @media screen and (max-width: 768px) {

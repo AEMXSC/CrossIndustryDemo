@@ -7,14 +7,15 @@
 /* Grid Layout */
 .product-compare-cards-container.compare-variant1 .compare-grid .swiper-wrapper {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   /* flex-wrap: wrap; */
   gap: 16px;
+  justify-content: center;
   flex-wrap: wrap;
   @media screen and (max-width: 1024px) {
    flex-wrap: unset;
-    
+    justify-content: unset;
   }
 }
 
