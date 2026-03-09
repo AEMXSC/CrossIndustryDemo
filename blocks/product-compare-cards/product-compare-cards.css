@@ -28,9 +28,10 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  width: 31.65%;
+  width: 400px;
   min-height: 595px;
   position: relative;
+  flex-shrink: 0;
 }
 
 .product-compare-cards-container.compare-variant1 .compare-card::after {
@@ -196,7 +197,7 @@
 
   .product-compare-cards-container.compare-variant1 .compare-card {
     padding: 0 24px;
-    width: 45.9%;
+    width: 400px;
   }
 
   .product-compare-cards-container.compare-variant1 .compare-card__title {
@@ -236,7 +237,7 @@
 
   .product-compare-cards-container.compare-variant1 .compare-card {
     padding: 0;
-    width: 100%;
+    width: 184px;
   }
 
   .product-compare-cards-container.compare-variant1 .compare-card .compare-card__image {
@@ -313,15 +314,15 @@
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
   align-items: center;
-  width: 100%;
+  width: 400px;
   max-width: 400px;
-  
-
+  flex-shrink: 0;
   /* flex: 0 0 375px; */
   @media (max-width: 1024px),
   (max-width: 768px) {
     padding: 12px;
-    width: 59%;
+    width: 400px;
+    max-width: unset;
   }
 }
 
@@ -514,6 +515,10 @@
   .product-compare-cards-container.compare-variant2 .compare-grid {
     gap: 16px;
   }
+  .product-compare-cards-container.compare-variant2 .compare-card {
+    width: 184px;
+    /* max-width: 184px; */
+  }
 
   .product-compare-cards-container.compare-variant2 .compare-card__title {
     font-size: 16px;
@@ -558,21 +563,22 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  width: 100%;
+  width: 400px;
   min-height: 538px;
   border-left: 0;
-  flex: 0 0 381px;
+  flex: 0 0 400px;
   padding-top: unset;
 
   @media screen and (max-width: 1024px) {
-      width: 71.52%;
+      width: 400px;
+      flex: none;
   }
   @media screen and (max-width: 768px) {
     flex: none;
-    width: 100%;
     min-height: 538px;
     border-left: 0;
-    width: 71.52%;
+    width: 184px;
+    /* max-width: 184px; */
   }
 }
 

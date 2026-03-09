@@ -115,18 +115,37 @@ export default function decorate(block) {
       console.log('Initializing Swiper for Variant 1');
       swiperOptions.spaceBetween = 16;
       swiperOptions.centeredSlides = false;
+      swiperOptions.slidesPerView = 1.2;
+      swiperOptions.breakpoints = {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        }
+      };
     }
     else if (isVariant2) {
       console.log('Initializing Swiper for Variant 2');
-      swiperOptions.slidesPerView = 'auto';
-      swiperOptions.spaceBetween = 24;
+      swiperOptions.spaceBetween = 16;
+      swiperOptions.slidesPerView = 1.2;
       swiperOptions.centeredSlides = false;
+      swiperOptions.breakpoints = {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        }
+      };
     }
     else if (isVariant3) {
       console.log('Initializing Swiper for Variant 3');
       swiperOptions.spaceBetween = 0;
-      swiperOptions.slidesPerView = 'auto';
+      swiperOptions.slidesPerView = 1.2;
       swiperOptions.centeredSlides = false;
+      swiperOptions.breakpoints = {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        }
+      };
     }
     new Swiper(swiperEl, swiperOptions);
   }
