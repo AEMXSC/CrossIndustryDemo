@@ -429,6 +429,22 @@
                                 {
                                     "name": "Hitech banner variant 4",
                                     "value": "hitech-banner-variant4"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 1",
+                                    "value": "healthcare-banner-variant1"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 2",
+                                    "value": "healthcare-banner-variant2"
+                                },
+                                {
+                                    "name": "Hitech banner variant 3",
+                                    "value": "healthcare-banner-variant3"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 4",
+                                    "value": "healthcare-banner-variant4"
                                 }
                             ]
                         }
