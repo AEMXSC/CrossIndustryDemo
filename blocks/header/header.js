@@ -546,7 +546,7 @@ export default async function decorate(block) {
     return null;
   }
 
-  const fragment = await loadNavHierarchically();
+  const fragment = await loadNavHierarchically("/us/healthcare/nav");
 
   // decorate nav DOM
   block.textContent = "";

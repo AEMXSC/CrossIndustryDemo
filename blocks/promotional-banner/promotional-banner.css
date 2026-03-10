@@ -695,3 +695,348 @@
         margin-top: 85px !important;
     }   
 }
+
+
+
+
+/* healthcare banner variant 1 */
+.healthcare-banner-variant1,
+.healthcare-banner-variant2 {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 88px;
+}
+
+.healthcare-banner-variant1 .promotionalbanner-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 48px;
+}
+
+.healthcare-banner-variant1 .banner-image {
+    width: 100%;
+}
+
+.healthcare-banner-variant1 img,
+.healthcare-banner-variant2 img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 .grid-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 .grid-content>div {
+    width: 49.72%;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 .grid-content .bottom-content {
+    width: 40.72%;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 h2 {
+    color: #0F1B2D;
+    font-family: var(--Manrope, sans-serif);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: -1.2px;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 h2 strong {
+    font-weight: 600;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 p {
+    color: #333;
+    font-family: var(--Inter, sans-serif);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 .redirections a:first-child,
+.promotional-banner-container.healthcare-banner-variant2 .redirections a:first-child,
+.promotional-banner-container.healthcare-banner-variant3 .redirections a:first-child,
+.promotional-banner-container.healthcare-banner-variant4 .redirections a:first-child {
+    border-radius: 100px;
+    background: #1F69FF;
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-family: var(--Manrope, sans-serif);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.promotional-banner-container.healthcare-banner-variant1 .redirections a:nth-child(2),
+.promotional-banner-container.healthcare-banner-variant2 .redirections a:nth-child(2),
+.promotional-banner-container.healthcare-banner-variant3 .redirections a:nth-child(2),
+.promotional-banner-container.healthcare-banner-variant4 .redirections a:nth-child(2) {
+    display: flex;
+    height: 52px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid #1F69FF;
+    color: #1F69FF;
+    font-family: var(--Manrope, sans-serif);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.healthcare-banner-variant1 .banner-image {
+    display: block;
+}
+
+
+/* healthc are variant 2 */
+.healthcare-banner-variant2 .promotionalbanner-content {
+display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.promotional-banner-container.healthcare-banner-variant2 .banner-content {
+    width: 44.9%;
+}
+
+.promotional-banner-container.healthcare-banner-variant2 h2,
+.promotional-banner-container.healthcare-banner-variant3 h2,
+.promotional-banner-container.healthcare-banner-variant4 h2 {
+color: #0F1B2D;
+font-family: var(--Manrope, sans-serif);
+font-size: 48px;
+font-weight: 400;
+line-height: 62px;
+letter-spacing: -0.96px;
+margin-bottom: 24px;
+}
+.promotional-banner-container.healthcare-banner-variant2 h2 strong {
+font-weight: 600;
+}
+.promotional-banner-container.healthcare-banner-variant2 p,
+.promotional-banner-container.healthcare-banner-variant3 p,
+.promotional-banner-container.healthcare-banner-variant4 p {
+color: #626262;
+font-family: var(--Inter, sans-serif);
+font-size: 18px;
+font-weight: 400;
+line-height: 24px; 
+}
+
+/* healthcare banner variant 3 */
+    .healthcare-banner-variant3.promotional-banner-container {
+        max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 88px;
+    }
+.healthcare-banner-variant3 .promotionalbanner-content .banner-image,
+.healthcare-banner-variant4 .promotionalbanner-content .banner-image{
+display: none;
+}
+.healthcare-banner-variant3.promotional-banner-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 88px;
+    min-height: 478px;
+    border-radius: 24px;
+}
+.healthcare-banner-variant3 .banner-content {
+        width: 50.84%;
+    padding: 80px 0px 80px 76px;
+    background: linear-gradient(90deg, #F6F7F7 1.2%, rgba(255, 255, 255, 0.00) 86.44%);
+    border-radius: 24px;
+}
+.healthcare-banner-variant3 .promotional-banner-wrapper {
+    border-radius: 24px;
+    background-size: 100% 100% !important; 
+}
+.promotional-banner-container.healthcare-banner-variant3 p {
+   color: #0F1B2D;
+}
+.promotional-banner-container .redirections {
+    margin-bottom: 0px;
+}
+
+
+/* healthcare banner variant 4  */
+.healthcare-banner-variant4.promotional-banner-container {
+ max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 88px;
+    min-height: 478px;
+    border-radius: 24px;
+}
+.healthcare-banner-variant4 .banner-content {
+        padding: 16px;
+}
+.healthcare-banner-variant4 .grid-content {
+        border-radius: 20px;
+    background: #FFF;
+    width: 43.5%;
+    padding: 64px 56px;
+    margin: 16px;
+ }
+ .promotional-banner-container.healthcare-banner-variant4 p {
+color: #626262;
+ }
+ .healthcare-banner-variant4 .promotional-banner-wrapper {
+        border-radius: 24px;
+    background-size: 100% 100% !important;
+ }
+    @media screen and (max-width: 1024px) {
+    /* healthcare banner variant 1 */
+    .promotional-banner-container.healthcare-banner-variant1 {
+        padding: 24px 24px 48px;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .grid-content {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 h2,
+    .promotional-banner-container.healthcare-banner-variant2 h2 {
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -0.6px;
+        margin-bottom: 12px;
+    }
+
+    .healthcare-banner-variant1 .bottom-content {
+        padding: 0px;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .grid-content>div {
+        width: 100%;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .grid-content .bottom-content {
+        width: 100%;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 p,
+    .promotional-banner-container.healthcare-banner-variant2 p,
+    .promotional-banner-container.healthcare-banner-variant3 p,
+    .promotional-banner-container.healthcare-banner-variant4 p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 32px;
+        margin-bottom: 24px;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .redirections {
+        margin-bottom: 0px;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .redirections a:first-child,
+    .promotional-banner-container.healthcare-banner-variant2 .redirections a:first-child,
+    .promotional-banner-container.healthcare-banner-variant3 .redirections a:first-child,
+    .promotional-banner-container.healthcare-banner-variant4 .redirections a:first-child {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .promotional-banner-container.healthcare-banner-variant1 .redirections a:nth-child(2),
+    .promotional-banner-container.healthcare-banner-variant2 .redirections a:nth-child(2),
+    .promotional-banner-container.healthcare-banner-variant3 .redirections a:nth-child(2),
+    .promotional-banner-container.healthcare-banner-variant4 .redirections a:nth-child(2) {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    .healthcare-banner-variant1 .promotionalbanner-content {
+        gap: 40px;
+    }
+
+    .healthcare-banner-variant1 img {
+        width: unset;
+    }
+
+
+    /* healthcare variant 2 */
+    .healthcare-banner-variant2.promotional-banner-container {
+        padding: 24px 24px 48px;
+    }
+    .healthcare-banner-variant2 .promotionalbanner-content {
+        flex-direction: column-reverse;
+        align-items: unset;
+    }
+    .promotional-banner-container.healthcare-banner-variant2 .banner-content {
+        width: 100%;
+    }
+    .healthcare-banner-variant2 img {
+        width: unset;
+    }
+    .healthcare-banner-variant2 .bottom-content {
+       padding: 0px;
+    }
+
+    /* healthcare banner variant 3 */
+    .healthcare-banner-variant3.promotional-banner-container {
+        padding: 24px 24px 48px;
+    }
+    .healthcare-banner-variant3 .banner-content {
+        width: 100%;
+            padding: 30px 24px 0px;
+                border-radius: 24px 0px;
+    }
+    .promotional-banner-container.healthcare-banner-variant3 h2,
+    .promotional-banner-container.healthcare-banner-variant4 h2 {
+font-size: 24px;
+line-height: 32px;
+letter-spacing: -0.48px;
+margin-bottom: 12px;
+    }
+    .promotional-banner-container.healthcare-banner-variant3 h2 strong,
+    .promotional-banner-container.healthcare-banner-variant4 h2 strong {
+font-size: 24px;
+letter-spacing: -0.48px;
+    }
+    .healthcare-banner-variant3 .bottom-content {
+        padding: 0px;
+    }
+    .healthcare-banner-variant3 .promotional-banner-wrapper {
+        min-height: 678px;
+                background-position: 100% 100% !important;
+        /* background-size: contain !important; */
+            background-color: #E0E0E0;
+    }
+
+    /* healthcare banner variant 4  */
+    .healthcare-banner-variant4 .grid-content {
+        width: 100%;
+        padding: 24px 12px;
+        margin: 0px;
+    }
+    .healthcare-banner-variant4 .bottom-content {
+        padding: 0px;
+    }
+    .healthcare-banner-variant4 .promotional-banner-wrapper {
+        min-height: 546px;
+    }
+    .promotional-banner-container.healthcare-banner-variant4 .redirections {
+        margin-bottom: 0px;
+    }
+    .healthcare-banner-variant4.promotional-banner-container {
+    padding: 24px 24px 48px;
+}
+.healthcare-banner-variant4 .banner-content {
+    padding: 14px;
+}
+    }

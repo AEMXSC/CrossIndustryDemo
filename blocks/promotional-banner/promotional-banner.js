@@ -4,7 +4,8 @@ import {
   h2,
   img,
   p,
-  span
+  span,
+  strong
 } from "../../scripts/dom-helpers.js";
 
 /* -----------------------------
@@ -70,7 +71,12 @@ export default function decorate(block) {
     "hitech-banner-variant1": hitechBanner,
     "hitech-banner-variant2": hitechBanner,
     "hitech-banner-variant3": hitechBanner,
-    "hitech-banner-variant4": hitechBanner
+    "hitech-banner-variant4": hitechBanner,
+
+    "healthcare-banner-variant1": healthcareBanner,
+    "healthcare-banner-variant2": healthcareBanner,
+    "healthcare-banner-variant3": healthcareBanner,
+    "healthcare-banner-variant4": healthcareBanner
   };
 
   const matchedVariant = Object.keys(variantMap)
@@ -345,6 +351,89 @@ function hitechBanner(block) {
               src: arrowIcon,
               alt: ""
             })) : ""
+          )
+        )
+      )
+    )
+  );
+}
+
+
+/* -----------------------------
+   Banner Variant 3
+------------------------------ */
+
+function healthcareBanner(block) {
+
+  let {
+    image,
+    heading,
+    description,
+    buttons
+  } = getContent(block);
+let [title, subtitle] = heading.split(":");
+let container = block.closest(".promotional-banner-container").querySelector(".promotional-banner-wrapper");
+let presentClass = block.closest(".promotional-banner-container").classList
+  if (presentClass.contains("healthcare-banner-variant3") || presentClass.contains("healthcare-banner-variant4")) {
+    container.style.background = `url(${image}) center top/ cover no-repeat`;
+  }
+  return div({
+      class: "promotionalbanner promotionalbanner-content block type3"
+    },
+
+    div({
+        class: "banner-image"
+      },
+      img({
+        loading: "eager",
+        fetchpriority: "high",
+        src: image,
+        alt: ""
+      })
+    ),
+
+    div({
+        class: "banner-content"
+      },
+
+      div({
+          class: "grid-content"
+        },
+
+        div(
+  {},
+  h2(
+    {},
+    strong({}, title),
+    subtitle ? `: ${subtitle}` : ""
+  )
+),
+
+        div({
+            class: "bottom-content"
+          },
+
+          p({}, description),
+
+          p({
+              class: "redirections"
+            },
+
+            buttons.first.text &&
+            a({
+                href: buttons.first.href,
+                title: buttons.first.title
+              },
+              buttons.first.text
+            ),
+
+            buttons.second.text &&
+            a({
+                href: buttons.second.href,
+                title: buttons.second.title
+              },
+              buttons.second.text
+            )
           )
         )
       )
