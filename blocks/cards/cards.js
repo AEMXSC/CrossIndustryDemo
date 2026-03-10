@@ -95,7 +95,27 @@ hitecgGalleryComp(block)
    if(classlistExists.contains("services-variant2")) {
     healthcareSrvices(block)
   }
+  if(classlistExists.contains("services-variant3")) {
+    console.log(block);
+    let imgSrc; 
+    if (window.innerWidth > 1024) {
+      imgSrc = block
+    .closest(".services-variant3")
+    ?.querySelectorAll(".default-content-wrapper")?.[1]
+    ?.querySelector("p:first-child img")
+    ?.src
+    ?.trim();
+      
+  } else {
+        imgSrc = block.closest(".services-variant3")
+    ?.querySelectorAll(".default-content-wrapper")?.[1]
+    ?.querySelector("p:last-child img")
+    ?.src
+    ?.trim();
+  }
+  block.closest(".services-variant3").querySelector(".cards-wrapper").style.background =`url(${imgSrc}) center top / cover no-repeat`
     }
+  }
 
 
 function blogCards(block) {

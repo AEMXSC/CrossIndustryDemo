@@ -2750,7 +2750,8 @@ padding: 9px 24px;
   justify-content: space-between;
 }
 
-.services-variant1.cards-container .default-content-wrapper {
+.services-variant1.cards-container .default-content-wrapper,
+.services-variant3.cards-container .default-content-wrapper {
   max-width: unset;
   margin: unset;
   padding: unset;
@@ -2776,7 +2777,9 @@ padding: 9px 24px;
 }
 
 .services-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon),
-.services-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+.services-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon),
+.services-variant3 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon),
+.services-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   border-radius: 40px;
   background: #1F69FF;
   padding: 13px;
@@ -2787,12 +2790,15 @@ padding: 9px 24px;
 }
 
 .services-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon) span,
-.services-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) span {
+.services-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) span,
+.services-variant3 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon) span,
+.services-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) span {
   width: 20px;
   height: 19px;
 }
 
-.services-variant1 .cards-card-body img {
+.services-variant1 .cards-card-body img,
+.services-variant3 .cards-card-body img {
   width: 20px;
   height: 19px;
   min-height: unset;
@@ -2869,7 +2875,8 @@ padding: 9px 24px;
       justify-content: space-between;
     align-items: center;
 }
-.services-variant2 .default-content-wrapper h2 {
+.services-variant2 .default-content-wrapper h2,
+.services-variant3 .default-content-wrapper h2 {
 color: #000;
 font-family: var(--Manrope, sans-serif);
 font-size: 48px;
@@ -2878,7 +2885,8 @@ line-height: 68px;
 letter-spacing: -1.92px;
 margin: 0px;
 }
-.services-variant2 .default-content-wrapper h2 strong{
+.services-variant2 .default-content-wrapper h2 strong,
+.services-variant3 .default-content-wrapper h2 strong{
 font-weight: 600;
 }
 .services-variant2.cards-container .cards-wrapper {
@@ -3002,6 +3010,65 @@ background-color: #E9E9EB;
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next {
     transform: rotate(180deg);
 }
+
+/* healthcare services variant 3 */
+.services-variant3.cards-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px 88px;
+}
+.services-variant3 .default-content-wrapper:last-child {
+  display: none;
+}
+.services-variant3 .cards-wrapper {
+  min-height: 636px;
+  position: relative;
+      background-size: 100% 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      padding: 24px;
+}
+/* .services-variant3 .cards-wrapper .cards {
+      position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+} */
+.services-variant3 .cards-wrapper .cards li{
+    padding: 24px 24px 32px 24px;
+    border-radius: 16px;
+    background:  #FFF;
+}
+.services-variant3.cards-container .default-content-wrapper {
+  margin-bottom: 64px;
+}
+.services-variant3 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), .services-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+margin-bottom: 40px;
+}
+.services-variant3 .cards > ul > li .cards-card-body h4 {
+color: #0F1B2D;
+font-family: var(--Inter, sans-serif);
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+margin: 0px;
+margin-bottom: 12px;
+}
+.services-variant3 .cards > ul > li .cards-card-body p {
+color: #0F1B2D;
+font-family: var(--Inter, sans-serif);
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+margin: 0px;
+}
+.services-variant3 .cards > ul > li .cards-card-body {
+  margin: 0px;
+}
+.services-variant3 .cards > ul {
+padding: 0px;
+}
 @media screen and (max-width: 1024px) {
   .services-variant2 .default-content-wrapper h2 {
     color: #0F1B2D;
@@ -3052,6 +3119,26 @@ background-color: #E9E9EB;
   position: absolute;
     bottom: 0;
     right: 24px;
+}
+
+/* healthcare services variant 3  */
+.services-variant3.cards-container {
+padding: 48px 24px;
+}
+.services-variant3 .cards-wrapper {
+  min-height: 1412px;
+  padding: 16px;
+  border-radius: 24px;
+}
+.services-variant3 .cards-wrapper .cards {
+      bottom: 48px;
+      /* top: 48px; */
+}
+.services-variant3 .cards-wrapper .cards > ul > li {
+  margin: 0px 0px 16px 0px;
+}
+.services-variant3 .cards-wrapper .cards > ul > li:last-child {
+  margin: 0px;
 }
 }
 @media screen and (max-width: 768px) {

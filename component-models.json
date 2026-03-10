@@ -254,6 +254,39 @@
           {
             "name": "Services",
             "value": "services"
+          },
+          {
+            "name": "HealthcareBlogs",
+            "value": "healthcareblogs"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleHealthcareBlogs",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "healthcareblogs"
+          ]
+        },
+        "options": [
+          {
+            "name": "HealthcareBlogs",
+            "children": [
+              {
+                "name": "Healthcare Blogs Variant 1",
+                "value": "healthcare-blogs-variant1"
+              },
+              {
+                "name": "Healthcare Blogs Variant 2",
+                "value": "healthcare-blogs-variant2"
+              }
+            ]
           }
         ]
       },
