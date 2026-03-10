@@ -92,6 +92,9 @@ hitecgGalleryComp(block)
   if(classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
     hitechArticles(block)
   }
+   if(classlistExists.contains("services-variant2")) {
+    healthcareSrvices(block)
+  }
     }
 
 
@@ -297,6 +300,26 @@ function hitechArticles(block) {
     hitechArticles3();
   }
 }
+function healthcareSrvices(block) {
+  let classlistExists = block.closest(".cards-container").classList;
+  block.classList.add('swiper');
+  block.querySelector("ul").classList.add("swiper-wrapper");
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+  if (classlistExists.contains("services-variant2")) {
+    let buttonWrapper = document.createElement('div');
+    buttonWrapper.classList.add('button-wrapper');
+    let prevButton = document.createElement('div');
+    prevButton.classList.add('swiper-button-prev');
+    let nextbutton = document.createElement('div');
+    nextbutton.classList.add('swiper-button-next');
+    buttonWrapper.appendChild(prevButton);
+    buttonWrapper.appendChild(nextbutton);
+    block.closest(".services-variant2").querySelector(".default-content-wrapper").appendChild(buttonWrapper);
+    healthcareSrvicesSwpiper();
+  }
+}
 function hitechArticles1() {
   Swiper(".hitech-articles1 .swiper", {
     slidesPerView: 3,
@@ -370,6 +393,33 @@ function hitechArticles3() {
       },
       1024: {
         slidesPerView: 3,
+      },
+    }
+  });
+}
+
+function healthcareSrvicesSwpiper() {
+  Swiper(".services-variant2 .swiper", {
+    slidesPerView: 1,
+    slideToClickedSlide: true,
+    spaceBetween: 12,
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
       },
     }
   });
