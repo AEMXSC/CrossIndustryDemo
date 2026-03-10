@@ -250,6 +250,43 @@
           {
             "name": "Compare",
             "value": "compare"
+          },
+          {
+            "name": "Services",
+            "value": "services"
+          }
+        ]
+      },
+      {
+        "component": "multiselect",
+        "name": "styleServices",
+        "label": "Style",
+        "valueType": "string[]",
+        "condition": {
+          "===": [
+            {
+              "var": "sectionType"
+            },
+            "services"
+          ]
+        },
+        "options": [
+          {
+            "name": "Services",
+            "children": [
+              {
+                "name": "Healthcare Services Variant 1",
+                "value": "services-variant1"
+              },
+              {
+                "name": "Healthcare Services Variant 2",
+                "value": "services-variant2"
+              },
+              {
+                "name": "Healthcare Services Variant3",
+                "value": "services-variant3"
+              }
+            ]
           }
         ]
       },
