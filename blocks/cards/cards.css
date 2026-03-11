@@ -3297,8 +3297,8 @@ line-height: 30px;
 padding: 0px;
 gap: 0px;
 }
-.healthcare-blogs-variant1 .cards .cards-card-body > ul,
-.healthcare-blogs-variant2 .cards .cards-card-body > ul {
+.healthcare-blogs-variant1 .cards-card-body > ul,
+.healthcare-blogs-variant2 .cards-card-body > ul {
 display: flex;
 align-items: center;
 gap: 15px;
@@ -3307,8 +3307,8 @@ margin-top: 24px;
 .healthcare-blogs-variant1 .cards .cards-card-body > ul {
   display: none;
 }
- .healthcare-blogs-variant1 .cards .cards-card-body > ul li,
- .healthcare-blogs-variant2 .cards .cards-card-body > ul li{
+ .healthcare-blogs-variant1 .cards-card-body > ul li,
+ .healthcare-blogs-variant2 .cards-card-body > ul li{
   color: #919191;
 font-family: var(--Inter, sans-serif);
 font-size: 16px;
@@ -3498,7 +3498,7 @@ margin: 0px 0px 16px;
   font-size: 14px;
   line-height: 20px;
 }
-.healthcare-blogs-variant2 .cards .cards-card-body > ul {
+.healthcare-blogs-variant2 .cards-card-body > ul {
   margin-top: 16px;
 }
 .healthcare-blogs-variant2 .cards > ul > li .cards-card-body .button-container {
