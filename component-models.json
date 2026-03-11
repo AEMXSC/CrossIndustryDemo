@@ -293,18 +293,6 @@
               {
                 "name": "Healthcare tab without swiper variant",
                 "value": "healthcare-tab-without-swiper"
-              },
-              {
-                "name": "Healthcare tab content First",
-                "value": "healthcare-tab-content-first"
-              },
-              {
-                "name": "Healthcare tab content Second",
-                "value": "healthcare-tab-content-second"
-              },
-              {
-                "name": "Healthcare tab content Third",
-                "value": "healthcare-tab-content-third"
               }
             ]
           }
@@ -502,6 +490,18 @@
               {
                 "name": "HitechAccordion tab content",
                 "value": "hitechaccordion-tab-content"
+              },
+              {
+                "name": "Healthcare accordion variant 1",
+                "value": "healthcare-accordion-variant1"
+              },
+              {
+                "name": "Healthcare accordion variant 2",
+                "value": "healthcare-accordion-variant2"
+              },
+              {
+                "name": "Healthcare accordion variant 3",
+                "value": "healthcare-accordion-variant3"
               }
             ]
           }

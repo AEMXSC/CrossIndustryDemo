@@ -8,7 +8,7 @@ export default async function decorate(block) {
 
 import { createOptimizedPicture, loadCSS } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
-import Swiper from './swiper.min.js';
+import Swiper from '../../scripts/swiper.min.js';
 
 export default function decorate(block) {
   loadCSS(`${window.hlx.codeBasePath}/blocks/cards/swiper.min.css`);
@@ -83,16 +83,20 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ul);
   const classlistExists = block.closest('.cards-container').classList;
+
   if (classlistExists.contains("blog-cards") || classlistExists.contains("blog-cards2") || classlistExists.contains("product-variant1")) {
-blogCards(block);
+    blogCards(block);
   }
   if (classlistExists.contains("hitech-variant1") || classlistExists.contains("hitech-variant2") || classlistExists.contains("hitech-variant3")) {
-hitecgGalleryComp(block)
+    hitecgGalleryComp(block)
   }
-  if(classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
+  if (classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
     hitechArticles(block)
   }
-    }
+  if (classlistExists.contains("hitechaccordion-tab-content")) {
+    healthcareTabSwiper(block)
+  }
+}
 
 
 function blogCards(block) {
@@ -303,7 +307,7 @@ function hitechArticles1() {
     // slideToClickedSlide: true,
     spaceBetween: 12,
     grabCursor: true,
-   breakpoints: {
+    breakpoints: {
       0: {
         slidesPerView: 1,
       },
@@ -326,7 +330,7 @@ function hitechArticles2() {
     slideToClickedSlide: true,
     spaceBetween: 12,
     grabCursor: true,
-   breakpoints: {
+    breakpoints: {
       0: {
         slidesPerView: 1,
       },
@@ -350,15 +354,15 @@ function hitechArticles3() {
     spaceBetween: 12,
     grabCursor: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
       el: '.swiper-pagination',
       clickable: true,
       type: "bullets",
     },
-   breakpoints: {
+    breakpoints: {
       0: {
         slidesPerView: 1,
       },
@@ -372,5 +376,35 @@ function hitechArticles3() {
         slidesPerView: 3,
       },
     }
+  });
+}
+
+function healthcareTabSwiper(block) {
+  let classlistExists = block.closest('.hitechaccordion-tab-content').classList;
+  block.classList.add('swiper');
+  block.querySelector('ul').classList.add('swiper-wrapper');
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+  const swiperButtonPrev = document.createElement('div');
+  swiperButtonPrev.classList.add('swiper-button-prev');
+  const swiperButtonNext = document.createElement('div');
+  swiperButtonNext.classList.add('swiper-button-next');
+
+  block.appendChild(swiperButtonPrev);
+  block.appendChild(swiperButtonNext);
+
+  if (classlistExists.contains("healthcare-round-tab-swiper")) {
+    healthcareRoundTabSwiper();
+  }
+  Swiper(".healthcare-round-tab-swiper .swiper", {
+    slidesPerView: 1,
+    slidpergroup: 1,
+    spaceBetween: 12,
+    grabCursor: true,
+    navigation: {
+      prevEl: swiperButtonPrev,
+      nextEl: swiperButtonNext,
+    },
   });
 }
