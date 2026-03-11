@@ -108,6 +108,44 @@
                             "name": "HealthcareBlogs",
                             "value": "healthcareblogs"
                         }
+                        ,
+                        {
+                            "name": "HealthcareCategories",
+                            "value": "healthcarecategories"
+                        }
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleHealthcareCategories",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "healthcarecategories"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "HealthcareCategories",
+                            "children": [
+                                {
+                                    "name": "Healthcare Categories Variant 1",
+                                    "value": "healthcare-categories-variant1"
+                                },
+                                {
+                                    "name": "Healthcare Categories Variant 2",
+                                    "value": "healthcare-categories-variant2"
+                                },
+                                {
+                                    "name": "Healthcare Categories Variant 3",
+                                    "value": "healthcare-categories-variant3"
+                                }
+                            ]
+                        }
                     ]
                 },
                 {
