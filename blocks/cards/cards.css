@@ -2901,6 +2901,7 @@ padding: 9px 24px;
 
 .services-variant2.cards-container .cards-wrapper ul {
   padding: 0px;
+  gap: 0px;
 }
 
 .services-variant2 .cards>ul>li {
@@ -3158,6 +3159,10 @@ padding: 9px 24px;
     gap: 12px;
   }
 
+  .services-variant2 .cards>ul>li .cards-card-image {
+    margin-right: 0px
+  }
+
   .services-variant2 .button-wrapper {
     position: absolute;
     bottom: 0;
@@ -3246,262 +3251,584 @@ padding: 9px 24px;
   max-width: 1440px;
   margin: 0 auto;
   padding: 80px 88px;
-      display: flex;
-    flex-direction: column;
-    gap: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
+
 .healthcare-blogs-variant1.cards-container .default-content-wrapper,
 .healthcare-blogs-variant2.cards-container .default-content-wrapper {
-max-width: unset;
+  max-width: unset;
   margin: 0px;
   padding: 0px;
 }
+
 .healthcare-blogs-variant1 .default-content-wrapper h2,
 .healthcare-blogs-variant2 .default-content-wrapper h2 {
   color: #0F1B2D;
-    font-family: var(--Manrope, sans-serif);
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 68px;
-    letter-spacing: -0.96px;
-margin: 0px;
+  font-family: var(--Manrope, sans-serif);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: -0.96px;
+  margin: 0px;
 }
-.healthcare-blogs-variant1 .default-content-wrapper h2 strong, 
+
+.healthcare-blogs-variant1 .default-content-wrapper h2 strong,
 .healthcare-blogs-variant2 .default-content-wrapper h2 strong {
-font-weight: 600;
+  font-weight: 600;
 }
+
 .healthcare-blogs-variant1.cards-container .cards-wrapper,
 .healthcare-blogs-variant2.cards-container .cards-wrapper {
   padding: 0px;
-    max-width: unset;
+  max-width: unset;
   margin: unset;
 }
-.healthcare-blogs-variant1 .cards > ul > li .cards-card-body p,
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body p {
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body p,
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body p {
   margin: 0px;
   color: #626262;
-font-family: var(--Inter, sans-serif);
-font-size: 14px;
-font-weight: 400;
-line-height: 20px;
+  font-family: var(--Inter, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
-.healthcare-blogs-variant1 .cards > ul > li .cards-card-body h4{
-margin: 0px 0px 8px;
-color: #0F1B2D;
-font-family: var(--Manrope, sans-serif);
-font-size: 20px;
-font-weight: 500;
-line-height: 30px;
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body h4 {
+  margin: 0px 0px 8px;
+  color: #0F1B2D;
+  font-family: var(--Manrope, sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
 }
-.healthcare-blogs-variant1 .cards > ul {
-padding: 0px;
-gap: 0px;
+
+.healthcare-blogs-variant1 .cards>ul {
+  padding: 0px;
+  gap: 0px;
 }
+
 .healthcare-blogs-variant1 .cards-card-body ul,
 .healthcare-blogs-variant2 .cards-card-body ul {
-display: flex;
-align-items: center;
-gap: 15px;
-margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 24px;
 }
+
 .healthcare-blogs-variant1 .cards .cards-card-body ul {
   display: none;
 }
- .healthcare-blogs-variant1 .cards-card-body ul li,
- .healthcare-blogs-variant2 .cards-card-body ul li{
+
+.healthcare-blogs-variant1 .cards-card-body ul li,
+.healthcare-blogs-variant2 .cards-card-body ul li {
   color: #919191;
-font-family: var(--Inter, sans-serif);
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-list-style: none;
-position: relative;
- }
- .healthcare-blogs-variant1 .cards.block li::before,
- .healthcare-blogs-variant2 .cards.block li::before {
-    content: "";
-    position: absolute;
-    left: -8px;
-    top: 10px;
-    width: 4px;
-    height: 4px;
-    background: var(--gray-medium, #929292);
-    border-radius: 50%;
+  font-family: var(--Inter, sans-serif);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style: none;
+  position: relative;
 }
+
+.healthcare-blogs-variant1 .cards.block li::before,
+.healthcare-blogs-variant2 .cards.block li::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  background: var(--gray-medium, #929292);
+  border-radius: 50%;
+}
+
 .healthcare-blogs-variant1 .cards.block li:first-child:before,
 .healthcare-blogs-variant2 .cards.block li:first-child:before {
   display: none;
 }
- .healthcare-blogs-variant1 .cards > ul > li .cards-card-body .button-container,
- .healthcare-blogs-variant2 .cards > ul > li .cards-card-body .button-container {
-    border-radius: 100px;
-    background: #1F69FF;
-    padding: 16px 32px;
-    margin-top: 32px;
- }
- .healthcare-blogs-variant1 .cards > ul > li .cards-card-body .button-container {
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body .button-container,
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container {
+  border-radius: 100px;
+  background: #1F69FF;
+  padding: 16px 32px;
+  margin-top: 32px;
+}
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body .button-container {
   display: none;
- }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body .button-container {
+}
+
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container {
   display: inline-block;
 }
- .healthcare-blogs-variant1 .cards > ul > li .cards-card-body .button-container a,
- .healthcare-blogs-variant2 .cards > ul > li .cards-card-body .button-container a {
-    color: #FFF;
-    font-family: var(--Manrope, sans-serif);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    text-decoration: none;
- }
-.healthcare-blogs-variant1 .cards > ul > li {
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body .button-container a,
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container a {
+  color: #FFF;
+  font-family: var(--Manrope, sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.healthcare-blogs-variant1 .cards>ul>li {
   flex: none;
 }
-.healthcare-blogs-variant1 .cards > ul > li .cards-card-image,
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-image {
+
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-image,
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-image {
   width: 100%;
 }
 
-.healthcare-blogs-variant1 .cards > ul > li .cards-card-body {
+.healthcare-blogs-variant1 .cards>ul>li .cards-card-body {
   margin-top: 16px;
 }
 
-.healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"] > p:first-of-type, 
-.healthcare-blogs-variant1 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
-    border-radius: 45px;
-    background: #DFEFF7;
-    padding: 8px 16px;
-    align-items: center;
-    color: #1F69FF;
-    font-family: var(--DM-Sans, sans-serif);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-        display: inline-block;
-    text-align: center;
-    margin-bottom: 16px;
+.healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,
+.healthcare-blogs-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:first-of-type {
+  border-radius: 45px;
+  background: #DFEFF7;
+  padding: 8px 16px;
+  align-items: center;
+  color: #1F69FF;
+  font-family: var(--DM-Sans, sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 16px;
 }
-.healthcare-blogs-variant1 .cards-wrapper .cards > ul > li img,
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li img {
+
+.healthcare-blogs-variant1 .cards-wrapper .cards>ul>li img,
+.healthcare-blogs-variant2 .cards-wrapper .cards>ul>li img {
   aspect-ratio: unset;
   border-radius: 12px;
   max-height: unset;
+  object-fit: fill;
 }
 
 /* healthcare variant 2 */
-.healthcare-blogs-variant2 .cards > ul {
+.healthcare-blogs-variant2 .cards>ul {
   flex-direction: column;
   padding: 0px;
 }
+
 .healthcare-blogs-variant2 .cards-config {
   display: none;
 }
-.healthcare-blogs-variant2 .cards > ul > li {
+
+.healthcare-blogs-variant2 .cards>ul>li {
   flex-direction: row;
   justify-content: left;
   gap: 40px;
 }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body h4 {
-color: #0F1B2D;
-font-family: var(--Manrope, sans-serif);
-font-size: 30px;
-font-weight: 600;
-line-height: 40px;
-letter-spacing: -0.6px;
-margin: 0px 0px 16px;
+
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body h4 {
+  color: #0F1B2D;
+  font-family: var(--Manrope, sans-serif);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+  margin: 0px 0px 16px;
 }
-.healthcare-blogs-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"] > p:first-of-type, .healthcare-blogs-variant2 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
+
+.healthcare-blogs-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,
+.healthcare-blogs-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:first-of-type {
   display: none;
 }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body {
-      width: 45.8%;
-      margin-bottom: 16px;
+
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-body {
+  width: 45.8%;
+  margin-bottom: 16px;
 }
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li img {
+
+.healthcare-blogs-variant2 .cards-wrapper .cards>ul>li img {
   height: 316px;
 }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-image {
-      width: 48.73%;
+
+.healthcare-blogs-variant2 .cards>ul>li .cards-card-image {
+  width: 48.73%;
 }
+
 /* .healthcare-blogs-variant2 .cards > ul > li .cards-card-body {
   margin: 0px;
 } */
 @media screen and (max-width: 1024px) {
-  .healthcare-blogs-variant1 .cards-wrapper .cards > ul {
+  .healthcare-blogs-variant1 .cards-wrapper .cards>ul {
     display: flex;
   }
+
   .healthcare-blogs-variant1.cards-container,
   .healthcare-blogs-variant2.cards-container {
     padding: 48px 0px 24px 24px;
     gap: 40px;
   }
-  .healthcare-blogs-variant1 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+
+  .healthcare-blogs-variant1 .cards-wrapper .cards>ul>li .cards-card-body h4 {
     margin-bottom: 8px;
     font-size: 16px;
     line-height: 20px;
   }
-  .healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"] > p:first-of-type, .healthcare-blogs-variant1 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
+
+  .healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,
+  .healthcare-blogs-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:first-of-type {
     font-size: 14px;
     padding: 6px 14px;
   }
-  .healthcare-blogs-variant1 .default-content-wrapper h2, 
+
+  .healthcare-blogs-variant1 .default-content-wrapper h2,
   .healthcare-blogs-variant2 .default-content-wrapper h2 {
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -0.6px;
   }
-  .healthcare-blogs-variant1 .cards-wrapper .cards > ul > li {
+
+  .healthcare-blogs-variant1 .cards-wrapper .cards>ul>li {
     margin: 0px 16px 0px 0px;
   }
+
   /* healthcare blogs variant 2 */
-  .healthcare-blogs-variant2 .cards-wrapper .cards > ul > li {
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul>li {
     flex-direction: row;
   }
+
   .healthcare-blogs-variant2.cards-container {
     padding-right: 24px;
   }
 }
+
 @media screen and (max-width: 768px) {
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li {
-  flex-direction: column;
-}
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-image {
-  width: 100%;
-}
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body {
-  width: 100%;
-}
-.healthcare-blogs-variant1 .cards-wrapper .cards > ul > li img,
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li img {
-  height: 180px;
-  object-fit: fill;
-}
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-}
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li {
-  gap: 0px;
-  margin: 0px;
-}
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body {
-  margin-bottom: 0px;
-  padding-bottom: 40px;
-}
-.healthcare-blogs-variant2 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul>li {
+    flex-direction: column;
+  }
+
+  .healthcare-blogs-variant2 .cards>ul>li .cards-card-image {
+    width: 100%;
+  }
+
+  .healthcare-blogs-variant2 .cards>ul>li .cards-card-body {
+    width: 100%;
+  }
+
+  .healthcare-blogs-variant1 .cards-wrapper .cards>ul>li img,
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul>li img {
+    height: 180px;
+    object-fit: fill;
+  }
+
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul>li {
+    gap: 0px;
+    margin: 0px;
+  }
+
+  .healthcare-blogs-variant2 .cards>ul>li .cards-card-body {
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+  }
+
+  .healthcare-blogs-variant2 .cards-wrapper .cards>ul>li .cards-card-body h4 {
     font-weight: 500;
     line-height: 24px;
     margin-bottom: 8px;
+  }
+
+  .healthcare-blogs-variant2 .cards>ul>li .cards-card-body p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .healthcare-blogs-variant2 .cards-card-body>ul {
+    margin-top: 16px;
+  }
+
+  .healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container {
+    margin-top: 16px;
+  }
 }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body p {
+
+/* healthcare categories variant 1 */
+.healthcare-categories-variant1.cards-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 88px;
+  display: flex;
+  gap: 32px;
+}
+.healthcare-categories-variant1.cards-container .default-content-wrapper,
+.healthcare-categories-variant1.cards-container .cards-wrapper {
+  max-width: unset;
+  margin: 0px;
+  padding: 0px;
+}
+.healthcare-categories-variant1 .default-content-wrapper h2 {
+color: #0F1B2D;
+font-family: var(--Manrope, sans-serif);
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 62px;
+letter-spacing: -0.96px;
+margin: 0px;
+}
+
+.healthcare-categories-variant1 .default-content-wrapper h2 strong{
+font-weight: 600;
+}
+
+.healthcare-categories-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,.healthcare-categories-variant1 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
+color: #333;
+font-family: var(--Manrope, sans-serif);
+font-size: 20px;
+font-weight: 500;
+line-height: 32px;
+margin: 0px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.healthcare-categories-variant1 .cards-wrapper .cards > ul {
+  flex-direction: column;
+  padding: 0px;
+  gap: 16px;
+}
+.healthcare-categories-variant1 .cards-wrapper .cards > ul > li {
+      border-radius: 60px;
+    background: #E5F6FE;
+    padding: 24px 40px;
+    margin: 0px;
+}
+.healthcare-categories-variant1 .cards > ul > li .cards-card-body {
+  background:transparent;
+  margin: 0px;
+}
+.healthcare-categories-variant1 .cards-wrapper li p .icon {
+width: 30px;
+    height: 30px;
+}
+.healthcare-categories-variant1 .cards-wrapper li p img {
+  width: 30px;
+    height: 30px;
+    min-height: unset;
+}
+.healthcare-categories-variant1 .default-content-wrapper {
+      width: 48.74%;
+}
+.healthcare-categories-variant1 .cards-wrapper{
+      width: 48.74%;
+ }
+ .healthcare-categories-variant1 .cards > ul > li .cards-card-image {
+  margin: 0px;
+ }
+
+  @media screen and (max-width: 768px) {
+.healthcare-categories-variant1.cards-container {
+      padding: 48px 24px;
+      flex-direction: column;
+}
+.healthcare-categories-variant1 .cards-wrapper .cards > ul {
+  gap: 16px;
+  display: flex;
+}
+.healthcare-categories-variant1 .default-content-wrapper {
+  width: 100%;
+}
+.healthcare-categories-variant1 .cards-wrapper {
+  width: 100%;
+}
+.healthcare-categories-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type, .healthcare-categories-variant1 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
+  font-size: 16px;
+}
+.healthcare-categories-variant1 .default-content-wrapper h2 {
+font-size: 30px;
+line-height: 36px;
+letter-spacing: -0.6px;
+}
+.healthcare-categories-variant1 .cards-wrapper .cards > ul > li {
+  padding: 16px 24px;
+}
+.healthcare-categories-variant1 .cards-wrapper li p img {
+  width: 24px;
+  height: 24px;
+}
+.healthcare-categories-variant1 .cards-wrapper li p .icon {
+width: unset;
+    height: unset;
+}
+  }
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+.healthcare-categories-variant1.cards-container {
+      padding: 120px 24px;
+}
+.healthcare-categories-variant1 .cards-wrapper .cards > ul {
+  gap: 16px;
+  display: flex;
+}
+ }
+
+
+ /* healthcare categories variant 2 */
+ .healthcare-categories-variant2.cards-container {
+max-width: 1440px;
+margin: 0 auto;
+padding: 60px 88px;
+display: flex;
+flex-direction: column;
+gap: 64px;
+background: #F6F6F6;
+overflow: hidden;
+ }
+  .healthcare-categories-variant2.cards-container .default-content-wrapper{
+padding: 0px;
+margin: 0px;
+ }
+ .healthcare-categories-variant2.cards-container .default-content-wrapper h2 {
+color: #000;
+text-align: center;
+font-family: var(--Manrope, sans-serif);
+font-size: 48px;
+font-style: normal;
+font-weight: 400;
+line-height: 68px;
+letter-spacing: -1.92px;
+margin: 0px;
+ }
+ .healthcare-categories-variant2.cards-container .default-content-wrapper h2 strong {
+font-weight: 600;
+ }
+ .healthcare-categories-variant2.cards-container .cards-wrapper{
+padding: 0px;
+ }
+ .healthcare-categories-variant2 .cards > ul {
+  padding: 0px;
+  overflow-x: scroll;
+      padding-right: 88px;
+      justify-content: flex-start;
+ }
+ .healthcare-categories-variant2 .cards > ul > li  {
+  padding: 32px 32px 48px;
+border-radius: 24px;
+text-align: center;
+min-width: 292px;
+ }
+ .healthcare-categories-variant2 ul > li:hover {
+background: #1F69FF;
+ }
+  .healthcare-categories-variant2 ul > li:hover {
+  
+ }
+  .healthcare-categories-variant2 .cards > ul > li:hover .cards-card-body h4{
+  color: #FFF;
+ }
+ .healthcare-categories-variant2 .cards-wrapper ul li:hover .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), 
+ .healthcare-categories-variant2 .cards-wrapper ul li:hover .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+background: rgba(255, 255, 255, 0.30);
+ }
+  .healthcare-categories-variant2 .cards > ul > li:hover .cards-card-body p{
+  color: #F6F7F9;
+ }
+
+.healthcare-categories-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), 
+.healthcare-categories-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+  border-radius: 40px;
+    background: #1F69FF;
+    padding: 13px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    margin-bottom: 32px;
+}
+.healthcare-categories-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon) span, 
+.healthcare-categories-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) span {
+    width: 20px;
+    height: 19px;
+    margin: 0px;
+}
+.healthcare-categories-variant2 .cards-card-body img {
+    width: 20px;
+    height: 19px;
+    min-height: unset;
+} 
+.healthcare-categories-variant2 .cards > ul > li .cards-card-body {
+  margin: 0 auto;
+  background-color: transparent;
+}
+.healthcare-categories-variant2 .cards > ul > li .cards-card-body h4 {
+  color: #0F1B2D;
+  text-align: center;
+  font-family: var(--Inter, sans-serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0px 0px 12px;
+}
+.healthcare-categories-variant2 .cards > ul > li .cards-card-body p {
+  color: #0F1B2D;
+  text-align: center;
+  font-family: var(--Inter, sans-serif);
   font-size: 14px;
-  line-height: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0px;
 }
-.healthcare-blogs-variant2 .cards-card-body > ul {
-  margin-top: 16px;
+
+@media screen and (max-width: 768px) { 
+.healthcare-categories-variant2.cards-container .default-content-wrapper {
+  padding: 0px;
 }
-.healthcare-blogs-variant2 .cards > ul > li .cards-card-body .button-container {
-  margin-top: 16px;
+.healthcare-categories-variant2.cards-container {
+  padding: 48px 24px;
+  gap: 40px;
+}
+.healthcare-categories-variant2 .cards-wrapper .cards > ul {
+  padding: 0px;
+          gap: 12px;
+        display: flex;
+        flex-direction: column;
+}
+.healthcare-categories-variant2 .cards-wrapper .cards > ul > li {
+  margin: 0px;
+  padding: 32px 24px;
+}
+.healthcare-categories-variant2 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+  margin-bottom: 12px;
+}
+.healthcare-categories-variant2 .cards > ul > li .cards-card-body p {
+  font-size: 16px;
+}
+.healthcare-categories-variant2.cards-container .default-content-wrapper h2 {
+font-size: 30px;
+line-height: 36px;
+letter-spacing: -0.6px;
+text-align: left;
 }
 }
+ @media screen and (min-width: 768px) and (max-width: 1024px) { 
+  .healthcare-categories-variant2.cards-container {
+    padding: 48px 24px;
+  }
+    .healthcare-categories-variant2 .cards-wrapper .cards > ul {
+        display: flex;
+    }
+    .healthcare-categories-variant2 .cards-wrapper .cards > ul > li {
+      margin: 0px;
+    }
+    .healthcare-categories-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), .healthcare-categories-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
+      margin-bottom: 32px;
+    }
+    .healthcare-categories-variant2 .cards-wrapper .cards > ul > li .cards-card-body h4 {
+      margin-bottom: 12px;
+    }
+ }

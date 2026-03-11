@@ -98,7 +98,7 @@ hitecgGalleryComp(block)
   if(classlistExists.contains("services-variant3")) {
     console.log(block);
     let imgSrc; 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 767) {
       imgSrc = block
     .closest(".services-variant3")
     ?.querySelectorAll(".default-content-wrapper")?.[1]
@@ -122,7 +122,7 @@ hitecgGalleryComp(block)
   Array.from(block.children[0].children).forEach((element) => {
     element.classList.add('swiper-slide');
   });
-    healthcareBolgs()
+    healthcareBlogs()
   }
   }
 
@@ -454,7 +454,7 @@ function healthcareSrvicesSwpiper() {
   });
 }
 
-function healthcareBolgs() {
+function healthcareBlogs() {
   Swiper(".healthcare-blogs-variant1 .swiper", {
     slidesPerView: 3,
     slideToClickedSlide: true,
