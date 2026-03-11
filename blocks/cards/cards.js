@@ -115,6 +115,15 @@ hitecgGalleryComp(block)
   }
   block.closest(".services-variant3").querySelector(".cards-wrapper").style.background =`url(${imgSrc}) center top / cover no-repeat`
     }
+
+        if (classlistExists.contains("healthcare-blogs-variant1")) {
+  block.classList.add('swiper');
+  block.querySelector("ul").classList.add("swiper-wrapper");
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+    healthcareBolgs()
+  }
   }
 
 
@@ -440,6 +449,29 @@ function healthcareSrvicesSwpiper() {
       },
       1024: {
         slidesPerView: 1,
+      },
+    }
+  });
+}
+
+function healthcareBolgs() {
+  Swiper(".healthcare-blogs-variant1 .swiper", {
+    slidesPerView: 3,
+    slideToClickedSlide: true,
+    spaceBetween: 20,
+    grabCursor: true,
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+      },
+      767: {
+        slidesPerView: 1.5,
+      },
+      1024: {
+        slidesPerView: 3,
       },
     }
   });
