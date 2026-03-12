@@ -3841,7 +3841,7 @@ margin: 0px;
 .healthcare-categories-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   position: absolute;
   right: 40px;
-  top: 50px;
+  top: 40px;
 }
 /* .healthcare-categories-variant3 ul > li .cards-card-body p:last-child {
 } */
@@ -3852,6 +3852,7 @@ margin: 0px;
 }
 .healthcare-categories-variant3 .cards > ul > li .cards-card-body {
   background-color: transparent;
+  margin: 0px;
 }
 .healthcare-categories-variant3 ul > li .cards-card-image img {
 width: 48px;
