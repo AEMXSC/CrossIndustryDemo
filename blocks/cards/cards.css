@@ -3825,6 +3825,7 @@ font-family: var(--Manrope, sans-serif);
 font-size: 20px;
 font-weight: 500;
 line-height: 30px;
+margin: 0px;
 margin-bottom: 8px;
 }
 .healthcare-categories-variant3 ul > li .cards-card-body p {
