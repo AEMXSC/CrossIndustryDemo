@@ -3860,6 +3860,10 @@ width: 48px;
     margin: unset;
     padding: 0 108px;
 }
+.healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type {
+position: unset;
+}
+
 @media screen and (max-width: 768px) { 
 .healthcare-categories-variant2.cards-container .default-content-wrapper {
   padding: 0px;
