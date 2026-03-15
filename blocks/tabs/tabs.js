@@ -167,7 +167,10 @@ export default async function decorate(block) {
   // -------- MOVE ACCORDIONS INTO PANELS --------
   const accordionVariants = [
     ...block.closest("main").querySelectorAll('[class*="hitechaccordion-tab-content"], [class*="accordion-variant"]'),
-  ];
+  ].filter((el) => (
+    el.classList.contains("hitechaccordion-tab-content")
+    || [...el.classList].some((cls) => cls.startsWith("accordion-variant"))
+  ));
   // console.log("Found accordions:", accordionVariants);
 
   tabItems.forEach((item, i) => {
@@ -184,6 +187,11 @@ export default async function decorate(block) {
 
     const sameLevelSections = [...main.querySelectorAll(`.section.${escapedSectionClass}`)]
       .filter((section) => section !== parentSection);
+
+    console.log(
+      `tabs parent: "${parentSectionLevelName}" — matching content sections found: ${sameLevelSections.length}`,
+      sameLevelSections,
+    );
 
     tabItems.forEach((item, i) => {
       const sourceSection = sameLevelSections[i];

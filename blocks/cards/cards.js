@@ -11,7 +11,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 import Swiper from '../../scripts/swiper.min.js';
 
 export default function decorate(block) {
-  loadCSS(`${window.hlx.codeBasePath}/blocks/cards/swiper.min.css`);
+  loadCSS(`${window.hlx.codeBasePath}/styles/swiper.min.css`);
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
     const li = document.createElement('li');
@@ -93,8 +93,8 @@ export default function decorate(block) {
   if (classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
     hitechArticles(block)
   }
-  if (classlistExists.contains("hitechaccordion-tab-content")) {
-    healthcareTabSwiper(block)
+  if (document.querySelectorAll(".healthcare-round-tab-swiper").length > 0) {
+    healthcareTabSwiper(block);
   }
 }
 
@@ -380,7 +380,7 @@ function hitechArticles3() {
 }
 
 function healthcareTabSwiper(block) {
-  let classlistExists = block.closest('.hitechaccordion-tab-content').classList;
+  let classlistExists = block.closest('.healthcare-round-tab-swiper, .healthcare-tab-swiper').classList;
   block.classList.add('swiper');
   block.querySelector('ul').classList.add('swiper-wrapper');
   Array.from(block.children[0].children).forEach((element) => {
@@ -394,17 +394,19 @@ function healthcareTabSwiper(block) {
   block.appendChild(swiperButtonPrev);
   block.appendChild(swiperButtonNext);
 
-  if (classlistExists.contains("healthcare-round-tab-swiper")) {
-    healthcareRoundTabSwiper();
-  }
-  Swiper(".healthcare-round-tab-swiper .swiper", {
+  // Initialize Swiper
+  new Swiper(block, {
     slidesPerView: 1,
-    slidpergroup: 1,
     spaceBetween: 12,
-    grabCursor: true,
+    slidepergroup: 1,
     navigation: {
-      prevEl: swiperButtonPrev,
       nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
     },
+    breakpoints: {
+      767: {
+        slidesPerView: 1,
+      }
+    }
   });
 }

@@ -195,7 +195,7 @@
 }
 
 /* .varient 2 */
-.accordion-variant2.accordion-container .default-content-wrapper p:last-of-type{
+.accordion-variant2.accordion-container .default-content-wrapper p:last-of-type {
   display: none;
 }
 
@@ -269,7 +269,7 @@
 .accordion-variant3.accordion-container .accordion-ul-wrapper ul li:first-child {
   padding: 11px 0 11px 13px;
   background-color: var(--light-gray, #F2F2F2);
-  color: var(--primary,#1F4DA8);
+  color: var(--primary, #1F4DA8);
   border-top: 0.43px solid var(--silver, #D8D8D6);
 }
 
@@ -354,4 +354,144 @@
   .accordion-variant3.accordion-container .accordion-ul-wrapper ul li:first-child {
     padding: 4.4px 0 4.4px 5.46px;
   }
+}
+
+/* healthcare accordion variation 1 start here */
+.section.healthcare-accordion-variant1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Stacked for mobile */
+  gap: 40px;
+  box-sizing: border-box;
+  /* Define areas for mobile layout order */
+  grid-template-areas:
+    "image"
+    "title"
+    "faq";
+  padding: 0 24px;
+}
+
+@media (min-width: 900px) {
+  .section.healthcare-accordion-variant1 {
+    /* Left col fixed 616px, Right col fixed 616px */
+    grid-template-columns: 44% 44%;
+    column-gap: 48px;
+    align-items: start;
+    justify-content: center;
+    /* Desktop: Image on left, Title & FAQ stacked on right */
+    grid-template-areas:
+      "image title"
+      "image faq";
+  }
+}
+
+/* Assigning the HTML blocks to the Grid Areas */
+
+/* 1. The wrapper containing the Image */
+.section.healthcare-accordion-variant1 .default-content-wrapper:first-of-type {
+  grid-area: image;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* 2. The wrapper containing the Title (Frequently Asked Questions) */
+.section.healthcare-accordion-variant1 .default-content-wrapper:last-of-type {
+  grid-area: title;
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--Manrope, sans-serif);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 68px;
+  letter-spacing: -2%;
+  color: #0F1B2D;
+  @media screen and (max-width: 900px) {
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+
+/* 3. The Accordion wrapper */
+.section.healthcare-accordion-variant1 .accordion-wrapper {
+  grid-area: faq;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* --- Visual Styling --- */
+
+.section.healthcare-accordion-variant1 .default-content-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  display: block;
+}
+
+
+.section.healthcare-accordion-variant1 .default-content-wrapper:last-of-type p strong {
+  display: block;
+  
+}
+
+/* Accordion Styling */
+.section.healthcare-accordion-variant1 .accordion-item {
+  background-color: #F6F7F9;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: none;
+  overflow: hidden;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 12px;
+  }
+}
+
+.section.healthcare-accordion-variant1 .accordion-item-label {
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section.healthcare-accordion-variant1 .accordion-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.section.healthcare-accordion-variant1 .accordion-item-label p {
+  margin: 0;
+  font-family: var(--Manrope, sans-serif);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #333333;
+   @media screen and (max-width: 900px) {
+    font-size: 16px;
+    line-height: 100%;
+  }
+}
+
+/* Icon Styling */
+.section.healthcare-accordion-variant1 .accordion-item-label::after {
+  content: '+';
+  font-size: 24px;
+  color: #007bff;
+  transition: transform 0.3s ease;
+  top: 23%;
+}
+
+.section.healthcare-accordion-variant1 .accordion-item[open] .accordion-item-label::after {
+  transform: rotate(45deg);
+}
+
+.section.healthcare-accordion-variant1 .accordion-item-body {
+  padding: 0 24px 24px 24px;
+  color: #627d98;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.section.healthcare-accordion-variant1 .accordion-item-body p {
+  margin: 0;
 }
