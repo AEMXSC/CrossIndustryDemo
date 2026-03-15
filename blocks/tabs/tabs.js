@@ -6,6 +6,12 @@ let tabBlockCnt = 0;
 
 export default async function decorate(block) {
   if (block.querySelector(".tabs-nav-wrapper")) return;
+  const parentSection = block.closest(".section");
+  const parentSectionLevelName = [...(parentSection?.classList || [])]
+    .find((cls) => cls !== "section" && cls !== "tabs-container");
+  console.log("tabs parent section level name:", parentSectionLevelName);
+  const main = block.closest("main");
+
   // Get the tabs style from data-aue-prop
   const tabsStyleParagraph = block.querySelector(
     'p[data-aue-prop="tabsstyle"]',
@@ -162,13 +168,39 @@ export default async function decorate(block) {
   const accordionVariants = [
     ...block.closest("main").querySelectorAll('[class*="hitechaccordion-tab-content"], [class*="accordion-variant"]'),
   ];
-  console.log("Found accordions:", accordionVariants);
+  // console.log("Found accordions:", accordionVariants);
 
   tabItems.forEach((item, i) => {
     if (accordionVariants[i]) {
       item.tabpanel.appendChild(accordionVariants[i]);
     }
   });
+
+  // -------- MOVE SAME-LEVEL SECTION CONTENT INTO PANELS --------
+  if (main && parentSectionLevelName) {
+    const escapedSectionClass = window.CSS?.escape
+      ? window.CSS.escape(parentSectionLevelName)
+      : parentSectionLevelName.replace(/[^a-zA-Z0-9_-]/g, "\\$&");
+
+    const sameLevelSections = [...main.querySelectorAll(`.section.${escapedSectionClass}`)]
+      .filter((section) => section !== parentSection);
+
+    tabItems.forEach((item, i) => {
+      const sourceSection = sameLevelSections[i];
+      if (!sourceSection) return;
+
+      const sectionContent = document.createDocumentFragment();
+      [...sourceSection.children].forEach((child) => {
+        sectionContent.appendChild(child);
+      });
+
+      if (sectionContent.childNodes.length) {
+        item.tabpanel.appendChild(sectionContent);
+      }
+
+      sourceSection.remove();
+    });
+  }
 
   // -------- FINAL DOM ASSEMBLY --------
   navWrapper.appendChild(tablist);
