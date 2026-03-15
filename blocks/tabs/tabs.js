@@ -189,16 +189,8 @@ export default async function decorate(block) {
       const sourceSection = sameLevelSections[i];
       if (!sourceSection) return;
 
-      const sectionContent = document.createDocumentFragment();
-      [...sourceSection.children].forEach((child) => {
-        sectionContent.appendChild(child);
-      });
-
-      if (sectionContent.childNodes.length) {
-        item.tabpanel.appendChild(sectionContent);
-      }
-
-      sourceSection.remove();
+      // Move the complete section node into the corresponding tab panel.
+      item.tabpanel.appendChild(sourceSection);
     });
   }
 
