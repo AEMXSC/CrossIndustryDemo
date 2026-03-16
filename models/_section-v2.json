@@ -668,6 +668,18 @@
                                 {
                                     "name": "hitech Footer variant 3",
                                     "value": "hitech-footerv3"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 1",
+                                    "value": "healthcare-footerv1"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 2",
+                                    "value": "healthcare-footerv2"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 3",
+                                    "value": "healthcare-footerv3"
                                 }
                             ]
                         }
