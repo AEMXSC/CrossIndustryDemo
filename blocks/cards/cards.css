@@ -528,7 +528,7 @@ width: 100%;
   align-items: center;
   gap: 10px;
   border-radius: 100px;
-  background: var(--charcoal, var(--charcoal, #1B1B1E));
+  background: var(--charcoal, #1B1B1E);
   /* margin-top: 0px; */
 }
 
@@ -627,7 +627,7 @@ width: 100%;
 }
 
 .blog-cards .cards-card-body h4 {
-  color: var(--charcoal, var(--charcoal, #1B1B1E));
+  color: var(--charcoal, #1B1B1E);
   font-family: var(--DM-Sans, sans-serif);
   font-size: 20px;
   font-style: normal;
@@ -813,7 +813,7 @@ padding-bottom: 24px !important;
 .blog-cards .default-content-wrapper h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: var(--charcoal, var(--charcoal, #1B1B1E));
+  color: var(--charcoal, #1B1B1E);
   font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   font-weight: 500;
@@ -842,7 +842,7 @@ padding-bottom: 24px !important;
   align-items: center;
   gap: 10px;
   border-radius: 100px;
-  background: var(--charcoal, var(--charcoal, #1B1B1E));
+  background: var(--charcoal, #1B1B1E);
   /* margin-top: 0px; */
 }
 
@@ -937,7 +937,7 @@ padding-bottom: 24px !important;
 }
 
 .blog-cards2 .cards-card-body h4 {
-  color: var(--charcoal, var(--charcoal, #1B1B1E));
+  color: var(--charcoal, #1B1B1E);
   font-family: var(--DM-Sans, sans-serif);
   font-size: 20px;
   font-style: normal;
@@ -1122,7 +1122,7 @@ gap: 16px;
 .blog-cards2 .default-content-wrapper h2 {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: var(--charcoal, var(--charcoal, #1B1B1E));
+  color: var(--charcoal, #1B1B1E);
   font-family: var(--DM-Sans, sans-serif);
   font-size: 30px;
   font-weight: 500;
@@ -1202,7 +1202,7 @@ margin-bottom: 40px;
 }
 .products .cards >ul > li{
 border-radius: 12px;
-background: radial-gradient(137.93% 71.45% at 49.96% 63.28%, var(--charcoal, #1B1B1E) 0%, var(--dark-gray, #484848) 100%);
+background: radial-gradient(137.93% 71.45% at 49.96% 63.28%, var(--charcoal, #1B1B1E) 0%, var(--gray-700, #484848) 100%);
 flex-direction: row;
 padding-right: 60px;
 justify-content: space-between;
@@ -1865,7 +1865,7 @@ display: grid;
 .hitech-variant2 .default-content-wrapper h3,
 .hitech-variant3 .default-content-wrapper h3{
   color: var(--color-dark-slate, #373739);
-    font-family: "Space Grotesk";
+    font-family: var(--Space-Grotesk, sans-serif);
     font-size: 36px;
     font-weight: 400;
     line-height: 48px;
@@ -2075,7 +2075,7 @@ background: var(--Primary, #10172A);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-color: #10172A;
+  background-color: var(--Primary, #10172A);
   border-radius: 41px;
   background-size: 16px 16px;
   margin-top : 0px;
@@ -2457,8 +2457,8 @@ padding: 40px 0px 40px 24px;
 .hitech-feature-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon),
 .hitech-feature-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), .hitech-feature-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   border-radius: 8px;
-  border: 1px solid #9E95D3;
-  background: #F0F0F0;
+  border: 1px solid var(--lavender, #9E95D3);
+  background: var(--soft-gray,#F0F0F0);
   width: 40px;
   height: 40px;
   display: flex;
@@ -2758,7 +2758,7 @@ padding: 9px 24px;
 }
 
 .services-variant1 .default-content-wrapper h2 {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-size: 60px;
   font-weight: 400;
   line-height: 68px;
@@ -2781,7 +2781,7 @@ padding: 9px 24px;
 .services-variant3 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon),
 .services-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   border-radius: 40px;
-  background: #1F69FF;
+  background: var(--primary, #1F69FF);
   padding: 13px;
   justify-content: center;
   align-items: center;
@@ -2814,11 +2814,11 @@ padding: 9px 24px;
   gap: 64px;
   align-self: stretch;
   border-radius: 24px;
-  background: #F6F7F9;
+  background: var(--light-gray, #F6F7F9);
 }
 
 .services-variant1 .cards-wrapper ul li:hover {
-  background: #1F69FF;
+  background: var(--primary, #1F69FF);
 }
 
 .services-variant1 .cards-wrapper ul li:hover .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon),
@@ -2827,11 +2827,11 @@ padding: 9px 24px;
 }
 
 .services-variant1 .cards>ul>li:hover .cards-card-body h4 {
-  color: #FFF;
+  color: var(--pure-white, #ffffff);
 }
 
 .services-variant1 .cards>ul>li:hover .cards-card-body p {
-  color: #F6F7F9;
+  color: var(--light-gray, #F6F7F9);
 }
 
 .services-variant1 .cards>ul>li .cards-card-body {
@@ -2841,7 +2841,7 @@ padding: 9px 24px;
 
 .services-variant1 .cards>ul>li .cards-card-body h4 {
   margin: 0px 0px 12px;
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Inter, sans-serif);
   font-size: 20px;
   font-weight: 500;
@@ -2850,7 +2850,7 @@ padding: 9px 24px;
 
 .services-variant1 .cards>ul>li .cards-card-body p {
   margin: 0px;
-  color: #626262;
+  color: var(--medium-gray, #626262);
   font-family: var(--Inter, sans-serif);
   font-size: 16px;
   font-weight: 400;
@@ -2879,7 +2879,7 @@ padding: 9px 24px;
 
 .services-variant2 .default-content-wrapper h2,
 .services-variant3 .default-content-wrapper h2 {
-  color: #000;
+  color: var(--black, #000);
   font-family: var(--Manrope, sans-serif);
   font-size: 48px;
   font-weight: 400;
@@ -2928,14 +2928,14 @@ padding: 9px 24px;
   margin: 0px;
   padding: 48px;
   border-radius: 24px;
-  background: #1F69FF;
+  background: var(--primary, #1F69FF);
   width: 51.06%;
   position: relative;
 }
 
 .services-variant2.cards-container .cards-wrapper .cards-card-body h4 {
   margin: 0px;
-  color: var(--Pure-White, #FFF);
+  color: var(--pure-white, #FFF);
   font-family: var(--Manrope, sans-serif);
   font-size: 40px;
   font-weight: 600;
@@ -2946,7 +2946,7 @@ padding: 9px 24px;
 
 .services-variant2.cards-container .cards-wrapper .cards-card-body p {
   margin: 0px;
-  color: var(--Pure-White, #FFF);
+  color: var(--pure-white, #FFF);
   font-family: var(--Inter, sans-serif);
   font-size: 18px;
   font-weight: 400;
@@ -2955,7 +2955,7 @@ padding: 9px 24px;
 
 .services-variant2.cards-container .cards-wrapper .cards-card-body .button-container {
   border-radius: 100px;
-  border: 1px solid #FFF;
+  border: 1px solid var(--pure-white, #FFF);
   display: inline-block;
   padding: 16px 32px;
   margin-top: 120px;
@@ -2964,7 +2964,7 @@ padding: 9px 24px;
 }
 
 .services-variant2.cards-container .cards-wrapper .cards-card-body .button-container a {
-  color: #FFF;
+  color: var(--pure-white, #ffffff);
   font-family: var(--Manrope, sans-serif);
   font-size: 16px;
   font-weight: 500;
@@ -3013,7 +3013,7 @@ padding: 9px 24px;
   background-repeat: no-repeat;
   /* background-size: contain; */
   background-position: center;
-  background-color: var(--Sky-Pulse, #1F69FF);
+  background-color: var(--primary, #1F69FF);
   border-radius: 41px;
   /* background-size: 16px 16px; */
   margin-top: 0px;
@@ -3026,7 +3026,7 @@ padding: 9px 24px;
   background-repeat: no-repeat;
   opacity: 0.5;
   cursor: not-allowed;
-  background-color: #E9E9EB;
+  background-color: var(--light-gray-200, #E9E9EB);
 }
 
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next {
@@ -3063,7 +3063,7 @@ padding: 9px 24px;
 .services-variant3 .cards-wrapper .cards li {
   padding: 24px 24px 32px 24px;
   border-radius: 16px;
-  background: #FFF;
+  background: var(--pure-white, #ffffff);
 }
 
 .services-variant3.cards-container .default-content-wrapper {
@@ -3076,7 +3076,7 @@ padding: 9px 24px;
 }
 
 .services-variant3 .cards>ul>li .cards-card-body h4 {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Inter, sans-serif);
   font-size: 16px;
   font-weight: 500;
@@ -3086,7 +3086,7 @@ padding: 9px 24px;
 }
 
 .services-variant3 .cards>ul>li .cards-card-body p {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Inter, sans-serif);
   font-size: 14px;
   font-weight: 400;
@@ -3104,7 +3104,7 @@ padding: 9px 24px;
 
 @media screen and (max-width: 1024px) {
   .services-variant2 .default-content-wrapper h2 {
-    color: #0F1B2D;
+    color: var(--midnight-blue, #0F1B2D);
     font-size: 30px;
     line-height: 36px;
     letter-spacing: -0.6px;
@@ -3150,7 +3150,7 @@ padding: 9px 24px;
   }
 
   .services-variant2.cards-container .cards-wrapper .cards-card-body p {
-    color: #F6F7F9;
+    color: var(--light-gray, #F6F7F9);
     font-size: 14px;
     line-height: 20px;
   }
@@ -3265,7 +3265,7 @@ padding: 9px 24px;
 
 .healthcare-blogs-variant1 .default-content-wrapper h2,
 .healthcare-blogs-variant2 .default-content-wrapper h2 {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Manrope, sans-serif);
   font-size: 48px;
   font-weight: 400;
@@ -3289,7 +3289,7 @@ padding: 9px 24px;
 .healthcare-blogs-variant1 .cards>ul>li .cards-card-body p,
 .healthcare-blogs-variant2 .cards>ul>li .cards-card-body p {
   margin: 0px;
-  color: #626262;
+  color: var(--medium-gray, #626262);
   font-family: var(--Inter, sans-serif);
   font-size: 14px;
   font-weight: 400;
@@ -3298,7 +3298,7 @@ padding: 9px 24px;
 
 .healthcare-blogs-variant1 .cards>ul>li .cards-card-body h4 {
   margin: 0px 0px 8px;
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Manrope, sans-serif);
   font-size: 20px;
   font-weight: 500;
@@ -3353,7 +3353,7 @@ padding: 9px 24px;
 .healthcare-blogs-variant1 .cards>ul>li .cards-card-body .button-container,
 .healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container {
   border-radius: 100px;
-  background: #1F69FF;
+  background: var(--primary, #1F69FF);
   padding: 16px 32px;
   margin-top: 32px;
 }
@@ -3368,7 +3368,7 @@ padding: 9px 24px;
 
 .healthcare-blogs-variant1 .cards>ul>li .cards-card-body .button-container a,
 .healthcare-blogs-variant2 .cards>ul>li .cards-card-body .button-container a {
-  color: #FFF;
+  color: var(--pure-white, #ffffff);
   font-family: var(--Manrope, sans-serif);
   font-size: 16px;
   font-weight: 500;
@@ -3392,10 +3392,10 @@ padding: 9px 24px;
 .healthcare-blogs-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,
 .healthcare-blogs-variant1 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:first-of-type {
   border-radius: 45px;
-  background: #DFEFF7;
+  background: var(--light-blue, #DFEFF7);
   padding: 8px 16px;
   align-items: center;
-  color: #1F69FF;
+  color: var(--primary, #1F69FF);
   font-family: var(--DM-Sans, sans-serif);
   font-size: 16px;
   font-weight: 500;
@@ -3430,7 +3430,7 @@ padding: 9px 24px;
 }
 
 .healthcare-blogs-variant2 .cards>ul>li .cards-card-body h4 {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Manrope, sans-serif);
   font-size: 30px;
   font-weight: 600;
@@ -3574,7 +3574,7 @@ padding: 9px 24px;
   padding: 0px;
 }
 .healthcare-categories-variant1 .default-content-wrapper h2 {
-color: #0F1B2D;
+color: var(--midnight-blue, #0F1B2D);
 font-family: var(--Manrope, sans-serif);
 font-size: 48px;
 font-style: normal;
@@ -3589,7 +3589,7 @@ font-weight: 600;
 }
 
 .healthcare-categories-variant1 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:first-of-type,.healthcare-categories-variant1 .cards-card-body:not(:has([data-aue-type="richtext"])) > p:first-of-type {
-color: #333;
+color: var(--dark-gray, #333);
 font-family: var(--Manrope, sans-serif);
 font-size: 20px;
 font-weight: 500;
@@ -3606,7 +3606,7 @@ align-items: center;
 }
 .healthcare-categories-variant1 .cards-wrapper .cards > ul > li {
       border-radius: 60px;
-    background: #E5F6FE;
+    background: var(--pale-blue, #E5F6FE);
     padding: 24px 40px;
     margin: 0px;
 }
@@ -3687,7 +3687,7 @@ padding: 60px 0px 60px 88px;
 display: flex;
 flex-direction: column;
 gap: 64px;
-background: #F6F6F6;
+background: var(--light-gray-100, #F6F6F6);
 overflow: hidden;
  }
   .healthcare-categories-variant2.cards-container .default-content-wrapper,
@@ -3697,7 +3697,7 @@ margin: 0px;
  }
  .healthcare-categories-variant2.cards-container .default-content-wrapper h2,
  .healthcare-categories-variant3.cards-container .default-content-wrapper h2 {
-color: #000;
+color: var(--black, #000);
 text-align: center;
 font-family: var(--Manrope, sans-serif);
 font-size: 48px;
@@ -3733,26 +3733,26 @@ text-align: center;
 min-width: 292px;
  }
  .healthcare-categories-variant2 ul > li:hover {
-background: #1F69FF;
+background: var(--primary, #1F69FF);
  }
   .healthcare-categories-variant2 ul > li:hover {
   
  }
   .healthcare-categories-variant2 .cards > ul > li:hover .cards-card-body h4{
-  color: #FFF;
+  color: var(--pure-white, #ffffff);
  }
  .healthcare-categories-variant2 .cards-wrapper ul li:hover .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), 
  .healthcare-categories-variant2 .cards-wrapper ul li:hover .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
 background: rgba(255, 255, 255, 0.30);
  }
   .healthcare-categories-variant2 .cards > ul > li:hover .cards-card-body p{
-  color: #F6F7F9;
+  color: var(--light-gray, #F6F7F9);
  }
 
 .healthcare-categories-variant2 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), 
 .healthcare-categories-variant2 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   border-radius: 40px;
-    background: #1F69FF;
+    background: var(--primary, #1F69FF);
     padding: 13px;
     justify-content: center;
     align-items: center;
@@ -3775,7 +3775,7 @@ background: rgba(255, 255, 255, 0.30);
   background-color: transparent;
 }
 .healthcare-categories-variant2 .cards > ul > li .cards-card-body h4 {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   text-align: center;
   font-family: var(--Inter, sans-serif);
   font-size: 20px;
@@ -3784,7 +3784,7 @@ background: rgba(255, 255, 255, 0.30);
   margin: 0px 0px 12px;
 }
 .healthcare-categories-variant2 .cards > ul > li .cards-card-body p {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   text-align: center;
   font-family: var(--Inter, sans-serif);
   font-size: 14px;
@@ -3813,14 +3813,14 @@ background: rgba(255, 255, 255, 0.30);
 .healthcare-categories-variant3 .cards > ul li{
     flex-direction: row;
     border-radius: 24px;
-background: #F6F7F9;
+background: var(--light-gray, #F6F7F9);
 position: relative;
 padding: 24px 40px;
 gap: 24px;
 align-items: center;
 }
 .healthcare-categories-variant3 ul li h4 {
-color: #0F1B2D;
+color: var(--midnight-blue, #0F1B2D);
 font-family: var(--Manrope, sans-serif);
 font-size: 20px;
 font-weight: 500;
@@ -3829,7 +3829,7 @@ margin: 0px;
 margin-bottom: 8px;
 }
 .healthcare-categories-variant3 ul > li .cards-card-body p {
-color: #626262;
+color: var(--medium-gray, #626262);
 font-family: var(--Inter, sans-serif);
 font-size: 14px;
 font-weight: 400;

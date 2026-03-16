@@ -253,8 +253,12 @@
     .banner-variant1.promotional-banner-container,
     .banner-variant2.promotional-banner-container,
     .banner-variant3.promotional-banner-container,
-    .banner-variant4.promotional-banner-container {
-        margin-top: 106px !important;
+    .banner-variant4.promotional-banner-container,
+    .healthcare-banner-variant1.promotional-banner-container.section,
+    .healthcare-banner-variant2.promotional-banner-container.section,
+    .healthcare-banner-variant3.promotional-banner-container.section,
+    .healthcare-banner-variant4.promotional-banner-container.section {
+        margin-top: 90px !important;
     }
 }
 
@@ -692,7 +696,7 @@
     .hitech-banner-variant2.promotional-banner-container,
     .hitech-banner-variant3.promotional-banner-container,
     .hitech-banner-variant4.promotional-banner-container {
-        margin-top: 85px !important;
+        margin-top: 90px !important;
     }   
 }
 
@@ -700,11 +704,12 @@
 
 
 /* healthcare banner variant 1 */
-.healthcare-banner-variant1,
-.healthcare-banner-variant2 {
+.healthcare-banner-variant1.promotional-banner-container.section,
+.healthcare-banner-variant2.promotional-banner-container.section {
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 88px;
+    margin-top: 153px;
 }
 
 .healthcare-banner-variant1 .promotionalbanner-content {
@@ -739,7 +744,7 @@
 }
 
 .promotional-banner-container.healthcare-banner-variant1 h2 {
-    color: #0F1B2D;
+    color: var(--midnight-blue, #0F1B2D);
     font-family: var(--Manrope, sans-serif);
     font-size: 60px;
     font-style: normal;
@@ -753,7 +758,7 @@
 }
 
 .promotional-banner-container.healthcare-banner-variant1 p {
-    color: #333;
+    color: var(--dark-gray, #333);
     font-family: var(--Inter, sans-serif);
     font-size: 16px;
     font-weight: 400;
@@ -766,13 +771,13 @@
 .promotional-banner-container.healthcare-banner-variant3 .redirections a:first-child,
 .promotional-banner-container.healthcare-banner-variant4 .redirections a:first-child {
     border-radius: 100px;
-    background: #1F69FF;
+    background: var(--primary, #1F69FF);
     display: flex;
     padding: 16px 32px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: #FFF;
+    color: var(--pure-white, #ffffff);
     font-family: var(--Manrope, sans-serif);
     font-size: 16px;
     font-weight: 500;
@@ -790,8 +795,8 @@
     align-items: center;
     gap: 10px;
     border-radius: 100px;
-    border: 1px solid #1F69FF;
-    color: #1F69FF;
+    border: 1px solid var(--primary, #1F69FF);
+    color: var(--primary, #1F69FF);
     font-family: var(--Manrope, sans-serif);
     font-size: 16px;
     font-style: normal;
@@ -819,7 +824,7 @@
 .promotional-banner-container.healthcare-banner-variant2 h2,
 .promotional-banner-container.healthcare-banner-variant3 h2,
 .promotional-banner-container.healthcare-banner-variant4 h2 {
-    color: #0F1B2D;
+    color: var(--midnight-blue, #0F1B2D);
     font-family: var(--Manrope, sans-serif);
     font-size: 48px;
     font-weight: 400;
@@ -835,7 +840,7 @@
 .promotional-banner-container.healthcare-banner-variant2 p,
 .promotional-banner-container.healthcare-banner-variant3 p,
 .promotional-banner-container.healthcare-banner-variant4 p {
-    color: #626262;
+    color: var(--medium-gray, #626262);
     font-family: var(--Inter, sans-serif);
     font-size: 18px;
     font-weight: 400;
@@ -843,10 +848,11 @@
 }
 
 /* healthcare banner variant 3 */
-.healthcare-banner-variant3.promotional-banner-container {
+.healthcare-banner-variant3.promotional-banner-container.section {
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 88px;
+    margin-top: 153px;
 }
 
 .healthcare-banner-variant3 .promotionalbanner-content .banner-image,
@@ -865,7 +871,7 @@
 .healthcare-banner-variant3 .banner-content {
     width: 50.84%;
     padding: 80px 0px 80px 76px;
-    background: linear-gradient(90deg, #F6F7F7 1.2%, rgba(255, 255, 255, 0.00) 86.44%);
+    background: linear-gradient(90deg, var(--cool-light-gray, #F6F7F7) 1.2%, rgba(255, 255, 255, 0.00) 86.44%);
     border-radius: 24px;
 }
 
@@ -875,7 +881,7 @@
 }
 
 .promotional-banner-container.healthcare-banner-variant3 p {
-    color: #0F1B2D;
+    color: var(--midnight-blue, #0F1B2D);
 }
 
 .promotional-banner-container .redirections {
@@ -884,12 +890,13 @@
 
 
 /* healthcare banner variant 4  */
-.healthcare-banner-variant4.promotional-banner-container {
+.healthcare-banner-variant4.promotional-banner-container.section {
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px 88px;
     min-height: 478px;
     border-radius: 24px;
+    margin-top: 153px;
 }
 
 .healthcare-banner-variant4 .banner-content {
@@ -898,14 +905,14 @@
 
 .healthcare-banner-variant4 .grid-content {
     border-radius: 20px;
-    background: #FFF;
+    background: var(--pure-white, #ffffff);
     width: 43.5%;
     padding: 64px 56px;
     margin: 16px;
 }
 
 .promotional-banner-container.healthcare-banner-variant4 p {
-    color: #626262;
+    color: var(--medium-gray, #626262);
 }
 
 .healthcare-banner-variant4 .promotional-banner-wrapper {
@@ -1039,7 +1046,7 @@
         min-height: 678px;
         background-position: 100% 100% !important;
         /* background-size: contain !important; */
-        background-color: #E0E0E0;
+        background-color: var(--border-gray, #E0E0E0);
     }
 
     /* healthcare banner variant 4  */
