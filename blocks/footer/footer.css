@@ -685,33 +685,37 @@ gap: 16px;
 .footer-wrapper:has(.healthcare-footerv1),
 .footer-wrapper:has(.healthcare-footerv2),
 .footer-wrapper:has(.healthcare-footerv3) {
-  background: #fff !important;
+  background: var(--pure-white, #ffffff) !important;
 }
+
 .healthcare-footerv1.footer-main .default-content-wrapper p:first-child .icon,
-.healthcare-footerv2.footer-main .default-content-wrapper p:first-child .icon{
+.healthcare-footerv2.footer-main .default-content-wrapper p:first-child .icon {
   width: 36px;
   height: 36px;
 }
+
 .healthcare-footerv1.footer-main .default-content-wrapper p:first-child,
 .healthcare-footerv2.footer-main .default-content-wrapper p:first-child,
 .healthcare-footerv3.footer-main .default-content-wrapper p:first-child {
-color: #0F1B2D;
-font-family: var(--Manrope, sans-serif);
-font-size: 30px;
-font-weight: 400;
-line-height: 40px;
+  color: var(--midnight-blue, #0F1B2D);
+  font-family: var(--Manrope, sans-serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
 }
+
 .healthcare-footerv1 .default-content-wrapper p:last-child,
 .healthcare-footerv2 .default-content-wrapper p:last-child,
 .healthcare-footerv3 .default-content-wrapper p:last-child {
-  color: #626262;
-font-family: var(--Manrope, sans-serif);
-line-height: 22px;
+  color: var(--medium-gray, #626262);
+  font-family: var(--Manrope, sans-serif);
+  line-height: 22px;
 }
+
 .healthcare-footerv1 .accordion-wrapper .accordion details summary p,
 .healthcare-footerv2.footer-main .accordion-wrapper .accordion details summary p,
 .healthcare-footerv3 .accordion-wrapper .accordion details summary p {
-  color: #0F1B2D;
+  color: var(--midnight-blue, #0F1B2D);
   font-family: var(--Manrope, sans-serif);
   opacity: 1;
 }
@@ -719,7 +723,7 @@ line-height: 22px;
 .healthcare-footerv1 .accordion-wrapper .accordion a,
 .healthcare-footerv2 .accordion-wrapper .accordion a,
 .healthcare-footerv3 .accordion-wrapper .accordion a {
-  color: #626262;
+  color: var(--medium-gray, #626262);
   font-family: var(--Manrope, sans-serif);
   font-weight: 500;
   opacity: 1;
@@ -744,9 +748,9 @@ line-height: 22px;
 .footer-bottom.healthcare-footerv2 a,
 .footer-bottom.healthcare-footerv3 a {
   opacity: 1;
-  color: #626262;
-font-family: var(--Manrope, sans-serif);
-font-weight: 500;
+  color: var(--medium-gray, #626262);
+  font-family: var(--Manrope, sans-serif);
+  font-weight: 500;
 }
 
 footer .footer .healthcare-footerv1 img,
@@ -762,93 +766,111 @@ footer .footer .healthcare-footerv3 img {
   align-items: center;
   gap: 10px;
 }
+
 .footer .footer-bottom.healthcare-footerv1,
 .footer .footer-bottom.healthcare-footerv2,
 .footer .footer-bottom.healthcare-footerv3 {
-border-top: 0.5px solid #A4DDF8;
-padding-top: 40px;
+  border-top: 0.5px solid var(--Ice-Blue, #A4DDF8);
+  padding-top: 40px;
 }
- .footer-bottom.healthcare-footerv1 .default-content-wrapper p,
- .footer-bottom.healthcare-footerv2 .default-content-wrapper p,
- .footer-bottom.healthcare-footerv3 .default-content-wrapper p {
-color: #0F1B2D;
-font-family: var(--Manrope, sans-serif);
- }
+
+.footer-bottom.healthcare-footerv1 .default-content-wrapper p,
+.footer-bottom.healthcare-footerv2 .default-content-wrapper p,
+.footer-bottom.healthcare-footerv3 .default-content-wrapper p {
+  color: var(--midnight-blue, #0F1B2D);
+  font-family: var(--Manrope, sans-serif);
+}
+
 .footer-bottom.healthcare-footerv1 a .icon,
 .footer-bottom.healthcare-footerv2 a .icon,
 .footer-bottom.healthcare-footerv3 a .icon {
   margin: 4px;
 }
+
 .footer-main.healthcare-footerv3 .accordion-wrapper {
   width: 100%;
 }
- @media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) {
+
   .footer-main.healthcare-footerv1 .accordion-wrapper .accordion details,
   .footer-main.healthcare-footerv2 .accordion-wrapper .accordion details,
   .footer-main.healthcare-footerv3 .accordion-wrapper .accordion details {
-border: none;
+    border: none;
   }
-  .healthcare-footerv1 .accordion details summary::after,
-.healthcare-footerv2 .accordion details summary::after {
-border-right: 2px solid #0F1B2D;
-  border-bottom: 2px solid #0F1B2D;
-}
 
-.footer-main.healthcare-footerv1 .accordion details[open] summary::after,
-.footer-main.healthcare-footerv2 .accordion details[open] summary::after {
- border-right: 2px solid #0F1B2D;
-  border-bottom: 2px solid #0F1B2D;
+  .healthcare-footerv1 .accordion details summary::after,
+  .healthcare-footerv2 .accordion details summary::after {
+    border-right: 2px solid var(--midnight-blue, #0F1B2D);
+    border-bottom: 2px solid var(--midnight-blue, #0F1B2D);
+  }
+
+  .footer-main.healthcare-footerv1 .accordion details[open] summary::after,
+  .footer-main.healthcare-footerv2 .accordion details[open] summary::after {
+    border-right: 2px solid var(--midnight-blue, #0F1B2D);
+    border-bottom: 2px solid var(--midnight-blue, #0F1B2D);
+  }
+
+  .healthcare-footerv1.footer-main .default-content-wrapper p:first-child,
+  .healthcare-footerv2.footer-main .default-content-wrapper p:first-child,
+  .healthcare-footerv3.footer-main .default-content-wrapper p:first-child {
+    font-size: 24px;
+    gap: 4px;
+  }
+
+  .healthcare-footerv1.footer-main .default-content-wrapper p:first-child .icon,
+  .healthcare-footerv2.footer-main .default-content-wrapper p:first-child .icon,
+  .healthcare-footerv3.footer-main .default-content-wrapper p:first-child .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer-main.healthcare-footerv1,
+  .footer-main.healthcare-footerv2,
+  .footer-main.healthcare-footerv3 {
+    gap: 32px;
+  }
+
+  .footer-main.healthcare-footerv1 .default-content-wrapper,
+  .footer-main.healthcare-footerv2 .default-content-wrapper,
+  .footer-main.healthcare-footerv3 .default-content-wrapper {
+    gap: 16px;
+  }
+
+  .footer-main.healthcare-footerv1 .accordion-wrapper .accordion details summary,
+  .footer-main.healthcare-footerv2 .accordion-wrapper .accordion details summary,
+  .footer-main.healthcare-footerv3 .accordion-wrapper .accordion details summary {
+    padding: 16px 0px;
+  }
+
+  .healthcare-footerv1 .accordion-wrapper .accordion details summary p,
+  .healthcare-footerv2 .accordion-wrapper .accordion details summary p,
+  .healthcare-footerv3 .accordion-wrapper .accordion details summary p {
+    font-weight: 500;
+  }
+
+  .footer .footer-bottom.healthcare-footerv1,
+  .footer .footer-bottom.healthcare-footerv2,
+  .footer .footer-bottom.healthcare-footerv3 {
+    padding-top: 24px;
+  }
+
+  .footer-bottom.healthcare-footerv1 .default-content-wrapper,
+  .footer-bottom.healthcare-footerv2 .default-content-wrapper,
+  .footer-bottom.healthcare-footerv3 .default-content-wrapper {
+    gap: 12px;
+  }
+
+  .footer-main.healthcare-footerv3 .accordion-wrapper .accordion {
+    justify-content: unset;
+  }
+
+  .healthcare-footerv3 .accordion-wrapper .accordion details {
+    border: none;
+    width: 28%;
+  }
+
+  .healthcare-footerv3 .accordion-wrapper .accordion details summary {
+    pointer-events: none;
+  }
 }
-.healthcare-footerv1.footer-main .default-content-wrapper p:first-child,
-.healthcare-footerv2.footer-main .default-content-wrapper p:first-child,
-.healthcare-footerv3.footer-main .default-content-wrapper p:first-child {
-  font-size: 24px;
-  gap: 4px;
-}
-.healthcare-footerv1.footer-main .default-content-wrapper p:first-child .icon,
-.healthcare-footerv2.footer-main .default-content-wrapper p:first-child .icon,
-.healthcare-footerv3.footer-main .default-content-wrapper p:first-child .icon {
-  width: 26px;
-height: 26px;
-}
-.footer-main.healthcare-footerv1,
-.footer-main.healthcare-footerv2,
-.footer-main.healthcare-footerv3 {
-gap: 32px;
-}
-.footer-main.healthcare-footerv1 .default-content-wrapper,
-.footer-main.healthcare-footerv2 .default-content-wrapper,
-.footer-main.healthcare-footerv3 .default-content-wrapper {
-  gap: 16px;
-}
-.footer-main.healthcare-footerv1 .accordion-wrapper .accordion details summary,
-.footer-main.healthcare-footerv2 .accordion-wrapper .accordion details summary,
-.footer-main.healthcare-footerv3 .accordion-wrapper .accordion details summary {
-padding: 16px 0px;
-}
-.healthcare-footerv1 .accordion-wrapper .accordion details summary p,
-.healthcare-footerv2 .accordion-wrapper .accordion details summary p,
-.healthcare-footerv3 .accordion-wrapper .accordion details summary p {
-  font-weight: 500;
-}
-.footer .footer-bottom.healthcare-footerv1,
-.footer .footer-bottom.healthcare-footerv2,
-.footer .footer-bottom.healthcare-footerv3 {
-  padding-top: 24px;
-}
-.footer-bottom.healthcare-footerv1 .default-content-wrapper,
-.footer-bottom.healthcare-footerv2 .default-content-wrapper,
-.footer-bottom.healthcare-footerv3 .default-content-wrapper {
-gap: 12px;
-}
-.footer-main.healthcare-footerv3 .accordion-wrapper .accordion {
-  justify-content: unset;
-}
-.healthcare-footerv3 .accordion-wrapper .accordion details {
-  border: none;
-  width: 28%;
-}
-.healthcare-footerv3 .accordion-wrapper .accordion details summary {
-  pointer-events: none;
-}
- }
