@@ -94,7 +94,7 @@ export default async function decorate(block) {
     console.warn("No footer found in hierarchy");
     return null;
   }
-  const fragment = await loadFooterHierarchically("/healthcare-footer1");
+  const fragment = await loadFooterHierarchically();
 
   // decorate footer DOM
   block.textContent = '';
@@ -104,7 +104,7 @@ export default async function decorate(block) {
   block.append(footer);
   console.log(block);
   const selectVariant = block.querySelector('.section').classList;
-  if (!selectVariant.contains('footer-variant3')) {
+  if (!selectVariant.contains('footer-variant3') || !selectVariant.contains('healthcare-footerv3')) {
     if (window.innerWidth > 992) {
       block.querySelectorAll('.accordion-item').forEach((ele) => {
         ele.open = true;
