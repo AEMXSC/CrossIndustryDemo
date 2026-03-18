@@ -99,6 +99,114 @@
                         {
                             "name": "Compare",
                             "value": "compare"
+                        },
+                        {
+                            "name": "Services",
+                            "value": "services"
+                        },
+                        {
+                            "name": "HealthcareBlogs",
+                            "value": "healthcareblogs"
+                        }
+                        ,
+                        {
+                            "name": "HealthcareCategories",
+                            "value": "healthcarecategories"
+                        }
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleHealthcareCategories",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "healthcarecategories"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "HealthcareCategories",
+                            "children": [
+                                {
+                                    "name": "Healthcare Categories Variant 1",
+                                    "value": "healthcare-categories-variant1"
+                                },
+                                {
+                                    "name": "Healthcare Categories Variant 2",
+                                    "value": "healthcare-categories-variant2"
+                                },
+                                {
+                                    "name": "Healthcare Categories Variant 3",
+                                    "value": "healthcare-categories-variant3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleHealthcareBlogs",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "healthcareblogs"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "HealthcareBlogs",
+                            "children": [
+                                {
+                                    "name": "Healthcare Blogs Variant 1",
+                                    "value": "healthcare-blogs-variant1"
+                                },
+                                {
+                                    "name": "Healthcare Blogs Variant 2",
+                                    "value": "healthcare-blogs-variant2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "component": "multiselect",
+                    "name": "styleServices",
+                    "label": "Style",
+                    "valueType": "string[]",
+                    "condition": {
+                        "===": [
+                            {
+                                "var": "sectionType"
+                            },
+                            "services"
+                        ]
+                    },
+                    "options": [
+                        {
+                            "name": "Services",
+                            "children": [
+                                {
+                                    "name": "Healthcare Services Variant 1",
+                                    "value": "services-variant1"
+                                },
+                                {
+                                    "name": "Healthcare Services Variant 2",
+                                    "value": "services-variant2"
+                                },
+                                {
+                                    "name": "Healthcare Services Variant3",
+                                    "value": "services-variant3"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -457,6 +565,22 @@
                                 {
                                      "name": "Healthcare banner variant new 1",
                                     "value": "healthcare-banner-variant-new-1"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 1",
+                                    "value": "healthcare-banner-variant1"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 2",
+                                    "value": "healthcare-banner-variant2"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 3",
+                                    "value": "healthcare-banner-variant3"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 4",
+                                    "value": "healthcare-banner-variant4"
                                 }
                             ]
                         }
@@ -572,6 +696,18 @@
                                 {
                                     "name": "hitech Footer variant 3",
                                     "value": "hitech-footerv3"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 1",
+                                    "value": "healthcare-footerv1"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 2",
+                                    "value": "healthcare-footerv2"
+                                },
+                                {
+                                    "name": "Healthcare Footer variant 3",
+                                    "value": "healthcare-footerv3"
                                 }
                             ]
                         }
