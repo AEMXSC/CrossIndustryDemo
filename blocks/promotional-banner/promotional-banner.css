@@ -924,7 +924,7 @@
 
     /* healthcare banner variant 1 */
     .promotional-banner-container.healthcare-banner-variant1 {
-        padding: 24px 24px 48px;
+        padding: 24px 24px 48px !important;
     }
 
     .promotional-banner-container.healthcare-banner-variant1 .grid-content {
@@ -1015,7 +1015,7 @@
 
     /* healthcare banner variant 3 */
     .healthcare-banner-variant3.promotional-banner-container {
-        padding: 24px 24px 48px;
+        padding: 24px 24px 48px !important;
     }
 
     .healthcare-banner-variant3 .banner-content {
@@ -1069,7 +1069,7 @@
     }
 
     .healthcare-banner-variant4.promotional-banner-container {
-        padding: 24px 24px 48px;
+        padding: 24px 24px 48px !important;
     }
 
     .healthcare-banner-variant4 .banner-content {
