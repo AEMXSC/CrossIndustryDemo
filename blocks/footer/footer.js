@@ -104,15 +104,22 @@ export default async function decorate(block) {
   block.append(footer);
   console.log(block);
   const selectVariant = block.querySelector('.section').classList;
-  if (!selectVariant.contains('footer-variant3') || !selectVariant.contains('healthcare-footerv3')) {
-    if (window.innerWidth > 992) {
+
+  if (window.innerWidth > 992) {
       block.querySelectorAll('.accordion-item').forEach((ele) => {
         ele.open = true;
       });
     }
-  } else {
-    block.querySelectorAll('.accordion-item').forEach((ele) => {
-      ele.open = true;
-    });
+
+  if (selectVariant.contains('footer-variant3')) {
+           block.querySelectorAll('.accordion-item').forEach((ele) => {
+        ele.open = true;
+      });
+  }
+
+  if (selectVariant.contains('healthcare-footerv3')) {
+     block.querySelectorAll('.accordion-item').forEach((ele) => {
+        ele.open = true;
+      });
   }
 }
