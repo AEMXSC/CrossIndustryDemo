@@ -790,15 +790,15 @@ footer .footer .healthcare-footerv3 img {
 .footer-main.healthcare-footerv3 .accordion-wrapper {
   width: 100%;
 }
-footer .footer .footer-main.healthcare-footerv1 .icon,
-footer .footer .footer-main.healthcare-footerv2 .icon,
-footer .footer .footer-main.healthcare-footerv3 .icon {
+footer .footer .footer-main.healthcare-footerv1 .accordion-item-body .icon,
+footer .footer .footer-main.healthcare-footerv2 .accordion-item-body .icon,
+footer .footer .footer-main.healthcare-footerv3 .accordion-item-body .icon {
 height: 16px;
     width: 16px;
 }
-footer .footer .footer-main.healthcare-footerv1 img,
-footer .footer .footer-main.healthcare-footerv2 img,
-footer .footer .footer-main.healthcare-footerv3 img {
+footer .footer .footer-main.healthcare-footerv1 .accordion-item-body img,
+footer .footer .footer-main.healthcare-footerv2 .accordion-item-body img,
+footer .footer .footer-main.healthcare-footerv3 .accordion-item-body img {
     height: 16px;
     width: 16px;
 }
