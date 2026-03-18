@@ -96,6 +96,39 @@ export default function decorate(block) {
   if (document.querySelectorAll(".healthcare-round-tab-swiper").length > 0) {
     healthcareTabSwiper(block);
   }
+
+    if(classlistExists.contains("services-variant2")) {
+    healthcareSrvices(block)
+  }
+  if(classlistExists.contains("services-variant3")) {
+    console.log(block);
+    let imgSrc; 
+    if (window.innerWidth > 767) {
+      imgSrc = block
+    .closest(".services-variant3")
+    ?.querySelectorAll(".default-content-wrapper")?.[1]
+    ?.querySelector("p:first-child img")
+    ?.src
+    ?.trim();
+      
+  } else {
+        imgSrc = block.closest(".services-variant3")
+    ?.querySelectorAll(".default-content-wrapper")?.[1]
+    ?.querySelector("p:last-child img")
+    ?.src
+    ?.trim();
+  }
+  block.closest(".services-variant3").querySelector(".cards-wrapper").style.background =`url(${imgSrc}) center top / cover no-repeat`
+    }
+
+        if (classlistExists.contains("healthcare-blogs-variant1")) {
+  block.classList.add('swiper');
+  block.querySelector("ul").classList.add("swiper-wrapper");
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+    healthcareBlogs()
+  }
 }
 
 
@@ -407,6 +440,56 @@ function healthcareTabSwiper(block) {
       767: {
         slidesPerView: 1,
       }
+    }
+  });
+}
+
+function healthcareSrvicesSwpiper() {
+  Swiper(".services-variant2 .swiper", {
+    slidesPerView: 1,
+    slideToClickedSlide: true,
+    spaceBetween: 12,
+    grabCursor: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      },
+    }
+  });
+}
+
+function healthcareBlogs() {
+  Swiper(".healthcare-blogs-variant1 .swiper", {
+    slidesPerView: 3,
+    slideToClickedSlide: true,
+    spaceBetween: 20,
+    grabCursor: true,
+   breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      375: {
+        slidesPerView: 1.5,
+      },
+      767: {
+        slidesPerView: 1.5,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
     }
   });
 }
