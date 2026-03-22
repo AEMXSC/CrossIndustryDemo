@@ -6875,6 +6875,29 @@
     ]
   },
   {
+    "id": "product-index",
+    "fields": [
+      {
+        "component": "text",
+        "name": "api-path",
+        "label": "GraphQL API Path",
+        "value": "/graphql/execute.json/global/product-index-component"
+      },
+      {
+        "component": "text",
+        "name": "publish-origin",
+        "label": "Publish Origin",
+        "value": "https://publish-p153659-e1796191.adobeaemcloud.com"
+      },
+      {
+        "component": "number",
+        "name": "max-items",
+        "label": "Visible Items Before View All",
+        "value": 5
+      }
+    ]
+  },
+  {
     "id": "productssection",
     "fields": [
       {
