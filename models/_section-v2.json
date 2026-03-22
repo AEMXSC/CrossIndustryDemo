@@ -807,7 +807,12 @@
                                 {
                                     "name": "Blogs v2",
                                     "value": "blog-cards2"
+                                },
+                                {
+                                    "name": "Alphabetical Product Listing",
+                                    "value": "alphabetical-product-listing"
                                 }
+
                             ]
                         }
                     ]
