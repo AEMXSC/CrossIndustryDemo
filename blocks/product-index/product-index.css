@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+/* this css for make the search :placeholder  authorable  */
+.alphabetical-product-listing .default-content-wrapper:last-child  {
+    display: none;
+}
 /* Header & Search (Safe Chaining) */
 .alphabetical-product-listing .default-content-wrapper p {
     font-size: 28px;

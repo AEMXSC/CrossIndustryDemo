@@ -10,23 +10,13 @@ async function fetchData() {
 
     const apiUrl = `${publishOrigin}${DEFAULT_API_PATH}`;
 
-    console.log('Fetching data from:', apiUrl);
-
     try {
         const response = await fetch(apiUrl);
-
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
         const json = await response.json();
-
-        // log full response
-        const alphabetData = json?.data?.searchOnAlphabetList?.items?.[0]?.searchdata;
-
-        // return only useful data
-        return alphabetData;
-
+        return json?.data?.searchOnAlphabetList?.items?.[0]?.searchdata;
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -34,69 +24,129 @@ async function fetchData() {
 
 export default async function decorate(block) {
     const alphabetData = await fetchData();
-
     if (!alphabetData) return;
+
+    // 1. Get the placeholder text from the last default-content-wrapper before clearing
+    const section = block.closest(".alphabetical-product-listing");
+    let authorPlaceholder = "Search...";
+    if (section) {
+        const lastContentP = section.querySelector('.default-content-wrapper:last-child p');
+        if (lastContentP) authorPlaceholder = lastContentP.textContent;
+    }
 
     // Clear block
     block.innerHTML = '';
 
-    //  Create alphabet nav
+    // Create UI Elements
     const nav = document.createElement('div');
     nav.className = 'alphabet-nav';
 
-    //  Create cards container
     const cardContainer = document.createElement('div');
     cardContainer.className = 'alphabet-cards';
 
-    //  Render cards function
-    function renderCards(letter) {
+    const viewAll = document.createElement('div');
+    viewAll.className = 'view-all';
+    viewAll.innerHTML = `View All →`;
+    viewAll.style.display = 'none';
+
+    let isSearchNavigation = false;
+
+    // 2. Render cards function with "View All" logic
+    function renderCards(letter, filterText = '') {
         cardContainer.innerHTML = '';
-
         const items = alphabetData[letter] || [];
+        
+        // Filter items if searching
+        const filteredItems = filterText 
+            ? items.filter(item => 
+                item.value.toLowerCase().includes(filterText) || 
+                item.value2.toLowerCase().includes(filterText))
+            : items;
 
-        items.forEach(item => {
+        filteredItems.forEach((item, index) => {
             const card = document.createElement('div');
             card.className = 'card';
+            
+            // If not "Viewing All", hide items after the 5th one
+            if (index >= 5) {
+                card.classList.add('is-hidden');
+                card.style.display = 'none';
+            }
 
             card.innerHTML = `
                 <div class="title">${item.value}</div>
                 <div class="subtitle">${item.value2}</div>
             `;
-
             cardContainer.appendChild(card);
         });
+
+        // Toggle View All button based on count
+        viewAll.style.display = filteredItems.length > 5 ? 'block' : 'none';
     }
 
-    //  Render alphabet letters
+    // 3. Alphabet Navigation
     alphabetData.alphabet.forEach((letter, index) => {
         const span = document.createElement('span');
         span.textContent = letter;
         span.className = 'alphabet-letter';
-
         if (index === 0) span.classList.add('active');
 
         span.addEventListener('click', () => {
-            // remove active
-            nav.querySelectorAll('.alphabet-letter')
-                .forEach(el => el.classList.remove('active'));
-
+            if (!isSearchNavigation) {
+                const searchField = document.querySelector('.alphabetical-product-listing .search-box input');
+                if (searchField) searchField.value = '';
+            }
+            nav.querySelectorAll('.alphabet-letter').forEach(el => el.classList.remove('active'));
             span.classList.add('active');
-
             renderCards(letter);
         });
-
         nav.appendChild(span);
     });
 
-    //  Default load = A
+    // 4. Search Logic
+    const searchInput = document.querySelector('.alphabetical-product-listing .search-box input');
+    if (searchInput) {
+        searchInput.setAttribute('placeholder', authorPlaceholder);
+        searchInput.addEventListener('input', (e) => {
+            const searchValue = e.target.value.trim().toLowerCase();
+
+            if (searchValue.length === 0) {
+                const activeLetter = nav.querySelector('.alphabet-letter.active');
+                if (activeLetter) renderCards(activeLetter.textContent);
+                return;
+            }
+
+            const firstLetter = searchValue[0].toUpperCase();
+            const targetLetter = Array.from(nav.querySelectorAll('.alphabet-letter'))
+                .find(el => el.textContent === firstLetter);
+
+            if (targetLetter) {
+                isSearchNavigation = true;
+                targetLetter.click();
+                isSearchNavigation = false;
+                // Re-run render with filter to handle "View All" visibility
+                renderCards(firstLetter, searchValue);
+            } else {
+                cardContainer.innerHTML = '';
+                viewAll.style.display = 'none';
+            }
+        });
+    }
+
+    // 5. View All Click Logic
+    viewAll.addEventListener('click', () => {
+        const hiddenCards = cardContainer.querySelectorAll('.card.is-hidden');
+        hiddenCards.forEach(card => {
+            card.style.display = 'block';
+            card.classList.remove('is-hidden');
+        });
+        viewAll.style.display = 'none';
+    });
+
+    // Default Load
     renderCards('A');
 
-    //  View All (optional)
-    const viewAll = document.createElement('div');
-    viewAll.className = 'view-all';
-    viewAll.innerHTML = `View All →`;
-
-    //  Append everything
+    // Append to block
     block.appendChild(nav);
     block.appendChild(cardContainer);
     block.appendChild(viewAll);

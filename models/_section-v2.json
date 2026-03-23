@@ -811,6 +811,10 @@
                                 {
                                     "name": "Alphabetical Product Listing",
                                     "value": "alphabetical-product-listing"
+                                },
+                                {
+                                    "name": "Alphabetical Product Listing Variant 2",
+                                    "value": "alphabetical-product-listing-variant-2"
                                 }
 
                             ]
