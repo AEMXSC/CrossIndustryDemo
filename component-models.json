@@ -6880,14 +6880,7 @@
   },
   {
     "id": "product-index",
-    "fields": [
-      {
-        "component": "text",
-        "name": "search-placeholder",
-        "label": "Search Placeholder Text",
-        "value": "Looking for a product?"
-      }
-    ]
+    "fields": []
   },
   {
     "id": "productssection",
