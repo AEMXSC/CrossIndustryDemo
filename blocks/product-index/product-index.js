@@ -38,7 +38,7 @@ export default async function decorate(block) {
     if (!alphabetData) return;
 
     // Clear block
-    block.innerHTML = '';
+    // block.innerHTML = '';
 
     //  Create alphabet nav
     const nav = document.createElement('div');

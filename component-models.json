@@ -6882,11 +6882,6 @@
     "id": "product-index",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "searchPath",
-        "label": "Search Path"
-      },
-      {
         "component": "text",
         "name": "search-placeholder",
         "label": "Search Placeholder Text",
