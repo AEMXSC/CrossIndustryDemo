@@ -846,6 +846,9 @@
     font-weight: 400;
     line-height: 24px;
 }
+.promotional-banner-container.healthcare-banner-variant4.healthcare-banner-variant5 p {
+    display: none;
+}
 
 /* healthcare banner variant 3 */
 .healthcare-banner-variant3.promotional-banner-container.section {
@@ -1177,6 +1180,7 @@ margin-bottom: 36px;
     /* Height from your Figma label 327x482 */
     display: flex;
     flex-direction: column;
+    margin: 0 24px;
     align-items: flex-start;
     background: radial-gradient(103.09% 130.98% at 87.82% 87.42%, #FFFFFF 0%, #F2FAFE 28.23%, #A5DEF9 100%);
   }

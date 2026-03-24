@@ -581,6 +581,10 @@
                                 {
                                     "name": "Healthcare banner variant 4",
                                     "value": "healthcare-banner-variant4"
+                                },
+                                {
+                                    "name": "Healthcare banner variant 5",
+                                    "value": "healthcare-banner-variant5"
                                 }
                             ]
                         }

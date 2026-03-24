@@ -915,7 +915,7 @@
   max-width: 732px;
   max-height: 602px;
   min-height: 602px;
-  object-fit: fill;
+  /* object-fit: fill; */
   border-radius: 15px;
   @media (max-width: 767px) {
     max-width: 327px;
@@ -1017,19 +1017,24 @@
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-next.swiper-button-disabled ,
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-prev.swiper-button-disabled {
   cursor: not-allowed;
-  background-color: #E9E9EB;
-  background-blend-mode: difference;
+  background-color: #DADDE6;
 }
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-next {
   position: absolute;
-  top: 87%;
+  top: auto;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
 }
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-prev {
   position: absolute;
-  top: 87%;
-  left:   85%;
+  top: auto;
+  bottom: 20px;
+  right: 78px;
+  left: auto;
   @media screen and (max-width: 767px) {
-    left: 65%;
+    right: 62px;
+    bottom: 20px;
   }
 }
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-next ,
@@ -1039,15 +1044,15 @@
   background-size: contain;
   background-position: center;
   background-color: #1F69FF;
-  border-radius: 41px;
-  background-size: 24px 24px;
+    border-radius: 999px;
+    background-size: 20px 20px;
   margin-top : 0px;
-  height: 54px;
-  width: 54px;
+    height: 44px;
+    width: 44px;
   @media screen and (max-width: 767px) {
-     height: 42px;
-     width: 42px;
-     background-size: 16px 16px;
+      height: 36px;
+      width: 36px;
+      background-size: 14px 14px;
   }
 }
 .section.healthcare-round-tab-swiper .tabs-wrapper .tabs.block .tabs-panels-wrapper .cards-container .cards-wrapper .swiper .swiper-button-next svg,
@@ -1591,8 +1596,9 @@
   max-width: 100%;
   max-height: 272px;
   min-height: 272px;
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 8px;
+  object-position: top;
 
   @media (max-width: 967px) {
     max-height: 150px;

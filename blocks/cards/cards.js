@@ -84,6 +84,19 @@ export default function decorate(block) {
   block.append(ul);
   const classlistExists = block.closest('.cards-container').classList;
 
+  if(classlistExists.contains("services-variant2")) {
+    healthcareSrvicesSwpiper(block);
+  }
+
+  if (classlistExists.contains("healthcare-blogs-variant1")) {
+  block.classList.add('swiper');
+  block.querySelector("ul").classList.add("swiper-wrapper");
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+    healthcareBlogs()
+  }
+
   if (classlistExists.contains("blog-cards") || classlistExists.contains("blog-cards2") || classlistExists.contains("product-variant1")) {
     blogCards(block);
   }
@@ -97,11 +110,8 @@ export default function decorate(block) {
     healthcareTabSwiper(block);
   }
 
-    if(classlistExists.contains("services-variant2")) {
-    healthcareSrvices(block)
-  }
   if(classlistExists.contains("services-variant3")) {
-    console.log(block);
+    // console.log(block);
     let imgSrc; 
     if (window.innerWidth > 767) {
       imgSrc = block
@@ -120,15 +130,6 @@ export default function decorate(block) {
   }
   block.closest(".services-variant3").querySelector(".cards-wrapper").style.background =`url(${imgSrc}) center top / cover no-repeat`
     }
-
-        if (classlistExists.contains("healthcare-blogs-variant1")) {
-  block.classList.add('swiper');
-  block.querySelector("ul").classList.add("swiper-wrapper");
-  Array.from(block.children[0].children).forEach((element) => {
-    element.classList.add('swiper-slide');
-  });
-    healthcareBlogs()
-  }
 }
 
 
@@ -444,17 +445,30 @@ function healthcareTabSwiper(block) {
   });
 }
 
-function healthcareSrvicesSwpiper() {
-  Swiper(".services-variant2 .swiper", {
+function healthcareSrvicesSwpiper(block) {
+  block.classList.add('swiper');
+  block.querySelector('ul').classList.add('swiper-wrapper');
+  Array.from(block.children[0].children).forEach((element) => {
+    element.classList.add('swiper-slide');
+  });
+
+  const swiperButtonPrev = document.createElement('div');
+  swiperButtonPrev.classList.add('swiper-button-prev');
+  const swiperButtonNext = document.createElement('div');
+  swiperButtonNext.classList.add('swiper-button-next');
+  block.appendChild(swiperButtonPrev);
+  block.appendChild(swiperButtonNext);
+
+  new Swiper(block, {
     slidesPerView: 1,
     slideToClickedSlide: true,
     spaceBetween: 12,
     grabCursor: true,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-   breakpoints: {
+      nextEl: swiperButtonNext,
+      prevEl: swiperButtonPrev,
+    },
+    breakpoints: {
       0: {
         slidesPerView: 1,
       },
@@ -467,7 +481,7 @@ function healthcareSrvicesSwpiper() {
       1024: {
         slidesPerView: 1,
       },
-    }
+    },
   });
 }
 
