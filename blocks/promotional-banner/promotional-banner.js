@@ -6,6 +6,80 @@ import {
   p
 } from "../../scripts/dom-helpers.js";
 
+/**
+ * Extracts image source from either an <img> element or a Dynamic Media anchor tag.
+ * Dynamic Media URLs are delivered as <a> tags with href containing the asset URL.
+ * @param {HTMLElement} container - The container element to search within
+ * @param {number} index - The index of the image to retrieve (0 for desktop, 1 for mobile)
+ * @returns {string} The image URL with optional width/quality parameters
+ */
+function getImageSource(container, index = 0) {
+  // First try to find traditional <img> elements
+  const images = container.querySelectorAll("img");
+  if (images.length > index) {
+    return images[index].src.trim();
+  }
+
+  // Look for Dynamic Media anchor tags (URLs containing /adobe/assets/)
+  const dmAnchors = Array.from(container.querySelectorAll("a[href]")).filter((anchor) => {
+    const href = anchor.href || "";
+    return href.includes("/adobe/assets/") || href.includes("delivery-");
+  });
+
+  if (dmAnchors.length > index) {
+    let imageUrl = dmAnchors[index].href.trim();
+    // Add width and quality params if not present
+    try {
+      const url = new URL(imageUrl);
+      if (!url.searchParams.has("width")) {
+        url.searchParams.set("width", "1400");
+      }
+      if (!url.searchParams.has("quality")) {
+        url.searchParams.set("quality", "85");
+      }
+      return url.toString();
+    } catch (e) {
+      return imageUrl;
+    }
+  }
+
+  // Fallback: return first available image source
+  if (images.length > 0) {
+    return images[0].src.trim();
+  }
+  if (dmAnchors.length > 0) {
+    return dmAnchors[0].href.trim();
+  }
+  return "";
+}
+
+/**
+ * Gets the appropriate image source based on viewport width.
+ * @param {HTMLElement} block - The block element
+ * @returns {string} The image URL for the current viewport
+ */
+function getResponsiveImageSource(block) {
+  const desktopIndex = 0;
+  const mobileIndex = 1;
+
+  // Check how many image sources are available
+  const images = block.querySelectorAll("img");
+  const dmAnchors = Array.from(block.querySelectorAll("a[href]")).filter((anchor) => {
+    const href = anchor.href || "";
+    return href.includes("/adobe/assets/") || href.includes("delivery-");
+  });
+  const totalImages = Math.max(images.length, dmAnchors.length);
+
+  if (totalImages > 1) {
+    // Two images available: use desktop for large screens, mobile for small
+    return window.innerWidth > 1024
+      ? getImageSource(block, desktopIndex)
+      : getImageSource(block, mobileIndex);
+  }
+  // Only one image: use it for all viewports
+  return getImageSource(block, 0);
+}
+
 export default function decorate(block) {
   console.log(block);
   let getType = block.classList;
@@ -29,11 +103,15 @@ export default function decorate(block) {
 
 
 function bannerType1(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("img")[0].src.trim() : block.querySelectorAll("img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("img")[0].src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-  let buttons = block.querySelectorAll("a");
+  let source = getResponsiveImageSource(block);
+  let heading = block.querySelector("h2")?.innerText?.trim() || "";
+  let description = block.querySelector("p")?.innerText?.trim() || "";
+
+  // Filter out Dynamic Media anchor tags from buttons
+  let buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
+    const href = anchor.href || "";
+    return !href.includes("/adobe/assets/") && !href.includes("delivery-");
+  });
   let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
   let fisrtAnchorHref = buttons[0]?.href.trim() || "";
   let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
@@ -101,11 +179,15 @@ function bannerType1(block) {
 }
 
 function bannerType3(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("img")[0].src.trim() : block.querySelectorAll("img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("img")[0].src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
-    let buttons = block.querySelectorAll("a");
+  let source = getResponsiveImageSource(block);
+  let heading = block.querySelector("h2")?.innerText?.trim() || "";
+  let description = block.querySelector("p")?.innerText?.trim() || "";
+
+  // Filter out Dynamic Media anchor tags from buttons
+  let buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
+    const href = anchor.href || "";
+    return !href.includes("/adobe/assets/") && !href.includes("delivery-");
+  });
   let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
   let fisrtAnchorHref = buttons[0]?.href.trim() || "";
   let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
@@ -191,13 +273,16 @@ function bannerType3(block) {
 }
 
 function bannerType4(block) {
-  let source = window.innerWidth > 1024 ? block.querySelectorAll("img")[0].src.trim() : block.querySelectorAll("img")[1].src.trim();
-  source = block.querySelectorAll("img").length > 1 ? source : block.querySelectorAll("img")[0].src.trim();
-  let heading = block.querySelector("h2").innerText.trim();
-  let description = block.querySelector("p").innerText.trim();
+  let source = getResponsiveImageSource(block);
+  let heading = block.querySelector("h2")?.innerText?.trim() || "";
+  let description = block.querySelector("p")?.innerText?.trim() || "";
   block.closest(".promotional-banner-container").style.background = `url(${source}) center / cover no-repeat`;
 
-    let buttons = block.querySelectorAll("a");
+  // Filter out Dynamic Media anchor tags from buttons
+  let buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
+    const href = anchor.href || "";
+    return !href.includes("/adobe/assets/") && !href.includes("delivery-");
+  });
   let fisrtAnchorText = buttons[0]?.innerText.trim() || "";
   let fisrtAnchorHref = buttons[0]?.href.trim() || "";
   let fisrtAnchorTitle = buttons[0]?.title.trim() || "";
