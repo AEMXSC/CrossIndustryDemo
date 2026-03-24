@@ -54,6 +54,36 @@ function getImageSource(container, index = 0) {
 }
 
 /**
+ * Checks if an element contains a Dynamic Media URL.
+ * @param {HTMLElement} element - The element to check
+ * @returns {boolean} True if element contains DM URL
+ */
+function containsDynamicMediaUrl(element) {
+  const text = element.textContent || '';
+  const anchor = element.querySelector('a[href]');
+  const href = anchor?.href || '';
+  return text.includes('/adobe/assets/') || text.includes('delivery-') || href.includes('/adobe/assets/') || href.includes('delivery-');
+}
+
+/**
+ * Gets the description text, filtering out paragraphs with Dynamic Media URLs.
+ * @param {HTMLElement} block - The block element
+ * @returns {string} The description text
+ */
+function getDescriptionText(block) {
+  const paragraphs = Array.from(block.querySelectorAll('p'));
+  const validParagraph = paragraphs.find((para) => {
+    // Skip paragraphs that contain DM URLs or only contain links
+    if (containsDynamicMediaUrl(para)) return false;
+    // Skip paragraphs that only contain CTA buttons (links)
+    const links = para.querySelectorAll('a');
+    if (links.length > 0 && para.textContent.trim() === Array.from(links).map((l) => l.textContent).join(' ').trim()) return false;
+    return para.textContent.trim().length > 0;
+  });
+  return validParagraph?.innerText?.trim() || '';
+}
+
+/**
  * Gets the appropriate image source based on viewport width.
  * @param {HTMLElement} block - The block element
  * @returns {string} The image URL for the current viewport
@@ -105,7 +135,7 @@ export default function decorate(block) {
 function bannerType1(block) {
   let source = getResponsiveImageSource(block);
   let heading = block.querySelector("h2")?.innerText?.trim() || "";
-  let description = block.querySelector("p")?.innerText?.trim() || "";
+  let description = getDescriptionText(block);
 
   // Filter out Dynamic Media anchor tags from buttons
   let buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
@@ -181,7 +211,7 @@ function bannerType1(block) {
 function bannerType3(block) {
   let source = getResponsiveImageSource(block);
   let heading = block.querySelector("h2")?.innerText?.trim() || "";
-  let description = block.querySelector("p")?.innerText?.trim() || "";
+  let description = getDescriptionText(block);
 
   // Filter out Dynamic Media anchor tags from buttons
   let buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
@@ -275,7 +305,7 @@ function bannerType3(block) {
 function bannerType4(block) {
   let source = getResponsiveImageSource(block);
   let heading = block.querySelector("h2")?.innerText?.trim() || "";
-  let description = block.querySelector("p")?.innerText?.trim() || "";
+  let description = getDescriptionText(block);
   block.closest(".promotional-banner-container").style.background = `url(${source}) center / cover no-repeat`;
 
   // Filter out Dynamic Media anchor tags from buttons
