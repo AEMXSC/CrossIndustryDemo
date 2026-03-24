@@ -25,6 +25,7 @@ async function fetchData() {
 export default async function decorate(block) {
     const alphabetData = await fetchData();
     if (!alphabetData) return;
+    const isAlphabeticalListing = !!block.closest('.alphabetical-product-listing');
 
     // 1. Get the placeholder text from the last default-content-wrapper before clearing
     const section = block.closest(".alphabetical-product-listing");
@@ -67,8 +68,8 @@ export default async function decorate(block) {
             const card = document.createElement('div');
             card.className = 'card';
             
-            // If not "Viewing All", hide items after the 5th one
-            if (index >= 5) {
+            // Apply View All truncation only for .alphabetical-product-listing
+            if (isAlphabeticalListing && index >= 5) {
                 card.classList.add('is-hidden');
                 card.style.display = 'none';
             }
@@ -80,8 +81,10 @@ export default async function decorate(block) {
             cardContainer.appendChild(card);
         });
 
-        // Toggle View All button based on count
-        viewAll.style.display = filteredItems.length > 5 ? 'block' : 'none';
+        // Toggle View All button only for .alphabetical-product-listing
+        if (isAlphabeticalListing) {
+            viewAll.style.display = filteredItems.length > 5 ? 'block' : 'none';
+        }
     }
 
     // 3. Alphabet Navigation
@@ -104,9 +107,13 @@ export default async function decorate(block) {
     });
 
     // 4. Search Logic
-    const searchInput = document.querySelector('.alphabetical-product-listing .search-box input');
+    const searchSection = block.closest('.alphabetical-product-listing, .alphabetical-product-listing-variant-2');
+    const searchWrapper = searchSection
+        ?.querySelector('.default-content-wrapper:last-child p')
+        ?.textContent?.trim() || authorPlaceholder;
+    const searchInput = searchSection?.querySelector('.search-box input');
     if (searchInput) {
-        searchInput.setAttribute('placeholder', authorPlaceholder);
+        searchInput.setAttribute('placeholder', searchWrapper);
         searchInput.addEventListener('input', (e) => {
             const searchValue = e.target.value.trim().toLowerCase();
 
@@ -128,26 +135,32 @@ export default async function decorate(block) {
                 renderCards(firstLetter, searchValue);
             } else {
                 cardContainer.innerHTML = '';
-                viewAll.style.display = 'none';
+                if (isAlphabeticalListing) {
+                    viewAll.style.display = 'none';
+                }
             }
         });
     }
 
     // 5. View All Click Logic
-    viewAll.addEventListener('click', () => {
-        const hiddenCards = cardContainer.querySelectorAll('.card.is-hidden');
-        hiddenCards.forEach(card => {
-            card.style.display = 'block';
-            card.classList.remove('is-hidden');
+    if (isAlphabeticalListing) {
+        viewAll.addEventListener('click', () => {
+            const hiddenCards = cardContainer.querySelectorAll('.card.is-hidden');
+            hiddenCards.forEach(card => {
+                card.style.display = 'block';
+                card.classList.remove('is-hidden');
+            });
+            viewAll.style.display = 'none';
         });
-        viewAll.style.display = 'none';
-    });
+    }
 
     // Default Load
     renderCards('A');
 
-    // Append to block
+    // Append to block — add View All only for .alphabetical-product-listing
+    if (isAlphabeticalListing) {
+        cardContainer.appendChild(viewAll);
+    }
     block.appendChild(nav);
     block.appendChild(cardContainer);
-    block.appendChild(viewAll);
 }
