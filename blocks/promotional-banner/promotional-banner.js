@@ -12,15 +12,55 @@ import {
    Helpers
 ------------------------------ */
 
-function getImages(block) {
-  const images = block.querySelectorAll("picture img, img");
-  if (!images.length) return "";
-
-  if (images.length > 1) {
-    return window.innerWidth > 1024 ? images[0].src.trim() : images[1].src.trim();
+/**
+ * NEW: Dynamic Media Source Extractor
+ * Extracts image source from either an <img> or a Dynamic Media anchor tag.
+ */
+function getImageSource(container, index = 0) {
+  const images = container.querySelectorAll("picture img, img");
+  if (images.length > index) {
+    return images[index].src.trim();
   }
 
-  return images[0].src.trim();
+  // Look for Dynamic Media URLs (Adobe Assets)
+  const dmAnchors = Array.from(container.querySelectorAll("a[href]")).filter((anchor) => {
+    const href = anchor.href || "";
+    return href.includes("/adobe/assets/") || href.includes("delivery-");
+  });
+
+  if (dmAnchors.length > index) {
+    const imageUrl = dmAnchors[index].href.trim();
+    try {
+      const url = new URL(imageUrl);
+      if (!url.searchParams.has("width")) url.searchParams.set("width", "1400");
+      if (!url.searchParams.has("quality")) url.searchParams.set("quality", "85");
+      return url.toString();
+    } catch (e) {
+      return imageUrl;
+    }
+  }
+
+  return images[0]?.src.trim() || dmAnchors[0]?.href.trim() || "";
+}
+
+/**
+ * NEW: Responsive logic handling DM and standard images
+ */
+function getResponsiveImageSource(block) {
+  const images = block.querySelectorAll("picture img, img");
+  const dmAnchors = Array.from(block.querySelectorAll("a[href]")).filter((anchor) => {
+    const href = anchor.href || "";
+    return href.includes("/adobe/assets/") || href.includes("delivery-");
+  });
+  
+  const totalImages = Math.max(images.length, dmAnchors.length);
+
+  if (totalImages > 1) {
+    return window.innerWidth > 1024
+      ? getImageSource(block, 0) // Desktop
+      : getImageSource(block, 1); // Mobile
+  }
+  return getImageSource(block, 0);
 }
 
 function getText(el) {
@@ -28,7 +68,11 @@ function getText(el) {
 }
 
 function getButtons(block) {
-  const buttons = block.querySelectorAll("a");
+  // UPDATED: Filter out Dynamic Media links so they don't appear as CTA buttons
+  const buttons = Array.from(block.querySelectorAll("a")).filter((anchor) => {
+    const href = anchor.href || "";
+    return !href.includes("/adobe/assets/") && !href.includes("delivery-");
+  });
 
   return {
     first: {
@@ -45,10 +89,18 @@ function getButtons(block) {
 }
 
 function getContent(block) {
+  // UPDATED: Filter out paragraphs that are just DM links
+  const paragraphs = Array.from(block.querySelectorAll('p'));
+  const validDescPara = paragraphs.find((para) => {
+    const text = para.textContent || '';
+    const isDM = text.includes('/adobe/assets/') || text.includes('delivery-') || para.querySelector('a[href*="/adobe/assets/"]') || para.querySelector('a[href*="delivery-"]');
+    return !isDM && text.trim().length > 0;
+  });
+
   return {
-    image: getImages(block),
+    image: getResponsiveImageSource(block), // Uses the new DM-aware logic
     heading: getText(block.querySelector("h2")),
-    description: getText(block.querySelector("p")),
+    description: validDescPara?.innerText?.trim() || "",
     buttons: getButtons(block)
   };
 }
@@ -250,7 +302,7 @@ function bannerType4(block) {
   let container = block.closest(".promotional-banner-container");
 
   if (container) {
-    container.style.background = `url(${image}) `;
+    container.style.background = `url(${image}) center / cover no-repeat`;
   }
 
   return div({
@@ -360,7 +412,7 @@ function hitechBanner(block) {
 
 
 /* -----------------------------
-   Banner Variant 3
+   Healthcare Banner
 ------------------------------ */
 
 function healthcareBanner(block) {
@@ -372,10 +424,11 @@ function healthcareBanner(block) {
     buttons
   } = getContent(block);
 let [title, subtitle] = heading.split(":");
-let container = block.closest(".promotional-banner-container").querySelector(".promotional-banner-wrapper");
-let presentClass = block.closest(".promotional-banner-container").classList
-  if (presentClass.contains("healthcare-banner-variant3") || presentClass.contains("healthcare-banner-variant4")) {
-    container.style.background = `url(${image}) center top/ cover no-repeat`;
+let container = block.closest(".promotional-banner-container")?.querySelector(".promotional-banner-wrapper");
+let presentClass = block.closest(".promotional-banner-container")?.classList;
+
+  if (presentClass?.contains("healthcare-banner-variant3") || presentClass?.contains("healthcare-banner-variant4")) {
+    if (container) container.style.background = `url(${image}) center top / cover no-repeat`;
   }
   return div({
       class: "promotionalbanner promotionalbanner-content block type3"
