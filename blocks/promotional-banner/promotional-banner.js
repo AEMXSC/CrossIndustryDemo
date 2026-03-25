@@ -250,7 +250,7 @@ function bannerType4(block) {
   let container = block.closest(".promotional-banner-container");
 
   if (container) {
-    container.style.background = `url(${image}) center / cover no-repeat`;
+    container.style.background = `url(${image}) `;
   }
 
   return div({

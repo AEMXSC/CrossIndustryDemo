@@ -3195,6 +3195,9 @@ padding: 9px 24px;
 }
 
 @media screen and (max-width: 768px) {
+   .services-variant3 .cards-wrapper {
+    min-height: unset;
+   }
   .services-variant1.cards-container {
     flex-direction: column;
     gap: 40px;
