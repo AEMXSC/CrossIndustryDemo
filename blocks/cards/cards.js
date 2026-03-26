@@ -10,6 +10,21 @@ import { createOptimizedPicture, loadCSS } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 import Swiper from '../../scripts/swiper.min.js';
 
+function isDynamicMediaUrl(url = '') {
+  return url.includes('/adobe/assets/') || url.includes('delivery-');
+}
+
+function normalizeDynamicMediaUrl(url = '') {
+  try {
+    const dmUrl = new URL(url);
+    if (!dmUrl.searchParams.has('width')) dmUrl.searchParams.set('width', '750');
+    if (!dmUrl.searchParams.has('quality')) dmUrl.searchParams.set('quality', '85');
+    return dmUrl.toString();
+  } catch (e) {
+    return url;
+  }
+}
+
 export default function decorate(block) {
   loadCSS(`${window.hlx.codeBasePath}/styles/swiper.min.css`);
   const ul = document.createElement('ul');
@@ -37,6 +52,26 @@ export default function decorate(block) {
       // First div (index 0) - Image
       if (index === 0) {
         div.className = 'cards-card-image';
+
+        // Handle authored DM links in image cells by converting anchor URL into image markup.
+        const existingImg = div.querySelector('img');
+        if (!existingImg) {
+          const dmAnchor = Array.from(div.querySelectorAll('a[href]'))
+            .find((anchor) => isDynamicMediaUrl(anchor.href || ''));
+
+          if (dmAnchor) {
+            const dmSrc = normalizeDynamicMediaUrl(dmAnchor.href || '');
+            const dmImg = document.createElement('img');
+            dmImg.src = dmSrc;
+            dmImg.alt = dmAnchor.textContent?.trim() || '';
+            dmImg.loading = 'lazy';
+
+            const picture = document.createElement('picture');
+            picture.appendChild(dmImg);
+            moveInstrumentation(dmAnchor, dmImg);
+            div.replaceChildren(picture);
+          }
+        }
       }
       // Second div (index 1) - Content with button
       else if (index === 1) {
@@ -76,6 +111,9 @@ export default function decorate(block) {
     ul.append(li);
   });
   ul.querySelectorAll('picture > img').forEach((img) => {
+    if (isDynamicMediaUrl(img.src || '')) {
+      return;
+    }
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
@@ -456,8 +494,13 @@ function healthcareSrvicesSwpiper(block) {
   swiperButtonPrev.classList.add('swiper-button-prev');
   const swiperButtonNext = document.createElement('div');
   swiperButtonNext.classList.add('swiper-button-next');
-  block.appendChild(swiperButtonPrev);
-  block.appendChild(swiperButtonNext);
+
+  // Create button wrapper and append buttons inside it
+  let buttonWrapper = document.createElement('div');
+  buttonWrapper.classList.add('button-wrapper');
+  buttonWrapper.appendChild(swiperButtonPrev);
+  buttonWrapper.appendChild(swiperButtonNext);
+  block.closest(".services-variant2").querySelector(".default-content-wrapper").appendChild(buttonWrapper);
 
   new Swiper(block, {
     slidesPerView: 1,

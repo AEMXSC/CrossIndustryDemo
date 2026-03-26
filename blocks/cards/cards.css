@@ -2875,6 +2875,7 @@ padding: 9px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .services-variant2 .default-content-wrapper h2,
@@ -3000,6 +3001,16 @@ padding: 9px 24px;
   display: flex;
   align-items: center;
   gap: 16px;
+  justify-content: end;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 20px;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next svg,
@@ -3011,19 +3022,30 @@ padding: 9px 24px;
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next {
   background-image: url(/icons/arrow.svg);
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-position: center;
   background-color: var(--primary, #1F69FF);
   border-radius: 41px;
-  /* background-size: 16px 16px; */
-  margin-top: 0px;
-  position: unset;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  position: static;
+  cursor: pointer;
+  pointer-events: all;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.services-variant2 .default-content-wrapper .button-wrapper .swiper-button-prev:hover,
+.services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next:hover:not(.swiper-button-disabled) {
+  background-color: var(--primary-dark, #0052CC);
 }
 
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-prev.swiper-button-disabled,
 .services-variant2 .default-content-wrapper .button-wrapper .swiper-button-next.swiper-button-disabled {
   background-image: url(/icons/carousel-grey-icon.svg);
   background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.5;
   cursor: not-allowed;
   background-color: var(--light-gray-200, #E9E9EB);
@@ -3164,9 +3186,15 @@ padding: 9px 24px;
   }
 
   .services-variant2 .button-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 24px;
+        position: fixed;
+        top: 93%;
+        bottom: auto;
+        left: auto;
+        right: 22px;
+        transform: unset;
+        width: auto;
+        padding: 0;
+        gap: 12px;
   }
 
   /* healthcare services variant 3  */
