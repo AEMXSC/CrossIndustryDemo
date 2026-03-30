@@ -1092,6 +1092,10 @@
   display: flex;
   align-items: center;
   background: #f0f7ff;
+  width: 100%;
+  max-width: 1264px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* --- Desktop Content Wrapper --- */
@@ -1186,6 +1190,7 @@ margin-bottom: 36px;
     margin: 0 24px;
     align-items: flex-start;
     background: radial-gradient(103.09% 130.98% at 87.82% 87.42%, #FFFFFF 0%, #F2FAFE 28.23%, #A5DEF9 100%);
+    width: auto;
   }
 
   /* 1. Hide Desktop Image */

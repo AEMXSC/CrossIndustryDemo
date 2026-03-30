@@ -144,7 +144,7 @@ export default function decorate(block) {
   if (classlistExists.contains("hitech-articles1") || classlistExists.contains("hitech-articles2") || classlistExists.contains("hitech-articles3")) {
     hitechArticles(block)
   }
-  if (document.querySelectorAll(".healthcare-round-tab-swiper").length > 0) {
+  if (block.closest('.healthcare-round-tab-swiper, .healthcare-round-tab-swipe, .healthcare-tab-swiper')) {
     healthcareTabSwiper(block);
   }
 
@@ -452,7 +452,8 @@ function hitechArticles3() {
 }
 
 function healthcareTabSwiper(block) {
-  let classlistExists = block.closest('.healthcare-round-tab-swiper, .healthcare-tab-swiper').classList;
+  const swiperContainer = block.closest('.healthcare-round-tab-swiper, .healthcare-round-tab-swipe, .healthcare-tab-swiper');
+  if (!swiperContainer) return;
   block.classList.add('swiper');
   block.querySelector('ul').classList.add('swiper-wrapper');
   Array.from(block.children[0].children).forEach((element) => {
