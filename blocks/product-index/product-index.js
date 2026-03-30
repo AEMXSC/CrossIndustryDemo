@@ -4,9 +4,7 @@ const DEFAULT_PUBLISH_ORIGIN = 'https://publish-p153659-e1796191.adobeaemcloud.c
 const DEFAULT_API_PATH = '/graphql/execute.json/global/hi-tech-component';
 
 async function fetchData() {
-    const publishOrigin = window.location.origin.includes('localhost')
-        ? DEFAULT_PUBLISH_ORIGIN
-        : window.location.origin;
+    const publishOrigin = DEFAULT_PUBLISH_ORIGIN;
 
     const apiUrl = `${publishOrigin}${DEFAULT_API_PATH}`;
 
