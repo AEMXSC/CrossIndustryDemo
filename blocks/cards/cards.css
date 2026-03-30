@@ -3223,9 +3223,9 @@ padding: 9px 24px;
 }
 
 @media screen and (max-width: 768px) {
-   .services-variant3 .cards-wrapper {
+   /* .services-variant3 .cards-wrapper {
     min-height: unset;
-   }
+   } */
   .services-variant1.cards-container {
     flex-direction: column;
     gap: 40px;
@@ -3871,7 +3871,7 @@ margin: 0px;
 .healthcare-categories-variant3 .cards-card-body:has([data-aue-type="richtext"]) [data-aue-type="richtext"]>p:has(.icon), 
 .healthcare-categories-variant3 .cards-card-body:not(:has([data-aue-type="richtext"]))>p:has(.icon) {
   position: absolute;
-  right: 40px;
+  right: 12px;
   top: 40px;
 }
 /* .healthcare-categories-variant3 ul > li .cards-card-body p:last-child {
