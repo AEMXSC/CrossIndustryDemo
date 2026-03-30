@@ -1,12 +1,9 @@
 import { readBlockConfig } from '../../scripts/aem.js';
 
-const DEFAULT_PUBLISH_ORIGIN = 'https://publish-p153659-e1796191.adobeaemcloud.com';
-const DEFAULT_API_PATH = '/graphql/execute.json/global/hi-tech-component';
+const DEFAULT_API_URL = 'https://publish-p153659-e1796191.adobeaemcloud.com/graphql/execute.json/global/hi-tech-component';
 
 async function fetchData() {
-    const publishOrigin = DEFAULT_PUBLISH_ORIGIN;
-
-    const apiUrl = `${publishOrigin}${DEFAULT_API_PATH}`;
+    const apiUrl = DEFAULT_API_URL;
 
     try {
         const response = await fetch(apiUrl);
