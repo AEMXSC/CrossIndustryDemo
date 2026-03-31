@@ -26,7 +26,7 @@
     letter-spacing: -2%;
     text-align: center;
     margin-bottom: 54px;
-    color: #0F1B2D;
+    color: var(--midnight-blue);
 }
 
 .alphabetical-product-listing .search-box {
@@ -73,7 +73,7 @@
 }
 
 .alphabetical-product-listing .alphabet-letter.active {
-    color: #1F69FF;
+    color: var(--primary);
     cursor: pointer;
     font-family: var(--Manrope, sans-serif);
     font-weight: 400;
@@ -103,7 +103,7 @@
 /* Card Styling based on 166px x 70px dimensions */
 .alphabetical-product-listing .card {
     background-color: #3174ee;
-    color: #fff;
+    color: var(--pure-white);
     min-width: 166px;
     /* Fixed width from your SS */
     height: 70px;
@@ -124,7 +124,7 @@ font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0%;
-color: #FFFFFF;
+color: var(--pure-white);
 }
 
 .alphabetical-product-listing .card .subtitle {
@@ -139,7 +139,7 @@ color: #E6E6E6;
 
 /* View All Link Alignment */
 .alphabetical-product-listing .view-all {
-    color: #1F69FF;
+    color: var(--primary);
     white-space: nowrap;
     cursor: pointer;
     display: flex;
@@ -179,7 +179,7 @@ letter-spacing: 0%;
 .alphabetical-product-listing-variant-2 {
     font-family: var(--Manrope, sans-serif);
     padding: 40px 20px;
-    background-color: #fff;
+    background-color: var(--pure-white);
     text-align: center;
     display: grid;
     grid-template-areas:
@@ -222,7 +222,7 @@ letter-spacing: 0%;
     letter-spacing: -2%;
     text-align: center;
     margin-bottom: 54px;
-    color: #0F1B2D;
+    color: var(--midnight-blue);
     text-align: left;
 }
 
@@ -270,7 +270,7 @@ letter-spacing: 0%;
 }
 
 .alphabetical-product-listing-variant-2 .alphabet-letter.active {
-    color: #1F69FF;
+    color: var(--primary);
     cursor: pointer;
     font-family: var(--Manrope, sans-serif);
     font-weight: 400;
@@ -308,7 +308,7 @@ letter-spacing: 0%;
 
 /* Card Styling based on 166px x 70px dimensions */
 .alphabetical-product-listing-variant-2 .card {
-    color: #fff;
+    color: var(--pure-white);
     border-radius: 8px;
     text-align: left;
     display: flex;
@@ -324,7 +324,7 @@ letter-spacing: 0%;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
-    color: #0F1B2D;
+    color: var(--midnight-blue);
 }
 .alphabetical-product-listing-variant-2 .card .title::first-letter {
     color: #3174ee;
@@ -336,13 +336,13 @@ letter-spacing: 0%;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
-    color: #626262;
+    color: var(--medium-gray);
     opacity: 0.8;
 }
 
 /* View All Link Alignment */
 .alphabetical-product-listing-variant-2 .view-all {
-    color: #1F69FF;
+    color: var(--primary);
     white-space: nowrap;
     cursor: pointer;
     display: flex;
