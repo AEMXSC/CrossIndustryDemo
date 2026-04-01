@@ -142,7 +142,7 @@
   padding-left: 30px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #374151;
+  color: var(--color-steel-gray, #5C5D63);
   line-height: 1.4;
 }
 
