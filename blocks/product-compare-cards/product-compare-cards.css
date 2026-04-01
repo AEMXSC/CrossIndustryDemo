@@ -104,12 +104,13 @@
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 8px;
+  color: var(--color-dark-slate, #373739);
 }
 
 /* Description */
 .product-compare-cards-container.compare-variant1 .compare-card__desc {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--color-steel-gray, #5C5D63);
   text-align: left;
 }
 
@@ -118,7 +119,7 @@
 .product-compare-cards-container.compare-variant1 .compare-card__model {
   display: inline-block;
   background: #F4F4F4;
-  color: #6b7280;
+  color: var(--color-steel-gray, #5C5D63);
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 5px;
@@ -399,7 +400,7 @@
 .product-compare-cards-container.compare-variant2 .compare-card__model p {
   display: inline-block;
   background: #efedff;
-  color: #6e63ff;
+  color: var(--secondary-color, #7A63FF);
   font-size: 14px;
   padding: 8px 12px;
   border-radius: 3px;
@@ -438,7 +439,7 @@
   position: relative;
   padding-left: 20px;
   margin-bottom: 8px;
-  color: #5C5D63;
+  color: var(--color-steel-gray, #5C5D63);
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
@@ -707,7 +708,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.25;
-  color: #383c41;
+  color: var(--color-dark-slate, #373739);
   margin: 0;
   padding: 24px 24px 12px;
 }
@@ -716,7 +717,7 @@
 .product-compare-cards-container.compare-variant3 .compare-card__desc {
   font-size: 14px;
   line-height: 1.45;
-  color: #666b73;
+  color: var(--color-steel-gray, #5C5D63);
   text-align: left;
   margin: 0;
   padding: 0 24px 24px;
@@ -728,7 +729,7 @@
 .product-compare-cards-container.compare-variant3 .compare-card__model p {
   display: inline-block;
   background: #F4F4F4;
-  color: #6f7378;
+  color: var(--color-steel-gray, #5C5D63);
   font-size: 12px;
   padding: 8px 12px;
   border-radius: 5px;
@@ -760,7 +761,7 @@
   position: relative;
   padding-left: 26px;
   margin-bottom: 12px;
-  color: #5f6368;
+  color: var(--color-steel-gray, #5C5D63);
   display: flex;
   font-family: 'inter', sans-serif;
   font-weight: 400;
@@ -800,8 +801,8 @@
 .product-compare-cards-container.compare-variant3 .button-dark {
   display: block;
   padding: 11px 16px;
-  background: #08163a;
-  color: #ffffff;
+  background: var(--primary-color, #10172A);
+  color: var(--neutral-0, #FFFFFF);
   border-radius: 4px;
   text-decoration: none;
   font-size: 14px;
