@@ -26,7 +26,7 @@
     letter-spacing: -2%;
     text-align: center;
     margin-bottom: 54px;
-    color: var(--midnight-blue);
+    color: var(--midnight-blue, #0F1B2D);
 }
 
 .alphabetical-product-listing .search-box {
@@ -73,7 +73,7 @@
 }
 
 .alphabetical-product-listing .alphabet-letter.active {
-    color: var(--primary);
+    color: var(--primary, #1F69FF);
     cursor: pointer;
     font-family: var(--Manrope, sans-serif);
     font-weight: 400;
@@ -103,7 +103,7 @@
 /* Card Styling based on 166px x 70px dimensions */
 .alphabetical-product-listing .card {
     background-color: #3174ee;
-    color: var(--pure-white);
+    color: var(--pure-white, #FFFFFF);
     min-width: 166px;
     /* Fixed width from your SS */
     height: 70px;
@@ -120,26 +120,26 @@
 .alphabetical-product-listing .card .title {
     margin-bottom: 2px;
     font-family: var(--Manrope, sans-serif);
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0%;
-color: var(--pure-white);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: var(--pure-white, #FFFFFF);
 }
 
 .alphabetical-product-listing .card .subtitle {
     opacity: 0.8;
     font-family: var(--Inter, sans-serif);
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-letter-spacing: 0%;
-color: #E6E6E6;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #E6E6E6;
 }
 
 /* View All Link Alignment */
 .alphabetical-product-listing .view-all {
-    color: var(--primary);
+    color: var(--primary, #1F69FF);
     white-space: nowrap;
     cursor: pointer;
     display: flex;
@@ -147,28 +147,35 @@ color: #E6E6E6;
     grid-area: view-all;
     margin-left: 24px;
     font-family: var(--Manrope, sans-serif);
-font-weight: 500;
-font-size: 16px;
-line-height: 32px;
-letter-spacing: 0%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0%;
     align-content: center;
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-    .alphabetical-product-listing .default-content-wrapper, .alphabetical-product-listing .search-wrapper, .alphabetical-product-listing .product-index-wrapper .alphabet-nav{
+
+    .alphabetical-product-listing .default-content-wrapper,
+    .alphabetical-product-listing .search-wrapper,
+    .alphabetical-product-listing .product-index-wrapper .alphabet-nav {
         padding: 0 24px;
     }
+
     .alphabetical-product-listing .alphabet-cards {
         margin-left: 24px;
         overflow: auto;
         display: flex;
         align-items: center;
     }
-    .alphabetical-product-listing .alphabet-letter, .alphabetical-product-listing .alphabet-letter.active {
+
+    .alphabetical-product-listing .alphabet-letter,
+    .alphabetical-product-listing .alphabet-letter.active {
         font-size: 20px;
         line-height: 100%;
     }
+
     .alphabetical-product-listing .default-content-wrapper p {
         font-size: 30px;
         line-height: 36px;
@@ -179,13 +186,13 @@ letter-spacing: 0%;
 .alphabetical-product-listing-variant-2 {
     font-family: var(--Manrope, sans-serif);
     padding: 40px 20px;
-    background-color: var(--pure-white);
+    background-color: var(--pure-white, #FFFFFF);
     text-align: center;
     display: grid;
     grid-template-areas:
         "title search"
         "title alphabetcard";
-        width: 100%;
+    width: 100%;
     max-width: 1228px;
     margin: 0 auto;
     column-gap: 32px;
@@ -222,7 +229,7 @@ letter-spacing: 0%;
     letter-spacing: -2%;
     text-align: center;
     margin-bottom: 54px;
-    color: var(--midnight-blue);
+    color: var(--midnight-blue, #0F1B2D);
     text-align: left;
 }
 
@@ -270,7 +277,7 @@ letter-spacing: 0%;
 }
 
 .alphabetical-product-listing-variant-2 .alphabet-letter.active {
-    color: var(--primary);
+    color: var(--primary, #1F69FF);
     cursor: pointer;
     font-family: var(--Manrope, sans-serif);
     font-weight: 400;
@@ -301,14 +308,14 @@ letter-spacing: 0%;
     gap: 16px;
     grid-area: cards;
     flex-direction: column;
-        padding: 24px 24px 40px;
+    padding: 24px 24px 40px;
     height: 314px;
     overflow: scroll;
 }
 
 /* Card Styling based on 166px x 70px dimensions */
 .alphabetical-product-listing-variant-2 .card {
-    color: var(--pure-white);
+    color: var(--pure-white, #FFFFFF);
     border-radius: 8px;
     text-align: left;
     display: flex;
@@ -324,8 +331,9 @@ letter-spacing: 0%;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
-    color: var(--midnight-blue);
+    color: var(--midnight-blue, #0F1B2D);
 }
+
 .alphabetical-product-listing-variant-2 .card .title::first-letter {
     color: #3174ee;
 }
@@ -336,13 +344,13 @@ letter-spacing: 0%;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
-    color: var(--medium-gray);
+    color: var(--medium-gray, #626262);
     opacity: 0.8;
 }
 
 /* View All Link Alignment */
 .alphabetical-product-listing-variant-2 .view-all {
-    color: var(--primary);
+    color: var(--primary, #1F69FF);
     white-space: nowrap;
     cursor: pointer;
     display: flex;
@@ -360,17 +368,20 @@ letter-spacing: 0%;
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .section.alphabetical-product-listing-variant-2 {
-         grid-template-areas:
-        "title"
-        "search"
-        "alphabetcard";
+        grid-template-areas:
+            "title"
+            "search"
+            "alphabetcard";
         padding: 0px 24px;
-        
+
     }
-     .alphabetical-product-listing-variant-2 .alphabet-letter, .alphabetical-product-listing-variant-2 .alphabet-letter.active {
+
+    .alphabetical-product-listing-variant-2 .alphabet-letter,
+    .alphabetical-product-listing-variant-2 .alphabet-letter.active {
         font-size: 20px;
         line-height: 100%;
     }
+
     .alphabetical-product-listing-variant-2 .default-content-wrapper p {
         font-size: 30px;
         line-height: 36px;
