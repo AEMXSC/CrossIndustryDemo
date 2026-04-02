@@ -379,7 +379,7 @@
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0%;
-  color: #373739;
+  color: var(--color-dark-slate, #373739);
   margin-inline-start: 22px;
 }
 
@@ -387,7 +387,7 @@
 .product-compare-cards-container.compare-variant2 .compare-card__desc {
   font-size: 14px;
   line-height: 20px;
-  color: #5C5D63;
+  color: var(--color-steel-gray, #5C5D63);
   text-align: left;
   margin: 12px 0 16px;
   padding: 0;
@@ -482,7 +482,7 @@
   display: block;
   padding: 8px;
   background: #0c1633;
-  color: #ffffff;
+  color: var(--neutral-0, #FFFFFF);
   border-radius: 2px;
   text-decoration: none;
   font-size: 16px;
@@ -619,8 +619,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #35348f;
-  color: #ffffff;
+  background: var(--color-limegreen, #0D0057CC);
+  color: var(--neutral-0, #FFFFFF);
   border-radius: 4px 4px 0 0;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
