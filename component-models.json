@@ -681,6 +681,10 @@
             "name": "Banner",
             "children": [
               {
+                "name": "Content Fragmenet Banner",
+                "value": "default"
+              },
+              {
                 "name": "Bfsi banner variant 1",
                 "value": "banner-variant1"
               },

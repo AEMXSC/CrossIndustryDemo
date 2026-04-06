@@ -109,10 +109,61 @@ function getContent(block) {
    Main Decorate
 ------------------------------ */
 
-export default function decorate(block) {
 
+// content fragment banner
+
+function contentFragmentBannner() {
+  return new Promise((resolve, reject) => {
+
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    let raw = JSON.stringify({
+      "graphQLPath": "https://publish-p153659-e1796191.adobeaemcloud.com/graphql/execute.json/global/hero-banner",
+      "cfPath": "/content/dam/dept-crossIndustry/content-fregment-/hero-banner/banner-web",
+      "variation": "master"
+    });
+
+    let requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow"
+    };
+
+    fetch("https://3635370-refdemoapigateway-stage.adobeioruntime.net/api/v1/web/ref-demo-api-gateway/fetch-cf", requestOptions)
+      .then((response) => response.text())
+      .then((result) => resolve(result))
+      .catch((error) => reject(error));
+  });
+}
+
+export default async function decorate(block) {
   const container = block.closest(".promotional-banner-container");
-  if (!container) return;
+    let response;
+  try {
+    response = await contentFragmentBannner();
+  } catch (e) {
+    console.error("API error:", e);
+  }
+
+  // -----------------------------
+  // ✅ If API data exists → use it
+  // -----------------------------
+  if (response) {
+    let data = typeof response === "string"
+      ? JSON.parse(response)
+      : response;
+
+    let item = data?.data?.heroBannerByPath?.item;
+
+    // if (item) {
+    //   let content = buildFromCF(item, container);
+    //   block.textContent = "";
+    //   block.append(content);
+    //   return;
+    // }
+  }
 
   const variantMap = {
     "banner-variant1": bannerType1,
