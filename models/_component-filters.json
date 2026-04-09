@@ -5,34 +5,32 @@
       "section"
     ]
   },
-  {
+   {
     "id": "section",
     "components": [
-      "accordion",
-      "action-button",
-      "button",
       "button",
       "cards",
       "carousel",
       "columns",
       "contentfragment",
+      "css-variable",
       "dm-asset",
       "dm-template",
-      "embed-adaptive-form",
-      "find-a-doctor",
-      "forex",
-      "form",
       "fragment",
       "hero",
+      "iframe",
       "image",
-      "quote",
       "search",
-      "separator",
-      "tabs",
       "teaser",
       "text",
+      "theme-configurator",
+      "theme-preview",
       "title",
-      "video"
+      "video",
+      "trackrecord",
+      "accordion",
+      "tabs",
+      "font-properties"
     ]
   },
   {

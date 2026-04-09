@@ -1,12 +1,10 @@
 footer {
-  background-color: var(--dark-color);
   font-size: var(--body-font-size-xs);
   font-family: var(--light-font-family);
-  background-color: var(--dark-color-opacity);
   background-color: #000;
   width: 100%;
   z-index: 2;
-  color: #ffffff;
+  color: #fff;
 }
 
 footer .footer > div {
@@ -26,7 +24,7 @@ footer .footer img {
 }
 
 footer .footer a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -38,4 +36,378 @@ footer .footer a:hover {
   footer .footer > div {
     padding: 50px 32px;
   }
+}
+
+
+
+.footer-wrapper {
+  background: var(--accent-color, #E2F1FB) !important;
+  color: var(--charcoal, #1B1B1E) !important;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+
+    /* max-width: 1440px;
+    margin: 0 auto !important; */
+    background: var(--accent-color, #E2F1FB);
+
+    /* padding: 100px 88px 30px; */
+    gap: 110px;
+}
+
+.footer-wrapper .footer  > div{
+  max-width: 1440px;
+  margin: 0 auto;
+ padding: 100px 88px 30px;
+ display: flex;
+     flex-direction: column;
+    gap: 100px;
+}
+
+.footer-main .default-content-wrapper {
+  display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 24px;
+    width: 31.1%;
+}
+
+.footer-main .default-content-wrapper p {
+  margin: 0;
+  color: var(--charcoal, #1B1B1E);
+font-family: var(--inter, sans-serif);
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+}
+
+.footer-main .default-content-wrapper p:first-child {
+  display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--charcoal, #1B1B1E);
+font-family: var(--dm-sans, sans-serif);
+font-size: 24px;
+font-weight: 500;
+line-height: 34px;
+}
+
+.footer-main .default-content-wrapper ul{
+    display: flex;
+    align-items: center ;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 12px;
+}
+
+.footer-main .default-content-wrapper ul li a::after {
+  display: none;
+}
+
+.footer-main .accordion-wrapper {
+    margin: 0;
+    padding: 0;
+
+    /* width: 52.45%; */
+    width: 69.45%;
+}
+
+.footer-main .accordion-wrapper .accordion{
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.footer-main .accordion-wrapper .accordion details {
+  border: none;
+  margin-top: 0;
+}
+
+.footer-main .accordion-wrapper .accordion details summary {
+padding: 0;
+margin-bottom: 16px;
+pointer-events: none;
+}
+
+.footer-main .accordion-wrapper .accordion details summary p{
+color: var(--charcoal, #1B1B1E);
+font-family: var(--inter, sans-serif);
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+opacity: 0.7;
+}
+
+.footer-main .accordion details summary::after {
+  display: none;
+}
+
+.footer-main .accordion details summary:focus,
+.footer-main .accordion details summary:hover {
+  background: transparent;
+}
+
+.footer-main .accordion details[open] summary {
+  background: transparent;
+}
+
+.footer-main .accordion details[open] .accordion-item-body {
+      border-top: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.footer-main .accordion details .accordion-item-body ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+      display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-main .accordion-wrapper .accordion a{
+  opacity: 0.7;
+}
+
+.footer ul li a{
+  text-decoration: none;
+  color: var(--charcoal, #1B1B1E);
+font-family: var(--inter, sans-serif);
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+position: relative;
+}
+
+.footer .footer-bottom ul li a::before {
+    content: "";
+    color: var(--charcoal, #1B1B1E);
+    font-family: var(--inter, sans-serif);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    border: 0.2px solid var(--charcoal, #1B1B1E);
+    margin: 0 8px;
+}
+
+ .footer .footer-bottom.footer-variant2 ul li a::before,
+ .footer .footer-bottom.footer-variant3 ul li a::before {
+  display: none;
+ }
+
+.footer .footer-bottom ul li:first-child a::before {
+  display: none;
+}
+
+.footer ul li a:hover {
+  color: var(--charcoal, #1B1B1E);
+}
+
+.footer ul li a::after {
+display: none;
+}
+
+.footer .footer-bottom {
+    border-top: 0.5px solid #B2B3B5;
+    padding-top: 30px;
+}
+
+.footer-bottom .default-content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom .default-content-wrapper ul{
+    display: flex;
+    align-items: center;
+
+    /* gap: 21px; */
+    list-style: none;
+    margin: 0;
+}
+
+.footer-bottom.footer-variant2 .default-content-wrapper ul,
+.footer-bottom.footer-variant3 .default-content-wrapper ul {
+gap: 21px;
+}
+
+/* .footer-bottom .default-content-wrapper ul:last-child {
+  display: none;
+} */
+.footer-bottom .default-content-wrapper p {
+color: var(--charcoal, #1B1B1E);
+font-family: var(--inter, sans-serif);
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+opacity: 0.7;
+}
+
+.footer-bottom a {
+  opacity: 0.7;
+}
+
+.footer-bottom.footer-variant2 a {
+  opacity: 1;
+}
+
+/* footer variant 2 */
+
+/* .footer-main.footer-variant2 .default-content-wrapper ul{
+display: none;
+}
+.footer-bottom.footer-variant2 .default-content-wrapper ul:first-child {
+  display: none;
+}
+.footer-bottom.footer-variant2 .default-content-wrapper ul:last-child {
+  display: block;
+} */
+
+
+/* footer variant 3  */
+
+.footer-main.footer-variant3 .accordion-wrapper {
+width: 100%;
+}
+
+.footer-main.footer-variant3 .accordion-wrapper .accordion sub{
+       border-radius: 29px;
+    border: 1px solid var(--primary,#1F4DA8);
+    padding: 4px 8px;
+    color: var(--primary,#1F4DA8);
+    font-family: var(--dm-sans, sans-serif);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+
+    /* width: 35px; */
+    height: 17px;
+}
+
+.footer-main.footer-variant3 .accordion details .accordion-item-body ul li{
+display: flex;
+gap: 8px;
+}
+
+.footer-bottom.footer-variant3 .default-content-wrapper p {
+display: flex;
+align-items: center;
+opacity: 1;
+gap: 8px
+;
+}
+
+ .footer-bottom.footer-variant3 .default-content-wrapper p:nth-child(2) {
+      opacity: 0.7;
+ }
+
+ .footer-bottom.footer-variant3 .default-content-wrapper ul li a {
+      opacity: 1;
+ }
+
+ .footer-bottom.footer-variant3 .default-content-wrapper ul li img {
+  margin: 0;
+ }
+
+@media screen and (width <= 992px) {
+  .footer-main {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-wrapper .footer > div  {
+    padding: 40px 24px 44px;
+    gap: 40px;
+  }
+
+  .footer-main .default-content-wrapper {
+    width: 100%;
+  }
+
+  .footer-main .accordion-wrapper {
+    width: 100%;
+  }
+
+  .footer-main .accordion-wrapper .accordion details {
+    border-bottom: 0.5px solid #B2B3B5;
+
+            /* padding-bottom: 24px; */
+  }
+
+  .footer-main .accordion-wrapper .accordion details summary {
+    pointer-events: auto;
+            padding: 24px 0;
+        margin-bottom: 0;
+  }
+
+  .footer-main .accordion details[open] .accordion-item-body {
+    padding-bottom: 24px;
+  }
+
+  .footer-main .accordion details summary::after {
+    right: 4px;
+    display: block;
+  } 
+
+  .footer-main .accordion-wrapper .accordion {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .footer-main.footer-variant3 .accordion-wrapper .accordion {
+            flex-flow: row wrap;
+                gap: 24px;
+                justify-content: center;
+  }
+
+  .footer .footer-bottom {
+    border: none;
+    padding-top: 0;
+  }
+
+.footer-bottom .default-content-wrapper {
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+
+.footer-bottom .default-content-wrapper p {
+  color: #2C343B;
+font-size: 12px;
+}
+
+.footer-bottom .default-content-wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* footer variant 3 */
+.footer-bottom.footer-variant3 .default-content-wrapper {
+gap: 16px;
+}
+
+.footer-variant3 .accordion details summary::after {
+  display: none;
+}
+
+.footer-variant3 .accordion-wrapper .accordion details {
+  border: none;
+  width: 46%;
+}
+
+ .footer-variant3 .accordion-wrapper .accordion details summary{
+          padding: 0 0 16px;
+ }
+
+ .footer-variant3 .accordion-wrapper .accordion {
+   align-items: unset;
+ }
 }
