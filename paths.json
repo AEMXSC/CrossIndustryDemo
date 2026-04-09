@@ -1,11 +1,22 @@
 {
   "mappings": [
-    "/content/dept-crossIndustry/:/",
-    "/content/dept-crossIndustry/configuration:/.helix/config.json",
-    "/content/dept-crossIndustry/metadata:/metadata.json"
+    "/content/bfsi-dept/language-masters/en:/",
+    "/content/bfsi-dept/language-masters/en/:/en/",
+    "/content/bfsi-dept/language-masters/fr/:/fr/",
+    "/content/bfsi-dept/language-masters/fr:/fr",
+    "/content/bfsi-dept/language-masters/es/:/es/",
+    "/content/bfsi-dept/language-masters/es:/es",
+    "/content/bfsi-dept/language-masters/ja/:/ja/",
+    "/content/bfsi-dept/language-masters/ja:/ja",
+    "/content/bfsi-dept/language-masters/de/:/de/",
+    "/content/bfsi-dept/language-masters/de:/de",
+    "/content/bfsi-dept/configuration:/.helix/config.json",
+    "/content/bfsi-dept/metadata:/metadata.json",
+    "/content/bfsi-dept/redirects:/redirects.json",
+    "/content/bfsi-dept/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/dept-crossIndustry",
-    "/content/dam/dept-crossIndustry"
+    "/content/bfsi-dept/",
+    "/content/dam/bfsi-dept/"
   ]
 }
