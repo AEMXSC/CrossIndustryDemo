@@ -492,12 +492,13 @@ export default async function decorate(block) {
    * Try to load navigation in hierarchical order
    * Example: /us/new-bfsi/page -> tries /us/new-bfsi/nav then /us/nav
    */
-  async function loadNavHierarchically() {
-    const pathSegments = window.location.pathname.split("/").filter(Boolean);
+  async function loadNavHierarchically(header = undefined) {
+    const pathSegments =  header ? header.split('/').filter(Boolean) : window.location.pathname.split("/").filter(Boolean);
     
     // Build paths to try in order (most specific to least specific)
     const pathsToTry = [];
     
+    if(header === undefined) {
     if (!isAuthor) {
       // For published site: try current path hierarchy
       for (let i = pathSegments.length; i > 0; i--) {
@@ -518,6 +519,9 @@ export default async function decorate(block) {
         pathsToTry.push(`/content/${siteName}${PATH_PREFIX}/${langCode}/nav`);
       }
     }
+  } else {
+ pathsToTry.push(header);
+  }
     
     // Remove duplicates while preserving order
     const uniquePaths = [...new Set(pathsToTry)];
@@ -908,12 +912,12 @@ export default async function decorate(block) {
     });
 
     const langWrapper = document.querySelector(".header-lang-wrapper");
-    const ul = langWrapper.querySelector("ul");
+    const ul = langWrapper?.querySelector("ul");
 
-    langWrapper.addEventListener("click", () => {
+    langWrapper?.addEventListener("click", () => {
       langWrapper.classList.toggle("open");
     });
-    ul.addEventListener("click", (e) => {
+    ul?.addEventListener("click", (e) => {
       if (e.target.tagName === "LI") {
         const first = ul.children[0];
         const clicked = e.target;

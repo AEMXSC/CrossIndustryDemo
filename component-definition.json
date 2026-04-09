@@ -873,6 +873,22 @@
           }
         },
         {
+          "title": "hitech-overview",
+          "id": "hitechoverview",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "hitech-overview",
+                  "filter": "hitechoverview",
+                  "model": "hitechoverview"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Iframe",
           "id": "iframe",
           "plugins": {
@@ -882,6 +898,51 @@
                 "template": {
                   "name": "Iframe",
                   "model": "iframe"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Product Compare Cards",
+          "id": "product-compare-cards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Product Compare Cards",
+                  "filter": "product-compare-cards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Product Compare Card",
+          "id": "product-compare-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Product Compare Card",
+                  "model": "product-compare-card"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Product Index",
+          "id": "product-index",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Product Index",
+                  "model": "product-index"
                 }
               }
             }
@@ -993,6 +1054,37 @@
                   "name": "Teaser",
                   "model": "teaser",
                   "key-value": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tech Specs Features",
+          "id": "techspecsfeatures",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Tech Specs Features",
+                  "model": "techspecsfeatures",
+                  "filter": "techspecsfeatures"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Tech Specs Features Item",
+          "id": "techspecsfeatures-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Tech Specs Features Item",
+                  "model": "techspecsfeatures-item"
                 }
               }
             }

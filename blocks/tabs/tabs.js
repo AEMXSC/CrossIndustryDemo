@@ -6,6 +6,12 @@ let tabBlockCnt = 0;
 
 export default async function decorate(block) {
   if (block.querySelector(".tabs-nav-wrapper")) return;
+  const parentSection = block.closest(".section");
+  const parentSectionLevelName = [...(parentSection?.classList || [])]
+    .find((cls) => cls !== "section" && cls !== "tabs-container");
+  console.log("tabs parent section level name:", parentSectionLevelName);
+  const main = block.closest("main");
+
   // Get the tabs style from data-aue-prop
   const tabsStyleParagraph = block.querySelector(
     'p[data-aue-prop="tabsstyle"]',
@@ -160,14 +166,41 @@ export default async function decorate(block) {
 
   // -------- MOVE ACCORDIONS INTO PANELS --------
   const accordionVariants = [
-    ...block.closest("main").querySelectorAll('[class*="accordion-varient"]'),
-  ];
+    ...block.closest("main").querySelectorAll('[class*="hitechaccordion-tab-content"], [class*="accordion-variant"]'),
+  ].filter((el) => (
+    el.classList.contains("hitechaccordion-tab-content")
+    || [...el.classList].some((cls) => cls.startsWith("accordion-variant"))
+  ));
+  // console.log("Found accordions:", accordionVariants);
 
   tabItems.forEach((item, i) => {
     if (accordionVariants[i]) {
       item.tabpanel.appendChild(accordionVariants[i]);
     }
   });
+
+  // -------- MOVE SAME-LEVEL SECTION CONTENT INTO PANELS --------
+  if (main && parentSectionLevelName) {
+    const escapedSectionClass = window.CSS?.escape
+      ? window.CSS.escape(parentSectionLevelName)
+      : parentSectionLevelName.replace(/[^a-zA-Z0-9_-]/g, "\\$&");
+
+    const sameLevelSections = [...main.querySelectorAll(`.section.${escapedSectionClass}`)]
+      .filter((section) => section !== parentSection);
+
+    console.log(
+      `tabs parent: "${parentSectionLevelName}" — matching content sections found: ${sameLevelSections.length}`,
+      sameLevelSections,
+    );
+
+    tabItems.forEach((item, i) => {
+      const sourceSection = sameLevelSections[i];
+      if (!sourceSection) return;
+
+      // Move the complete section node into the corresponding tab panel.
+      item.tabpanel.appendChild(sourceSection);
+    });
+  }
 
   // -------- FINAL DOM ASSEMBLY --------
   navWrapper.appendChild(tablist);

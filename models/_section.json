@@ -181,7 +181,10 @@
         "banner",
         "accordion",
         "tabs",
-        "font-properties"
+        "font-properties",
+        "techspecsfeatures",
+        "product-index",
+        "hitechoverview"
       ]
     }
   ]

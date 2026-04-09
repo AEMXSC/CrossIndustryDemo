@@ -121,7 +121,7 @@
 .benefits-section-container .benefits .button {
     display: inline-block;
     padding: 10px 22px;
-    background: #1f4fbf;
+    background: var(--color-royal-blue, #1f4fbf);
     color: var(--neutral-0,#fff);
     border-radius: 24px;
     text-decoration: none;

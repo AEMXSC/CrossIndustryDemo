@@ -5,7 +5,7 @@
       "section"
     ]
   },
-   {
+  {
     "id": "section",
     "components": [
       "button",
@@ -30,7 +30,16 @@
       "trackrecord",
       "accordion",
       "tabs",
-      "font-properties"
+      "css-variable",
+      "font-properties",
+      "promotionalbanner",
+      "benefitssection",
+      "blogs",
+      "font-properties",
+      "techspecsfeatures",
+      "product-index",
+      "hitechoverview",
+      "product-compare-cards"
     ]
   },
   {
@@ -52,7 +61,7 @@
       "dm-asset",
       "dm-template",
       "image",
-      "text",      
+      "text",
       "title",
       "video"
     ]

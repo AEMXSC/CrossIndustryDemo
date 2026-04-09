@@ -1,35 +1,35 @@
-/* notification-banner-varient1 */
-.notification-banner-varient1 {
+/* notification-banner-variant1 */
+.notification-banner-variant1 {
     background: var(--Charcoal);
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(1) {
+.notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(1) {
     display: none;
 }
 
-.notification-banner-varient1 .banner-wrapper .block {
+.notification-banner-variant1 .banner-wrapper .block {
     background: var(--Charcoal);
     min-height: 96px;
     border-radius: 12px;
     padding: 28px 40px;
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(2) {
+.notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(2) {
     display: none;
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div ul {
+.notification-banner-variant1 .banner-wrapper .block>div ul {
     display: none;
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(2)>div {
+.notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(2)>div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 32px;
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+.notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 20px;
@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-.notification-banner-varient1 .banner-wrapper .block>div>div>.button-container a {
+.notification-banner-variant1 .banner-wrapper .block>div>div>.button-container a {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 14px;
@@ -56,54 +56,54 @@
 }
 
 @media (max-width: 768px) {
-    .simple-banner-varient1 {
+    .simple-banner-variant1 {
         padding: 0px 24px 48px !important;
     }
-    .simple-banner-varient1 .banner-wrapper{
+    .simple-banner-variant1 .banner-wrapper{
         padding: 0px !important;
     }
-    .notification-banner-varient1 .banner-wrapper .block {
+    .notification-banner-variant1 .banner-wrapper .block {
         padding: 32px 24px;
     }
 
-    .notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(2)>div {
+    .notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(2)>div {
         flex-direction: column;
         gap: 16px;
     }
 
-    .notification-banner-varient1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+    .notification-banner-variant1 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
         font-size: 14px;
         line-height: 20px;
     }
 }
 
-/* notification-banner-varient2 */
-.notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(1) {
+/* notification-banner-variant2 */
+.notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(1) {
     display: none;
 }
 
-.notification-banner-varient2 .banner-wrapper .block {
+.notification-banner-variant2 .banner-wrapper .block {
     background: var(--Deep-Blue);
     min-height: 96px;
     border-radius: 12px;
     padding: 28px 40px;
 }
 
-.notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(2) {
+.notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(2) {
     display: none;
 }
 
-.notification-banner-varient2 .banner-wrapper .block>div ul {
+.notification-banner-variant2 .banner-wrapper .block>div ul {
     display: none;
 }
 
-.notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div {
+.notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+.notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 20px;
@@ -114,7 +114,7 @@
     text-align: center;
 }
 
-.notification-banner-varient2 .banner-wrapper .block>div>div>.button-container a {
+.notification-banner-variant2 .banner-wrapper .block>div>div>.button-container a {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 14px;
@@ -130,34 +130,34 @@
 
 
 @media (max-width: 768px) {
-    .notification-banner-varient2 .banner-wrapper .block {
+    .notification-banner-variant2 .banner-wrapper .block {
         padding: 32px 24px;
     }
 
-    .notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div {
+    .notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div {
         flex-direction: column;
     }
 
-    .notification-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+    .notification-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
         font-size: 16px;
         line-height: 20px;
         margin-bottom: 24px;
     }
 
-    .notification-banner-varient2 .banner-wrapper .block>div>div>.button-container,
-    .notification-banner-varient2 .banner-wrapper .block>div>div>.button-container a {
+    .notification-banner-variant2 .banner-wrapper .block>div>div>.button-container,
+    .notification-banner-variant2 .banner-wrapper .block>div>div>.button-container a {
         width: 100%;
         max-width: unset;
     }
 }
 
 
-/* notification-banner-varient3 */
-.notification-banner-varient3 .banner-wrapper .block {
+/* notification-banner-variant3 */
+.notification-banner-variant3 .banner-wrapper .block {
     padding: 24px;
 }
 
-.notification-banner-varient3 .banner-wrapper .block {
+.notification-banner-variant3 .banner-wrapper .block {
     background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, var(--secondary,#D79F4B) 98.59%);
     min-height: 76px;
     border-radius: 24px;
@@ -168,14 +168,14 @@
     justify-content: center;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div:first-child {
+.notification-banner-variant3 .banner-wrapper .block>div:first-child {
     position: absolute;
     inset: 0;
     z-index: 1;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div:first-child picture,
-.notification-banner-varient3 .banner-wrapper .block>div:first-child picture img {
+.notification-banner-variant3 .banner-wrapper .block>div:first-child picture,
+.notification-banner-variant3 .banner-wrapper .block>div:first-child picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -184,7 +184,7 @@
     left: 1.5px;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div:last-child>div {
+.notification-banner-variant3 .banner-wrapper .block>div:last-child>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +195,7 @@
     padding: 0 24px;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div>div>p:first-child {
+.notification-banner-variant3 .banner-wrapper .block>div>div>p:first-child {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 20px;
@@ -205,15 +205,15 @@
     text-align: center;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div>div>p:nth-of-type(2) {
+.notification-banner-variant3 .banner-wrapper .block>div>div>p:nth-of-type(2) {
     display: none;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div ul {
+.notification-banner-variant3 .banner-wrapper .block>div ul {
     display: none;
 }
 
-.notification-banner-varient3 .banner-wrapper .block>div>div>.button-container a {
+.notification-banner-variant3 .banner-wrapper .block>div>div>.button-container a {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 14px;
@@ -228,22 +228,22 @@
 }
 
 @media (max-width: 768px) {
-    .notification-banner-varient3 .banner-wrapper .block {
+    .notification-banner-variant3 .banner-wrapper .block {
         min-height: 144px;
     }
 
-    .notification-banner-varient3 .banner-wrapper .block>div:last-child>div {
+    .notification-banner-variant3 .banner-wrapper .block>div:last-child>div {
         flex-direction: column;
         gap: 16px;
     }
 
-    .notification-banner-varient3 .banner-wrapper .block>div>div>p:first-child {
+    .notification-banner-variant3 .banner-wrapper .block>div>div>p:first-child {
         font-size: 14px;
         line-height: 20px;
     }
 }
 
-/* simple-banner-varient1 */
+/* simple-banner-variant1 */
 /* Banner shell */
 .banner.simple-banner-type-1 {
     position: relative;
@@ -355,12 +355,12 @@
     }
 }
 
-/* simple-banner-varient2 */
-.simple-banner-varient2 .banner-wrapper .block>div:nth-of-type(1) {
+/* simple-banner-variant2 */
+.simple-banner-variant2 .banner-wrapper .block>div:nth-of-type(1) {
     display: none;
 }
 
-.simple-banner-varient2 .banner-wrapper .block {
+.simple-banner-variant2 .banner-wrapper .block {
     background: radial-gradient(92.52% 92.52% at 3.6% 33.33%, #1F4BA8 0%, #0F3174 100%);
     min-height: 282px;
     display: flex;
@@ -370,11 +370,11 @@
 }
 
 
-.simple-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p {
+.simple-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p {
     display: none;
 }
 
-.simple-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+.simple-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 48px;
@@ -386,16 +386,16 @@
     margin-bottom: 32px;
 }
 
-.simple-banner-varient2 .banner-wrapper .block>div ul {
+.simple-banner-variant2 .banner-wrapper .block>div ul {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .simple-banner-varient2 .banner-wrapper .block {
+    .simple-banner-variant2 .banner-wrapper .block {
         padding: 32px 24px;
     }
 
-    .simple-banner-varient2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
+    .simple-banner-variant2 .banner-wrapper .block>div:nth-of-type(2)>div>p:nth-of-type(1) {
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 24px;
@@ -537,16 +537,16 @@
     }
 }
 
-/* simple-banner-varient4 */
-.simple-banner-varient4 .banner-wrapper .block picture {
+/* simple-banner-variant4 */
+.simple-banner-variant4 .banner-wrapper .block picture {
     /* display: none; */
 }
 
-.simple-banner-varient4 .banner-wrapper .block {
+.simple-banner-variant4 .banner-wrapper .block {
     padding: 24px;
 }
 
-.simple-banner-varient4 .banner-wrapper .block {
+.simple-banner-variant4 .banner-wrapper .block {
     background: linear-gradient(91.27deg, var(--Warm-White) 0.37%, #F5E9D5 0.37%, var(--secondary,#D79F4B) 98.59%);
     min-height: 282px;
     border-radius: 24px;
@@ -557,14 +557,14 @@
     justify-content: center;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div:first-child {
+.simple-banner-variant4 .banner-wrapper .block>div:first-child {
     position: absolute;
     inset: 0;
     z-index: 1;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div:first-child picture,
-.simple-banner-varient4 .banner-wrapper .block>div:first-child picture img {
+.simple-banner-variant4 .banner-wrapper .block>div:first-child picture,
+.simple-banner-variant4 .banner-wrapper .block>div:first-child picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -572,7 +572,7 @@
     bottom: -30px;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div:last-child>div {
+.simple-banner-variant4 .banner-wrapper .block>div:last-child>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -583,28 +583,28 @@
     padding: 0 24px;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div>div>p:first-child {
+.simple-banner-variant4 .banner-wrapper .block>div>div>p:first-child {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 48px;
     line-height: 62px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #000000;
+    color: var(--color-black, #000000);
     text-align: center;
     margin-bottom: 13px;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div>div>p:nth-of-type(2) {
+.simple-banner-variant4 .banner-wrapper .block>div>div>p:nth-of-type(2) {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 16px;
     line-height: 24px;
     letter-spacing: var(--letter-spacing, 0);
-    color: #000000;
+    color: var(--color-black, #000000);
     text-align: center;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div>div>.button-container a {
+.simple-banner-variant4 .banner-wrapper .block>div>div>.button-container a {
     font-family: var(--DM-Sans, sans-serif);
     font-weight: var(--font-weight-400, 400);
     font-size: 16px;
@@ -619,35 +619,35 @@
     border-radius: 44px;
 }
 
-.simple-banner-varient4 .banner-wrapper .block>div:last-child>div>ul {
+.simple-banner-variant4 .banner-wrapper .block>div:last-child>div>ul {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .simple-banner-varient4 .banner-wrapper .block {
+    .simple-banner-variant4 .banner-wrapper .block {
         /* padding: 32px 24px 27px 24px; */
     }
 
-    .simple-banner-varient4 .banner-wrapper .block>div:last-child>div {
+    .simple-banner-variant4 .banner-wrapper .block>div:last-child>div {
         /* padding: 0; */
     }
 
-    .simple-banner-varient4 .banner-wrapper .block>div>div>p:first-child {
+    .simple-banner-variant4 .banner-wrapper .block>div>div>p:first-child {
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 16px;
     }
 
-    .simple-banner-varient4 .banner-wrapper .block>div>div>p:nth-of-type(2) {
+    .simple-banner-variant4 .banner-wrapper .block>div>div>p:nth-of-type(2) {
         font-size: 14px;
     }
 
-    .simple-banner-varient4 .banner-wrapper .block>div>div>p:last-child {
+    .simple-banner-variant4 .banner-wrapper .block>div>div>p:last-child {
         width: 100%;
         max-width: unset;
     }
 
-    .simple-banner-varient4 .banner-wrapper .block>div>div>.button-container a {
+    .simple-banner-variant4 .banner-wrapper .block>div>div>.button-container a {
         font-size: 14px;
         line-height: 20px;
         text-align: center;
@@ -691,3 +691,4 @@ a.button:focus {
 .banner.simple-banner-type-2>div:last-child>div ul .banner.simple-banner-type-3>div:last-child>div ul {
     display: none;
 }
+

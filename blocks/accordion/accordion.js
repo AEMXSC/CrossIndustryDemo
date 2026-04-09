@@ -39,6 +39,25 @@ export default function decorate(block) {
     details.append(summary, body);
     row.replaceWith(details);
   });
+
+  // healthcare-accordion-variant2: first item open by default, single-item open behavior
+  if (block.closest('.section.healthcare-accordion-variant2')) {
+    const accordionItems = [...block.querySelectorAll('.accordion-item')];
+    const firstItem = accordionItems[0];
+    if (firstItem) firstItem.open = true;
+
+    accordionItems.forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open) return;
+        accordionItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.open = false;
+          }
+        });
+      });
+    });
+  }
+
   // ---- container-level logic (run once) ----
   const container = block.closest(".accordion-container");
   if (!container) return;
