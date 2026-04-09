@@ -1,22 +1,14 @@
 {
   "mappings": [
-    "/content/bfsi-dept/language-masters/en:/",
-    "/content/bfsi-dept/language-masters/en/:/en/",
-    "/content/bfsi-dept/language-masters/fr/:/fr/",
-    "/content/bfsi-dept/language-masters/fr:/fr",
-    "/content/bfsi-dept/language-masters/es/:/es/",
-    "/content/bfsi-dept/language-masters/es:/es",
-    "/content/bfsi-dept/language-masters/ja/:/ja/",
-    "/content/bfsi-dept/language-masters/ja:/ja",
-    "/content/bfsi-dept/language-masters/de/:/de/",
-    "/content/bfsi-dept/language-masters/de:/de",
-    "/content/bfsi-dept/configuration:/.helix/config.json",
-    "/content/bfsi-dept/metadata:/metadata.json",
-    "/content/bfsi-dept/redirects:/redirects.json",
-    "/content/bfsi-dept/placeholders:/placeholders.json"
+    "/content/cross-industry-demo/language-masters/en:/",
+    "/content/cross-industry-demo/language-masters/en/:/en/",
+    "/content/cross-industry-demo/configuration:/.helix/config.json",
+    "/content/cross-industry-demo/metadata:/metadata.json",
+    "/content/cross-industry-demo/redirects:/redirects.json",
+    "/content/cross-industry-demo/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/bfsi-dept/",
-    "/content/dam/bfsi-dept/"
+    "/content/cross-industry-demo/",
+    "/content/dam/cross-industry-demo/"
   ]
 }
