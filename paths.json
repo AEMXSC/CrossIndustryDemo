@@ -1,11 +1,14 @@
 {
   "mappings": [
-    "/content/dept-crossIndustry/:/",
-    "/content/dept-crossIndustry/configuration:/.helix/config.json",
-    "/content/dept-crossIndustry/metadata:/metadata.json"
+    "/content/crossindustrydemo-bfsi/language-masters/en:/",
+    "/content/crossindustrydemo-bfsi/language-masters/en/:/en/",
+    "/content/crossindustrydemo-bfsi/configuration:/.helix/config.json",
+    "/content/crossindustrydemo-bfsi/metadata:/metadata.json",
+    "/content/crossindustrydemo-bfsi/redirects:/redirects.json",
+    "/content/crossindustrydemo-bfsi/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/dept-crossIndustry",
-    "/content/dam/dept-crossIndustry"
+    "/content/crossindustrydemo-bfsi/",
+    "/content/dam/crossindustrydemo-bfsi/"
   ]
 }
